@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50506
 File Encoding         : 65001
 
-Date: 2018-11-22 10:57:22
+Date: 2018-11-23 16:59:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,7 +31,7 @@ CREATE TABLE `activity_information` (
   `hold_end` datetime DEFAULT NULL,
   `hold_place` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `style` varchar(6) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `participate` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `participant` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `image` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `type` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `is_interview` char(2) COLLATE utf8_unicode_ci DEFAULT NULL,
