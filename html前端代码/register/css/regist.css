@@ -1,16 +1,14 @@
-*{ margin: 0;padding: 0;font-family: 微软雅黑；}
-em{display: block;font-style: normal;font-size: 14px;color: rgb(179, 177, 177)}
-li{list-style: none;display: inline-block;}
-li a{text-decoration: none;}
-html,body,.wrapper{
-	width: 100%;
+body{
+	width: auto;
+	height: auto;
+	background: #fcfcdd;
+}
+*{
+	margin: 0;
+	padding: 0;
 }
 .hidden{
 	display: none;
-}
-.wrapper{
-	background-color: #fcfcdd;	
-	position: relative;
 }
 .logo{
 	width: 290px;
