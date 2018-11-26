@@ -14,6 +14,7 @@
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
+	<mvc:default-servlet-handler />
 
 	<!-- 定义JSP文件的位置 -->
 	<bean
