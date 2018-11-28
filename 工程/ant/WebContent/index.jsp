@@ -5,7 +5,7 @@
 <html>
 <head>
 
-<title>新闻首页</title>
+<title>个人首页</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/jquery.js"></script>
