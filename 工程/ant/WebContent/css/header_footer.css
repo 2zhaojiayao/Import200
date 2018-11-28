@@ -1,0 +1,120 @@
+
+*{
+	margin: 0 auto;
+	padding: 0;
+}
+
+body{
+	 font-size:14px;
+	 line-height: 22px;
+	 background-color: #fcfcdd
+	}
+a{
+	text-decoration:none;
+}
+li{
+	list-style: none;
+}
+.clear{
+	clear: both;
+}
+.header #logo{
+	width: 1080px;
+	height:50px;
+}
+.header #logo #pic_logo{
+	float:left;
+	width:157px;
+	height: 36px;
+	/*margin: 6px auto;*/
+}
+.header #search {
+	float: left;
+	margin-left:713px;
+	margin-left:713px;
+}
+.header #search input{
+	width:237px;
+	height: 28px;
+}
+#search input{
+	outline: none；
+	display:block;
+/*	获得焦点时也设置成圆角*/
+	border-radius:10px; /*这句就是重点，让边框变为圆角*/
+	border: 1px solid #CCC; /*让边框变为1px宽度，直线，#CCC颜色*/
+    width: 150px;
+    background-image: url(../images/search.png);
+  /*  background-position：50% //背景图位置*/
+    background-position: 100%;
+    width: 10px;
+    height:10px;
+    background-repeat: no-repeat;
+  }
+.header #logo #message{
+	float: left;
+	width: 15px;
+	height: 17px;
+	margin-left:968px;
+	margin-top: -20px;
+}
+.header #logo #person_info{
+	float: left;
+	margin-left: 1000px;
+	margin-top: -25px;
+	width: 100px;
+}
+.header #logo #person_info img{
+	width: 20px;
+	height: 20px;
+}
+.header #nav{
+background-color: #ffc300;
+height: 45px;
+width: 100%;
+/*margin-top: -5px;*/
+}
+.header #nav ul{
+ display:block;
+ width: 1080px;
+/* margin-left: 50px;*/
+}
+.header #nav ul li  a{
+	text-decoration:none;
+	display: inline-block;
+	width: 80px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+    vertical-align: middle;
+    color:#222;
+}
+
+.header #nav ul li {
+	float: left;
+    font: 600 14px '微软雅黑';
+}
+.header #nav a:hover{
+	background-color:#fc9700;
+	/*height:45px;*/
+}
+.footer{
+	width:100%;
+	height: 84px;
+	background-color: #ffa400;
+
+}
+.footer #footer_text{
+	width: 100%;
+	display: inline-block;
+	 font:600 15px '微软雅黑';
+    margin-top: 25px;
+     text-align: center;
+  
+}
+.footer p{
+	 color:#fff;
+	}
+.footer a{
+	 color:#fff;
+	}
