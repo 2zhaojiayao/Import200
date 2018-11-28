@@ -116,28 +116,20 @@ input, button {
 .top_1 .head_img{
 	width: 25px;
 	height: 25px;
-	margin-left: 26px;
+	margin-left: 25px;
 	margin-top: 45px;
 	float: left;
 }
 
-.header #logo #person_info {
-	float: right;
-	width: 300px;
-	float: left;
-}
-
-.header #logo #person_info img {
-	width: 24px;
-	height: 24px;
-	float: left;
-}
-
-.header #logo #person_info #name {
+.top_1 .name {
+	width: auto;
+	height: auto;
+	font-size: 14px;
+	text-align: left;
 	margin-left: 5px;
 	position: absolute;
-	margin-top: 20px;
-	float: left;
+	margin-top: 45px;
+	float: right;
 }
 
 .header #nav {

@@ -44,6 +44,8 @@
 
 .introduce {
 	width: 1080px;
+	height: auto;
+	margin-bottom: 20px;
 }
 
 .introduce #info p {

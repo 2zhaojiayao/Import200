@@ -27,7 +27,7 @@
 				<td class="top_1"><img src="images/message.png" class="message"></td>
 				<td class="top_1"><img src="images/person.png" class="head_img"></td>
 				<td class="top_1">
-					<div id="name">
+					<div class="name">
 						<span>Jessy</span>
 					</div>
 				</td>
