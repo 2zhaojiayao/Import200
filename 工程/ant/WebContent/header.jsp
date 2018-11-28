@@ -28,7 +28,7 @@
 				<td class="top_1"><img src="images/person.png" class="head_img"></td>
 				<td class="top_1">
 					<div class="name">
-						<span>Jessy</span>
+						<span>嘟嘟暴龙</span>
 					</div>
 				</td>
 			</tr>
