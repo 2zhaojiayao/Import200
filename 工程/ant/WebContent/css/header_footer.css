@@ -1,4 +1,4 @@
-
+/*通用设置*/
 *{
 	margin: 0 auto;
 	padding: 0;
@@ -10,6 +10,7 @@ body{
 	 background-color: #fcfcdd
 	}
 a{
+	
 	text-decoration:none;
 }
 li{
@@ -24,60 +25,64 @@ li{
 }
 .header #logo #pic_logo{
 	float:left;
-	width:157px;
-	height: 36px;
+	width:213px;
+	height: 49px;
+	margin: 3px;
 	/*margin: 6px auto;*/
 }
 .header #search {
 	float: left;
-	margin-left:713px;
-	margin-left:713px;
+	margin-left:640px;
+	margin-top: -45px;
+
 }
 .header #search input{
-	width:237px;
-	height: 28px;
+	outline: none;
+	width:284px;
+	height: 32px;
+	border-radius:20px; /*这句就是重点，让边框变为圆角*/
+	border: 1px solid #CCC; 
 }
-#search input{
-	outline: none；
-	display:block;
-/*	获得焦点时也设置成圆角*/
-	border-radius:10px; /*这句就是重点，让边框变为圆角*/
-	border: 1px solid #CCC; /*让边框变为1px宽度，直线，#CCC颜色*/
-    width: 150px;
-    background-image: url(../images/search.png);
-  /*  background-position：50% //背景图位置*/
-    background-position: 100%;
-    width: 10px;
-    height:10px;
-    background-repeat: no-repeat;
-  }
+.header #search img{
+	display: inline-block;
+	margin-left: -30px;
+	 width: 15px;
+    height:15px;
+    cursor: pointer;
+
+}
+
 .header #logo #message{
 	float: left;
-	width: 15px;
-	height: 17px;
-	margin-left:968px;
-	margin-top: -20px;
+	width: 24px;
+	height: 24px;
+	margin-left:935px;
+	margin-top: -42px;
 }
 .header #logo #person_info{
 	float: left;
-	margin-left: 1000px;
-	margin-top: -25px;
-	width: 100px;
+	margin-left: 973px;
+	margin-top: -40px;
+	width: 300px;
 }
 .header #logo #person_info img{
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
+}
+.header #logo #person_info #name{
+	display: inline-block;
+    margin-left: 5px;
+	position: absolute;
+	top: 15px;
 }
 .header #nav{
 background-color: #ffc300;
 height: 45px;
 width: 100%;
-/*margin-top: -5px;*/
 }
 .header #nav ul{
  display:block;
  width: 1080px;
-/* margin-left: 50px;*/
 }
 .header #nav ul li  a{
 	text-decoration:none;
@@ -96,7 +101,6 @@ width: 100%;
 }
 .header #nav a:hover{
 	background-color:#fc9700;
-	/*height:45px;*/
 }
 .footer{
 	width:100%;
@@ -114,7 +118,8 @@ width: 100%;
 }
 .footer p{
 	 color:#fff;
-	}
+	
+}
 .footer a{
 	 color:#fff;
-	}
+}
