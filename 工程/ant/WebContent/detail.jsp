@@ -93,7 +93,7 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="#">去看看</a>
+							<a href="detail.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
@@ -113,7 +113,7 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="#">去看看</a>
+							<a href="detail.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
@@ -133,7 +133,7 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="#">去看看</a>
+							<a href="detail.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
