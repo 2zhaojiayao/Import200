@@ -29,6 +29,12 @@ li {
 	height: 112px;
 }
 
+.top table {
+	width: 1080px;
+	height: auto;
+	margin: 0 auto;
+}
+
 .top_lenght {
 	margin: 0 auto;
 	width: 1080px;
@@ -105,7 +111,7 @@ input, button {
 	content: "\f002";
 }
 
-.top_1 .message{
+.top_1 .message {
 	width: 25px;
 	height: 25px;
 	margin-left: 26px;
@@ -113,7 +119,7 @@ input, button {
 	float: left;
 }
 
-.top_1 .head_img{
+.top_1 .head_img {
 	width: 25px;
 	height: 25px;
 	margin-left: 25px;
@@ -167,6 +173,7 @@ input, button {
 	width: 100%;
 	height: 84px;
 	background-color: #ffa400;
+	margin-bottom: 0px;
 }
 
 .footer #footer_text {

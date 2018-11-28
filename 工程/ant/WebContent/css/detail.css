@@ -12,7 +12,8 @@ body {
 
 .main_top_left1 a {
 	text-decoration: none;
-	cursor: pointer; color: #a6a6a6;
+	cursor: pointer;
+	color: #a6a6a6;
 }
 
 .main_top_left1 a:hover {
@@ -21,7 +22,8 @@ body {
 
 .main {
 	margin: 0 auto;
-	margin-top: 20px; width : 1080px;
+	margin-top: 20px;
+	width: 1080px;
 	height: 129px;
 	background-color: #fff;
 	width: 1080px;
@@ -159,7 +161,8 @@ body {
 }
 
 .content_right {
-	margin-bottom: 20px; margin-left : 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
 	padding: 40px 0px;
 	width: 424px;
 	height: auto;

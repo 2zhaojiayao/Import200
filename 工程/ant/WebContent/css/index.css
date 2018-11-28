@@ -12,13 +12,17 @@
 }
 
 .slider {
-	margin-top: 0;
+	margin: 0 auto;
 }
 
 .num {
 	position: absolute;
 	right: 730px;
 	bottom: 9px;
+}
+
+#scrollPics {
+	margin: 0 auto;
 }
 
 #scrollPics .num li {
@@ -45,6 +49,7 @@
 .introduce {
 	width: 1080px;
 	height: auto;
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 

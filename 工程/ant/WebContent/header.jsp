@@ -19,7 +19,7 @@
 				<td class="top_1">
 					<div class="search">
 						<form>
-							<input type="text" placeholder="请输入您要搜索的内容...">
+							<input type="text" placeholder="  请输入您要搜索的内容...">
 							<button type="submit"></button>
 						</form>
 					</div>
