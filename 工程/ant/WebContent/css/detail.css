@@ -1,4 +1,4 @@
-@charset "utf-8";
+
 body{
 	background-color: #fcfcdd;
 	width: auto;
@@ -80,6 +80,8 @@ header{
 	margin:0px auto;
 	width: 1080px;
 	height: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .content_box{
 	margin-top: 20px;
@@ -244,4 +246,8 @@ hr{
 	padding-top: 20px;
 	margin-top: 40px;
 	color: #000;
+}
+footer{
+	clear: both;
+	height: 84px;
 }

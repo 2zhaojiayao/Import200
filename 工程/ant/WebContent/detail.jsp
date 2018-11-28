@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>活动详情</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/detail.css">
@@ -10,7 +10,7 @@
 <body>
 	<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>　　
 	<!--header-->
-	<%@include file="header.jsp" %>
+	<header><%@include file="header.jsp" %></header>
 	<!--main-->
 	<div class="main">
 		<div class="main_top">
@@ -159,7 +159,7 @@
 	</div>
 	<!--footer-->
 	<footer>
-
+		<%@include file="footer.jsp" %>		
 	</footer>
 </body>
 </html>
