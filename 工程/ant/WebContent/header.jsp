@@ -1,35 +1,46 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery.js"></script>
 </head>
-<body>
-<!-- 页头部分 -->
-	<!-- 页头部分 -->
-	<div class="header">
-		<div id="logo">
-			<img src="images/logo2.png" id="pic_logo" >
-		<div id="search">
-		   <input id="search_info   type="text" />
-           <img src="images/search.png">
-        </div>
-			<img src="images/message.png" id="message">
-		   <div id="person_info"> 
-			  <img src="images/person.jpg" >
-			  <div id="name"> <span>chengqiong</span></div>
-		   </div>
-		</div>
-		<div class="clear"></div>
-		<div id="nav">
-			<ul>
-				<li><a href="#">首页</a></li>
-				<li><a href="#">活动</a></li>
-				<li><a href="#">个人中心</a></li>
-			</ul>
-		 </div>
-    </div> 
-</body>
+<div class="header">
+	<div class="top">
+		<table>
+			<tr class="top_lenght">
+				<td class="top_1">
+					<div class="logo">
+						<img src="images/logo2.png">
+					</div>
+				</td>
+				<td class="top_1">
+					<div class="search">
+						<form>
+							<input type="text" placeholder="请输入您要搜索的内容...">
+							<button type="submit"></button>
+						</form>
+					</div>
+				</td>
+				<td class="top_1"><img src="images/message.png" class="message"></td>
+				<td class="top_1"><img src="images/person.png" class="head_img"></td>
+				<td class="top_1">
+					<div id="name">
+						<span>Jessy</span>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="nav">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">活动</a></li>
+			<li><a href="#">个人中心</a></li>
+		</ul>
+	</div>
+</div>
 </html>

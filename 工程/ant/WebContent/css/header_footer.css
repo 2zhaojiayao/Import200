@@ -1,125 +1,194 @@
 /*通用设置*/
-*{
+* {
 	margin: 0 auto;
 	padding: 0;
 }
 
-body{
-	 font-size:14px;
-	 line-height: 22px;
-	 background-color: #fcfcdd
-	}
-a{
-	
-	text-decoration:none;
+body {
+	font-size: 14px;
+	line-height: 22px;
+	background-color: #fcfcdd
 }
-li{
+
+a {
+	text-decoration: none;
+}
+
+li {
 	list-style: none;
 }
-.clear{
-	clear: both;
+
+.header {
+	width: 100%;
+	height: auto;
 }
-.header #logo{
+
+.header .top {
+	margin: 0 auto;
 	width: 1080px;
-	height:50px;
+	height: 112px;
 }
-.header #logo #pic_logo{
-	float:left;
-	width:213px;
-	height: 49px;
-	margin: 3px;
-	/*margin: 6px auto;*/
-}
-.header #search {
-	float: left;
-	margin-left:640px;
-	margin-top: -45px;
 
+.top_lenght {
+	margin: 0 auto;
+	width: 1080px;
+	height: 112px;
 }
-.header #search input{
+
+.top_1 {
+	float: left;
+}
+
+.top_1 .logo img {
+	width: 213px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+input, button {
+	border: none;
 	outline: none;
-	width:284px;
-	height: 32px;
-	border-radius:20px; /*这句就是重点，让边框变为圆角*/
-	border: 1px solid #CCC; 
-}
-.header #search img{
-	display: inline-block;
-	margin-left: -30px;
-	 width: 15px;
-    height:15px;
-    cursor: pointer;
-
 }
 
-.header #logo #message{
+.search {
+	width: 284px;
+	height: 34px;
+	margin-top: 40px;
+	margin-left: 350px;
 	float: left;
-	width: 24px;
-	height: 24px;
-	margin-left:935px;
-	margin-top: -42px;
 }
-.header #logo #person_info{
-	float: left;
-	margin-left: 973px;
-	margin-top: -40px;
+
+.search form {
+	position: relative;
+	height: 34px;
+}
+
+.search input {
+	outline: none;
+	border: 1px solid #CCC;
+	background-color: #fff;
+	width: 284px;
+	height: 34px;
+	border-radius: 42px;
+	transition: .3s linear;
+	float: right;
+}
+
+.search input:focus {
 	width: 300px;
 }
-.header #logo #person_info img{
+
+.search button {
+	width: 35px;
+	height: 35px;
+	display: inline;
+	margin-right: 10px;
+	cursor: pointer;
+	background: none;
+	color: #ff8d1a;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+}
+
+.search button:before {
+	width: 35px;
+	height: 35px;
+	display: inline;
+	margin-right: 10px;
+	content: "\f002";
+	font-family: FontAwesome;
+	color: #324b4e;
+	content: "\f002";
+}
+
+.top_1 .message{
+	width: 25px;
+	height: 25px;
+	margin-left: 26px;
+	margin-top: 45px;
+	float: left;
+}
+
+.top_1 .head_img{
+	width: 25px;
+	height: 25px;
+	margin-left: 26px;
+	margin-top: 45px;
+	float: left;
+}
+
+.header #logo #person_info {
+	float: right;
+	width: 300px;
+	float: left;
+}
+
+.header #logo #person_info img {
 	width: 24px;
 	height: 24px;
+	float: left;
 }
-.header #logo #person_info #name{
-	display: inline-block;
-    margin-left: 5px;
+
+.header #logo #person_info #name {
+	margin-left: 5px;
 	position: absolute;
-	top: 15px;
+	margin-top: 20px;
+	float: left;
 }
-.header #nav{
-background-color: #ffc300;
-height: 45px;
-width: 100%;
+
+.header #nav {
+	background-color: #ffc300;
+	height: 45px;
+	width: 100%;
 }
-.header #nav ul{
- display:block;
- width: 1080px;
+
+.header #nav ul {
+	display: block;
+	width: 1080px;
 }
-.header #nav ul li  a{
-	text-decoration:none;
+
+.header #nav ul li  a {
+	text-decoration: none;
 	display: inline-block;
 	width: 80px;
 	height: 45px;
 	text-align: center;
 	line-height: 45px;
-    vertical-align: middle;
-    color:#222;
+	vertical-align: middle;
+	color: #222;
 }
 
 .header #nav ul li {
 	float: left;
-    font: 600 14px '微软雅黑';
+	font: 600 14px '微软雅黑';
 }
-.header #nav a:hover{
-	background-color:#fc9700;
+
+.header #nav a:hover {
+	background-color: #fc9700;
 }
-.footer{
-	width:100%;
+
+.footer {
+	width: 100%;
 	height: 84px;
 	background-color: #ffa400;
-
 }
-.footer #footer_text{
+
+.footer #footer_text {
 	width: 100%;
 	display: inline-block;
-	 font:600 15px '微软雅黑';
-    margin-top: 25px;
-     text-align: center;
-  
+	font: 600 15px '微软雅黑';
+	margin-top: 25px;
+	text-align: center;
 }
-.footer p{
-	 color:#fff;
-	
+
+.footer p {
+	color: #fff;
 }
-.footer a{
-	 color:#fff;
+
+.footer a {
+	color: #fff;
 }
