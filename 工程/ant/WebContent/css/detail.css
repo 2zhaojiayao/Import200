@@ -25,11 +25,9 @@ a:hover {
 a:active { 
 	color:#fc9700;
 } 
-header{
-	height: 94px;
-}
 .main{
 	margin:0 auto;
+	margin-top:20px;
 	width: 1080px;
 	height: 129px;
 	background-color: #fff;	
@@ -133,7 +131,7 @@ header{
 	-webkit-transition-duration: 0.4s; 
 	transition-duration: 0.4s;
 	background-color: #fc9700;
-	border: none;
+	border: 1px solid #fc9700;
 	color: #fff;
 	padding: 15px 32px;
 	text-align: center;
@@ -247,7 +245,7 @@ hr{
 	margin-top: 40px;
 	color: #000;
 }
-footer{
+.bottom{
 	clear: both;
 	height: 84px;
 }
