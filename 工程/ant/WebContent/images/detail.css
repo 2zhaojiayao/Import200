@@ -11,19 +11,14 @@ body{
 }
 a{
 	text-decoration: none;
-	style:"cursor:hand";
+	style:"cursor:hand";	
+	color:#a6a6a6;
 }
 a:link { 
 	color:#a6a6a6;
 } 
-a:visited { 
-	color:#fc9700;
-} 
 a:hover { 
 	color: #fc9700;
-} 
-a:active { 
-	color:#fc9700;
 } 
 header{
 	height: 94px;
