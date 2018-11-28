@@ -167,9 +167,9 @@ hr{
 }
 .content_right_box{
 	margin:0px auto;
-	margin-top: 25px;
+	margin-top: 30px;
 	width: 340px;
-	height: 176px;
+	height: 177px;
 	border: 1px solid #fc9700;
 	background-color: #fff;
 	border-radius: 2px;
@@ -184,7 +184,7 @@ hr{
 	background-color: #fff; 
 }
 .content_right_box_inside2{
-	height: 46px;
+	height: 47px;
 	background-color: #fc9700;
 }
 .content_right_img{
