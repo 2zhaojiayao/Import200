@@ -19,7 +19,7 @@
 	<div class="main">
 		<div class="main_top">
 			<span class="main_top_left1"><a href="index.jsp">首页</a></span>
-			&nbsp;/&nbsp; <span class="main_top_left1"><a href="index.jsp">活动</a></span>
+			&nbsp;/&nbsp; <span class="main_top_left1"><a href="#">活动</a></span>
 			&nbsp;/&nbsp; <span class="main_top_left2">活动详情</span>
 		</div>
 		<div class="main_center">
@@ -92,9 +92,13 @@
 
 					</div>
 					<div class="content_right_box_inside2">
-						<div class="content_right_box1">去看看</div>
+						<div class="content_right_box1">
+							<a href="#">去看看</a>
+						</div>
 						<div class="content_right_line"></div>
-						<div class="content_right_box2">我要报名</div>
+						<div class="content_right_box2">
+							<a href="#">我要报名</a>
+						</div>
 					</div>
 				</div>
 				<div class="content_right_box">
@@ -108,9 +112,13 @@
 
 					</div>
 					<div class="content_right_box_inside2">
-						<div class="content_right_box1">去看看</div>
+						<div class="content_right_box1">
+							<a href="#">去看看</a>
+						</div>
 						<div class="content_right_line"></div>
-						<div class="content_right_box2">我要报名</div>
+						<div class="content_right_box2">
+							<a href="#">我要报名</a>
+						</div>
 					</div>
 				</div>
 				<div class="content_right_box">
@@ -124,9 +132,13 @@
 
 					</div>
 					<div class="content_right_box_inside2">
-						<div class="content_right_box1">去看看</div>
+						<div class="content_right_box1">
+							<a href="#">去看看</a>
+						</div>
 						<div class="content_right_line"></div>
-						<div class="content_right_box2">我要报名</div>
+						<div class="content_right_box2">
+							<a href="#">我要报名</a>
+						</div>
 					</div>
 				</div>
 				<div class="content_submit_two">
