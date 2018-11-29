@@ -20,7 +20,7 @@ pageEncoding="UTF-8"%>
 			<p class="center_fail">500</p>
 			<p class="center_p">呀！出错了！</p>
 			<p class="center_p1">亲爱的用户，我们的服务器出错啦...</p> 
-			<p class="center_p2">5秒后将跳回首页</p>
+			<p class="center_p2"><span class="time"></span>秒后将跳回首页</p>
 		</div>
 	</div>
 	<script type="text/javascript">

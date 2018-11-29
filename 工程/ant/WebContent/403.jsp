@@ -20,7 +20,7 @@ pageEncoding="UTF-8"%>
 			<p class="center_fail">403</p>
 			<p class="center_p">呀！出错了！</p>
 			<p class="center_p1">亲爱的用户，您无权访问该页面...</p> 
-			<p class="center_p2">5秒后将跳回首页</p>
+			<p class="center_p2"><span class="time"></span>秒后将跳回首页</p>
 		</div>
 	</div>
 	<script type="text/javascript">
