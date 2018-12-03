@@ -1,31 +1,37 @@
 * {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 }
-body{
-	background-color: #fcfcdd;
+
+body {
 	width: 1080px;
 	height: auto;
+	font-size: 22px;
+	line-height: 22px;
+	background-color: #fcfcdd
 }
-.center{
+.center {
 	width: 1080px;
 	height: 700px;
-	margin:0 auto;
+	margin: 0 auto;
 	text-align: center;
 }
-#jsGrid{
+
+#jsGrid {
 	clear: both;
 	width: 1080px;
 	height: auto;
 	text-align: center;
 	margin: 0 auto;
-	margin-left: 200px;
+	margin-top: 10px;
 }
-.content_submit {
-	padding-top: 20px;
+
+.center_submit {
+	width:1080px;
+	margin: 0 auto;
+	padding-top: 0px;
 	position: absolute;
-	margin-top: 580px;
-	float: left;
+	margin-top: 645px;
 }
 
 .button {
@@ -34,7 +40,7 @@ body{
 	background-color: #fc9700;
 	border: 1px solid #fc9700;
 	color: #fff;
-	padding: 10px 20px;
+	padding: 8px 18px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -45,5 +51,11 @@ body{
 .button:hover {
 	background-color: #fff;
 	color: #fc9700;
-	border: 1px solid #fc9700;
+	border: 1px solid #fc9700;	
+	cursor: pointer;
+}
+.center_text{
+	font-size: 20px;
+	color: #fc9700;
+	margin-top:10px;
 }
