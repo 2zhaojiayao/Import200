@@ -2,6 +2,9 @@ html,body{
 	width:100%;
 	background-color:#fcfcdd; 
 }
+a{
+	cursor:pointer;
+}
 .main{
 	width:1080px;
 	margin:20px auto;
@@ -17,6 +20,9 @@ html,body{
 	height: 50px;
 	line-height: 50px;
 	padding-left:40px;
+}
+.top_nav a{
+	color:#a6a6a6;
 }
 .top_list{
 	height: 100px;
@@ -122,24 +128,25 @@ html,body{
 .search_org{
 	width:175px;
 	float: right;
+	height: 30px;
 }
 .search_org form {
 	position: relative;
-	height: 34px;
+	height: 30px;
 }
 .search_org input {
 	outline: none;
 	border: 1px solid #CCC;
 	background-color: #fff;
 	width: 284px;
-	height: 34px;
+	height: 30px;
 	border-radius: 3px;
 	transition: .3s linear;
 	float: right;
 }
 .search_org button {
 	width: 35px;
-	height: 34px;
+	height: 30px;
 	display: inline;
 	cursor: pointer;
 	background: none;
@@ -148,10 +155,9 @@ html,body{
 	position: absolute;
 	right: 0;
 }
-
 .search_org button:before {
 	width: 35px;
-	height: 35px;
+	height: 30px;
 	display: inline;
 	margin-right: 10px;
 	content: '搜';
@@ -293,6 +299,7 @@ html,body{
 	border-left: 1px solid #fc7a00;
 	color:#fc7a00;
 	font-size: 14px;
+	cursor:pointer;
 }
 .operation option{
 	width:60px;
