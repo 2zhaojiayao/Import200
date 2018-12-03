@@ -40,6 +40,7 @@
 			<li><a href="#">首页</a></li>
 			<li><a href="#">活动</a></li>
 			<li><a href="#">个人中心</a></li>
+			<li><a href="#">个人信息</a></li>
 		</ul>
 	</div>
 </div>
