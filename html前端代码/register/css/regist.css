@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 body{
 	width: auto;
 	height: auto;
@@ -13,9 +15,13 @@ body{
 .logo{
 	width: 290px;
 	height: 100px;
-	margin: 0px auto;
+	margin: 10px auto;
 	text-align: center;
 	line-height: 100px;
+}
+.logo img{
+	width: 290px;
+	height: 100px;
 }
 .article{
 	border: 1px solid #fc7a00;
