@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>我的</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
 	<link rel="stylesheet" type="text/css" href="css/organization.css">
 </head>
@@ -15,7 +16,7 @@
 		<!-- 主要部分 -->
 		<div class="main">
 			<!-- 上部分 -->
-			<div class="top">
+			<div class="top_org">
 				<div class="top_nav">
 					<a href="#">首页</a>/
 					<span>我的</span>
@@ -56,13 +57,11 @@
 								<div class="btn"><a href="#">进行中</a></div>
 								<div class="btn"><a href="#">已结束</a></div>
 							</div>
-							<div class="search">
-								<div class="input-group">
-								  <div class="input-control search-box search-box-circle has-icon-left has-icon-right search-example" id="searchboxExample">
-								    <input id="inputSearchExample3" type="search" class="form-control search-input" placeholder="请输入活动名称">
-								    <label for="inputSearchExample3" class="input-control-icon-left search-icon"><i class="icon icon-search"></i></label>
-								  </div>
-								</div>
+							<div class="search_org">
+								<form>
+									<input type="text" placeholder="请输入活动名称">
+									<button type="submit"></button>
+								</form>
 							</div>
 						</div>
 					</div>

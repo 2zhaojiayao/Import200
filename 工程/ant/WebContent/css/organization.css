@@ -7,7 +7,7 @@ html,body{
 	margin:20px auto;
 }
 /*上部分*/
-.top{
+.top_org{
 	width:1080px;
 	height: 150px;
 	margin-bottom: 20px;
@@ -119,10 +119,46 @@ html,body{
 .btn:hover:not(.active) a{
 	color:white;
 }
-.search{
+.search_org{
 	width:175px;
 	float: right;
 }
+.search_org form {
+	position: relative;
+	height: 34px;
+}
+.search_org input {
+	outline: none;
+	border: 1px solid #CCC;
+	background-color: #fff;
+	width: 284px;
+	height: 34px;
+	border-radius: 3px;
+	transition: .3s linear;
+	float: right;
+}
+.search_org button {
+	width: 35px;
+	height: 34px;
+	display: inline;
+	cursor: pointer;
+	background: none;
+	color: #ff8d1a;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+}
+
+.search_org button:before {
+	width: 35px;
+	height: 35px;
+	display: inline;
+	margin-right: 10px;
+	content: '搜';
+	font-family: FontAwesome;
+	color: #ff8d1a;
+}
+
 /*发布活动按钮*/
 .bottom_publish{
 	width: 1000px;
