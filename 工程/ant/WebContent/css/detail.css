@@ -157,7 +157,8 @@ body {
 .button:hover {
 	background-color: #fff;
 	color: #fc9700;
-	border: 1px solid #fc9700;
+	border: 1px solid #fc9700;	
+	cursor: pointer;
 }
 
 .content_right {
