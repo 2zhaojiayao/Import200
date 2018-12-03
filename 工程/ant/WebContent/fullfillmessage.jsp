@@ -5,9 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <title>完善信息</title>
+    <link rel="stylesheet" type="text/css" href="css/header_footer.css">
     <link rel="stylesheet" type="text/css" href="css/regist.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/reg.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
     <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
@@ -58,11 +59,8 @@
                 </form>
             </div>
         </div>
-        <div class="footer">
-            <ul>
-                <li>帮助</li>
-            </ul>
-        </div>
+        <!-- 页尾 -->
+        <%@include file="footer.jsp"%>
     </div>
 </body>
 </html>
