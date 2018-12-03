@@ -10,6 +10,14 @@ body {
 	line-height: 22px;
 	background-color: #fcfcdd
 }
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #fc9700;
+}
+a:hover {
+	color: #f00;
+}
 .center {
 	width: 1080px;
 	height: 700px;
