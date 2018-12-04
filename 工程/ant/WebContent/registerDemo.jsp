@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <title>注册页面</title>
     <link rel="stylesheet" type="text/css" href="css/regist.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/header_footer.css"
+	media="all">
     <script type="text/javascript" src="js/reg.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
     <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
@@ -155,11 +157,8 @@
                 </form>
             </div>
         </div>
-        <div class="footer">
-            <ul>
-                <li>帮助</li>
-            </ul>
-        </div>
+        <!-- 页尾 -->
+        <%@include file="footer.jsp"%>
     </div>
 </body>
 </html>

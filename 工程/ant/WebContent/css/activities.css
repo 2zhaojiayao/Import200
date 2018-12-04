@@ -1,0 +1,267 @@
+
+*{
+	margin: 0 auto;
+	padding: 0;
+}
+
+body{
+	 font-size:14px;
+	 line-height: 22px;
+	 background-color: #fcfcdd
+	}
+a{
+	
+	text-decoration:none;
+}
+li{
+	list-style: none;
+}
+#orange{
+	color: #fc7a00;
+}
+.assembly{
+	width: 1080px;
+	height: 90px;
+	margin-top: 18px;
+
+
+}
+.breadcrumb{
+	width: 1080px;
+	height: 30px;
+	color:#a6a6a6;
+}
+/**search*/
+#search {
+	width: 284px;
+	height: 30px;
+	margin-left: 766px;
+}
+.search{
+	width: 284px;
+	height: 34px;
+	margin-top: 40px;
+	
+	float: left;
+}
+
+.search form,#search form{
+	position: relative;
+	height: 34px;
+}
+
+.search input,#search input{
+	outline: none;
+	border: 1px solid #CCC;
+	background-color: #fff;
+	width: 284px;
+	height: 34px;
+	border-radius: 42px;
+	transition: .3s linear;
+	float: right;
+}
+
+.search input:focus,#search input:focus {
+	width: 300px;
+}
+
+.search button,#search button {
+	width: 35px;
+	height: 35px;
+	display: inline;
+	margin-right: 10px;
+	cursor: pointer;
+	background: none;
+	color: #ff8d1a;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+}
+
+.search button:before,#search button:before {
+	width: 35px;
+	height: 35px;
+	display: inline;
+	margin-right: 10px;
+	content: "\f002";
+	font-family: FontAwesome;
+	color: #ff8d1a;
+}
+/*搜索*/
+.assembly #search img{
+	 width: 15px;
+    height:15px;
+}
+.out_type{
+	width: 1080px;
+	height: 33px;
+	
+}
+.label{
+	width: 65px;
+	height: 33px;
+	padding: 4px;
+	font-size: 18px;
+	text-align: center;
+	background-color: rgba(255,195,0,0.4);
+	margin-left: 0; 
+	box-shadow: 0 0 0 1px  #fc7a00; 
+}
+.clear{
+	clear: both;
+}
+.activities_type{
+	margin:  auto;
+	width: 1080px;
+	background-color:#fff; 
+	height: 150px;
+	box-shadow: 0 0 0 1px #fff;
+}
+
+.activities_type li{
+	float: left;
+	
+}
+.activities_type .type_header{
+	float: left;
+	display: inline-block;
+	width: 60px;
+	height: 20px;
+	margin: 15px;
+	
+}
+.small_type li a{
+	display: inline-block;
+	width: 60px;
+	height: 20px;
+	font: 400 12px '微软雅黑';
+	border: 1px solid #eee;
+	margin: 14px;
+	border-radius: 7px;
+	text-align: center;
+	line-height: 20px;
+	color: #222;
+
+}
+.small_type select{
+   border-radius: 7px;
+}
+.small_type select:hover{
+  background-color: #fc9700;
+}
+.small_type a:hover{
+	background-color: #fc9700;
+}
+.small_type a:click{
+	background-color: #ccc;
+}
+/**conter*/
+.activities_conter{
+	width: 1080px;
+	height: 700px;
+	margin: 25px auto;
+
+}
+.activity_object{
+	width: 250px;
+	height: 290px;
+	float: left;
+	margin: 10px;
+	background-color: #fff;
+	box-shadow: 1px 2px #aaa;
+}
+.activity_object>a{
+	width: 250px;
+	height: 180px;
+}
+.activity_object>a>img{
+	width: 250px;
+	height: 180px;
+}
+.activity_object>ul{
+	height: 120px;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+.activity_object>ul>li{
+	height: 34px;
+}
+.activity_object>ul>li>a{
+	font-size: 22px;
+	color: black;
+}
+.activity_object>ul>li>a:hover{
+	font-size: 22px;
+	color: rgb(108,108,108);
+}
+.activity_object>ul>li>p{
+	font-size: 18px;
+}
+#grey{
+	color: #a8a8a8;
+}
+/**page
+.page{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: #767675;
+}
+.page>a,.page>span{
+	text-decoration: none;
+	border: 1px solid #f9d52b;
+	padding: 5px 7px;
+	color: #767675;
+	cursor: pointer;
+}
+.page>a:hover,.page span:hover{
+	background-color:#fc9700;
+}
+#topage{
+	width: 38px;
+	height: 28px;
+}**/
+/*页码*/
+.bottom_page{
+	width:450px;
+	height: 30px;
+	line-height: 30px;
+	margin:20px auto;
+	text-align: center;
+}
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin-top: 30px;
+}
+
+ul.pagination li {
+	display: inline;
+}
+
+ul.pagination li a {
+    color: #505050;
+    float: left;
+    margin:0px 5px;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+ul.pagination li a.active {
+    background-color: #fc7a00;
+    color: white;
+    border: 1px solid #fc7a00;
+    border-radius: 4px;
+}
+
+ul.pagination li a:hover{
+	background-color:#fc9700;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+
+/**footer**/
