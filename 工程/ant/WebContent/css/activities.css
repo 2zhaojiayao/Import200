@@ -110,19 +110,18 @@ li{
 .clear{
 	clear: both;
 }
-.activities_type{
-	margin:  auto;
+.activity_type{
+	margin-top: 200px;
 	width: 1080px;
 	background-color:#fff; 
 	height: 150px;
-	box-shadow: 0 0 0 1px #fff;
 }
 
-.activities_type li{
+.activity_type li{
 	float: left;
 	
 }
-.activities_type .type_header{
+.activity_type .type_header{
 	float: left;
 	display: inline-block;
 	width: 60px;
@@ -143,9 +142,9 @@ li{
 	color: #222;
 
 }
-.small_type a:hover{
+ .small_type a:hover{
 	background-color: #fc9700;
-}
+}   
 
 }
 .college{

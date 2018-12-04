@@ -7,6 +7,7 @@
 	<title>活动</title>
 	<link rel="stylesheet" type="text/css" href="css/activities.css">
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
+
 </head>
 <body>
 <!-- header -->
@@ -160,5 +161,6 @@
 	</div>
 <!--footer-->
 		<%@include file="footer.jsp"%>
+			<script type="text/javascript" src="js/activity.js"></script>
 </body>
 </html>
