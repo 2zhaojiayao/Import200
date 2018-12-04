@@ -1,7 +1,8 @@
 .jsgrid{
-	position:absolute;
+	position:relative;
 	overflow:hidden;
 	font-size:14px;
+	margin:0 auto;
 }
 .jsgrid,.jsgrid *,.jsgrid :after,.jsgrid :before{
 	box-sizing:border-box
