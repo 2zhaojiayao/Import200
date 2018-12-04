@@ -32,52 +32,7 @@
 	</div>
 	<%@include file="activity.jsp"%>
 	<script type="text/javascript" src="js/activity.js"></script>
-	<!-- <div class="activity_type">
-		<ul class="big_type">
-			<li>
-				<ul class="small_type">
-					<sapn class="type_header">按类别:</sapn>
-					<li><a href="#">全部</a>	</li>
-					<li><a>志愿活动</a></li>
-					<li><a>文体竞赛</a></li>
-					<li><a>学术竞赛</a></li>
-				</ul>
-			</li>
-			<div class="clear"></div>
-			<li>
-				<ul class="small_type">
-					<sapn class="type_header">按级别:</sapn>
-					<li><a>全部	</a></li>
-					<li><a>国家级</a></li>
-					<li><a>省级</a></li>
-					<li><a>市级</a></li>
-					<li><a>校级</a></li>
-				    <li>  <div class="college">
-				   	<input id="ipt" type="text" placeholder="院级"/>
-						 <ul id="ul">
-						  <li><a href="javascript:;" >物理科学与信息工程学院</a></li>
-						  <li><a href="javascript:;">测试2</a></li>
-						  <li><a href="javascript:;">测试3</a></li>
-						  <li><a href="javascript:;">测试4</a></li>
-						  <li><a href="javascript:;">测试5</a></li>
-						  <li><a href="javascript:;">测试6</a></li>
-						 </ul>
-						 </div>
-				    </li>
-				 </ul>
-			</li>
-			<div class="clear"></div>
-			<li>
-				<ul class="small_type">
-					<sapn class="type_header">按时间:</sapn>
-					<li><a>全部</a>	</li>
-					<li><a>报名中</a></li>
-					<li><a>进行中</a></li>
-					<li><a>已结束</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>  -->
+	
 <!--conter-->
 	<div class="activities_conter">
 		<div class="activity_object">
