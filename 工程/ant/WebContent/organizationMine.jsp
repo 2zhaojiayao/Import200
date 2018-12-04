@@ -12,7 +12,7 @@
 <body>
 	<div class="wrapper">
 	<!-- 页头 -->
-	<%@include file="header.jsp"%>
+	<%@include file="zuzhi_header.jsp"%>
 		<!-- 主要部分 -->
 		<div class="main">
 			<!-- 上部分 -->
@@ -100,15 +100,14 @@
 									<a href="#">编辑</a>
 									<select class="form-control">
 										<option value="">更多</option>
-										<option value="apple">苹果</option>
-										<option value="banana">香蕉</option>
-										<option value="orange">桔子</option>
+										<option value="apple">查看报名信息</option>
+										<option value="banana">查看参赛信息</option>
+										<option value="orange">删除本次活动</option>
 									</select>									
 								</div>
 							</div>
 						</div>
 						<div class="clear"></div>
-
 						<div class="bottom_list_detail">
 							<div class="bottom_list_detail_left">
 								<div class="num">
