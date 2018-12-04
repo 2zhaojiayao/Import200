@@ -49,13 +49,18 @@
 					<li><a>省级</a></li>
 					<li><a>市级</a></li>
 					<li><a>校级</a></li>
-				    <li><a>
-				    	<select>
-				    		<option>软件学院</option>
-				    		<option>数信学院</option>
-				    		<option>文学院</option>
-				    	</select></a>
-				    </li>
+				    <li>  <div class="college">
+							   	<input id="ipt" type="text" placeholder="院级"/>
+								 <ul id="ul">
+									  <li><a href="javascript:;" >物理科学与信息工程学院</a></li>
+									  <li><a href="javascript:;">测试2</a></li>
+									  <li><a href="javascript:;">测试3</a></li>
+									  <li><a href="javascript:;">测试4</a></li>
+									  <li><a href="javascript:;">测试5</a></li>
+									  <li><a href="javascript:;">测试6</a></li>
+								 </ul>
+                           </div>
+                    </li>
 				</ul>
 			</li>
 			<div class="clear"></div>
