@@ -45,7 +45,11 @@
 							</tr>
 							<tr class="tr">
 								<td class="td1">活动简介</td>
-								<td class="td2">---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+								<td class="td2"><div id="td2_box">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div></td>
+							</tr>
+							<tr class="tr">
+								<td class="td1">级别</td>
+								<td class="td2">校级/院级</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">举办者</td>
@@ -68,6 +72,14 @@
 								<td class="td2">是/否</td>
 							</tr>
 							<tr class="tr">
+								<td class="td1">参与形式</td>
+								<td class="td2">团队/个人</td>
+							</tr>
+							<tr class="tr">
+								<td class="td1">类型</td>
+								<td class="td2">学术竞赛/志愿活动/文体竞赛</td>
+							</tr>
+							<tr class="tr">
 								<td class="td1">综测加分</td>
 								<td class="td2">X分</td>
 							</tr>
@@ -81,6 +93,26 @@
 			<div class="content_right">
 				<div class="content_right_word">热门活动推荐</div>
 				<hr>
+				<div class="content_right_box">
+					<div class="content_right_box_inside1">
+						<img src="images/inside.svg" class="content_right_img">
+						<div class="content_right_text">
+							<div class="content_right_text1">活动名称</div>
+							<div class="content_right_text2">
+								这是一段很长的活动简介，很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长......</div>
+						</div>
+
+					</div>
+					<div class="content_right_box_inside2">
+						<div class="content_right_box1">
+							<a href="detail.jsp">去看看</a>
+						</div>
+						<div class="content_right_line"></div>
+						<div class="content_right_box2">
+							<a href="#">我要报名</a>
+						</div>
+					</div>
+				</div>
 				<div class="content_right_box">
 					<div class="content_right_box_inside1">
 						<img src="images/inside.svg" class="content_right_img">
