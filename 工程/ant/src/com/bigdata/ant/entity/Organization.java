@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 /**
@@ -26,6 +28,7 @@ private String eamil;
 private String password;
 private String name;
 private Set<Activity> activities=new HashSet<Activity>();
+
 	public Organization() {
 		// TODO Auto-generated constructor stub
 	}
@@ -62,5 +65,7 @@ private Set<Activity> activities=new HashSet<Activity>();
 	public void setActivities(Set<Activity> activities) {
 		this.activities = activities;
 	}
+	
+	
 
 }

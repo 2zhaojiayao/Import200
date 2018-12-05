@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/12/4 17:17:58                           */
+/* Created on:     2018/12/5 8:56:43                            */
 /*==============================================================*/
 
 
@@ -78,7 +78,7 @@ create table activity_sum
    id                   int not null auto_increment,
    student_id           int,
    activity_name        varchar(30),
-   term                 varchar(10),
+   year                 varchar(10),
    score                float,
    type                 varchar(10),
    primary key (id)
@@ -148,7 +148,6 @@ create table organization_user
    email                varchar(30),
    password             varchar(30),
    name                 varchar(60),
-   college_id           int,
    primary key (organization_id)
 );
 
