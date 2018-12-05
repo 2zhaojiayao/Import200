@@ -13,8 +13,6 @@
 	media="all">
 </head>
 <body>
-	<script type="text/javascript"
-		src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 	<!--header-->
 	<%@include file="header.jsp"%>
 	<!--main-->
@@ -39,7 +37,7 @@
 					<img src="images/center.jpg">
 				</div>
 				<div class="content_text">
-					<form method="post">
+					<form action="#" name="fileForm">
 						<table>
 							<tr class="tr">
 								<td class="td1">活动名称</td>
@@ -87,29 +85,29 @@
 							</tr>
 						</table>
 						<div class="content_submit">
-							<input type="submit" name="submit" value="我要报名" class="button"
-								onclick="openDialog()">
+							<div class="button" onclick="openDialog()">我要报名</div>
 						</div>
-						<div id="light" class="white_content">
-							<div class="main-fixed-comp popup-mask">
-								<div class="popup no-bottom boxtop">
-									<div class="popup-title">团队信息</div>
-									<div class="popup-content invite-popup">
-										<input class="popup-input search-input" placeholder="请输入团队名称"><br>
-										<input class="popup-input search-input"
-											placeholder="请输入邀请队员的学号">
-										<div class="popup-content cooperator-popup">
-											<div class="base-btn invite-btn">确定</div>
-											<div class="base-btn invite-btn">
-												<a href="javascript:void(0)" onclick="closeDialog() ">取消</a>
-											</div>
+
+						<div id="light" class="main-fixed-comp popup-mask">
+							<div class="popup no-bottom boxtop">
+								<div class="popup-title">项目协作成员</div>
+								<div class="popup-content invite-popup">
+									<input class="popup-input search-input" placeholder="请输入团队名称"><br>
+									<input class="popup-input search-input"
+										placeholder="请输入邀请队员的学号">
+									<div class="popup-content cooperator-popup">
+										<div class="invitation" onclick="()">添加队员</div>
+										<input type=button onclick="document.body.insertAdjacentHTML('beforeEnd','<input type=text name='+i+' value='+i+++'> ')" value=添加>
+										<div class="base-btn invite-btn" onclick="submitBtnClick()">确定</div>
+										<div class="base-btn invite-btn">
+											<a href="javascript:void(0)" onclick="closeDialog() ">取消</a>
 										</div>
 									</div>
 								</div>
-
 							</div>
-							<div id="fade"></div>
+
 						</div>
+						<div id="fade"></div>
 					</form>
 				</div>
 			</div>

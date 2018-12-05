@@ -298,21 +298,9 @@ hr {
 	height: 84px;
 }
 
-.white_content {
+.popup-mask {
 	display: none;
 	position: absolute;
-	top: 25%;
-	left: 25%;
-	width: 55%;
-	height: 55%;
-	padding: 20px;
-	background-color: white;
-	z-index: 1002;
-	overflow: auto;
-}
-
-.popup-mask {
-	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -363,7 +351,7 @@ hr {
 	margin-top: 20px;
 }
 
-button, input, textarea {
+button, input, keygen, select, textarea {
 	font: 16px "PingFang SC", "Microsoft YaHei", "Microsoft JhengHei", "黑体",
 		arial, STHeiti, '\5b8b\4f53';
 	border: none;
@@ -383,10 +371,16 @@ button, input, textarea {
 	text-align: center;
 	background-color: #fc9700;
 	cursor: pointer;
-	display: block;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	float: left;
+	margin-left:150px;
 }
 
+.base-btn a{
+	text-decoration: none;
+	cursor: pointer;
+	color: #fff;
+}
 .boxtop {
 	width: 640px;
 	padding-bottom: 20px;
