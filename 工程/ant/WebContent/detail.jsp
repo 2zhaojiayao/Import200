@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>活动详情</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <link rel="stylesheet" type="text/css" href="css/detail.css">
@@ -169,7 +170,7 @@
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="#">我要报名</a>
+							<a href="#" onclick="topbox()">我要报名</a>
 						</div>
 					</div>
 				</div>
@@ -183,5 +184,7 @@
 	<div class="bottom">
 		<%@include file="footer.jsp"%>
 	</div>
+
+	<script type="text/javascript" src="js/update.js"></script>
 </body>
 </html>
