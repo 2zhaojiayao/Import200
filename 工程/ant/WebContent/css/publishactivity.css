@@ -1,21 +1,22 @@
 *{
 	margin:0px auto;
-	font-size:16px;
-	font-family:"Î¢ÈíÑÅºÚ";
-	color:#383838;
 }
 body{
-	background-color:#fcfcdd; 
+	font-size:16px;
+	font-family:"å¾®è½¯é›…é»‘";
+	color:#383838;
+	background-color:#fcfcdd;
+}
+.header{
+	height:100px;
 }
 .content{
 	width:1080px;
-	height:1228px;
 }
 .content_top{
 	width:1040px;
 	height:100px;
 	background-color:#fff;
-	margin-top:10px;
 	margin-bottom:10px;
 	padding:20px;
 	line-height:2.2em;
@@ -38,12 +39,6 @@ body{
 	margin-right:5px;
 	float:left;
 }
-.introsign{
-	display:inline-block;
-	color:#fc7a00;
-	vertical-align:top;
-	margin-right:10px;
-}
 .sign{
 	color:#fc7a00;
 }
@@ -59,11 +54,9 @@ body{
 	font-size:16px;
 	background:#fff;
 	width:515px;
-	height:36px;
-	padding-top:12px;
+	height:60px;
 }
 .prompt{
-	font-size:16px;
 	display:inline-block;
 	width:125px;
 	text-align:left;
@@ -71,32 +64,31 @@ body{
 	vertical-align:top;
 }
 .textarea{
-	width:495px;
+	width:515px;
 	height:150px;
-	font-family:"Î¢ÈíÑÅºÚ";
-	font-size:16px;
 	padding:10px;
+	font-family:"å¾®è½¯é›…é»‘";
 	border:1px solid #e5e5e5;
 	margin-bottom:15px;
 	margin-left:45px;
 }
 .inputframe{
-	font-size:16px;
 	text-align:left;
-	text-indent:10px;
 	width:515px;
 	height:35px;
+	font-size:16px;
 	border:1px solid #e5e5e5;
+	padding-left:10px;
 	margin-bottom:18px;
 	color:#666;
 }
 .inputframe1{
-	font-size:16px;
 	text-align:left;
-	text-indent:10px;
 	width:520px;
 	height:40px;
+	font-size:16px;
 	border:1px solid #e5e5e5;
+	padding-left:10px;
 	margin-bottom:18px;
 	color:#666;
 }
@@ -202,7 +194,8 @@ body{
 	height:40px;
 	color:#333;
 	margin-top:42px;
-	border-radius:5px;
-	border:1px dashed #fc7a00;
+	border-radius:10px;	
 	background-color:#ffc985;
 }
+
+/*ffe285*/

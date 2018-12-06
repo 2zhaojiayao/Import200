@@ -7,12 +7,10 @@
 	<title>发布活动</title>
 	<script type="text/javascript" src="js/publishactivity.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/publishactivity.css"/>
-	<link rel="stylesheet" type="text/css" href="css/header_footer.css"
-	media="all">
 </head>
 <body>
 <!-- header -->
-<%@include file="header.jsp"%>
+<div class="header"></div>
 <!-- content -->
 <div class="content">
 	<!-- content_top -->
@@ -30,7 +28,7 @@
 				<lable class="addimg"><input type="file" name="img" class="upimg"/></lable><br>
 				<lable class="sign">*</lable><label class="prompt">活动名称：</label>
 				<input class="inputframe" type="text" name="activityname" placeholder="请输入活动名称"/><br>
-				<lable class="introsign">*</lable><label class="promptintro">活动简介：</label>
+				<label class="promptintro"><lable class="sign">*</lable>活动简介：</label>
 				<textarea class="textarea" placeholder="请输入活动介绍信息"></textarea><br>
 				<lable class="sign">*</lable><label class="prompt">报名开始时间：</label>
 				<input class="inputframe" type="date" name="applybegintime" value="2018-01-01"/><br>
@@ -127,6 +125,6 @@
 	</div>
 </div>
 <!-- footer -->
-<%@include file="footer.jsp"%>
+<div class="footer"></div>
 </body>
 </html>
