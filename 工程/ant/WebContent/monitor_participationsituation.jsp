@@ -4,13 +4,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>活动参与情况</title>
-	<link rel="stylesheet" type="text/css" href="css/participation.css">
+	<title>班委页面_活动参与情况</title>
+	<link rel="stylesheet" type="text/css" href="css/monitor_participationsituation.css">
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
 </head>
 <body>
 <!--header-->
-<%@include file="header.jsp"%>
+<%@include file="monitor_header.jsp"%>
 <!--conter-->
 	<div class="conter">
 		<p>如确认表格中活动参与情况不完善，班委可在此页面对活动参与情况作修改。</p>
@@ -23,4 +23,5 @@
 <!--footer-->
 	<%@include file="footer.jsp"%>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>活动</title>
-	<link rel="stylesheet" type="text/css" href="css/activity.css">
+	<title>个人页面_活动分类_ul</title>
+	<link rel="stylesheet" type="text/css" href="css/student_activityclassify_ul.css">
 	
 
 
@@ -73,6 +73,7 @@
 		</ul>
 	</div> 
 		
-  <script type="text/javascript" src="js/activity.js"></script>
+  <script type="text/javascript" src="js/student_activityclassify_ul.js"></script>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

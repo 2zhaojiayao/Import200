@@ -4,14 +4,14 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>发布活动</title>
-	<script type="text/javascript" src="js/publishactivity.js"></script>
+	<title>组织者页面_发布活动</title>
+	<script type="text/javascript" src="js/organization_publishactivity.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css"/>
-	<link rel="stylesheet" type="text/css" href="css/publishactivity.css"/>
+	<link rel="stylesheet" type="text/css" href="css/organization_publishactivity.css"/>
 </head>
 <body>
 <!-- header -->
-<%@include file="header.jsp" %>
+<%@include file="organization_header.jsp" %>
 <!-- content -->
 <div class="content">
 	<!-- content_top -->
@@ -128,4 +128,5 @@
 <!-- footer -->
 <%@include file="footer.jsp" %>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

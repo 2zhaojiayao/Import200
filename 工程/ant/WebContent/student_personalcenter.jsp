@@ -3,14 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>个人中心</title>
+	<title>个人页面_个人中心</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/PersonalCenter.css"/>
-	<script type="text/javascript" src="js/PersonalCenter.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/student_personalcenter.css"/>
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css"/>
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="student_header.jsp"%>
 	<table>
 		<!--页面header-->
 		<!--首页/个人首页-->
@@ -289,7 +288,7 @@
 								<td class="table3-tr0td0">
 									<!--日历-->
 									<div class='calendar' id='calendar'></div>
-  									<script type='text/javascript' src='js/Calendar.js'></script>
+  									<script type='text/javascript' src='js/student_personalcenter.js'></script>
 								</td>
 							</tr>
 

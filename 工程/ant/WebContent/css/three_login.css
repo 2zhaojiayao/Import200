@@ -1,6 +1,7 @@
 @charset "utf-8";
 body{
     background-color: #e5ecf5;
+    
 }
 *{
     margin: 0;
@@ -68,7 +69,7 @@ nav>.nav_logo,nav>.nav_logo>img{
 /*轮播图*/
 }
 .container>.login_body>#container_img{
-    width: 1859px;
+    width: 1080px;
     height: 806px;
     position: absolute;
     z-index: 1;

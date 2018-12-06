@@ -4,13 +4,13 @@
 <html lang="zh_cn">
 <head>
 <meta charset="utf-8">
-<link type="text/css" href="css/award2.css" rel="stylesheet">
+<link type="text/css" href="css/monitor_awardcharacter.css" rel="stylesheet">
 <link type="text/css" href="css/header_footer.css" rel="stylesheet">
-<title>评奖评优</title>
+<title>班委页面_评奖评优_导入品德成绩</title>
 </head>
 
 <body>
-	<%@include file="header.jsp"%>
+	<%@include file="monitor_header.jsp"%>
 <div class="content">
 	<div  id="steps">
 	   <ol class="ui-step ui-step-yellow ui-step-3">
@@ -54,4 +54,5 @@
 </div>
 	<%@include file="footer.jsp"%>				
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

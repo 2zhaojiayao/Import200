@@ -4,16 +4,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>活动发布成功</title>
-	<link rel="stylesheet" type="text/css" href="css/success.css">
+	<title>组织者页面_成功发布</title>
+	<link rel="stylesheet" type="text/css" href="css/organization_successfulpublish.css">
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
 </head>
 <body>
 	<!--header-->
-	<%@include file="zuzhi_header.jsp"%>
+	<%@include file="organization_header.jsp"%>
    	<!--content_top-->
     <div class="content_top">
-		<a href="#">首页</a> / 发布活动
+		<a href="#">首页</a> / 成功发布活动
 	</div>
 	<!--content-->
 	<div class="content">
@@ -25,4 +25,5 @@
 	<!--footer-->
 		<%@include file="footer.jsp"%>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

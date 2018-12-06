@@ -4,15 +4,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>活动</title>
-	<link rel="stylesheet" type="text/css" href="css/activities.css">
+	<title>个人页面_活动分类</title>
+	<link rel="stylesheet" type="text/css" href="css/student_activityclassify.css">
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
-	<link rel="stylesheet" type="text/css" href="css/activity.css">
+	<link rel="stylesheet" type="text/css" href="css/student_activityclassify_ul.css">
 
 </head>
 <body>
 <!-- header -->
-<%@include file="header.jsp"%>
+<%@include file="student_header.jsp"%>
 <!--type-->
 	<div class="assembly">
 			<div class="breadcrumb">
@@ -30,7 +30,7 @@
 				<div class="label" id="orange">分类</div>
 			</div>
 	</div>
-	<%@include file="activity.jsp"%>
+	<%@include file="student_activityclassify_ul.jsp"%>
 	<script type="text/javascript" src="js/activity.js"></script>
 	
 <!--conter-->
@@ -120,4 +120,5 @@
 		<%@include file="footer.jsp"%>
 			
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

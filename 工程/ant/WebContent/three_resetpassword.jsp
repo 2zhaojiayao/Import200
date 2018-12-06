@@ -4,9 +4,9 @@
 <html>
 <head>
 	<script type="text/javascript" src="js/resetpwd.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/resetpwd.css">
+	<link rel="stylesheet" type="text/css" href="css/three_resetpassword.css">
 	<meta charset="UTF-8">
-	<title></title>
+	<title>忘记密码_重置密码</title>
 </head>
 <body>
 	<div class="top"><img src="images/logo2.png"/ class="logo"></div>
@@ -20,4 +20,5 @@
 		<input type="submit" value="提交修改" class="sub"/>
 	</form>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

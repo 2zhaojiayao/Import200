@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>活动详情</title>
+<title>个人页面_活动详情</title>
 <script type="text/javascript" src="js/jquery.js"></script>
-<link rel="stylesheet" type="text/css" href="css/detail.css">
+<link rel="stylesheet" type="text/css" href="css/student_activitydetail.css">
 <link rel="stylesheet" type="text/css" href="css/header_footer.css"
 	media="all">
 </head>
@@ -14,7 +14,7 @@
 	<script type="text/javascript"
 		src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 	<!--header-->
-	<%@include file="header.jsp"%>
+	<%@include file="student_header.jsp"%>
 	<!--main-->
 	<div class="main">
 		<div class="main_top">
@@ -152,4 +152,5 @@
 		<%@include file="footer.jsp"%>
 	</div>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

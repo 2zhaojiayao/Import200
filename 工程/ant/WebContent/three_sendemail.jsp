@@ -4,8 +4,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>忘记密码</title>
-	<link rel="stylesheet" type="text/css" href="css/recoverpwd.css" />
+	<title>发送邮件</title>
+	<link rel="stylesheet" type="text/css" href="css/three_recoverpwd.css" />
 </head>
 <body>
 	<div class="top"><img src="images/logo2.png" class="logo"/></div>
@@ -19,4 +19,5 @@
 		<input type="submit" value="发送邮件" class="sub" />
 	</form>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

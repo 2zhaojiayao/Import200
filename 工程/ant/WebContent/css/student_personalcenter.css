@@ -4,7 +4,7 @@
 body{
 	background-color: #fcfcdd;
 }
-/*<!--首页/个人首页-->*/
+/*<!--棣栭〉/涓汉棣栭〉-->*/
 .table1{
 	height: 134px;
 	width: 1080px;
@@ -13,7 +13,7 @@ body{
 .table1 tr td a {
 	color: #a6a6a6;
 	font-size: 13px;
-	font-family:"微软雅黑";
+	font-family:"寰蒋闆呴粦";
 	text-decoration: none ;
 }
 .tr0td0{
@@ -26,29 +26,29 @@ body{
 .table1-ninhao{
 	color: #383838;
 	font-size: 19px;
-	font-family:"微软雅黑";
+	font-family:"寰蒋闆呴粦";
 }
 .table1-little{
 	color: #a6a6a6;
 	font-size: 13px;
-	font-family:"微软雅黑";
+	font-family:"寰蒋闆呴粦";
 }
 .table1-youshang{
 	color: #a6a6a6;
 	font-size: 13px;
-	font-family:"微软雅黑";
+	font-family:"寰蒋闆呴粦";
 }
 .table1-youxia{
 	color: #000000;
 	font-size: 28px;
-	font-family:"微软雅黑";
+	font-family:"寰蒋闆呴粦";
 }
 .table2{
 	height: 635px;
 	width:1080px; 
 	padding-top: 30px;
 }
-/*<!--我报名过的活动-->*/
+/*<!--鎴戞姤鍚嶈繃鐨勬椿鍔�-->*/
 .table2-tr0td0{
 	width: 750px;
 /*	background-color: yellow;*/
@@ -62,7 +62,7 @@ body{
 .table5 td{
 	border-spacing: 0px;
 }
-/*我报名过的活动*/
+/*鎴戞姤鍚嶈繃鐨勬椿鍔�*/
 .table5-tr0{
 	height: 59px;
 	flood-color: #383838;
@@ -71,7 +71,7 @@ body{
 	color: #383838;
 	padding-left: 30px;
 }
-/*<!--已报名-->*/
+/*<!--宸叉姤鍚�-->*/
 .table5-tr1td0{
 	height: 32px;
 	padding-left: 10px;
@@ -84,7 +84,7 @@ body{
 	width: 250px;
 	border-right: 1px solid #999;
 }
-/*<已报名中的div>*/
+/*<宸叉姤鍚嶄腑鐨刣iv>*/
 .table5-tr2td0-div{
 	height: 130px;
 	width: 234px;
@@ -93,11 +93,11 @@ body{
 .table5-tr2td1{
 	border-right: 1px solid #999;
 }
-/*<已报名的第一个项目名>*/
+/*<宸叉姤鍚嶇殑绗竴涓」鐩悕>*/
 .table6{
 	border:none;
 }
-/*<框内统一模板>*/
+/*<妗嗗唴缁熶竴妯℃澘>*/
 .table6-tr0td0-img{
 	height: auto;
 	width: 25px;
@@ -148,7 +148,7 @@ body{
 .table6-tr0td1{
 	display: block;
 }
-/*<已报名的第二个项目名>*/
+/*<宸叉姤鍚嶇殑绗簩涓」鐩悕>*/
 .table5-tr2td1{
 	height: 160px;
 	width: 250px;
@@ -207,7 +207,7 @@ body{
 .table7-tr0td1{
 	display: block;
 }
-/*<已报名的第三个项目名>*/
+/*<宸叉姤鍚嶇殑绗笁涓」鐩悕>*/
 .table5-tr2td2{
 	height: 160px;
 	width: 250px;
@@ -266,7 +266,7 @@ body{
 .table8-tr0td1{
 	display: block;
 }
-/*<!--进行中-->*/
+/*<!--杩涜涓�-->*/
 .table5-tr3td0{
 	height: 32px;
 	padding-left: 10px;
@@ -285,7 +285,7 @@ body{
 .table5-tr6td1{
 	border-right: 1px solid #999;
 }
-/*<进行中的第一个项目名>*/
+/*<杩涜涓殑绗竴涓」鐩悕>*/
 .table5-tr4td0{
 	height: 160px;
 	width: 250px;
@@ -344,7 +344,7 @@ body{
 .table9-tr0td1{
 	display: block;
 }
-/*<进行中的第二个项目名>*/
+/*<杩涜涓殑绗簩涓」鐩悕>*/
 .table5-tr4td1{
 	height: 160px;
 	width: 250px;
@@ -403,7 +403,7 @@ body{
 .table10-tr0td1{
 	display: block;
 }
-/*<进行中的第三个项目名>*/
+/*<杩涜涓殑绗笁涓」鐩悕>*/
 .table5-tr4td2{
 	height: 160px;
 	width: 250px;
@@ -462,7 +462,7 @@ body{
 .table11-tr0td1{
 	display: block;
 }
-/*<!--已完成-->*/
+/*<!--宸插畬鎴�-->*/
 .table5-tr5td0{
 	height: 32px;
 	padding-left: 10px;
@@ -472,7 +472,7 @@ body{
 .try{
 	border: 1px solid #999;
 }
-/*<已完成的第一个项目名>*/
+/*<宸插畬鎴愮殑绗竴涓」鐩悕>*/
 .table5-tr6td0{
 	height: 160px;
 	width: 250px;
@@ -531,7 +531,7 @@ body{
 .table12-tr0td1{
 	display: block;
 }
-/*<已完成的第二个项目名>*/
+/*<宸插畬鎴愮殑绗簩涓」鐩悕>*/
 .table5-tr6td1{
 	height: 160px;
 	width: 250px;
@@ -590,7 +590,7 @@ body{
 .table13-tr0td1{
 	display: block;
 }
-/*<已完成的第三个项目名>*/
+/*<宸插畬鎴愮殑绗笁涓」鐩悕>*/
 .table5-tr6td2{
 	height: 160px;
 	width: 250px;
@@ -649,33 +649,33 @@ body{
 .table14-tr0td1{
 	display: block;
 }
-/*<!--留白宽20px-->*/
+/*<!--鐣欑櫧瀹�20px-->*/
 .table2-tr0td1{
 	width: 20px;
 	background-color: #fcfcdd;
 }
-/*<!--日历+浏览历史-->*/
-/*<!--日历-->*/
+/*<!--鏃ュ巻+娴忚鍘嗗彶-->*/
+/*<!--鏃ュ巻-->*/
 .table3-tr0td0{
 	height: 280px;
 	width: 310px;
 	background-color: #fff;
 	
 }
-/*<!--留白高10px-->*/
+/*<!--鐣欑櫧楂�10px-->*/
 .table3-tr1td0{
 	height: 10px;
 	width: 310px;
 	background-color:#fcfcdd;
 }
-/*<!--浏览历史-->*/
+/*<!--娴忚鍘嗗彶-->*/
 .table3-tr2td0{
 	height: 345px;
 	width: 310px;
 	background-color: #fff;
 }
 /**
- * 设置日历的大小
+ * 璁剧疆鏃ュ巻鐨勫ぇ灏�
  */
 .calendar{
   width: 280px;
@@ -684,7 +684,7 @@ body{
 }
 
 /**
- * 设置日历顶部盒子
+ * 璁剧疆鏃ュ巻椤堕儴鐩掑瓙
  */
 .calendar .calendar-title-box{
   position: relative;
@@ -696,7 +696,7 @@ body{
 }
 
 /**
- * 设置上个月的按钮图标
+ * 璁剧疆涓婁釜鏈堢殑鎸夐挳鍥炬爣
  */
 .calendar .prev-month {
   position: absolute;
@@ -713,7 +713,7 @@ body{
 }
 
 /**
- * 设置下个月的按钮图标
+ * 璁剧疆涓嬩釜鏈堢殑鎸夐挳鍥炬爣
  */
 .calendar .next-month {
   position: absolute;
@@ -730,31 +730,31 @@ body{
 }
 
 
-/* 设置日历表格样式 */
+/* 璁剧疆鏃ュ巻琛ㄦ牸鏍峰紡 */
 .calendar-table{
   width: 100%;
   border-collapse: collapse;
   text-align:center;
 }
 
-/* 表格行高 */
+/* 琛ㄦ牸琛岄珮 */
 .calendar-table tr{
   height: 30px;
   line-height: 30px;
 }
 
-/* 当前天 颜色特殊显示 */
+/* 褰撳墠澶� 棰滆壊鐗规畩鏄剧ず */
 .currentDay {
   color: #ff8d1a;
 /*  background-color: #ff8d1a;*/
 }
 
-/* 本月 文字颜色 */
+/* 鏈湀 鏂囧瓧棰滆壊 */
 .currentMonth {
   color: #999;
 }
 
-/* 其他月颜色 */
+/* 鍏朵粬鏈堥鑹� */
 .otherMonth{
   color: #ede;
 }
@@ -804,7 +804,7 @@ body{
 	display: block;
 	line-height: 60px;
 	font-size: 14px;
-	margin-left: -40px;
+	margin:0px;
 }
 .table4-divul1 li:hover{
 	border-bottom: 1px solid #d9d9d9;
