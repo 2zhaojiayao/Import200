@@ -6,8 +6,8 @@
     <head>
         <meta charset="UTF-8">
         <title>login-小蚂蚁</title>
-        <link rel="stylesheet" href="css/login.css">
-         <script src="js/login.js"></script> 
+        <link rel="stylesheet" href="css/three_login.css">
+        <script src="js/three_login.js"></script> 
     </head>
     <body>
 
@@ -190,4 +190,5 @@
 		<%@include file="footer.jsp"%>
        
     </body>
+ <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

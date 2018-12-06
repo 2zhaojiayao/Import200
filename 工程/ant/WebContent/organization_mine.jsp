@@ -4,15 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>我的</title>
+	<title>组织者页面_我的</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
-	<link rel="stylesheet" type="text/css" href="css/organization.css">
+	<link rel="stylesheet" type="text/css" href="css/organization_mine.css">
 </head>
 <body>
 	<div class="wrapper">
 	<!-- 页头 -->
-	<%@include file="zuzhi_header.jsp"%>
+	<%@include file="organization_header.jsp"%>
 		<!-- 主要部分 -->
 		<div class="main">
 			<!-- 上部分 -->
@@ -329,4 +329,5 @@
 		<%@include file="footer.jsp"%>
 	</div>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

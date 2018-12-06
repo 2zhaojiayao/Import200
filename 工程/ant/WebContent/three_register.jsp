@@ -5,14 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <title>注册页面</title>
-    <link rel="stylesheet" type="text/css" href="css/regist.css">
+    <link rel="stylesheet" type="text/css" href="css/three_register.css">
     <link rel="stylesheet" type="text/css" href="css/header_footer.css"
 	media="all">
-    <script type="text/javascript" src="js/reg.js"></script>
+    <script type="text/javascript" src="js/three_register.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
-    <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
     <div class="wrapper">
         <div class="logo"><img src="images/logo2.png"></div>
         <div class="article">
@@ -161,4 +160,5 @@
         <%@include file="footer.jsp"%>
     </div>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

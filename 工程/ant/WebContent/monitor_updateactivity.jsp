@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>修改活动</title>
+<title>班委页面_修改活动</title>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jsgrid.min.js"></script>
-<link type="text/css" rel="stylesheet" href="css/update.css" />
-<link type="text/css" rel="stylesheet" href="css/jsgrid.min.css" />
-<link rel="stylesheet" type="text/css" href="css/jsgrid-theme.min.css">
+<link type="text/css" rel="stylesheet" href="css/monitor_updateactivity.css" />
+
+<script type="text/javascript" src="js/monitor_updateactivity.js"></script>
+<link type="text/css" rel="stylesheet" href="css/monitor_updateactivitymin.css" />
+<link rel="stylesheet" type="text/css" href="css/monitor_updateactivitytheme.css">
 </head>
 <body>
 	<!-- center -->
@@ -22,4 +23,5 @@
 	</div>
 	<script type="text/javascript" src="js/update.js"></script>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

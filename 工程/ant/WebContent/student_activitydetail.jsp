@@ -4,17 +4,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<<<<<<< HEAD:工程/ant/WebContent/student_activitydetail.jsp
+<title>个人页面_活动详情</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/student_activitydetail.css">
+=======
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>活动详情</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/detail.js"></script>
 <link rel="stylesheet" type="text/css" href="css/detail.css">
+>>>>>>> bc5308772457682a2d5f0b61105128e9a3a2be6b:工程/ant/WebContent/detail.jsp
 <link rel="stylesheet" type="text/css" href="css/header_footer.css"
 	media="all">
 </head>
 <body>
 	<!--header-->
-	<%@include file="header.jsp"%>
+	<%@include file="student_header.jsp"%>
 	<!--main-->
 	<div class="main">
 		<div class="main_top">
@@ -214,4 +220,5 @@
 	</div>
 
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

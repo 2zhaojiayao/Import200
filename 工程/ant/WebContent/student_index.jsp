@@ -5,7 +5,7 @@
 <html>
 <head>
 
-<title>班委首页</title>
+<title>个人页面_首页</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -17,7 +17,7 @@
 </head>
 <body>
 
-	<%@include file="banwei_header.jsp"%>
+	<%@include file="student_header.jsp"%>
 	<div class="content">
 		<div id="scrollPics">
 			<ul class="slider">
@@ -43,5 +43,5 @@
 
 
 </body>
-
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

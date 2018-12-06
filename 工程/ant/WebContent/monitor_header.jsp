@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/header_footer.css" media="all">
 </head>
 <div class="header">
 	<div class="top">
@@ -38,9 +39,7 @@
 	<div id="nav">
 		<ul>
 			<li><a href="#">首页</a></li>
-			<li><a href="#">活动列表</a></li>
-			<li><a href="#">发布活动</a></li>
-			<li><a href="#">我的</a></li>
+			<li><a href="#">评奖评优</a></li>
 		</ul>
 	</div>
 </div>

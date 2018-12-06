@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ActivityList</title>
+	<title>组织者页面_活动列表</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/ActivityList.css">
+	<link rel="stylesheet" type="text/css" href="css/organization_activitylist.css">
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css"/>
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="organization_header.jsp"%>
 	<table name="table2-1" cellpadding="0" cellspacing="0">
 		<!-- 首页活动列表 -->
 		<tr>			

@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>设置</title>
+	<title>个人页面_个人信息</title>
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
-	<link rel="stylesheet" type="text/css" href="css/setInformation.css">
+	<link rel="stylesheet" type="text/css" href="css/student_personalInformation.css">
 </head>
 <body>
 	<div class="wrapper">
 		<!-- 页头 -->
-		<%@include file="header.jsp"%>
+		<%@include file="student_header.jsp"%>
 		<!-- 主要部分 -->
 		<div class="main">
 			<!-- 上部分 -->
@@ -119,4 +119,5 @@
 		<%@include file="footer.jsp"%>
 	</div>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

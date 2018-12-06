@@ -4,11 +4,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>完善信息</title>
-    <link rel="stylesheet" type="text/css" href="css/header_footer.css">
-    <link rel="stylesheet" type="text/css" href="css/regist.css">
-    <script type="text/javascript" src="js/reg.js"></script>
+    <title>个人页面_完善信息</title>
     <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/header_footer.css">
+    <link rel="stylesheet" type="text/css" href="css/three_register.css">
+    <script type="text/javascript" src="js/three_register.js"></script>
 </head>
 <body>
     <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
@@ -63,4 +63,5 @@
         <%@include file="footer.jsp"%>
     </div>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>
