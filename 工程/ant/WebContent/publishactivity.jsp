@@ -6,11 +6,12 @@
 	<meta charset="UTF-8">
 	<title>发布活动</title>
 	<script type="text/javascript" src="js/publishactivity.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/header_footer.css"/>
 	<link rel="stylesheet" type="text/css" href="css/publishactivity.css"/>
 </head>
 <body>
 <!-- header -->
-<div class="header"></div>
+<%@include file="header.jsp" %>
 <!-- content -->
 <div class="content">
 	<!-- content_top -->
@@ -125,6 +126,6 @@
 	</div>
 </div>
 <!-- footer -->
-<div class="footer"></div>
+<%@include file="footer.jsp" %>
 </body>
 </html>
