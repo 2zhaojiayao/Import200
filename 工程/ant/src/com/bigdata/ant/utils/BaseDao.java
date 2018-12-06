@@ -129,15 +129,15 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 * @return Page的对象
 	 * @throws Exception
 	 */
-//	@SuppressWarnings("unchecked")
-//	public Page<T> findPage(int pageNum, int pageSize) throws Exception {
-//		long total = this.findCount();
-//		Query query = this.sessionFactory.getCurrentSession().createQuery("from " + entityClass.getSimpleName());
-//		query.setFirstResult((pageNum - 1) * pageSize);
-//		query.setMaxResults(pageSize);
-//		List<T> rows = query.list();
-//		return new Page<T>(pageNum, pageSize, (int) total, rows);
-//	}
+	@SuppressWarnings("unchecked")
+	public Page<T> findPage(int pageNum, int pageSize) throws Exception {
+		long total = this.findCount();
+		Query query = this.sessionFactory.getCurrentSession().createQuery("from " + entityClass.getSimpleName());
+		query.setFirstResult((pageNum - 1) * pageSize);
+		query.setMaxResults(pageSize);
+		List<T> rows = query.list();
+		return new Page<T>(pageNum, pageSize, (int) total, rows);
+	}
 
 	/**
 	 * @desc 根据hql，按条件查询数据数量
@@ -186,12 +186,12 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 * @return Page对象
 	 * @throws Exception
 	 */
-//	public Page<T> findPage(int pageNum, int pageSize, String hqlCount, String hqlList, Object[] params)
-//			throws Exception {
-//		long total = findCount(hqlCount, params);
-//		List<T> rows = find(pageNum, pageSize, hqlList, params);
-//		return new Page<T>(pageNum, pageSize, (int) total, rows);
-//	}
+	public Page<T> findPage(int pageNum, int pageSize, String hqlCount, String hqlList, Object[] params)
+			throws Exception {
+		long total = findCount(hqlCount, params);
+		List<T> rows = find(pageNum, pageSize, hqlList, params);
+		return new Page<T>(pageNum, pageSize, (int) total, rows);
+	}
 
 	/**
 	 * @desc 根据hql，按条件进行投影查询
@@ -241,12 +241,12 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 * @return Page对象
 	 * @throws Exception
 	 */
-//	public Page<Object[]> findPageByProjection(int pageNum, int pageSize, String hqlCount, String hqlList,
-//			Object[] params) throws Exception {
-//		long total = findCount(hqlCount, params);
-//		List<Object[]> rows = findByProjection(pageNum, pageSize, hqlList, params);
-//		return new Page<Object[]>(pageNum, pageSize, (int) total, rows);
-//	}
+	public Page<Object[]> findPageByProjection(int pageNum, int pageSize, String hqlCount, String hqlList,
+			Object[] params) throws Exception {
+		long total = findCount(hqlCount, params);
+		List<Object[]> rows = findByProjection(pageNum, pageSize, hqlList, params);
+		return new Page<Object[]>(pageNum, pageSize, (int) total, rows);
+	}
 
 	// **************SQL***************************
 	/**
@@ -350,11 +350,11 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 * @return
 	 * @throws Exception
 	 */
-//	public Page<Map<String, Object>> findPageBySql(int pageNum, int pageSize, String sqlCount, String sqlList, Object[] params)
-//			throws Exception {
-//		long total = this.findCountBySql(sqlCount, params);
-//		List<Map<String, Object>> rows = this.findBySql(sqlList, params, pageNum, pageSize);
-//		return new Page<Map<String, Object>>(pageNum, pageSize, (int) total, rows);
-//	}
+	public Page<Map<String, Object>> findPageBySql(int pageNum, int pageSize, String sqlCount, String sqlList, Object[] params)
+			throws Exception {
+		long total = this.findCountBySql(sqlCount, params);
+		List<Map<String, Object>> rows = this.findBySql(sqlList, params, pageNum, pageSize);
+		return new Page<Map<String, Object>>(pageNum, pageSize, (int) total, rows);
+	}
 
 }
