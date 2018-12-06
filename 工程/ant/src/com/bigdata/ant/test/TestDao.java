@@ -7,6 +7,8 @@
  */
 package com.bigdata.ant.test;
 
+import com.bigdata.ant.header.dao.HeaderDao;
+
 /**
  * @ClassName:TestDao
  * @Description:TODO（用一句话描述这个类的作用）
@@ -14,7 +16,7 @@ package com.bigdata.ant.test;
  * @Date:2018年11月22日
  *
  */
-public class TestDao {
+public class TestDao{
 
 	/**
 	 * 创建一个新的实例 TestDao.  
@@ -23,5 +25,10 @@ public class TestDao {
 	public TestDao() {
 		// TODO Auto-generated constructor stub
 	}
-
+public void main (String[] args) {
+	HeaderDao header1=new HeaderDao();
+	header1.fuzzySearch();
+	
+	
+}
 }
