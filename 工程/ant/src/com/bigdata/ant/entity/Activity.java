@@ -1,6 +1,5 @@
 
 package com.bigdata.ant.entity;
-import java.nio.MappedByteBuffer;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
