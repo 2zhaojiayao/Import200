@@ -6,7 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<<<<<<< HEAD:工程/ant/WebContent/student_header.jsp
 <link rel="stylesheet" type="text/css" href="css/header_footer.css" media="all">
+=======
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+>>>>>>> bc5308772457682a2d5f0b61105128e9a3a2be6b:工程/ant/WebContent/header.jsp
 </head>
 <div class="header">
 	<div class="top">
