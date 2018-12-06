@@ -110,51 +110,7 @@ li{
 .clear{
 	clear: both;
 }
-.activities_type{
-	margin:  auto;
-	width: 1080px;
-	background-color:#fff; 
-	height: 150px;
-	box-shadow: 0 0 0 1px #fff;
-}
 
-.activities_type li{
-	float: left;
-	
-}
-.activities_type .type_header{
-	float: left;
-	display: inline-block;
-	width: 60px;
-	height: 20px;
-	margin: 15px;
-	
-}
-.small_type li a{
-	display: inline-block;
-	width: 60px;
-	height: 20px;
-	font: 400 12px '微软雅黑';
-	border: 1px solid #eee;
-	margin: 14px;
-	border-radius: 7px;
-	text-align: center;
-	line-height: 20px;
-	color: #222;
-
-}
-.small_type select{
-   border-radius: 7px;
-}
-.small_type select:hover{
-  background-color: #fc9700;
-}
-.small_type a:hover{
-	background-color: #fc9700;
-}
-.small_type a:click{
-	background-color: #ccc;
-}
 /**conter*/
 .activities_conter{
 	width: 1080px;

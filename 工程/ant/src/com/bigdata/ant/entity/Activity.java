@@ -1,6 +1,5 @@
 
 package com.bigdata.ant.entity;
-import java.nio.MappedByteBuffer;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -38,7 +37,8 @@ private String holdPlace;
 private String style;
 private String participant;
 private String image;
-private String type;//类型
+private String searchType;//搜索类型
+private String comprehensiveType;//综测类型
 private String isInterview;
 private Organization organization;
 private Set<Student> students=new HashSet<Student>();
@@ -125,11 +125,18 @@ private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
 	public void setImage(String image) {
 		this.image = image;
 	}
-	public String getType() {
-		return type;
+
+	public String getSearchType() {
+		return searchType;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setSearchType(String searchType) {
+		this.searchType = searchType;
+	}
+	public String getComprehensiveType() {
+		return comprehensiveType;
+	}
+	public void setComprehensiveType(String comprehensiveType) {
+		this.comprehensiveType = comprehensiveType;
 	}
 	@Column(name="is_interview")
 	public String getIsInterview() {

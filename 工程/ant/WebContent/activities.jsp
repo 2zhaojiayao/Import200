@@ -7,6 +7,8 @@
 	<title>活动</title>
 	<link rel="stylesheet" type="text/css" href="css/activities.css">
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
+	<link rel="stylesheet" type="text/css" href="css/activity.css">
+
 </head>
 <body>
 <!-- header -->
@@ -28,48 +30,9 @@
 				<div class="label" id="orange">分类</div>
 			</div>
 	</div>
-	<div class="activities_type">
-		
-		<ul class="big_type">
-			<li>
-				<ul class="small_type">
-					<sapn class="type_header">按类别:</sapn>
-					<li><a href="#">全部</a>	</li>
-					<li><a>志愿活动</a></li>
-					<li><a>文体竞赛</a></li>
-					<li><a>学术竞赛</a></li>
-				</ul>
-			</li>
-			<div class="clear"></div>
-			<li>
-				<ul class="small_type">
-					<sapn class="type_header">按级别:</sapn>
-					<li><a>全部	</a></li>
-					<li><a>国家级</a></li>
-					<li><a>省级</a></li>
-					<li><a>市级</a></li>
-					<li><a>校级</a></li>
-				    <li><a>
-				    	<select>
-				    		<option>软件学院</option>
-				    		<option>数信学院</option>
-				    		<option>文学院</option>
-				    	</select></a>
-				    </li>
-				</ul>
-			</li>
-			<div class="clear"></div>
-			<li>
-				<ul class="small_type">
-					<sapn class="type_header">按时间:</sapn>
-					<li><a>全部</a>	</li>
-					<li><a>报名中</a></li>
-					<li><a>进行中</a></li>
-					<li><a>已结束</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+	<%@include file="activity.jsp"%>
+	<script type="text/javascript" src="js/activity.js"></script>
+	
 <!--conter-->
 	<div class="activities_conter">
 		<div class="activity_object">
@@ -155,5 +118,6 @@
 	</div>
 <!--footer-->
 		<%@include file="footer.jsp"%>
+			
 </body>
 </html>
