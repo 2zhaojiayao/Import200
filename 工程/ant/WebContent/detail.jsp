@@ -85,7 +85,7 @@
 							</tr>
 						</table>
 						<div class="content_submit">
-							<div class="button" onclick="openDialog()">我要报名</div>
+							<input type='button' id="text1" class="button" value="我要报名">
 						</div>
 
 						<div id="light" class="main-fixed-comp popup-mask">
@@ -93,15 +93,23 @@
 								<div class="popup-title">项目协作成员</div>
 								<div class="popup-content invite-popup">
 									<input class="popup-input search-input" placeholder="请输入团队名称"><br>
-									<input class="popup-input search-input"
-										placeholder="请输入邀请队员的学号">
-									<div class="popup-content cooperator-popup">
-										<div class="invitation" onclick="()">添加队员</div>
-										<input type=button onclick="document.body.insertAdjacentHTML('beforeEnd','<input type=text name='+i+' value='+i+++'> ')" value=添加>
-										<div class="base-btn invite-btn" onclick="submitBtnClick()">确定</div>
-										<div class="base-btn invite-btn">
-											<a href="javascript:void(0)" onclick="closeDialog() ">取消</a>
+									<div id="InputsWrapper">
+										<div class="extend">
+											<input type="text" name="mytext[]" id="field_1"
+												class="popup-input search-input" placeholder="请输入队员 1 的学号" />
+											<input type='button' rel="external nofollow"
+												class="removeclass" value='删除'>
 										</div>
+									</div>
+									<div class="popup-content cooperator-popup">
+										<input type='button' rel="external nofollow"
+											id="AddMoreFileBox" class="base-btn invite-btn" value="添加成员">
+										<div class="btn2">
+											<input type='button' id="text" class="base-btn invite-btn"
+												value="确定"> <input type='button' id="text2"
+												class="base-btn invite-btn" value="取消">
+										</div>
+
 									</div>
 								</div>
 							</div>

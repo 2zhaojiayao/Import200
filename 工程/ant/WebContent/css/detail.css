@@ -359,7 +359,7 @@ button, input, keygen, select, textarea {
 	color: #333;
 }
 
-.base-btn {
+.base-btn{
 	width: 100px;
 	height: 30px;
 	margin: 0 auto;
@@ -372,8 +372,34 @@ button, input, keygen, select, textarea {
 	background-color: #fc9700;
 	cursor: pointer;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+.removeclass {
+	width: 100px;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 4px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background-color: #fc7a00;
+	cursor: pointer;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	margin-left:50px;
+}
+.btn2 input{
 	float: left;
-	margin-left:150px;
+	margin-left: 150px;
+}
+#AddMoreFileBox{
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: #fcc300;
+	color:#d24d57;
+}
+.removeclass{
+	background-color: #d24d57;
 }
 
 .base-btn a{
