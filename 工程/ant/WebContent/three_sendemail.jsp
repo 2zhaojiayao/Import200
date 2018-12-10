@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="top"><img src="images/logo2.png" class="logo"/></div>
-	<form action="" method="post" class="formsty">
+	<form action="send" name="email" method="post" class="formsty">
 		<p class="fill">请填写您注册账号使用的邮箱:</p>
 		<input type="text" class="mail" />
 		<div class="prompt">
