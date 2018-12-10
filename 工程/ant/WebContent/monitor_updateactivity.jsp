@@ -6,16 +6,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>班委页面_修改活动</title>
 <script type="text/javascript" src="js/jquery.js"></script>
-<link type="text/css" rel="stylesheet" href="css/monitor_updateactivity.css" />
+<link type="text/css" rel="stylesheet"
+	href="css/monitor_updateactivity.css" />
 
 <script type="text/javascript" src="js/monitor_updateactivity.js"></script>
-<link type="text/css" rel="stylesheet" href="css/monitor_updateactivitymin.css" />
-<link rel="stylesheet" type="text/css" href="css/monitor_updateactivitytheme.css">
+<link type="text/css" rel="stylesheet"
+	href="css/monitor_updateactivitymin.css" />
+<link rel="stylesheet" type="text/css"
+	href="css/monitor_updateactivitytheme.css">
 </head>
 <body>
 	<!-- center -->
 	<div class="center">
-	<div class="center_text">点击以修改活动</div>
+		<div class="center_text">点击以修改活动</div>
 		<div id="jsGrid" class="center_jsGrid jsgrid"></div>
 		<div class="center_submit">
 			<input type="submit" name="submit" value="提 交" class="button">
@@ -23,5 +26,6 @@
 	</div>
 	<script type="text/javascript" src="js/update.js"></script>
 </body>
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>
