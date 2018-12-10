@@ -1,12 +1,10 @@
 package com.bigdata.ant.email;
 
 import java.util.Date;
-import java.util.Map;
 import java.util.Properties;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
-import javax.annotation.Resource;
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -48,14 +46,17 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 	 * @param params
 	 * @return
 	 */
-	public boolean SearchByEmail(String hql, String[] email) {
+	public boolean SearchByEmail(String hql, String email) {
+		Student s = null;
 		try {
-			if (this.findOne(hql, email) != null) {
-				return true;
-			} else {
-				return false;
-			}
-		} catch (Exception e) {
+			s = this.findOne(hql, email);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		if (s != null) {
+			return true;
+		} else {
 			return false;
 		}
 	}
@@ -71,29 +72,27 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 	 */
 	public void SendEmail(String email) {
 		Properties props = System.getProperties();
+		props.put("mail.transport.protocol", "smtp");
 		props.put("mail.smtp.host", "smtp.163.com");
 		props.put("mail.smtp.auth", "true");
 		Session session = Session.getInstance(props, new Authenticator() {
 			public PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("15226567668@163.com", "123456xjm");
+				return new PasswordAuthentication("15226567668@163.com", "xjm123456");
 			}
 		});
 		MimeMessage message = new MimeMessage(session);
-
 		try {
+
 			message.setFrom(new InternetAddress("15226567668@163.com"));
 			message.addRecipients(Message.RecipientType.TO, new InternetAddress().parse(email));
-			message.setSubject("找回密码");
-			MimeBodyPart mimeBodyPart = new MimeBodyPart();
-			mimeBodyPart.setContent("<a href='three_resetpassword.jsp?email=" + email + "'}'>点此链接，重置密码</a>",
-					"text/html;charset=GB2312");
-
-			MimeMultipart mimeMultipart = new MimeMultipart();
-			mimeMultipart.addBodyPart(mimeBodyPart);
-			message.setContent(mimeMultipart);
-
-			message.setHeader("忘记密码", "smtpsend");
+			message.setSubject("重置密码");
+//			message.setContent(
+//					"<h2>重置密码</h2><b>亲爱的用户，您好！</b><br><a href=localhost:8080/ant/three_sendemail.jsp>点此链接，重置密码</a>",
+//					"text/html;charset=GB2312");
+			message.setContent("<a href='http://www.baidu.com'>度娘</a>", "text/html;charset=GBK");
+			message.setHeader("X-Mailer", "smtpsend");
 			message.setSentDate(new Date());
+			message.saveChanges();
 			Transport.send(message);
 		} catch (AddressException e) {
 			// TODO Auto-generated catch block
@@ -102,6 +101,5 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return;
 	}
 }

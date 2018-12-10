@@ -20,13 +20,13 @@ public class SendEmailController {
 	private SendEmailServiceImpl sendEmailServiceImpl;
 
 	@RequestMapping("/send")
-	public String IsEmail(HttpServletRequest request) {
+	public String SendEmail(HttpServletRequest request) {
 		String email = request.getParameter("email");
-		String[] one = { email };
-		String hql = "from Student s where s.email=?";
-		boolean b = this.sendEmailServiceImpl.FindEmail(hql, one);// 判断数据库中是否有此email
-//		this.sendEmailServiceImpl.SendEmail(email);
-		System.out.println(email);
+		String hql = "from Student s where s.email = ?0";
+		boolean b = this.sendEmailServiceImpl.FindEmail(hql, email);// 判断数据库中是否有此email
+		if (b == true) {
+			this.sendEmailServiceImpl.SendEmail(email);
+		}
 		System.out.println(b);
 		return "three_sendemail";
 	}

@@ -29,11 +29,11 @@ public class SendEmailServiceImpl {
 	 * @return:boolean(返回类型)
 	 *
 	 * @param hql
-	 * @param params
+	 * @param email
 	 * @return
 	 */
-	public boolean FindEmail(String hql, String[] params) {
-		if (this.sendEmailDaoImpl.SearchByEmail(hql, params)) {
+	public boolean FindEmail(String hql, String email) {
+		if (this.sendEmailDaoImpl.SearchByEmail(hql, email)) {
 			return true;
 		} else {
 			return false;
