@@ -6,7 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<<<<<<< HEAD
 <script type="text/javascript" src="js/JsonpAjax.js"></script>
+=======
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+>>>>>>> 961514b0a2dff5b8ce823b61becad083483264f8
 </head>
 <div class="header">
 	<div class="top">
