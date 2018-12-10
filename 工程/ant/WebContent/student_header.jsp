@@ -6,11 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/jquery.js"></script>
-<<<<<<< HEAD:工程/ant/WebContent/student_header.jsp
-<link rel="stylesheet" type="text/css" href="css/header_footer.css" media="all">
-=======
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
->>>>>>> bc5308772457682a2d5f0b61105128e9a3a2be6b:工程/ant/WebContent/header.jsp
+<script type="text/javascript" src="js/JsonpAjax.js"></script>
 </head>
 <div class="header">
 	<div class="top">
@@ -24,8 +20,10 @@
 				<td class="top_1">
 					<div class="search">
 						<form>
-							<input type="text" placeholder="  请输入您要搜索的内容...">
-							<button type="submit"></button>
+							 <input type="text" placeholder="       请输入您要搜索的内容..." id="text"> 
+						     <button type="submit"></button> 
+							 <div id="word"></div>
+							
 						</form>
 					</div>
 				</td>
