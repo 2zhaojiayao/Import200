@@ -86,10 +86,7 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 			message.setFrom(new InternetAddress("15226567668@163.com"));
 			message.addRecipients(Message.RecipientType.TO, new InternetAddress().parse(email));
 			message.setSubject("重置密码");
-//			message.setContent(
-//					"<h2>重置密码</h2><b>亲爱的用户，您好！</b><br><a href=localhost:8080/ant/three_sendemail.jsp>点此链接，重置密码</a>",
-//					"text/html;charset=GB2312");
-			message.setContent("<a href='http://www.baidu.com'>度娘</a>", "text/html;charset=GBK");
+			message.setContent("<a href='http://localhost:8080/ant/three_resetpassword.jsp?email="+email+"''>点此链接，重置密码</a>", "text/html;charset=GBK");
 			message.setHeader("X-Mailer", "smtpsend");
 			message.setSentDate(new Date());
 			message.saveChanges();

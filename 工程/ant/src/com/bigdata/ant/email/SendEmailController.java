@@ -27,7 +27,6 @@ public class SendEmailController {
 		if (b == true) {
 			this.sendEmailServiceImpl.SendEmail(email);
 		}
-		System.out.println(b);
 		return "three_sendemail";
 	}
 
