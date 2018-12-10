@@ -15,23 +15,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller
-@RequestMapping("/send")
 public class SendEmailController {
 	@Resource
 	private SendEmailServiceImpl sendEmailServiceImpl;
-	
+
+	@RequestMapping("/send")
 	public String IsEmail(HttpServletRequest request) {
-		return "index";
-//		String email = request.getParameter("email");
-//		Object[] one = {email};
-//		String hql = "from Student s where s.email=?";
-//		boolean b = this.sendEmailServiceImpl.FindEmail(hql, one);//判断数据库中是否有此email
-//		if(b) {
-//			this.sendEmailServiceImpl.SendEmail(email);
-//		}else {
-//			return "404";
-//		}
-//		return null;
+		String email = request.getParameter("email");
+		String[] one = { email };
+		String hql = "from Student s where s.email=?";
+		boolean b = this.sendEmailServiceImpl.FindEmail(hql, one);// 判断数据库中是否有此email
+//		this.sendEmailServiceImpl.SendEmail(email);
+		System.out.println(email);
+		System.out.println(b);
+		return "three_sendemail";
 	}
 
 }

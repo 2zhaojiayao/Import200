@@ -35,9 +35,22 @@ import com.bigdata.ant.utils.BaseDao;
 @Repository
 public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 
-	public boolean SearchByEmail(String hql, Object[] params) {
+	/**
+	 * 
+	 * @Title: SearchByEmail
+	 * @Description: 通过email找到用户
+	 * @param:@param hql
+	 * @param:@param params
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param hql
+	 * @param params
+	 * @return
+	 */
+	public boolean SearchByEmail(String hql, String[] email) {
 		try {
-			if (this.findOne(hql, params) != null) {
+			if (this.findOne(hql, email) != null) {
 				return true;
 			} else {
 				return false;
@@ -47,6 +60,15 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 		}
 	}
 
+	/**
+	 * 
+	 * @Title: SendEmail
+	 * @Description: 发送邮件
+	 * @param:@param email (参数)
+	 * @return:void(返回类型)
+	 *
+	 * @param email
+	 */
 	public void SendEmail(String email) {
 		Properties props = System.getProperties();
 		props.put("mail.smtp.host", "smtp.163.com");
@@ -63,7 +85,7 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 			message.addRecipients(Message.RecipientType.TO, new InternetAddress().parse(email));
 			message.setSubject("找回密码");
 			MimeBodyPart mimeBodyPart = new MimeBodyPart();
-			mimeBodyPart.setContent("<a href='three_resetpassword.jsp?email="+email+"'}'>点此链接，重置密码</a>",
+			mimeBodyPart.setContent("<a href='three_resetpassword.jsp?email=" + email + "'}'>点此链接，重置密码</a>",
 					"text/html;charset=GB2312");
 
 			MimeMultipart mimeMultipart = new MimeMultipart();
@@ -80,6 +102,6 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return ;
+		return;
 	}
 }
