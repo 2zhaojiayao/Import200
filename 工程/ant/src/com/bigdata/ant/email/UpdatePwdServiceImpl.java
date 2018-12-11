@@ -19,6 +19,9 @@ public class UpdatePwdServiceImpl {
 
 	@Resource
 	private UpdatePwdDaoImpl updatePwdDaoImpl;
-	
-	public boolean FindEmail(String hql, String email) {}
+
+	public void ChangePwd(String hql, String email, String pwd) {
+		this.updatePwdDaoImpl.UpdatePwd(hql, email, pwd);
+		return;
+	}
 }

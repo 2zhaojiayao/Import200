@@ -9,7 +9,7 @@
 	<title>忘记密码_重置密码</title>
 </head>
 <body>
-	<div class="top"><img src="images/logo2.png"/ class="logo"></div>
+	<div class="top"><img src="images/logo2.png" class="logo"></div>
 	<form action="updatepwd" method="post" class="formsty">
 		<p class="mailid">${email }</p>
 		<div class="prompt">新密码：</div>
