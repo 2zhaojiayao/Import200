@@ -5,7 +5,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.swing.JOptionPane;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 
@@ -33,6 +36,7 @@ public class UpdatePwdController {
 			JOptionPane.showMessageDialog(null, "密码修改成功，请登录", "成功", JOptionPane.OK_OPTION);
 			return "three_login";
 		} else {
+			request.setAttribute("email", email);
 			JOptionPane.showMessageDialog(null, "请重新输入！", "错误", JOptionPane.ERROR_MESSAGE);
 			return "three_resetpassword";
 		}

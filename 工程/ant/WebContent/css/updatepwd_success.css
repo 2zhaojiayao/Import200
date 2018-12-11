@@ -1,0 +1,33 @@
+html, body {
+	background-color: #fcfcdd;
+	width: auto;
+	height: 100%;
+	margin: 0 auto;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	width: 1080px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.content img {
+	margin: 0 auto;
+	margin-top: 20%;
+	width: auto;
+	height: auto;
+	text-align: center;
+	margin-top: 20%;
+}
+
+p {
+	color: #fc7a00;
+	font-size: 30px;
+	padding-bottom: 20px;
+	text-align: center;
+}

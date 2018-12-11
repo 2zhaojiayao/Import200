@@ -24,10 +24,13 @@ public class SendEmailController {
 		String email = request.getParameter("email");
 		String hql = "from Student s where s.email = ?0";
 		boolean b = this.sendEmailServiceImpl.FindEmail(hql, email);// 判断数据库中是否有此email
+		request.setAttribute("email", email);
 		if (b == true) {
 			this.sendEmailServiceImpl.SendEmail(email);
+			return "three_login";
+		} else {
+			return "three_sendemail";
 		}
-		return "three_sendemail";
 	}
 
 }

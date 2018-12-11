@@ -49,7 +49,7 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 	public boolean SearchByEmail(String hql, String email) {
 		Student s = null;
 		try {
-			s = this.findOne(hql, email);
+			s = this.findOne1(hql, email);
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -86,7 +86,9 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 			message.setFrom(new InternetAddress("15226567668@163.com"));
 			message.addRecipients(Message.RecipientType.TO, new InternetAddress().parse(email));
 			message.setSubject("重置密码");
-			message.setContent("<a href='http://localhost:8080/ant/three_resetpassword.jsp?email="+email+"''>点此链接，重置密码</a>", "text/html;charset=GBK");
+			message.setContent(
+					"<a href='http://localhost:8080/ant/three_resetpassword.jsp?email=" + email + "''>点此链接，重置密码</a>",
+					"text/html;charset=GBK");
 			message.setHeader("X-Mailer", "smtpsend");
 			message.setSentDate(new Date());
 			message.saveChanges();

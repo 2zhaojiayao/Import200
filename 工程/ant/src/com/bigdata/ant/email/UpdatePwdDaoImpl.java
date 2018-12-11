@@ -31,9 +31,9 @@ public class UpdatePwdDaoImpl extends BaseDao<Student, Integer> {
 	 */
 	public void UpdatePwd(String hql, String email, String pwd) {
 		try {
-			Student s = this.findOne(hql, email);
+			Student s = this.findOne1(hql, email);
 			s.setPassword(pwd);
-			this.update(s);
+			this.save(s);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
