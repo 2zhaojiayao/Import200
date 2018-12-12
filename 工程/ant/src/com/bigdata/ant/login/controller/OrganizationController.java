@@ -44,8 +44,7 @@ public class OrganizationController {
 			return "three_login";
 		} else {
 			Organization o = this.organizationServiceImpl.FindName(email);
-			String name = o.getName();
-			request.setAttribute("name", name);
+			request.setAttribute("o", o);
 			return "organization_index";
 		}
 	}
