@@ -21,6 +21,17 @@ public class SendEmailController {
 	@Resource
 	private SendEmailServiceImpl sendEmailServiceImpl;
 
+	/**
+	 * 
+	 * @Title: SendEmail
+	 * @Description: 验证邮箱
+	 * @param:@param request
+	 * @param:@return (参数)
+	 * @return:String(返回类型)
+	 *
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping("/send")
 	public String SendEmail(HttpServletRequest request) {
 		String email = request.getParameter("email");
