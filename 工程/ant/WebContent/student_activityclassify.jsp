@@ -36,9 +36,9 @@
 <!--conter-->
 	<div class="activities_conter">
 		<div class="activity_object">
-			<a href=""><img src="images/activity1.jpg"></a>
+			<a href="activitydetail?activityId=1"><img src="images/activity1.jpg"></a>
 		<ul>
-			<li><a href="#">activity_name</a></li>
+			<li><a href="activitydetail?activityId=1">activity_name</a></li>
 			<li><p id="grey">activity_describe</p></li>
 			<li id="grey">activity_time</li>
 		</ul>
