@@ -10,24 +10,36 @@ html, body {
 	padding: 0;
 }
 
-.content {
+.center {
 	width: 1080px;
 	height: 100%;
 	margin: 0 auto;
 }
 
-.content img {
-	margin: 0 auto;
-	margin-top: 20%;
-	width: auto;
-	height: auto;
-	text-align: center;
-	margin-top: 20%;
+.center_img {
+	width: 1080px;
+	height: 100%;
 }
 
-p {
-	color: #fc7a00;
-	font-size: 30px;
+img {
+	margin-top: 20%;
+	margin-left: 20px;
+	width: 50px;
+	height: auto;
+	text-align: center;
+}
+
+.center_text {
+	width: 1080px;
+	height: auto;
+	margin-top: 20%;
+	margin-left: 20px;
+	font-family: "FZShuTi", 方正舒体;
+}
+
+.center_p1 {
+	color: #383838;
+	font-size: 34px;
 	padding-bottom: 20px;
 	text-align: center;
 }
