@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<<<<<<< HEAD:工程/ant/WebContent/student_activitydetail.jsp
 <title>个人页面_活动详情</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <link rel="stylesheet" type="text/css"
