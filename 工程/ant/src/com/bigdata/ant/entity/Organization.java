@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 /**
  * 
  * @ClassName:Organization
@@ -21,51 +23,60 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="organization_user")
+@Table(name = "organization_user")
 public class Organization {
-private int id;
-private String eamil;
-private String password;
-private String name;
-private Set<Activity> activities=new HashSet<Activity>();
+	private int id;
+	private String email;
+	private String password;
+	private String name;
+	private Set<Activity> activities = new HashSet<Activity>();
 
 	public Organization() {
 		// TODO Auto-generated constructor stub
 	}
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "organization_id")
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getEamil() {
-		return eamil;
+
+	public String getEmail() {
+		return email;
 	}
-	public void setEamil(String eamil) {
-		this.eamil = eamil;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	@OneToMany(mappedBy="organization",targetEntity=Activity.class,cascade=CascadeType.ALL)
+
+	@OneToMany(mappedBy = "organization", targetEntity = Activity.class, cascade = CascadeType.ALL)
 	public Set<Activity> getActivities() {
 		return activities;
 	}
+
 	public void setActivities(Set<Activity> activities) {
 		this.activities = activities;
 	}
-	
-	
 
 }

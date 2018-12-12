@@ -28,7 +28,7 @@
 			&nbsp;/&nbsp; <span class="main_top_left2">活动详情</span>
 		</div>
 		<div class="main_center">
-			<span class="main_center_left">活动名称</span>
+			<span class="main_center_left">${activitydetail.name }</span>
 		</div>
 		<div class="main_bottom">
 			<span class="main_bottom_left">这里是活动内容的简介---------------------------------大概会有一行文字---------------------------------</span>
@@ -46,47 +46,51 @@
 						<table>
 							<tr class="tr">
 								<td class="td1">活动名称</td>
-								<td class="td2">XXX活动</td>
+								<td class="td2">${activitydetail.name }</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">活动简介</td>
-								<td class="td2"><div id="td2_box">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div></td>
+								<td class="td2"><div id="td2_box">${activitydetail.description }------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div></td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">级别</td>
-								<td class="td2">校级/院级</td>
+								<td class="td2">${activitydetail.level }</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">举办者</td>
-								<td class="td2">XXX组织</td>
+								<td class="td2">${activitydetail.organization.name}</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">参与对象</td>
-								<td class="td2">XXX、XXX、XXX</td>
+								<td class="td2">${activitydetail.participant}</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">报名截止时间</td>
-								<td class="td2">XXXX年-XX月-XX日</td>
+								<td class="td2">${activitydetail.applyEnd}</td>
 							</tr>
 							<tr class="tr">
-								<td class="td1">活动举办时间</td>
-								<td class="td2">XXXX年-XX月-XX日</td>
+								<td class="td1">举办开始时间</td>
+								<td class="td2">${activitydetail.holdBegin}</td>
+							</tr>
+							<tr class="tr">
+								<td class="td1">举办结束时间</td>
+								<td class="td2">${activitydetail.holdEnd}</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">是否需要面试</td>
-								<td class="td2">是/否</td>
+								<td class="td2">${activitydetail.isInterview }</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">参与形式</td>
-								<td class="td2">团队/个人</td>
+								<td class="td2">${activitydetail.style }</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">类型</td>
-								<td class="td2">学术竞赛/志愿活动/文体竞赛</td>
+								<td class="td2">${activitydetail.comprehensiveType }</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">综测加分</td>
-								<td class="td2">X分</td>
+								<td class="td2">${activitystage.score }</td>
 							</tr>
 						</table>
 						<div class="content_submit">
