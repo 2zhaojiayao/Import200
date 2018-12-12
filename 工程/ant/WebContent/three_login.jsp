@@ -101,7 +101,7 @@
 
 						</div>
 						<div class="b_clear submit">
-							<a href="#" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
+							<a href="toRegister" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
 							<button type="submit">登&nbsp;&nbsp;录</button>
 
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>
@@ -133,7 +133,7 @@
 
 						</div>
 						<div class="b_clear submit">
-							<a href="#" class="r_float" id="orange">注册账号</a> <a href="#"
+							<a href="toRegister" class="r_float" id="orange">注册账号</a> <a href="#"
 								class="r_float" id="orange">忘记密码？</a>
 							<button type="submit">登&nbsp;&nbsp;录</button>
 
@@ -167,7 +167,7 @@
 
 						</div>
 						<div class="b_clear submit">
-							<a href="#" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
+							<a href="toRegister" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
 							<button type="submit">登&nbsp;&nbsp;录</button>
 
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>

@@ -75,3 +75,83 @@ function orgReg() {
         tags[0].classList.remove("active");
     }
 }
+$(function() {
+	$("#student_id").blur(function(){
+		var student_id=$("#student_id").val();
+		var textId=/^\d{10}$/;
+		if(!textId.test(student_id)){
+			$("#top_id_msg").html("学号必须由10位数字组成");
+			$("#top_id_msg").addClass("redWord");
+		}else{
+			$.ajax({
+		    	url:"checkStudentId",
+		        type:"POST",
+		        data:{"student_id":student_id},
+		        success: function(data) {
+		        	if("no"==data){
+		        		$("#top_id_msg").html("该学号已被注册");
+		        		$("#top_id_msg").addClass("redWord");
+		        	}else if("ok"==data){
+		        		$("#top_id_msg").html("该学号可以注册");
+		        		$("#top_id_msg").removeClass("redWord");
+		        	}
+		        }
+		    });
+		}
+	});	
+	$("#name").blur(function(){
+		var name=$("#name").val();
+		var textName=/[\u4e00-\u9fa5]{2,20}|[a-zA-Z\.\s]{1,20}/;
+		if(!textName.test(name)){
+			$("#name_msg").html("请填写您的真实姓名，长度在20个字符以内");
+			$("#name_msg").addClass("redWord");
+		}else{
+			$("#name_msg").html("姓名符合要求");
+			$("#name_msg").removeClass("redWord");
+		}
+	});	
+	$("#psd").blur(function(){
+		var psd=$("#psd").val();
+		var textPsd=/^[a-zA-Z]\w{5,17}$/;
+		if(!textPsd.test(psd)){
+			$("#psd_msg").html("以字母开头，长度在6~18之间，只能包含字母、数字和下划线");
+			$("#psd_msg").addClass("redWord");
+		}else{
+			$("#psd_msg").html("密码符合要求");
+			$("#psd_msg").removeClass("redWord");
+		}
+	});	
+	$("#againpsd").blur(function(){
+		var psd=$("#psd").val();
+		var againpsd=$("#againpsd").val();
+		if(!(psd==againpsd)){
+			$("#againpsd_msg").html("密码前后不一致");
+			$("#againpsd_msg").addClass("redWord");
+		}else{
+			$("#againpsd_msg").html("密码前后一致");
+			$("#againpsd_msg").removeClass("redWord");
+		}
+	});	
+	$("#email").blur(function(){
+		var email=$("#email").val();
+		var textEmail=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+		if(!textEmail.test(email)){
+			$("#email_psg").html("请填写正确格式的邮箱地址");
+			$("#email_psg").addClass("redWord");
+		}else{
+			$("#email_psg").html("邮箱符合要求");
+			$("#email_psg").removeClass("redWord");
+		}
+	});	
+	$("#college").change(function(){
+		var college=$('#college').val();
+		$.ajax({
+	    url:"selectProfession",
+	    type:"POST",
+	    data:{"profession":college},
+	    success: function(data) {
+	    	
+	    }
+	    });
+	});	
+});

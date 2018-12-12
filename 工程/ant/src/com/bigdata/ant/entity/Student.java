@@ -1,9 +1,12 @@
 package com.bigdata.ant.entity;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,6 +16,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.GenericGenerator;
 /**
@@ -32,6 +36,9 @@ public class Student {
 	private String gender;
 	private String email;
 	private ClassInfo classInfo;
+	private Integer status;//状态，0-未激活；1-已激活 ;
+	private String validateCode;
+	private Date registerTime;
 	private Set<Activity> scanedActivities=new HashSet<Activity>();
 	private Set<ActivityJoin> joinedActivities=new HashSet<ActivityJoin>();
 	public Student() {
@@ -70,6 +77,26 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	@Column(name="validate_code")
+	public String getValidateCode() {
+		return validateCode;
+	}
+	public void setValidateCode(String validateCode) {
+		this.validateCode = validateCode;
+	}
+	@Column(name="register_time")
+	public Date getRegisterTime() {
+		return registerTime;
+	}
+	public void setRegisterTime(Date registerTime) {
+		this.registerTime = registerTime;
+	}
 	@ManyToOne
 	@JoinColumn(name="class_id")
 	public ClassInfo getClassInfo() {
@@ -93,7 +120,4 @@ public class Student {
 	public void setJoinedActivities(Set<ActivityJoin> joinedActivities) {
 		this.joinedActivities = joinedActivities;
 	}
-	
-	
-	
 }
