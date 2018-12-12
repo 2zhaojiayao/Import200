@@ -65,12 +65,8 @@
 								<td class="td2">${activitydetail.applyEnd}</td>
 							</tr>
 							<tr class="tr">
-								<td class="td1">举办开始时间</td>
-								<td class="td2">${activitydetail.holdBegin}</td>
-							</tr>
-							<tr class="tr">
-								<td class="td1">举办结束时间</td>
-								<td class="td2">${activitydetail.holdEnd}</td>
+								<td class="td1">活动起止时间</td>
+								<td class="td2">${activitydetail.holdBegin}&nbsp;——&nbsp;${activitydetail.holdEnd}</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">是否需要面试</td>
