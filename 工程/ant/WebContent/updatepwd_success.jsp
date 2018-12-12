@@ -19,7 +19,7 @@
 			<img src="images/success.png">
 		</div>
 		<div class="center_text">
-			<p class=""center_p1"">
+			<p class="center_p1"">
 				更改密码成功，<span class="time"></span>秒后跳回登录页面
 			</p>
 		</div>

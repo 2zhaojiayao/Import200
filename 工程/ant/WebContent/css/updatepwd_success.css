@@ -17,24 +17,21 @@ html, body {
 }
 
 .center_img {
-	width: 1080px;
-	height: 200px;
+	width: 100px;
+	height: auto;
 	margin: 0 auto;
 }
 
 .center_img img {
-	margin-top: 50%;
-	margin-left: 40%;
-	width: 50px;
+	width: auto;
 	height: auto;
 	text-align: center;
 }
 
 .center_text {
-	width: 1080px;
-	height: 400px;
-	margin-top: 20%;
-	margin-left: 20%;
+	margin: 0 auto;
+	width: 600px;
+	height: auto;
 	font-family: "FZShuTi", 方正舒体;
 }
 
