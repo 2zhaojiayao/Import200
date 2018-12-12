@@ -6,21 +6,23 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bigdata.ant.login.service.MonitorServiceImpl;
+import com.bigdata.ant.login.service.OrganizationServiceImpl;
 import com.bigdata.ant.login.service.StudentServiceImpl;
 
 /**
  * 
- * @ClassName:StudentController
- * @Description:学生登录验证
+ * @ClassName:MonitorController
+ * @Description:班委登录验证
  * @Author xujunmei
  * @Date:2018年12月12日
  *
  */
 @Controller
-public class StudentController {
+public class MonitorController {
 
 	@Resource
-	private StudentServiceImpl studentServiceImpl;
+	private MonitorServiceImpl monitorServiceImpl;
 
 	/**
 	 * 
@@ -33,16 +35,16 @@ public class StudentController {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping("/stu_login")
+	@RequestMapping("/mon_login")
 	public String Login(HttpServletRequest request) {
-		String id = request.getParameter("id");
+		String email = request.getParameter("email");
 		String pwd = request.getParameter("pwd");
-		boolean b = this.studentServiceImpl.FindIdAndPwd(id, pwd);
+		boolean b = this.monitorServiceImpl.FindIdAndPwd(email, pwd);
 		if (b == false) {
 			return "three_login";
 		} else {
-			request.setAttribute("id", id);
-			return "student_index";
+			request.setAttribute("email", email);
+			return "monitor_index";
 		}
 	}
 }

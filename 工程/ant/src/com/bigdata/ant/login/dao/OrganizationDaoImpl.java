@@ -1,0 +1,47 @@
+package com.bigdata.ant.login.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.bigdata.ant.entity.Organization;
+import com.bigdata.ant.utils.BaseDao;
+
+/**
+ * 
+ * @ClassName:OrganizationDaoImpl
+ * @Description:组织者登录验证
+ * @Author xujunmei
+ * @Date:2018年12月12日
+ *
+ */
+@Repository
+public class OrganizationDaoImpl extends BaseDao<Organization, Integer> {
+
+	/**
+	 * 
+	 * @Title: SearchByIdAndPwd
+	 * @Description:验证账户与密码是否正确
+	 * @param:@param email
+	 * @param:@param pwd
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param email
+	 * @param pwd
+	 * @return
+	 */
+	public boolean SearchByIdAndPwd(String email, String pwd) {
+		Organization o = null;
+		String hql = "from Organization o where o.email = ?0 and o.password = ?1";
+		try {
+			o = this.findOne1(hql, email, pwd);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (o != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
