@@ -1,7 +1,7 @@
 html, body {
 	background-color: #fcfcdd;
 	width: auto;
-	height: 100%;
+	height: auto;
 	margin: 0 auto;
 }
 
@@ -12,34 +12,34 @@ html, body {
 
 .center {
 	width: 1080px;
-	height: 100%;
+	height: 500px;
 	margin: 0 auto;
 }
 
 .center_img {
-	width: 1080px;
-	height: 100%;
+	width: 240px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 20%;
 }
 
-img {
-	margin-top: 20%;
-	margin-left: 20px;
-	width: 50px;
+.center_img img {
+	width: auto;
 	height: auto;
 	text-align: center;
 }
 
 .center_text {
-	width: 1080px;
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 550px;
 	height: auto;
-	margin-top: 20%;
-	margin-left: 20px;
 	font-family: "FZShuTi", 方正舒体;
 }
 
 .center_p1 {
 	color: #383838;
 	font-size: 34px;
-	padding-bottom: 20px;
+	padding-top: 20px;
 	text-align: center;
 }

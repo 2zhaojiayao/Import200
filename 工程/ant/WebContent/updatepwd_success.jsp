@@ -6,12 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>更改成功</title>
 <script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/updatepwd_success.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script language="javascript" type="text/javascript">
 	setTimeout(function() {
 		this.location.href = "three_login.jsp"
 	}, 5000);
 </script>
-<link rel="stylesheet" type="text/css" href="css/updatepwd_success.css">
 </head>
 <body>
 	<div class="center">
@@ -19,7 +20,7 @@
 			<img src="images/success.png">
 		</div>
 		<div class="center_text">
-			<p class=""center_p1"">
+			<p class="center_p1"">
 				更改密码成功，<span class="time"></span>秒后跳回登录页面
 			</p>
 		</div>
@@ -40,6 +41,4 @@
 		}, 1000);
 	</script>
 </body>
-<script type="text/javascript"
-	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

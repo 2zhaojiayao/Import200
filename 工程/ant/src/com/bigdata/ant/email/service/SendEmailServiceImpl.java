@@ -1,9 +1,11 @@
-package com.bigdata.ant.email;
+package com.bigdata.ant.email.service;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.bigdata.ant.email.dao.SendEmailDaoImpl;
 
 /**
  * 

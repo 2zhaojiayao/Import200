@@ -1,4 +1,4 @@
-package com.bigdata.ant.email;
+package com.bigdata.ant.email.dao;
 
 import org.springframework.stereotype.Repository;
 
