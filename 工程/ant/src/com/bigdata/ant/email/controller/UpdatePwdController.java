@@ -30,7 +30,7 @@ public class UpdatePwdController {
 		System.out.println(pwd);
 		String hql = "from Student s where s.email = ?0";
 		this.updatePwdServiceImpl.ChangePwd(hql, email, pwd);
-		return "updatepwd_success.jsp";
+		return "updatepwd_success";
 	}
 
 }
