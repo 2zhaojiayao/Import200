@@ -6,11 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>更改成功</title>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script language="javascript" type="text/javascript">
+<!--  script language="javascript" type="text/javascript">
 	setTimeout(function() {
 		this.location.href = "three_login.jsp"
 	}, 5000);
-</script>
+</script>-->
 <link rel="stylesheet" type="text/css" href="css/updatepwd_success.css">
 </head>
 <body>
@@ -40,6 +40,4 @@
 		}, 1000);
 	</script>
 </body>
-<script type="text/javascript"
-	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>
