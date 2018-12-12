@@ -2,6 +2,7 @@ package com.bigdata.ant.login.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +37,7 @@ public class StudentController {
 	 */
 	@RequestMapping("/stu_login")
 	public String Login(HttpServletRequest request) {
+		HttpSession session = request.getSession();
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		boolean b = this.studentServiceImpl.FindIdAndPwd(id, pwd);
@@ -43,8 +45,7 @@ public class StudentController {
 			return "three_login";
 		} else {
 			Student s = this.studentServiceImpl.FindName(id);
-			String name = s.getName();
-			request.setAttribute("name", name);
+			session.setAttribute("s", s);
 			return "student_index";
 		}
 	}

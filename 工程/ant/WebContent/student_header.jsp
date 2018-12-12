@@ -32,7 +32,7 @@
 				<td class="top_1"><img src="images/person.png" class="head_img"></td>
 				<td class="top_1">
 					<div class="name">
-						<span>${name }</span>
+						<span>${s.name }</span>
 					</div>
 				</td>
 			</tr>
