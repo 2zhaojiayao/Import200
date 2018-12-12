@@ -34,8 +34,8 @@ public class SendEmailServiceImpl {
 	 * @param email
 	 * @return
 	 */
-	public boolean FindEmail(String hql, String email) {
-		if (this.sendEmailDaoImpl.SearchByEmail(hql, email)) {
+	public boolean FindEmail(String email) {
+		if (this.sendEmailDaoImpl.SearchByEmail(email)) {
 			return true;
 		} else {
 			return false;

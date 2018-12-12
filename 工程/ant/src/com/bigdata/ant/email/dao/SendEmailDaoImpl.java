@@ -42,7 +42,8 @@ public class SendEmailDaoImpl extends BaseDao<Student, Integer> {
 	 * @param params
 	 * @return
 	 */
-	public boolean SearchByEmail(String hql, String email) {
+	public boolean SearchByEmail(String email) {
+		String hql = "from Student s where s.email = ?0";
 		Student s = null;
 		try {
 			s = this.findOne1(hql, email);

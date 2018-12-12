@@ -26,8 +26,7 @@ public class UpdatePwdController {
 	public String UpdatePwd(HttpServletRequest request) {
 		String email = request.getParameter("email");
 		String pwd = request.getParameter("pwd");
-		String hql = "from Student s where s.email = ?0";
-		this.updatePwdServiceImpl.ChangePwd(hql, email, pwd);
+		this.updatePwdServiceImpl.ChangePwd(email, pwd);
 		return "updatepwd_success";
 	}
 

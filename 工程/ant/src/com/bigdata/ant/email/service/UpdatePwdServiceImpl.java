@@ -22,8 +22,8 @@ public class UpdatePwdServiceImpl {
 	@Resource
 	private UpdatePwdDaoImpl updatePwdDaoImpl;
 
-	public void ChangePwd(String hql, String email, String pwd) {
-		this.updatePwdDaoImpl.UpdatePwd(hql, email, pwd);
+	public void ChangePwd(String email, String pwd) {
+		this.updatePwdDaoImpl.UpdatePwd(email, pwd);
 		return;
 	}
 }

@@ -167,7 +167,8 @@
 
 						</div>
 						<div class="b_clear submit">
-							<a href="#" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
+							<a href="three_register.jsp" class="r_float">注册账号</a> <a href="#"
+								class="r_float">忘记密码？</a>
 							<button type="submit">登&nbsp;&nbsp;录</button>
 
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>
