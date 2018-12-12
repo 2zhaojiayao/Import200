@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.login.service.MonitorServiceImpl;
 import com.bigdata.ant.login.service.OrganizationServiceImpl;
 import com.bigdata.ant.login.service.StudentServiceImpl;

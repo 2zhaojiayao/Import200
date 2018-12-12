@@ -44,4 +44,27 @@ public class StudentDaoImpl extends BaseDao<Student, Integer> {
 			return false;
 		}
 	}
+
+	/**
+	 * 
+	 * @Title: SearchName
+	 * @Description: 按id查找用户
+	 * @param:@param id
+	 * @param:@return (参数)
+	 * @return:String(返回类型)
+	 *
+	 * @param id
+	 * @return
+	 */
+	public Student SearchName(String id) {
+		Student s = null;
+		String hql = "from Student s where s.id = ?0";
+		try {
+			s = this.findOne1(hql, id);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return s;
+	}
 }

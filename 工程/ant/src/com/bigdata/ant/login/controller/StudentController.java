@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.login.service.StudentServiceImpl;
 
 /**
@@ -41,7 +42,9 @@ public class StudentController {
 		if (b == false) {
 			return "three_login";
 		} else {
-			request.setAttribute("id", id);
+			Student s = this.studentServiceImpl.FindName(id);
+			String name = s.getName();
+			request.setAttribute("name", name);
 			return "student_index";
 		}
 	}

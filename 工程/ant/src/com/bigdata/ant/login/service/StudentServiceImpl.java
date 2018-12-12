@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.login.dao.StudentDaoImpl;
 
 /**
@@ -41,5 +42,20 @@ public class StudentServiceImpl {
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * 
+	 * @Title: FindName
+	 * @Description: 查找用户名
+	 * @param:@param id
+	 * @param:@return (参数)
+	 * @return:String(返回类型)
+	 *
+	 * @param id
+	 * @return
+	 */
+	public Student FindName(String id) {
+		return this.studentDaoImpl.SearchName(id);
 	}
 }

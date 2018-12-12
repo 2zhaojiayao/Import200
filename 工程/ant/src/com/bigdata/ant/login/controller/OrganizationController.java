@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bigdata.ant.entity.Organization;
 import com.bigdata.ant.login.service.OrganizationServiceImpl;
 import com.bigdata.ant.login.service.StudentServiceImpl;
 
@@ -42,7 +43,9 @@ public class OrganizationController {
 		if (b == false) {
 			return "three_login";
 		} else {
-			request.setAttribute("email", email);
+			Organization o = this.organizationServiceImpl.FindName(email);
+			String name = o.getName();
+			request.setAttribute("name", name);
 			return "organization_index";
 		}
 	}

@@ -44,4 +44,27 @@ public class OrganizationDaoImpl extends BaseDao<Organization, Integer> {
 			return false;
 		}
 	}
+
+	/**
+	 * 
+	 * @Title: SearchName
+	 * @Description: 查找用户名
+	 * @param:@param email
+	 * @param:@return (参数)
+	 * @return:Organization(返回类型)
+	 *
+	 * @param email
+	 * @return
+	 */
+	public Organization SearchName(String email) {
+		Organization o = null;
+		String hql = "from Organization o where o.email = ?0";
+		try {
+			o = this.findOne1(hql, email);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return o;
+	}
 }

@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bigdata.ant.entity.Organization;
 import com.bigdata.ant.login.dao.OrganizationDaoImpl;
 
 /**
@@ -41,5 +42,20 @@ public class OrganizationServiceImpl {
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * 
+	 * @Title: FindName
+	 * @Description: 查找用户名
+	 * @param:@param email
+	 * @param:@return (参数)
+	 * @return:Organization(返回类型)
+	 *
+	 * @param email
+	 * @return
+	 */
+	public Organization FindName(String email) {
+		return this.organizationDaoImpl.SearchName(email);
 	}
 }

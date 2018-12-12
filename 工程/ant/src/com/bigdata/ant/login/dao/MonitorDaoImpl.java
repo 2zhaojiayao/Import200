@@ -44,4 +44,5 @@ public class MonitorDaoImpl extends BaseDao<Monitor, String> {
 			return false;
 		}
 	}
+
 }
