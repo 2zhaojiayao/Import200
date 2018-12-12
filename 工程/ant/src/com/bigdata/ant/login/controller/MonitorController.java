@@ -2,14 +2,12 @@ package com.bigdata.ant.login.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.login.service.MonitorServiceImpl;
-import com.bigdata.ant.login.service.OrganizationServiceImpl;
-import com.bigdata.ant.login.service.StudentServiceImpl;
 
 /**
  * 
@@ -38,13 +36,14 @@ public class MonitorController {
 	 */
 	@RequestMapping("/mon_login")
 	public String Login(HttpServletRequest request) {
+		HttpSession session = request.getSession();
 		String email = request.getParameter("email");
 		String pwd = request.getParameter("pwd");
 		boolean b = this.monitorServiceImpl.FindIdAndPwd(email, pwd);
 		if (b == false) {
 			return "three_login";
 		} else {
-			request.setAttribute("email", email);
+			session.setAttribute("email", email);
 			return "monitor_index";
 		}
 	}
