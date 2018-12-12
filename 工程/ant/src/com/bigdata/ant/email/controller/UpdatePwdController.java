@@ -25,9 +25,7 @@ public class UpdatePwdController {
 	@RequestMapping("/updatepwd")
 	public String UpdatePwd(HttpServletRequest request) {
 		String email = request.getParameter("email");
-		System.out.println(email);
 		String pwd = request.getParameter("pwd");
-		System.out.println(pwd);
 		String hql = "from Student s where s.email = ?0";
 		this.updatePwdServiceImpl.ChangePwd(hql, email, pwd);
 		return "updatepwd_success";
