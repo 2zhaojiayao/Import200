@@ -1,14 +1,12 @@
-package com.bigdata.ant.email;
+package com.bigdata.ant.email.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.swing.JOptionPane;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import com.bigdata.ant.email.service.UpdatePwdServiceImpl;
 
 /**
  * 
