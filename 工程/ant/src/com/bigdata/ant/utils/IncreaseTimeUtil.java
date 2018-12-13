@@ -1,8 +1,19 @@
 package com.bigdata.ant.utils;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
+/**
+ * 
+ * @ClassName:IncreaseTimeUtil
+ * @Description:TODO（用一句话描述这个类的作用）
+ * @Author wangmengzhen
+ * @Date:2018年12月13日
+ *
+ */
 public class IncreaseTimeUtil {
 	/**
 	 * 
@@ -25,5 +36,21 @@ public class IncreaseTimeUtil {
         cal.add(Calendar.HOUR, hour);// 24小时制   
         date = cal.getTime();   
         return date;   
+    }
+	public static List<String> addDateYear(int n){//显示当前年份增加    
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		List<String> list=new ArrayList<String>();
+        Calendar cal = Calendar.getInstance();   
+        cal.setTime(new Date()); 
+        int month = cal.get(Calendar.MONTH) + 1;
+        if(month>=9) {//如果当年月份超过九月，就存当前年、及前4年
+        	list.add(sdf.format(cal.getTime()));//存当前年
+        }
+        for (int i = -1; i >=n ; i--) {
+        	cal.add(Calendar.YEAR, i); //年份减1
+        	String str = sdf.format(cal.getTime());
+        	list.add(str);
+		}   
+        return list;
     }
 }

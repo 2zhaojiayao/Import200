@@ -76,8 +76,8 @@
                         <p id="college_msg"></p>
                     </div>
                     <div class="select_normal">
-                        <select>
-                            <option value="">专业</option>
+                        <select id="profession">
+                            <option value="0">专业</option>
                             <c:forEach items="${college }" var="col">
 						        <c:forEach items="${col.professions }" var="pro">
 						        	<option value="${pro.id }">${pro.name }</option>
@@ -87,20 +87,17 @@
                         <p id="profession_msg"></p>
                     </div>
                     <div class="select_normal">
-                        <select>
-                            <option value="">年级</option>
-                            <option value="2015">2015级</option>
-                            <option value="2016">2016级</option>
-                            <option value="2017">2017级</option>
-                            <option value="2018">2018级</option>
-                            <option value="2019">2019级</option>
-                            <option value="2020">2020级</option>
+                        <select id="grade">
+                            <option value="0">年级</option>
+                            <c:forEach items="${grade }" var="gra">
+						        <option value="${gra }">${gra }年级</option>
+						   	</c:forEach>
                         </select>
                         <p id="grade_msg"></p>
                     </div>
                     <div class="select_normal">
                         <select>
-                            <option value="">班级</option>
+                            <option value="0">班级</option>
                             <option value="1">1班</option>
                             <option value="2">2班</option>
                             <option value="3">3班</option>

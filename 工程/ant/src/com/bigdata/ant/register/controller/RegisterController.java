@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.register.service.RegisterServiceImpl;
+import com.bigdata.ant.utils.IncreaseTimeUtil;
 
 @Controller
 public class RegisterController {
@@ -34,7 +35,8 @@ public class RegisterController {
 	 */
 	@RequestMapping("/toRegister")
 	public String toRegister(HttpServletRequest request) {
-		request.setAttribute("college", registerServiceImpl.findCollege());
+		request.setAttribute("college", registerServiceImpl.findCollege());//把学院信息查出来
+		request.setAttribute("grade", IncreaseTimeUtil.addDateYear(-4));
 		return "three_register";
 		
 	}
