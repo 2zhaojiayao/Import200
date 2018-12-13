@@ -29,7 +29,8 @@ public class UpdatePwdDaoImpl extends BaseDao<Student, Integer> {
 	 * @param email
 	 * @param pwd
 	 */
-	public void UpdatePwd(String hql, String email, String pwd) {
+	public void UpdatePwd(String email, String pwd) {
+		String hql = "from Student s where s.email = ?0";
 		try {
 			Student s = this.findOne1(hql, email);
 			s.setPassword(pwd);

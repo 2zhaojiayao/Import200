@@ -77,26 +77,24 @@
 					</div>
 				</div>
 				<div class="login_con">
-					<form action="" method="POST">
+					<form action="stu_login" method="POST">
 						<div>
-							<label for="user_name">用户名</label> <input type="text" name=""
+							<label for="user_name">用户名</label> <input type="text" name="id"
 								id="user_name" placeholder="账号为学号"> <img
 								src="images/icons/user.svg">
 							<p class="tips hidden">请检查您的账号</p>
 						</div>
 						<div>
-							<label for="user_pwd">密码</label> <input type="password" name=""
-								id="user_pwd" placeholder="请输入账户密码"> <img
+							<label for="user_pwd">密码</label> <input type="password"
+								name="pwd" id="user_pwd" placeholder="请输入账户密码"> <img
 								src="images/icons/lock.svg">
 							<p class="tips hidden">请检查您的密码</p>
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
-								type="text" name="" id="auth_code" placeholder="填写验证码"
-								class="l_float" maxlength="6">
-
-							<button class="auth_code l_float">获取验证码</button>
-							<img src="images/icons/auth_code.svg">
+								type="text" name="vcode" size="3" id="auth_code"
+								placeholder="填写验证码" class="l_float" maxlength="6"> <img
+								src="vert" id="image">&nbsp; <a href="javascript:change()">看不清，换一张</a>&nbsp;
 							<p class="tips hidden">验证码错误</p>
 
 						</div>
@@ -109,16 +107,16 @@
 					</form>
 				</div>
 				<div class="login_con hidden">
-					<form action="" method="POST">
+					<form action="mon_login" method="POST">
 						<div>
-							<label for="user_name">用户名</label> <input type="text" name=""
-								id="user_name" placeholder="账号为班委邮箱"> <img
+							<label for="user_name">用户名</label> <input type="text"
+								name="email" id="user_name" placeholder="账号为班委邮箱"> <img
 								src="images/icons/user.svg">
 							<p class="tips hidden">请检查您的账号</p>
 						</div>
 						<div>
-							<label for="user_pwd">密码</label> <input type="password" name=""
-								id="user_pwd" placeholder="请输入账户密码"> <img
+							<label for="user_pwd">密码</label> <input type="password"
+								name="pwd" id="user_pwd" placeholder="请输入账户密码"> <img
 								src="images/icons/lock.svg">
 							<p class="tips hidden">请检查您的密码</p>
 						</div>
@@ -143,16 +141,16 @@
 
 				</div>
 				<div class="login_con hidden">
-					<form action="" method="POST">
+					<form action="org_login" method="POST">
 						<div>
-							<label for="user_name">用户名</label> <input type="text" name=""
-								id="user_name" placeholder="账号为组织邮箱"> <img
+							<label for="user_name">用户名</label> <input type="text"
+								name="email" id="user_name" placeholder="账号为组织邮箱"> <img
 								src="images/icons/user.svg">
 							<p class="tips hidden">请检查您的账号</p>
 						</div>
 						<div>
-							<label for="user_pwd">密码</label> <input type="password" name=""
-								id="user_pwd" placeholder="请输入账户密码"> <img
+							<label for="user_pwd">密码</label> <input type="password"
+								name="pwd" id="user_pwd" placeholder="请输入账户密码"> <img
 								src="images/icons/lock.svg">
 							<p class="tips hidden">请检查您的密码</p>
 						</div>
@@ -167,7 +165,12 @@
 
 						</div>
 						<div class="b_clear submit">
+<<<<<<< HEAD
 							<a href="toRegister" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
+=======
+							<a href="three_register.jsp" class="r_float">注册账号</a> <a href="#"
+								class="r_float">忘记密码？</a>
+>>>>>>> 1076c2d606ec7a411091f98599a0b027036ae5a6
 							<button type="submit">登&nbsp;&nbsp;录</button>
 
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>

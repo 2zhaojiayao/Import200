@@ -21,11 +21,21 @@ public class SendEmailController {
 	@Resource
 	private SendEmailServiceImpl sendEmailServiceImpl;
 
+	/**
+	 * 
+	 * @Title: SendEmail
+	 * @Description: 验证邮箱
+	 * @param:@param request
+	 * @param:@return (参数)
+	 * @return:String(返回类型)
+	 *
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping("/send")
 	public String SendEmail(HttpServletRequest request) {
 		String email = request.getParameter("email");
-		String hql = "from Student s where s.email = ?0";
-		boolean b = this.sendEmailServiceImpl.FindEmail(hql, email);// 判断数据库中是否有此email
+		boolean b = this.sendEmailServiceImpl.FindEmail(email);// 判断数据库中是否有此email
 		request.setAttribute("email", email);
 		if (b == true) {
 			this.sendEmailServiceImpl.SendEmail(email);

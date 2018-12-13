@@ -6,11 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/jquery.js"></script>
-<<<<<<< HEAD
 <script type="text/javascript" src="js/JsonpAjax.js"></script>
-=======
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
->>>>>>> 961514b0a2dff5b8ce823b61becad083483264f8
 </head>
 <div class="header">
 	<div class="top">
@@ -24,10 +21,10 @@
 				<td class="top_1">
 					<div class="search">
 						<form>
-							 <input type="text" placeholder="       请输入您要搜索的内容..." id="text"> 
-						     <button type="submit"></button> 
-							 <div id="word"></div>
-							
+							<input type="text" placeholder="请输入您要搜索的内容..." id="text">
+							<button type="submit"></button>
+							<div id="word"></div>
+
 						</form>
 					</div>
 				</td>
@@ -35,7 +32,7 @@
 				<td class="top_1"><img src="images/person.png" class="head_img"></td>
 				<td class="top_1">
 					<div class="name">
-						<span>嘟嘟暴龙</span>
+						<span>${s.name }</span>
 					</div>
 				</td>
 			</tr>

@@ -22,14 +22,22 @@ public class UpdatePwdController {
 	@Resource
 	private UpdatePwdServiceImpl updatePwdServiceImpl;
 
+	/**
+	 * 
+	 * @Title: UpdatePwd
+	 * @Description: 重置密码
+	 * @param:@param request
+	 * @param:@return (参数)
+	 * @return:String(返回类型)
+	 *
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping("/updatepwd")
 	public String UpdatePwd(HttpServletRequest request) {
 		String email = request.getParameter("email");
-		System.out.println(email);
 		String pwd = request.getParameter("pwd");
-		System.out.println(pwd);
-		String hql = "from Student s where s.email = ?0";
-		this.updatePwdServiceImpl.ChangePwd(hql, email, pwd);
+		this.updatePwdServiceImpl.ChangePwd(email, pwd);
 		return "updatepwd_success";
 	}
 

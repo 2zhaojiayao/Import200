@@ -81,6 +81,7 @@ input, button {
 	border-radius: 42px;
 	transition: .3s linear;
 	float: right;
+	padding-left: 25px;
 }
 
 .search input:focus {

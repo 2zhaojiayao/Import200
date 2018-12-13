@@ -4,14 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>个人页面_活动详情</title>
-<script type="text/javascript" src="js/jquery.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="css/student_activitydetail.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>活动详情</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/detail.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="css/student_activitydetail.css">
 <link rel="stylesheet" type="text/css" href="css/detail.css">
 <link rel="stylesheet" type="text/css" href="css/header_footer.css"
 	media="all">
@@ -68,12 +65,8 @@
 								<td class="td2">${activitydetail.applyEnd}</td>
 							</tr>
 							<tr class="tr">
-								<td class="td1">举办开始时间</td>
-								<td class="td2">${activitydetail.holdBegin}</td>
-							</tr>
-							<tr class="tr">
-								<td class="td1">举办结束时间</td>
-								<td class="td2">${activitydetail.holdEnd}</td>
+								<td class="td1">活动起止时间</td>
+								<td class="td2">${activitydetail.holdBegin}&nbsp;——&nbsp;${activitydetail.holdEnd}</td>
 							</tr>
 							<tr class="tr">
 								<td class="td1">是否需要面试</td>
