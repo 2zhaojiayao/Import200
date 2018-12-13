@@ -92,11 +92,9 @@
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
-								type="text" name="" id="auth_code" placeholder="填写验证码"
-								class="l_float" maxlength="6">
-
-							<button class="auth_code l_float">获取验证码</button>
-							<img src="images/icons/auth_code.svg">
+								type="text" name="vcode" size="3" id="auth_code"
+								placeholder="填写验证码" class="l_float" maxlength="6"> <img
+								src="vert" id="image">&nbsp; <a href="javascript:change()">看不清，换一张</a>&nbsp;
 							<p class="tips hidden">验证码错误</p>
 
 						</div>
