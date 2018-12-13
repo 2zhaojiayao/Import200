@@ -122,12 +122,11 @@
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
-								type="text" name="" id="auth_code" placeholder="填写验证码"
-								class="l_float" maxlength="6">
-
-							<button class="auth_code l_float">获取验证码</button>
-							<img src="images/icons/auth_code.svg">
-							<p class="tips hidden">验证码错误</p>
+								type="text" name="vcode" id="auth_code" class="l_float"
+								maxlength="5" size="3"> <img src="vert" id="image"
+								class="auth_code l_float">&nbsp;<a
+								href="javascript:change()">看不清，换一张</a> &nbsp;<br /> <font
+								color="red"> ${message } </font>
 
 						</div>
 						<div class="b_clear submit">
@@ -156,12 +155,11 @@
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
-								type="text" name="" id="auth_code" placeholder="填写验证码"
-								class="l_float" maxlength="6">
-
-							<button class="auth_code l_float">获取验证码</button>
-							<img src="images/icons/auth_code.svg">
-							<p class="tips hidden">验证码错误</p>
+								type="text" name="vcode" id="auth_code" class="l_float"
+								maxlength="5" size="3"> <img src="vert" id="image"
+								class="auth_code l_float">&nbsp;<a
+								href="javascript:change()">看不清，换一张</a> &nbsp;<br /> <font
+								color="red"> ${message } </font>
 
 						</div>
 						<div class="b_clear submit">
