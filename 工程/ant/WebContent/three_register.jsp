@@ -29,19 +29,19 @@
                 		<p id="admitStudentRegister" name="admitStudentRegister">${admitStudentRegister }</p>
                 	</div>               	
                     <div class="top_id">
-                        <input id="student_id" type="text" name="id" placeholder="学号">
+                        <input id="student_id" type="text" name="id" placeholder="学号" value="${student.id }">
                         <p id="top_id_msg"></p>
                     </div>
                     <div class="normal">
-                        <input id="name" type="text" name="name" placeholder="请填写您的真实姓名">
+                        <input id="name" type="text" name="name" placeholder="请填写您的真实姓名" value="${student.name }">
                         <p id="name_msg"></p>
                     </div>
                     <div class="normal">
-                        <input id="psd" type="password" name="password" placeholder="密码6~18位，以字母开头，只能包含字母、数字和下划线">
+                        <input id="psd" type="password" name="password" placeholder="密码6~18位，以字母开头，只能包含字母、数字和下划线" value="${student.password }">
                         <p id="psd_msg"></p>
                     </div>
                     <div class="normal">
-                        <input id="againpsd" type="password" name="againpwd" placeholder="确认密码">
+                        <input id="againpsd" type="password" name="againpwd" placeholder="确认密码" value="${againpsd }">
                         <p id="againpsd_msg"></p>
                     </div>
                     <label class="sex">
@@ -55,7 +55,7 @@
                     </label>
                     <p id="sex_msg"></p>
                     <div class="normal">
-                        <input id="email" type="email" name="email" placeholder="邮箱">
+                        <input id="email" type="email" name="email" placeholder="邮箱" value="${student.email }">
                         <p id="email_psg"></p>
                     </div>
                     <div class="regist">
@@ -67,7 +67,7 @@
             <div class="reg hidden">
                 <form>
                     <div class="select_college">
-                        <select id="college">
+                        <select id="college" name="college">
                             <option value="0">学院</option>
                             <c:forEach items="${college }" var="col">
 						        <option value="${col }">${col.name }</option>
@@ -76,7 +76,7 @@
                         <p id="college_msg"></p>
                     </div>
                     <div class="select_normal">
-                        <select id="profession">
+                        <select id="profession" name="profession">
                             <option value="0">专业</option>
                             <c:forEach items="${college }" var="col">
 						        <c:forEach items="${col.professions }" var="pro">
@@ -87,43 +87,34 @@
                         <p id="profession_msg"></p>
                     </div>
                     <div class="select_normal">
-                        <select id="grade">
+                        <select id="grade" name="grade">
                             <option value="0">年级</option>
                             <c:forEach items="${grade }" var="gra">
-						        <option value="${gra }">${gra }年级</option>
+						        <option value="${gra }">${gra }级</option>
 						   	</c:forEach>
                         </select>
                         <p id="grade_msg"></p>
                     </div>
                     <div class="select_normal">
-                        <select>
-                            <option value="0">班级</option>
-                            <option value="1">1班</option>
-                            <option value="2">2班</option>
-                            <option value="3">3班</option>
-                            <option value="4">4班</option>
-                            <option value="5">5班</option>
-                            <option value="6">6班</option>
-                            <option value="7">7班</option>
-                            <option value="8">8班</option>
-                            <option value="9">9班</option>
-                            <option value="10">10班</option>
-                            <option value="11">11班</option>
-                            <option value="12">12班</option>
+                        <select id="classes" name="classes">
+                        	<option value="0">班级</option>
+	                        <c:forEach items="${classes }" var="cla">
+							     <option value="${cla }">${cla }班</option>
+							</c:forEach>  
                         </select>
-                        <p id="class_msg"></p>
+                        <p id="classes_msg"></p>
                     </div>
                     <div class="normal">
-                        <input type="password" name="pwd" placeholder="6-16位密码，区分大小写">
-                        <p id="psd_msg"></p>
+                        <input id="mon_psd" type="password" name="password" placeholder="6-16位密码，区分大小写">
+                        <p id="mon_psd_msg"></p>
                     </div>
                     <div class="normal">
-                        <input type="password" name="pwd" placeholder="确认密码">
-                        <p id="againpsd_msg"></p>
+                        <input id="mon_againpsd" type="password" name="pwd" placeholder="确认密码">
+                        <p id="mon_againpsd_msg"></p>
                     </div>
                     <div class="normal">
-                        <input type="email" name="email" placeholder="邮箱">
-                        <p id="email_msg"></p>
+                        <input id="mon_email" type="email" name="email" placeholder="邮箱">
+                        <p id="mon_email_msg"></p>
                     </div>
                     <div class="regist">
                         <input type="submit" class="submit" value="注册">
@@ -134,36 +125,36 @@
             <div class="reg hidden">
                 <form>
                     <div class="select_college">
-                        <select>
-                            <option value="">所属单位</option>
-                            <option value="apple">河北师范大学</option>
+                        <select id="belong">
+                            <option value="0">所属单位</option>
+                            <option value="school">河北师范大学</option>
                             <c:forEach items="${college }" var="col">
 						        <option value="${col.id }">${col.name }</option>
 						   	</c:forEach>
                         </select>
-                        <p id="college_msg"></p>
+                        <p id="belong_msg"></p>
                     </div>
                     <div class="select_normal">
-                        <select>
-                            <option value="">组织名</option>
-                            <option value="apple">团委</option>
-                            <option value="banana">青协</option>
-                            <option value="orange">学生会</option>
-                            <option value="orange">社团</option>
+                        <select id="org_name">
+                            <option value="0">组织名</option>
+                            <option value="团委">团委</option>
+                            <option value="青协">青协</option>
+                            <option value="学生会">学生会</option>
+                            <option value="社团">社团</option>
                         </select>
-                        <p id="org_msg"></p>
+                        <p id="org_name_msg"></p>
                     </div>
                     <div class="normal">
-                        <input type="password" name="pwd" placeholder="6-16位密码，区分大小写">
-                        <p id="psd_msg"></p>
+                        <input id="org_psd" type="password" name="password" placeholder="6-16位密码，区分大小写">
+                        <p id="org_psd_msg"></p>
                     </div>
                     <div class="normal">
-                        <input type="password" name="pwd" placeholder="确认密码">
-                        <p id="againpsd_msg"></p>
+                        <input id="org_againpsd" type="password" name="pwd" placeholder="确认密码">
+                        <p id="org_againpsd_msg"></p>
                     </div>
                     <div class="normal">
-                        <input type="email" name="email" placeholder="邮箱">
-                        <p id="email_msg"></p>
+                        <input id="org_email" type="email" name="email" placeholder="邮箱">
+                        <p id="org_email_msg"></p>
                     </div>        
                     <div class="regist">
                         <input type="submit" class="submit" value="注册">

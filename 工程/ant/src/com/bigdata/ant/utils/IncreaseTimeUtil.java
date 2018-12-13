@@ -37,6 +37,17 @@ public class IncreaseTimeUtil {
         date = cal.getTime();   
         return date;   
     }
+	/**
+	 * 
+	* @Title: addDateYear  
+	* @Description: TODO(这里用一句话描述这个方法的作用) 为了显示可选的年级，判断当前年份（得到当前年份及前四年的）
+	* @param:@param n
+	* @param:@return (参数)
+	* @return:List<String>(返回类型)
+	*
+	 * @param n
+	 * @return
+	 */
 	public static List<String> addDateYear(int n){//显示当前年份增加    
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 		List<String> list=new ArrayList<String>();
@@ -46,8 +57,8 @@ public class IncreaseTimeUtil {
         if(month>=9) {//如果当年月份超过九月，就存当前年、及前4年
         	list.add(sdf.format(cal.getTime()));//存当前年
         }
-        for (int i = -1; i >=n ; i--) {
-        	cal.add(Calendar.YEAR, i); //年份减1
+        for (int i = 0; i <n ; i++) {
+        	cal.add(Calendar.YEAR, -1); //年份减1
         	String str = sdf.format(cal.getTime());
         	list.add(str);
 		}   

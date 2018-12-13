@@ -1,5 +1,6 @@
 package com.bigdata.ant.register.service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -11,20 +12,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bigdata.ant.entity.College;
 import com.bigdata.ant.entity.Student;
-import com.bigdata.ant.register.dao.RegisterCollegeDaoImpl;
-import com.bigdata.ant.register.dao.RegisterDaoImpl;
+import com.bigdata.ant.register.dao.CollegeDaoImpl;
+import com.bigdata.ant.register.dao.StudentDaoImpl;
 import com.bigdata.ant.utils.IncreaseTimeUtil;
 import com.bigdata.ant.utils.MD5Util;
 import com.bigdata.ant.utils.MailUtil;
 
 @Service
 @Transactional(readOnly = false)
-public class RegisterServiceImpl {
+public class StudentServiceImpl {
 	
 	@Resource
-	private RegisterDaoImpl registerDaoImpl;
+	private StudentDaoImpl studentDaoImpl;
 	@Resource
-	private RegisterCollegeDaoImpl registerCollegeDaoImpl;
+	private CollegeDaoImpl collegeDaoImpl;
 	
 	/**
 	 * 
@@ -37,10 +38,26 @@ public class RegisterServiceImpl {
 	 */
 	public List<College> findCollege(){
 		try {
-			return registerCollegeDaoImpl.findAll();
+			return collegeDaoImpl.findAll();
 		} catch (Exception e) {
 			return null;
 		}
+	}
+	/**
+	 * 
+	* @Title: findClasses  
+	* @Description: TODO(这里用一句话描述这个方法的作用) 可以选择的班级信息
+	* @param:@return (参数)
+	* @return:List<Integer>(返回类型)
+	*
+	 * @return
+	 */
+	public List<Integer> findClasses() {
+		List<Integer> list=new ArrayList<Integer>();
+		for (int i = 1; i <= 12; i++) {
+			list.add(i);
+		}
+		return list;
 	}
 	/**
 	 * 
@@ -55,7 +72,7 @@ public class RegisterServiceImpl {
 	 */
 	public Boolean findStudentById (String student_id) {
 		try {
-			Student student=registerDaoImpl.get(student_id);
+			Student student=studentDaoImpl.get(student_id);
 			if(student!=null) {
 				return true;//可以找到该学生
 			}else {
@@ -131,7 +148,7 @@ public class RegisterServiceImpl {
 	 */
 	public void saveStudent(Student student) {
 		try {			
-			registerDaoImpl.save(student);
+			studentDaoImpl.save(student);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -161,6 +178,7 @@ public class RegisterServiceImpl {
 		student.setStatus(0);
 		student.setValidateCode(validateCode);
 		student.setRegisterTime(new Date());
+		student.setPassword(MD5Util.encode2hex(student.getPassword()));//密码加密
 		saveStudent(student);
 		return validateCode;			
 	}
@@ -179,14 +197,14 @@ public class RegisterServiceImpl {
 	 * @return
 	 */
 	public String VolidateRegister(String email,String validateCode) {
-		Student student=registerDaoImpl.findByEmail(email);
+		Student student=studentDaoImpl.findByEmail(email);
 		if(student!=null) {
 			if(student.getStatus()==0) {
 				Date currentTime=new Date();
 				//验证链接是否过期
 				if(currentTime.before(IncreaseTimeUtil.addDateMinut(student.getRegisterTime(), 24))) {
 					if(student.getValidateCode().equals(validateCode)) {
-						registerDaoImpl.updateStatus();
+						studentDaoImpl.updateStatus();
 						return "激活成功";
 					}
 				}else {
