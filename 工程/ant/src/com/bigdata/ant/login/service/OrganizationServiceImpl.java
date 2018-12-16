@@ -36,8 +36,27 @@ public class OrganizationServiceImpl {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean getOrgByIdAndPwd(String email, String pwd) {
-		if (this.organizationDaoImpl.getOrgByIdAndPwd(email, pwd)) {
+	public boolean getOrgByEmailAndPwd(String email, String pwd) {
+		if (this.organizationDaoImpl.getOrgByEmailAndPwd(email, pwd)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * 
+	 * @Title: getOrgByEmail
+	 * @Description: 是否存在邮箱
+	 * @param:@param email
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param email
+	 * @return
+	 */
+	public boolean getOrgByEmail(String email) {
+		if (this.organizationDaoImpl.getOrgByEmail(email)) {
 			return true;
 		} else {
 			return false;

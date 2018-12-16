@@ -39,8 +39,19 @@ public class MonitorController {
 		HttpSession session = request.getSession();
 		String email = request.getParameter("email");
 		String pwd = request.getParameter("pwd");
-		boolean b = this.monitorServiceImpl.getMonByIdAndPwd(email, pwd);
-		if (b == false) {
+		String session_vcode = (String) session.getAttribute("text"); // 从session中获取真正的验证码
+		String form_vcode = request.getParameter("vcode"); // 获取用户输入的验证码
+		boolean a = this.monitorServiceImpl.getMonByEmail(email);
+		boolean b = this.monitorServiceImpl.getMonByEmailAndPwd(email, pwd);
+		if (a == false) {
+			request.setAttribute("message1", "用户名错误");
+			return "three_login";
+		} else if (b == false) {
+			request.setAttribute("message2", "密码错误");
+			return "three_login";
+		} else if (!(session_vcode.equalsIgnoreCase(form_vcode))) // 进行判断
+		{
+			request.setAttribute("message", "验证码错误"); // 如果错误就将错误信息发送给客户端
 			return "three_login";
 		} else {
 			session.setAttribute("email", email);

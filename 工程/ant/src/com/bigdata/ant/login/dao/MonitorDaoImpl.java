@@ -29,7 +29,7 @@ public class MonitorDaoImpl extends BaseDao<Monitor, String> {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean getMonByIdAndPwd(String email, String pwd) {
+	public boolean getMonByEmailAndPwd(String email, String pwd) {
 		Monitor m = null;
 		String hql = "from Monitor m where m.email = ?0 and m.password = ?1";
 		try {
@@ -45,4 +45,30 @@ public class MonitorDaoImpl extends BaseDao<Monitor, String> {
 		}
 	}
 
+	/**
+	 * 
+	 * @Title: getMonByEmail
+	 * @Description:判断email是否存在
+	 * @param:@param email
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param email
+	 * @return
+	 */
+	public boolean getMonByEmail(String email) {
+		Monitor m = null;
+		String hql = "from Monitor m where m.email = ?0";
+		try {
+			m = this.findOne1(hql, email);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (m != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
