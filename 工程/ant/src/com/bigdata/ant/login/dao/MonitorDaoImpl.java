@@ -18,7 +18,7 @@ public class MonitorDaoImpl extends BaseDao<Monitor, String> {
 
 	/**
 	 * 
-	 * @Title: SearchByIdAndPwd
+	 * @Title: getMonByIdAndPwd
 	 * @Description: 验证账户与密码是否正确
 	 * @param:@param email
 	 * @param:@param pwd
@@ -29,7 +29,7 @@ public class MonitorDaoImpl extends BaseDao<Monitor, String> {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean SearchByIdAndPwd(String email, String pwd) {
+	public boolean getMonByIdAndPwd(String email, String pwd) {
 		Monitor m = null;
 		String hql = "from Monitor m where m.email = ?0 and m.password = ?1";
 		try {

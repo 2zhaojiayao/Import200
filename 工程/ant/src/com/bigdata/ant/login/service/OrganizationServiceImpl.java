@@ -25,7 +25,7 @@ public class OrganizationServiceImpl {
 
 	/**
 	 * 
-	 * @Title: FindIdAndPwd
+	 * @Title: getOrgByIdAndPwd
 	 * @Description: 验证账号密码是否正确
 	 * @param:@param email
 	 * @param:@param pwd
@@ -36,8 +36,8 @@ public class OrganizationServiceImpl {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean FindIdAndPwd(String email, String pwd) {
-		if (this.organizationDaoImpl.SearchByIdAndPwd(email, pwd)) {
+	public boolean getOrgByIdAndPwd(String email, String pwd) {
+		if (this.organizationDaoImpl.getOrgByIdAndPwd(email, pwd)) {
 			return true;
 		} else {
 			return false;

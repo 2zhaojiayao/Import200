@@ -18,7 +18,7 @@ public class StudentDaoImpl extends BaseDao<Student, Integer> {
 
 	/**
 	 * 
-	 * @Title: SearchByIdAndPwd
+	 * @Title: getStuByIdAndPwd
 	 * @Description: 验证账户与密码是否正确
 	 * @param:@param id
 	 * @param:@param pwd
@@ -29,13 +29,12 @@ public class StudentDaoImpl extends BaseDao<Student, Integer> {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean SearchByIdAndPwd(String id, String pwd) {
+	public boolean getStuByIdAndPwd(String id, String pwd) {
 		Student s = null;
 		String hql = "from Student s where s.id = ?0 and s.password = ?1";
 		try {
 			s = this.findOne1(hql, id, pwd);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (s != null) {
@@ -47,22 +46,21 @@ public class StudentDaoImpl extends BaseDao<Student, Integer> {
 
 	/**
 	 * 
-	 * @Title: SearchName
+	 * @Title: getStuById
 	 * @Description: 按id查找用户
 	 * @param:@param id
 	 * @param:@return (参数)
-	 * @return:String(返回类型)
+	 * @return:Student(返回类型)
 	 *
 	 * @param id
 	 * @return
 	 */
-	public Student SearchName(String id) {
+	public Student getStuById(String id) {
 		Student s = null;
 		String hql = "from Student s where s.id = ?0";
 		try {
 			s = this.findOne1(hql, id);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return s;

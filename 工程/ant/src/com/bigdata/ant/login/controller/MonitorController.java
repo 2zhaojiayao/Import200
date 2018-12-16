@@ -39,7 +39,7 @@ public class MonitorController {
 		HttpSession session = request.getSession();
 		String email = request.getParameter("email");
 		String pwd = request.getParameter("pwd");
-		boolean b = this.monitorServiceImpl.FindIdAndPwd(email, pwd);
+		boolean b = this.monitorServiceImpl.getMonByIdAndPwd(email, pwd);
 		if (b == false) {
 			return "three_login";
 		} else {

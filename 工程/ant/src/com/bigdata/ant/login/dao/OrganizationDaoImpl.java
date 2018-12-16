@@ -18,7 +18,7 @@ public class OrganizationDaoImpl extends BaseDao<Organization, Integer> {
 
 	/**
 	 * 
-	 * @Title: SearchByIdAndPwd
+	 * @Title: getOrgByIdAndPwd
 	 * @Description:验证账户与密码是否正确
 	 * @param:@param email
 	 * @param:@param pwd
@@ -29,7 +29,7 @@ public class OrganizationDaoImpl extends BaseDao<Organization, Integer> {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean SearchByIdAndPwd(String email, String pwd) {
+	public boolean getOrgByIdAndPwd(String email, String pwd) {
 		Organization o = null;
 		String hql = "from Organization o where o.email = ?0 and o.password = ?1";
 		try {
