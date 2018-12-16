@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -304,14 +305,10 @@
 									<div class="table4">
 										<p class="table4-p">浏览历史</p>
 										<div class="table4-div">
-											<ul class="table4-divul0">
-												<li><a href="#" class="table4-divul0li0a">今天</a></li>
-												<li><a href="#" class="table4-divul0li1a">昨天</a></li>
-											</ul>
 											<ul class="table4-divul1">
-												<li><a href="#">项目名称</a></li>
-												<li><a href="#">项目名称</a></li>
-												<li><a href="#">项目名称</a></li>
+												<c:forEach items="${scannedActList }" var="scannedAct">
+													<li><a href="#">${scannedAct.name }</a></li>
+												</c:forEach>
 											</ul>
 										</div>
 										<a href="#" class="table4-a"><img src="images/02.png" width="40px" height="40px"></a>

@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/12/5 8:56:43                            */
+/* Created on:     2018/12/12 8:49:57                           */
 /*==============================================================*/
 
 
@@ -51,6 +51,7 @@ create table activity_information
    search_type          varchar(10),
    comprehensive_type   varchar(10),
    is_interview         char(2),
+   student_number       int,
    primary key (id)
 );
 

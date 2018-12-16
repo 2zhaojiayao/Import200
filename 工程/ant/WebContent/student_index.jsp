@@ -40,13 +40,7 @@
 		</div>
 	</div>
 	<%@include file="footer.jsp"%>
-
-
 </body>
-<<<<<<< HEAD
- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> 
-=======
 <script type="text/javascript"
 	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
->>>>>>> 961514b0a2dff5b8ce823b61becad083483264f8
 </html>
