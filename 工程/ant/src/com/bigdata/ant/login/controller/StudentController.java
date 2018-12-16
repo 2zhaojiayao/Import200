@@ -40,6 +40,17 @@ public class StudentController {
 		HttpSession session = request.getSession();
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
+		String session_vcode = (String) session.getAttribute("text"); // 从session中获取真正的验证码
+		String form_vcode = request.getParameter("vcode"); // 获取用户输入的验证码
+		String message = "";
+		String msg = (String) request.getAttribute("msg");
+		if (msg != null) {
+			message = msg;
+		}
+		if (!(session_vcode.equalsIgnoreCase(form_vcode))) // 进行判断
+		{
+			request.setAttribute("msg", "验证码错误"); // 如果错误就将错误信息发送给客户端
+		}
 		boolean b = this.studentServiceImpl.FindIdAndPwd(id, pwd);
 		if (b == false) {
 			return "three_login";

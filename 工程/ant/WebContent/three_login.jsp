@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>login-小蚂蚁</title>
 <link rel="stylesheet" href="css/three_login.css">
-<script src="js/three_login.js"></script>
+<script type="text/javascript" src="js/three_login.js"></script>
 </head>
 <body>
 
@@ -92,17 +92,17 @@
 						</div>
 						<!--  div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
-								type="text" name="vcode" size="3" id="auth_code"
-								placeholder="填写验证码" class="l_float" maxlength="6"> <img
-								src="vert" id="image">&nbsp; <a href="javascript:change()">看不清，换一张</a>&nbsp;
-							<p class="tips hidden">验证码错误</p>
+								type="text" name="vcode" id="auth_code" class="l_float"
+								maxlength="5" size="3"> <img src="vert" id="image"
+								class="auth_code l_float">&nbsp;<a
+								href="javascript:change()">看不清，换一张</a> &nbsp;<br /> <font
+								color="red"> ${message } </font>
 
 						</div>-->
 						<div class="b_clear submit">
 							<a href="toRegister" class="r_float">注册账号</a> <a href="#"
 								class="r_float">忘记密码？</a>
 							<button type="submit">登&nbsp;&nbsp;录</button>
-
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>
 						</div>
 					</form>
@@ -123,12 +123,11 @@
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
-								type="text" name="" id="auth_code" placeholder="填写验证码"
-								class="l_float" maxlength="6">
-
-							<button class="auth_code l_float">获取验证码</button>
-							<img src="images/icons/auth_code.svg">
-							<p class="tips hidden">验证码错误</p>
+								type="text" name="vcode" id="auth_code" class="l_float"
+								maxlength="5" size="3"> <img src="vert" id="image"
+								class="auth_code l_float">&nbsp;<a
+								href="javascript:change()">看不清，换一张</a> &nbsp;<br /> <font
+								color="red"> ${message } </font>
 
 						</div>
 						<div class="b_clear submit">
@@ -157,12 +156,11 @@
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
-								type="text" name="" id="auth_code" placeholder="填写验证码"
-								class="l_float" maxlength="6">
-
-							<button class="auth_code l_float">获取验证码</button>
-							<img src="images/icons/auth_code.svg">
-							<p class="tips hidden">验证码错误</p>
+								type="text" name="vcode" id="auth_code" class="l_float"
+								maxlength="5" size="3"> <img src="vert" id="image"
+								class="auth_code l_float">&nbsp;<a
+								href="javascript:change()">看不清，换一张</a> &nbsp;<br /> <font
+								color="red"> ${message } </font>
 
 						</div>
 						<div class="b_clear submit">
@@ -185,6 +183,4 @@
 		<!-- 页尾 -->
 		<%@include file="footer.jsp"%>
 </body>
-<script type="text/javascript"
-	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

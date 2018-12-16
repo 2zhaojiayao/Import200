@@ -1,9 +1,14 @@
 package com.bigdata.ant.entity;
 
+<<<<<<< HEAD
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+=======
+import java.util.ArrayList;
+import java.util.List;
+>>>>>>> 0b22865fa652f192a7af3a35b6223a2c9d4ddd68
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -36,13 +41,17 @@ public class Student {
 	private String gender;
 	private String email;
 	private ClassInfo classInfo;
+<<<<<<< HEAD
 	private Integer status;//状态，0-未激活；1-已激活 ;
 	private String validateCode;
 	private Date registerTime;
 	private Set<Activity> scanedActivities=new HashSet<Activity>();
 	private Set<ActivityJoin> joinedActivities=new HashSet<ActivityJoin>();
+=======
+	private List<Activity> scanedActivities=new ArrayList<Activity>();
+	private List<ActivityJoin> joinedActivities=new ArrayList<ActivityJoin>();
+>>>>>>> 0b22865fa652f192a7af3a35b6223a2c9d4ddd68
 	public Student() {
-		// TODO Auto-generated constructor stub
 	}
 	@Id
 	@GenericGenerator(name="assigned-generator",strategy="assigned")
@@ -107,17 +116,17 @@ public class Student {
 	}
 	@ManyToMany
 	@JoinTable(name="student_scan",joinColumns=@JoinColumn(name="student_id"),inverseJoinColumns=@JoinColumn(name="activity_id"))
-	public Set<Activity> getScanedActivities() {
+	public List<Activity> getScanedActivities() {
 		return scanedActivities;
 	}
-	public void setScanedActivities(Set<Activity> scanedActivities) {
+	public void setScanedActivities(List<Activity> scanedActivities) {
 		this.scanedActivities = scanedActivities;
 	}
-    @OneToMany(mappedBy="student",targetEntity=ActivityJoin.class,cascade=CascadeType.ALL)
-	public Set<ActivityJoin> getJoinedActivities() {
+	@OneToMany(mappedBy="student",targetEntity=ActivityJoin.class,cascade=CascadeType.ALL)
+	public List<ActivityJoin> getJoinedActivities() {
 		return joinedActivities;
 	}
-	public void setJoinedActivities(Set<ActivityJoin> joinedActivities) {
+	public void setJoinedActivities(List<ActivityJoin> joinedActivities) {
 		this.joinedActivities = joinedActivities;
 	}
 }
