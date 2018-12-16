@@ -65,4 +65,30 @@ public class StudentDaoImpl extends BaseDao<Student, Integer> {
 		}
 		return s;
 	}
+
+	/**
+	 * 
+	 * @Title: getById
+	 * @Description: 判断数据库中是否有id
+	 * @param:@param id
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param id
+	 * @return
+	 */
+	public boolean getById(String id) {
+		Student s = null;
+		String hql = "from Student s where s.id = ?0";
+		try {
+			s = this.findOne1(hql, id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if (s != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

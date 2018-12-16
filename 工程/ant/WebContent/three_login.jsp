@@ -11,37 +11,14 @@
 </head>
 <body>
 
-	<header>
-		<nav class="b_clear">
-			<div class="nav_logo l_float">
-				<img src="images/logo2.png" alt="">
+	<!--轮播图-->
+	<div class="container">
+		<div class="login_body l_clear">
+			<div id="container_img">
+				<div id="list">
+					<img src="images/bj5.jpg" alt="1" />
+				</div>
 			</div>
-
-		</nav>
-	</header>
-	 <!--轮播图-->
-        <div class="container">
-            <div class="login_body l_clear">
-                <div id="container_img">
-                    <div id="list" style="left: -100%;">
-                     <img src="images/bj5.jpg" alt="1" />
-                     <img src="images/bj1.jpg" alt="1" />
-                     <img src="images/bj2.jpg" alt="2" />
-                     <img src="images/bj3.jpg" alt="3" />
-                     <img src="images/bj4.jpg" alt="4" />
-                     <img src="images/bj5.jpg" alt="5" />
-                     <img src="images/bj1.jpg" alt="5" />
-                    </div>
-                   <div id="buttons">
-                    <span index="1" class="on"></span>
-                    <span index="2"></span>
-                    <span index="3"></span>
-                    <span index="4"></span>
-                    <span index="5"></span>
-                   </div>
-                   <a href="javascript:;" id="prev" class="arrow">&lt;</a>
-                   <a href="javascript:;" id="next" class="arrow">&gt;</a>
-               </div>
 			<!--日历-->
 			<div class="calendar">
 				<div class="title">
@@ -88,20 +65,25 @@
 								id="user_name" placeholder="账号为学号"> <img
 								src="images/icons/user.svg">
 							<p class="tips hidden">请检查您的账号</p>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message1 } </font>
 						</div>
 						<div>
 							<label for="user_pwd">密码</label> <input type="password"
 								name="pwd" id="user_pwd" placeholder="请输入账户密码"> <img
 								src="images/icons/lock.svg">
 							<p class="tips hidden">请检查您的密码</p>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message2 } </font>
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
 								type="text" name="vcode" id="auth_code" class="l_float"
-								maxlength="5" size="3"> <img src="vert" id="image"
+								maxlength="5" size="5"> <img src="vert" id="image"
 								class="auth_code l_float">&nbsp;<a
 								href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
-
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message } </font>
 						</div>
 						<div class="b_clear submit">
 							<a href="#" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
@@ -109,9 +91,6 @@
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>
 						</div>
 					</form>
-					<br>
-					<!-- 获取信息和显示错误信息 -->
-					<font color="red"> ${message } </font>
 				</div>
 				<div class="login_con hidden">
 					<form action="mon_login" method="POST">
@@ -120,20 +99,25 @@
 								name="email" id="user_name" placeholder="账号为班委邮箱"> <img
 								src="images/icons/user.svg">
 							<p class="tips hidden">请检查您的账号</p>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message1 } </font>
 						</div>
 						<div>
 							<label for="user_pwd">密码</label> <input type="password"
 								name="pwd" id="user_pwd" placeholder="请输入账户密码"> <img
 								src="images/icons/lock.svg">
 							<p class="tips hidden">请检查您的密码</p>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message2 } </font>
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
 								type="text" name="vcode" id="auth_code" class="l_float"
-								maxlength="5" size="3"> <img src="vert" id="image"
+								maxlength="5" size="5"> <img src="vert" id="image"
 								class="auth_code l_float">&nbsp;<a
-								href="javascript:change()">看不清，换一张</a> &nbsp;<br /> <font
-								color="red"> ${message } </font>
+								href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message } </font>
 
 						</div>
 						<div class="b_clear submit">
@@ -153,21 +137,25 @@
 								name="email" id="user_name" placeholder="账号为组织邮箱"> <img
 								src="images/icons/user.svg">
 							<p class="tips hidden">请检查您的账号</p>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message1 } </font>
 						</div>
 						<div>
 							<label for="user_pwd">密码</label> <input type="password"
 								name="pwd" id="user_pwd" placeholder="请输入账户密码"> <img
 								src="images/icons/lock.svg">
 							<p class="tips hidden">请检查您的密码</p>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message2 } </font>
 						</div>
 						<div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
 								type="text" name="vcode" id="auth_code" class="l_float"
-								maxlength="5" size="3"> <img src="vert" id="image"
+								maxlength="5" size="5"> <img src="vert" id="image"
 								class="auth_code l_float">&nbsp;<a
-								href="javascript:change()">看不清，换一张</a> &nbsp;<br /> <font
-								color="red"> ${message } </font>
-
+								href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message } </font>
 						</div>
 						<div class="b_clear submit">
 							<a href="three_register.jsp" class="r_float">注册账号</a> <a href="#"
