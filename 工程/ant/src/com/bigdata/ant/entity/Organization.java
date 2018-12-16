@@ -24,7 +24,7 @@ import javax.persistence.Table;
 @Table(name="organization_user")
 public class Organization {
 private int id;
-private String eamil;
+private String email;
 private String password;
 private String name;
 private Set<Activity> activities=new HashSet<Activity>();
@@ -40,11 +40,12 @@ private Set<Activity> activities=new HashSet<Activity>();
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getEamil() {
-		return eamil;
+	
+	public String getEmail() {
+		return email;
 	}
-	public void setEamil(String eamil) {
-		this.eamil = eamil;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getPassword() {
 		return password;

@@ -40,8 +40,7 @@ import com.bigdata.ant.utils.BaseDao;
 @Repository
 
 public class HeaderDaoImpl extends BaseDao<Activity,Integer> {
-	@Resource
-	private SessionFactory sessionFactory;
+
 	public List<Object[]> findActivitiesNames(String keyword)  {
 		List<Object[]> activities=null;
 		String hql="select name from Activity where name like ?0";

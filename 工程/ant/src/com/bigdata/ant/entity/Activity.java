@@ -28,7 +28,7 @@ public class Activity {
 private int id;
 private String name;
 private String description;
-private int level;//级别
+private String level;//级别
 private Date applyBegin;
 private Date applyEnd;
 private Date holdBegin;
@@ -40,6 +40,7 @@ private String image;
 private String searchType;//搜索类型
 private String comprehensiveType;//综测类型
 private String isInterview;
+private Integer studentNumber;
 private Organization organization;
 private Set<Student> students=new HashSet<Student>();
 private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
@@ -66,11 +67,19 @@ private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getLevel() {
+	
+	public String getLevel() {
 		return level;
 	}
-	public void setLevel(int level) {
+	public void setLevel(String level) {
 		this.level = level;
+	}
+	@Column(name="student_number")
+	public Integer getStudentNumber() {
+		return studentNumber;
+	}
+	public void setStudentNumber(Integer studentNumber) {
+		this.studentNumber = studentNumber;
 	}
 	@Column(name="apply_begin")
 	public Date getApplyBegin() {
@@ -125,7 +134,7 @@ private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
 	public void setImage(String image) {
 		this.image = image;
 	}
-
+    @Column(name="search_type")
 	public String getSearchType() {
 		return searchType;
 	}
@@ -160,9 +169,6 @@ private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
 	public void setStudents(Set<Student> students) {
 		this.students = students;
 	}
-
-
-	
    @OneToMany(mappedBy="activity",targetEntity=ActivityStage.class,cascade=CascadeType.ALL)
 	public Set<ActivityStage> getActivityStages() {
 		return activityStages;
