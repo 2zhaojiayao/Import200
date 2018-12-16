@@ -176,7 +176,7 @@ $(function() {
 	});	
 	$("#classes").blur(function(){
 		var classes=$('#classes').val();
-		if(profession=="0"){
+		if(classes=="0"){
 			$("#classes_msg").html("请选择班级");
 			$("#classes_msg").addClass("redWord");
 		}else{
