@@ -1,7 +1,7 @@
 package com.bigdata.ant.entity;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -32,10 +32,9 @@ public class Student {
 	private String gender;
 	private String email;
 	private ClassInfo classInfo;
-	private Set<Activity> scanedActivities=new HashSet<Activity>();
-	private Set<ActivityJoin> joinedActivities=new HashSet<ActivityJoin>();
+	private List<Activity> scanedActivities=new ArrayList<Activity>();
+	private List<ActivityJoin> joinedActivities=new ArrayList<ActivityJoin>();
 	public Student() {
-		// TODO Auto-generated constructor stub
 	}
 	@Id
 	@GenericGenerator(name="assigned-generator",strategy="assigned")
@@ -80,17 +79,17 @@ public class Student {
 	}
 	@ManyToMany
 	@JoinTable(name="student_scan",joinColumns=@JoinColumn(name="student_id"),inverseJoinColumns=@JoinColumn(name="activity_id"))
-	public Set<Activity> getScanedActivities() {
+	public List<Activity> getScanedActivities() {
 		return scanedActivities;
 	}
-	public void setScanedActivities(Set<Activity> scanedActivities) {
+	public void setScanedActivities(List<Activity> scanedActivities) {
 		this.scanedActivities = scanedActivities;
 	}
-    @OneToMany(mappedBy="student",targetEntity=ActivityJoin.class,cascade=CascadeType.ALL)
-	public Set<ActivityJoin> getJoinedActivities() {
+	@OneToMany(mappedBy="student",targetEntity=ActivityJoin.class,cascade=CascadeType.ALL)
+	public List<ActivityJoin> getJoinedActivities() {
 		return joinedActivities;
 	}
-	public void setJoinedActivities(Set<ActivityJoin> joinedActivities) {
+	public void setJoinedActivities(List<ActivityJoin> joinedActivities) {
 		this.joinedActivities = joinedActivities;
 	}
 	
