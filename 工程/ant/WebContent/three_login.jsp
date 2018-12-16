@@ -90,7 +90,7 @@
 								src="images/icons/lock.svg">
 							<p class="tips hidden">请检查您的密码</p>
 						</div>
-						<div class="b_clear">
+						<!-- div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
 								type="text" name="vcode" id="auth_code" class="l_float"
 								maxlength="5" size="3"> <img src="vert" id="image"
@@ -98,7 +98,7 @@
 								href="javascript:change()">看不清，换一张</a> &nbsp;<br /> <font
 								color="red"> ${message } </font>
 
-						</div>
+						</div> -->
 						<div class="b_clear submit">
 							<a href="#" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
 							<button type="submit">登&nbsp;&nbsp;录</button>
