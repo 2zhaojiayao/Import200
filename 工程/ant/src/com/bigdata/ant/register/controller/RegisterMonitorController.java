@@ -9,18 +9,17 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.bigdata.ant.entity.Monitor;
-import com.bigdata.ant.register.service.MonitorServiceImpl;
+import com.bigdata.ant.register.service.RegisterMonitorServiceImpl;
 
 @Controller
-public class MonitorController {
+public class RegisterMonitorController {
 	@Resource
-	private MonitorServiceImpl monitorServiceImpl;
+	private RegisterMonitorServiceImpl registermonitorServiceImpl;
 	
 	@RequestMapping("/checkMonitorEmail")
 	public void checkMonitorEmail(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String mon_email = request.getParameter("mon_email");
-		Boolean bool = monitorServiceImpl.findMonitorByEmail(mon_email);
+		Boolean bool = registermonitorServiceImpl.findMonitorByEmail(mon_email);
 		if (bool == true) {// 数据库中已存在该班委
 			System.out.println("已存在班委");
 			response.getWriter().print("no");

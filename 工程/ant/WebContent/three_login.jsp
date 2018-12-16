@@ -90,16 +90,17 @@
 								src="images/icons/lock.svg">
 							<p class="tips hidden">请检查您的密码</p>
 						</div>
-						<div class="b_clear">
+						<!--  div class="b_clear">
 							<label for="auth_code" class="b_clear">验证码</label> <input
 								type="text" name="vcode" size="3" id="auth_code"
 								placeholder="填写验证码" class="l_float" maxlength="6"> <img
 								src="vert" id="image">&nbsp; <a href="javascript:change()">看不清，换一张</a>&nbsp;
 							<p class="tips hidden">验证码错误</p>
 
-						</div>
+						</div>-->
 						<div class="b_clear submit">
-							<a href="toRegister" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
+							<a href="toRegister" class="r_float">注册账号</a> <a href="#"
+								class="r_float">忘记密码？</a>
 							<button type="submit">登&nbsp;&nbsp;录</button>
 
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>
@@ -131,8 +132,8 @@
 
 						</div>
 						<div class="b_clear submit">
-							<a href="toRegister" class="r_float" id="orange">注册账号</a> <a href="#"
-								class="r_float" id="orange">忘记密码？</a>
+							<a href="toRegister" class="r_float" id="orange">注册账号</a> <a
+								href="#" class="r_float" id="orange">忘记密码？</a>
 							<button type="submit">登&nbsp;&nbsp;录</button>
 
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>
@@ -165,12 +166,11 @@
 
 						</div>
 						<div class="b_clear submit">
-<<<<<<< HEAD
-							<a href="toRegister" class="r_float">注册账号</a> <a href="#" class="r_float">忘记密码？</a>
-=======
-							<a href="three_register.jsp" class="r_float">注册账号</a> <a href="#"
-								class="r_float">忘记密码？</a>
->>>>>>> 1076c2d606ec7a411091f98599a0b027036ae5a6
+							<<<<<<< HEAD <a href="toRegister" class="r_float">注册账号</a> <a
+								href="#" class="r_float">忘记密码？</a> ======= <a
+								href="three_register.jsp" class="r_float">注册账号</a> <a href="#"
+								class="r_float">忘记密码？</a> >>>>>>>
+							1076c2d606ec7a411091f98599a0b027036ae5a6
 							<button type="submit">登&nbsp;&nbsp;录</button>
 
 							<p class="tips hidden">登录失败，请检查您的账户与密码</p>

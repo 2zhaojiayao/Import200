@@ -9,18 +9,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bigdata.ant.entity.Monitor;
-import com.bigdata.ant.entity.Student;
-import com.bigdata.ant.login.dao.MonitorDaoImpl;
+import com.bigdata.ant.register.dao.RegisterMonitorDaoImpl;
 import com.bigdata.ant.utils.IncreaseTimeUtil;
 import com.bigdata.ant.utils.MD5Util;
 import com.bigdata.ant.utils.MailUtil;
 
 @Service
 @Transactional(readOnly = false)
-public class MonitorServiceImpl {
+public class RegisterMonitorServiceImpl {
 
 	@Resource
-	private MonitorDaoImpl monitorDaoImpl;
+	private RegisterMonitorDaoImpl registerMonitorDaoImpl;
 
 	/**
 	 * 
@@ -35,7 +34,7 @@ public class MonitorServiceImpl {
 	 */
 	public Boolean findMonitorByEmail(String email) {
 		try {
-			Monitor monitor = monitorDaoImpl.get(email);
+			Monitor monitor = registerMonitorDaoImpl.get(email);
 			if (monitor != null) {
 				return true;// 该邮箱已经注册过班委
 			} else {
@@ -97,37 +96,38 @@ public class MonitorServiceImpl {
 
 	/**
 	 * 
-	* @Title: saveMonitor  
-	* @Description: TODO(这里用一句话描述这个方法的作用) 
-	* @param:@param monitor (参数)
-	* @return:void(返回类型)
-	*
+	 * @Title: saveMonitor
+	 * @Description: TODO(这里用一句话描述这个方法的作用)
+	 * @param:@param monitor (参数)
+	 * @return:void(返回类型)
+	 *
 	 * @param monitor
 	 */
 	public void saveMonitor(Monitor monitor) {
-		try {			
-			monitorDaoImpl.save(monitor);
+		try {
+			registerMonitorDaoImpl.save(monitor);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
+
 	public Monitor getMonitor(String email) {
-		try {			
-			return monitorDaoImpl.get(email);
+		try {
+			return registerMonitorDaoImpl.get(email);
 		} catch (Exception e) {
 			return null;
 		}
 	}
+
 	/**
 	 * 
-	* @Title: processMonitorRegister  
-	* @Description: TODO(这里用一句话描述这个方法的作用) 
-	* @param:@param monitor
-	* @param:@return (参数)
-	* @return:String(返回类型)
-	*
+	 * @Title: processMonitorRegister
+	 * @Description: TODO(这里用一句话描述这个方法的作用)
+	 * @param:@param monitor
+	 * @param:@return (参数)
+	 * @return:String(返回类型)
+	 *
 	 * @param monitor
 	 * @return
 	 */
@@ -146,22 +146,22 @@ public class MonitorServiceImpl {
 		saveMonitor(monitor);
 		return validateCode;
 	}
-	
-	public String VolidateMonitorRegister(String email,String validateCode) {
-		Monitor monitor=getMonitor(email);
-		if(monitor!=null) {
-			if(monitor.getStatus()==0) {
-				Date currentTime=new Date();
-				//验证链接是否过期
-				if(currentTime.before(IncreaseTimeUtil.addDateMinut(monitor.getRegisterTime(), 24))) {
-					if(monitor.getValidateCode().equals(validateCode)) {
+
+	public String VolidateMonitorRegister(String email, String validateCode) {
+		Monitor monitor = getMonitor(email);
+		if (monitor != null) {
+			if (monitor.getStatus() == 0) {
+				Date currentTime = new Date();
+				// 验证链接是否过期
+				if (currentTime.before(IncreaseTimeUtil.addDateMinut(monitor.getRegisterTime(), 24))) {
+					if (monitor.getValidateCode().equals(validateCode)) {
 //						monitorDaoImpl.updateStatus();
 						return "激活成功";
 					}
-				}else {
+				} else {
 					return "激活码已过期";
 				}
-			}else {
+			} else {
 				return "邮箱已激活，请登录";
 			}
 		}

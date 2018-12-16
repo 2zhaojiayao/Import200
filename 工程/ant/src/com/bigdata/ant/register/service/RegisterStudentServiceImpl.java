@@ -12,20 +12,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bigdata.ant.entity.College;
 import com.bigdata.ant.entity.Student;
-import com.bigdata.ant.register.dao.CollegeDaoImpl;
-import com.bigdata.ant.register.dao.StudentDaoImpl;
+import com.bigdata.ant.register.dao.RegisterCollegeDaoImpl;
+import com.bigdata.ant.register.dao.RegisterStudentDaoImpl;
 import com.bigdata.ant.utils.IncreaseTimeUtil;
 import com.bigdata.ant.utils.MD5Util;
 import com.bigdata.ant.utils.MailUtil;
 
 @Service
 @Transactional(readOnly = false)
-public class StudentServiceImpl {
+public class RegisterStudentServiceImpl {
 	
 	@Resource
-	private StudentDaoImpl studentDaoImpl;
+	private RegisterStudentDaoImpl registerStudentDaoImpl;
 	@Resource
-	private CollegeDaoImpl collegeDaoImpl;
+	private RegisterCollegeDaoImpl collegeDaoImpl;
 	
 	/**
 	 * 
@@ -72,7 +72,7 @@ public class StudentServiceImpl {
 	 */
 	public Boolean findStudentById (String student_id) {
 		try {
-			Student student=studentDaoImpl.get(student_id);
+			Student student=registerStudentDaoImpl.get(student_id);
 			if(student!=null) {
 				return true;//可以找到该学生
 			}else {
@@ -148,7 +148,7 @@ public class StudentServiceImpl {
 	 */
 	public void saveStudent(Student student) {
 		try {			
-			studentDaoImpl.save(student);
+			registerStudentDaoImpl.save(student);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -197,14 +197,14 @@ public class StudentServiceImpl {
 	 * @return
 	 */
 	public String VolidateRegister(String email,String validateCode) {
-		Student student=studentDaoImpl.findByEmail(email);
+		Student student=registerStudentDaoImpl.findByEmail(email);
 		if(student!=null) {
 			if(student.getStatus()==0) {
 				Date currentTime=new Date();
 				//验证链接是否过期
 				if(currentTime.before(IncreaseTimeUtil.addDateMinut(student.getRegisterTime(), 24))) {
 					if(student.getValidateCode().equals(validateCode)) {
-						studentDaoImpl.updateStatus();
+						registerStudentDaoImpl.updateStatus();
 						return "激活成功";
 					}
 				}else {

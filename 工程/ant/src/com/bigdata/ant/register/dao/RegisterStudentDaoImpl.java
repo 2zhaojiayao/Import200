@@ -15,7 +15,7 @@ import com.bigdata.ant.utils.BaseDao;
  *
  */
 @Repository
-public class StudentDaoImpl extends BaseDao<Student,Integer> {
+public class RegisterStudentDaoImpl extends BaseDao<Student,Integer> {
 	
 	/**
 	 * 

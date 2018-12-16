@@ -6,7 +6,7 @@ import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.utils.BaseDao;
 
 @Repository
-public class MonitorDaoImpl extends BaseDao<Monitor,String> {
+public class RegisterMonitorDaoImpl extends BaseDao<Monitor,String> {
 	public Boolean updateStatus() {
 		try {
 			String sql="update monitor_user set status=?0";
