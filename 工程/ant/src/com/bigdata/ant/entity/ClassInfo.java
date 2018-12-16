@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -62,7 +63,7 @@ public class ClassInfo {
 	public void setClassNo(String classNo) {
 		this.classNo = classNo;
 	}
-   @OneToMany(mappedBy="classInfo",targetEntity=Student.class,cascade=CascadeType.ALL)
+   @OneToMany(mappedBy="classInfo",targetEntity=Student.class,cascade=CascadeType.ALL,fetch = FetchType.EAGER)
 	public Set<Student> getStudents() {
 		return students;
 	}

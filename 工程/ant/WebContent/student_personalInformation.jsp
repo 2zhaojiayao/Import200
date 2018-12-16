@@ -82,12 +82,14 @@
 									<td class="td2"><select>
 											<option value="apple">${s.classInfo.profession.college.name}</option>
 											<c:forEach items="${college }" var="onecollege">
-												<option value="banana">${onecollege.name}</option>
+												<option value="banana" class="">${onecollege.name}</option>
 											</c:forEach>
 									</select></td>
 								</tr>
 								<tr class="tr">
-									<td class="td1">专业:${s.classInfo.profession.college.professions}</td>
+									<td class="td1">专业:
+<%-- 									${s.classInfo.profession.college.professions} --%>
+									</td>
 									<td class="td2">
 										<select>
 											<option value="apple">${s.classInfo.profession.name}</option>
