@@ -86,23 +86,30 @@
 									id="user_name" placeholder="账号为学号"> <img
 									src="images/icons/user.svg">
 								<p class="tips hidden">请检查您的账号</p>
+
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message1 } </font>
 							</div>
 							<div>
 								<label for="user_pwd">密码</label> <input type="password" name=""
 									id="user_pwd" placeholder="请输入账户密码"> <img
 									src="images/icons/lock.svg">
 								<p class="tips hidden">请检查您的密码</p>
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message2 } </font>
 							</div>
 							<div class="b_clear">
 								<label for="auth_code" class="b_clear">验证码</label> <input
-									type="text" name="" id="auth_code" placeholder="填写验证码"
-									class="l_float" maxlength="6">
+									type="text" name="vcode" id="auth_code" class="l_float"
+									maxlength="5" size="3"> <img src="vert" id="image"
+									class="auth_code l_float">&nbsp;<a
+									href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
 
-								<button class="auth_code l_float">获取验证码</button>
-								<img src="images/icons/auth_code.svg">
-								<p class="tips hidden">验证码错误</p>
-
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message } </font>
 							</div>
+
+
 							<div class="b_clear submit">
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
@@ -131,13 +138,13 @@
 							</div>
 							<div class="b_clear">
 								<label for="auth_code" class="b_clear">验证码</label> <input
-									type="text" name="" id="auth_code" placeholder="填写验证码"
-									class="l_float" maxlength="6">
+									type="text" name="vcode" id="auth_code" class="l_float"
+									maxlength="5" size="3"> <img src="vert" id="image"
+									class="auth_code l_float">&nbsp;<a
+									href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
 
-								<button class="auth_code l_float">获取验证码</button>
-								<img src="images/icons/auth_code.svg">
-								<p class="tips hidden">验证码错误</p>
-
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message } </font>
 							</div>
 							<div class="b_clear submit">
 								<label for="remmber"> <input class="remmber"
@@ -168,13 +175,13 @@
 							</div>
 							<div class="b_clear">
 								<label for="auth_code" class="b_clear">验证码</label> <input
-									type="text" name="" id="auth_code" placeholder="填写验证码"
-									class="l_float" maxlength="6">
+									type="text" name="vcode" id="auth_code" class="l_float"
+									maxlength="5" size="3"> <img src="vert" id="image"
+									class="auth_code l_float">&nbsp;<a
+									href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
 
-								<button class="auth_code l_float">获取验证码</button>
-								<img src="images/icons/auth_code.svg">
-								<p class="tips hidden">验证码错误</p>
-
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message } </font>
 							</div>
 							<div class="b_clear submit">
 								<label for="remmber"> <input class="remmber"
@@ -187,8 +194,8 @@
 								<p class="tips hidden">登录失败，请检查您的账户与密码</p>
 							</div>
 						</form>
-						
-						
+
+
 
 					</div>
 				</div>
