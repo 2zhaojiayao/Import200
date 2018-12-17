@@ -25,7 +25,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="activity_information")
 public class Activity {
-<<<<<<< HEAD
 private int id;
 private String name;
 private String description;
@@ -45,28 +44,6 @@ private Integer studentNumber;
 private Organization organization;
 private Set<Student> students=new HashSet<Student>();
 private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
-=======
-	private int id;
-	private String name;
-	private String description;
-	private String level;// 级别
-	private Date applyBegin;
-	private Date applyEnd;
-	private Date holdBegin;
-	private Date holdEnd;
-	private String holdPlace;
-	private String style;
-	private String participant;
-	private String image;
-	private String searchType;// 搜索类型
-	private String comprehensiveType;// 综测类型
-	private String isInterview;
-	private Integer studentNumber;
-	private Organization organization;
-	private Set<Student> students = new HashSet<Student>();
-	private Set<ActivityStage> activityStages = new HashSet<ActivityStage>();
-
->>>>>>> dd8abd3f468ded7142e238d6738130d5d19890a0
 	public Activity() {
 		// TODO Auto-generated constructor stub
 	}
@@ -97,7 +74,6 @@ private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
 	public void setLevel(String level) {
 		this.level = level;
 	}
-<<<<<<< HEAD
 	@Column(name="student_number")
 	public Integer getStudentNumber() {
 		return studentNumber;
@@ -106,19 +82,6 @@ private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
 		this.studentNumber = studentNumber;
 	}
 	@Column(name="apply_begin")
-=======
-
-	@Column(name = "student_number")
-	public Integer getStudentNumber() {
-		return studentNumber;
-	}
-
-	public void setStudentNumber(Integer studentNumber) {
-		this.studentNumber = studentNumber;
-	}
-	
-	@Column(name = "apply_begin")
->>>>>>> dd8abd3f468ded7142e238d6738130d5d19890a0
 	public Date getApplyBegin() {
 		return applyBegin;
 	}
@@ -178,6 +141,7 @@ private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
 	public void setSearchType(String searchType) {
 		this.searchType = searchType;
 	}
+	@Column(name="comprehensive_type")
 	public String getComprehensiveType() {
 		return comprehensiveType;
 	}
