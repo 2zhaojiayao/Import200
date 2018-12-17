@@ -141,6 +141,7 @@ private Set<ActivityStage> activityStages=new HashSet<ActivityStage>();
 	public void setSearchType(String searchType) {
 		this.searchType = searchType;
 	}
+	@Column(name="comprehensive_type")
 	public String getComprehensiveType() {
 		return comprehensiveType;
 	}
