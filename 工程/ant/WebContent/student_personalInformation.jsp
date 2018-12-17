@@ -63,7 +63,7 @@
 					</div>
 					<div class="clear"></div>
 					<div class="bottom_right_detail">
-						<form action="#" method="post">
+						<form action="saveSinformation" method="post">
 							<table>
 								<tr class="tr">
 									<td class="td1">姓名:</td>

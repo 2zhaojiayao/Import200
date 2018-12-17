@@ -28,14 +28,14 @@ public class PersonalInformationDaoImpl extends BaseDao<College, Integer> {
 	//查询所有学院
 	public List<College> collegeInformation(){
 		String hql="from College";
-			List<College> studentcollege = null;
-			try {
-				studentcollege = this.findAll();
-				
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		List<College> studentcollege = null;
+		try {
+			studentcollege = this.findAll();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 			return studentcollege;
 	
 	}
