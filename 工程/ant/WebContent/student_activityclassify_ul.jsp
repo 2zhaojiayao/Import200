@@ -54,10 +54,6 @@
 								<li><a href="javascript:;" class="normal">生命科学学院</a></li>
 								<li><a href="javascript:;" class="normal">资源与环境科学学院</a></li>
 								<li><a href="javascript:;" class="normal">体育学院</a></li>
-								<li><a href="javascript:;" class="normal">信息技术学院</a></li>
-								<li><a href="javascript:;" class="normal">职业技术学院</a></li>
-								<li><a href="javascript:;" class="normal">旅游系</a></li>
-								<li><a href="javascript:;" class="normal">中燃工学院</a></li>
 								
 							</ul>
 						</div>
