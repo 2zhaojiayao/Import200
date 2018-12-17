@@ -24,9 +24,8 @@
 						<form>
 							 <input type="text" placeholder="       请输入您要搜索的内容..." id="text" autocomplete="off"> 
 						     <button type="submit"></button> 
-							 <div id="word"></div>
-							
 						</form>
+						 <div id="word"></div>
 					</div>
 				</td>
 				<td class="top_1"><img src="images/message.png" class="message"></td>
