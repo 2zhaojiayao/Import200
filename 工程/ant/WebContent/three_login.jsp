@@ -105,10 +105,10 @@
 									class="auth_code l_float">&nbsp;<a
 									href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
 
-								<!-- 获取信息和显示错误信息 -->
-								<font color="red"> ${message } </font>
 							</div>
-
+							<br>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message } </font>
 
 							<div class="b_clear submit">
 								<label for="remmber"> <input class="remmber"
@@ -147,9 +147,9 @@
 									class="auth_code l_float">&nbsp;<a
 									href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
 
-								<!-- 获取信息和显示错误信息 -->
-								<font color="red"> ${message } </font>
 							</div>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message } </font>
 							<div class="b_clear submit">
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
@@ -188,9 +188,9 @@
 									class="auth_code l_float">&nbsp;<a
 									href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
 
-								<!-- 获取信息和显示错误信息 -->
-								<font color="red"> ${message } </font>
 							</div>
+							<!-- 获取信息和显示错误信息 -->
+							<font color="red"> ${message } </font>
 							<div class="b_clear submit">
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
