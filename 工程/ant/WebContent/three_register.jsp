@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/three_register.js"></script>
 </head>
+
 <body>
     <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
     <div class="wrapper">
