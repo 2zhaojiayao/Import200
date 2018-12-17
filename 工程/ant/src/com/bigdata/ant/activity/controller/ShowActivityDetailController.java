@@ -17,13 +17,12 @@ public class ShowActivityDetailController {
 
 	@RequestMapping(value="/activitydetail",method=RequestMethod.GET)
 	public String getActivityDetail(HttpServletRequest request) {
-		String id = request.getParameter("activityId");
+		String id = "1";
 		if(id!=null) {
 			int actId = Integer.parseInt(id);
 			Activity activity = this.showActivityDetailServiceImpl.getActivityDetail(actId);
 			if(activity.equals(null)==false) {
 				request.setAttribute("activitydetail", activity);
-				System.out.println(activity.getName());
 				ActivityStage astage = this.showActivityDetailServiceImpl.getActivityStage(actId);
 				if(astage!=null) {
 					request.setAttribute("activitystage", astage);
