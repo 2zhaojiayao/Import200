@@ -34,15 +34,15 @@
 						</td>
 						<td>
 							<p class="table1-youshang">参加的活动数<br></p>
-							<p class="table1-youxia">56</p>
+							<p class="table1-youxia">${activitynum}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">综测分数<br></p>
-							<p class="table1-youxia">80.99</p>
+							<p class="table1-youxia">${nowscore}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">综测排名<br></p>
-							<p class="table1-youxia">8/24</p>
+							<p class="table1-youxia">${Studentactivitynum}</p>
 						</td>
 					</tr>
 				</table>

@@ -14,6 +14,9 @@
 	<form action="send" name="email" method="post" class="formsty">
 		<p class="fill">请填写您注册账号使用的邮箱:</p>
 		<input type="text" name="email" class="mail" />
+
+		<!-- 获取信息和显示错误信息 -->
+		<font color="red"> ${message } </font>
 		<div class="prompt">
 			<img src="images/msg.jpg" class="msg" />
 			<lable class="message">为了保证您的账户安全，我们将会向您的邮箱发送一封邮件，以确认是本人的操作。请确认查收并修改密码！</lable>

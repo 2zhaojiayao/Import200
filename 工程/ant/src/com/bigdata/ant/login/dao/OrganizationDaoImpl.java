@@ -18,7 +18,7 @@ public class OrganizationDaoImpl extends BaseDao<Organization, Integer> {
 
 	/**
 	 * 
-	 * @Title: SearchByIdAndPwd
+	 * @Title: getOrgByIdAndPwd
 	 * @Description:验证账户与密码是否正确
 	 * @param:@param email
 	 * @param:@param pwd
@@ -29,11 +29,38 @@ public class OrganizationDaoImpl extends BaseDao<Organization, Integer> {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean SearchByIdAndPwd(String email, String pwd) {
+	public boolean getOrgByEmailAndPwd(String email, String pwd) {
 		Organization o = null;
 		String hql = "from Organization o where o.email = ?0 and o.password = ?1";
 		try {
 			o = this.findOne1(hql, email, pwd);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (o != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * 
+	 * @Title: getOrgByEmail
+	 * @Description: 判断邮箱是否存在
+	 * @param:@param email
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param email
+	 * @return
+	 */
+	public boolean getOrgByEmail(String email) {
+		Organization o = null;
+		String hql = "from Organization o where o.email = ?0";
+		try {
+			o = this.findOne1(hql, email);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -25,7 +25,7 @@ public class StudentServiceImpl {
 
 	/**
 	 * 
-	 * @Title: FindIdAndPwd
+	 * @Title: getStuByIdAndPwd
 	 * @Description: 验证账号密码是否正确
 	 * @param:@param id
 	 * @param:@param pwd
@@ -36,8 +36,8 @@ public class StudentServiceImpl {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean FindIdAndPwd(String id, String pwd) {
-		if (this.studentDaoImpl.SearchByIdAndPwd(id, pwd)) {
+	public boolean getStuByIdAndPwd(String id, String pwd) {
+		if (this.studentDaoImpl.getStuByIdAndPwd(id, pwd)) {
 			return true;
 		} else {
 			return false;
@@ -50,12 +50,31 @@ public class StudentServiceImpl {
 	 * @Description: 查找用户名
 	 * @param:@param id
 	 * @param:@return (参数)
-	 * @return:String(返回类型)
+	 * @return:Student(返回类型)
 	 *
 	 * @param id
 	 * @return
 	 */
-	public Student FindName(String id) {
-		return this.studentDaoImpl.SearchName(id);
+	public Student getStuById(String id) {
+		return this.studentDaoImpl.getStuById(id);
+	}
+
+	/**
+	 * 
+	 * @Title: getById
+	 * @Description: 判断数据库中是否有id
+	 * @param:@param id
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param id
+	 * @return
+	 */
+	public boolean getById(String id) {
+		if (this.studentDaoImpl.getById(id)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

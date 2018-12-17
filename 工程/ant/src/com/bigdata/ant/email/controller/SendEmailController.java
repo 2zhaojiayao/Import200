@@ -41,6 +41,7 @@ public class SendEmailController {
 			this.sendEmailServiceImpl.SendEmail(email);
 			return "three_login";
 		} else {
+			request.setAttribute("message", "请输入注册时使用的邮箱！");
 			return "three_sendemail";
 		}
 	}

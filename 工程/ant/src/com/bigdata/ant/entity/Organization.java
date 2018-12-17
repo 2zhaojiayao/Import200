@@ -1,4 +1,4 @@
-package com.bigdata.ant.entity;
+package com.bigdata.ant;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -33,9 +33,9 @@ public class Organization {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Column(name = "organization_id")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "organization_id")
 	public int getId() {
 		return id;
 	}
