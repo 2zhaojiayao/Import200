@@ -9,8 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -25,16 +23,19 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "organization_user")
 public class Organization {
-private String name;
-private Date registerTime;
-private Set<Activity> activities=new HashSet<Activity>();
+	private int id;
+	private String email;
+	private String password;
+	private String name;
+	private Set<Activity> activities = new HashSet<Activity>();
+
 	public Organization() {
 		// TODO Auto-generated constructor stub
 	}
-@Id
-	
-	@Column(name = "organization_id")
+
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "organization_id")
 	public int getId() {
 		return id;
 	}
@@ -42,7 +43,6 @@ private Set<Activity> activities=new HashSet<Activity>();
 	public void setId(int id) {
 		this.id = id;
 	}
-
 
 	public String getEmail() {
 		return email;
@@ -68,7 +68,7 @@ private Set<Activity> activities=new HashSet<Activity>();
 		this.name = name;
 	}
 
-	}
+	@OneToMany(mappedBy = "organization", targetEntity = Activity.class, cascade = CascadeType.ALL)
 	public Set<Activity> getActivities() {
 		return activities;
 	}
@@ -76,6 +76,5 @@ private Set<Activity> activities=new HashSet<Activity>();
 	public void setActivities(Set<Activity> activities) {
 		this.activities = activities;
 	}
-	
 
 }

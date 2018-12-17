@@ -85,7 +85,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	/**
 	 * 
 	 * @Title: findOne1
-	 * @Description: 占位符的变长参数实现
+	 * @Description: TODO(这里用一句话描述这个方法的作用)
 	 * @param:@param hql
 	 * @param:@param params
 	 * @param:@return
@@ -94,8 +94,8 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 *
 	 * @param hql
 	 * @param params
+	 * @author xjm
 	 * @return
-	 * @author xujunmei
 	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked")
@@ -248,24 +248,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 		return query.list();
 	}
 
-	
-//	/**
-//	 * 成琼添加
-//	 * @desc 根据hql，按条件进行投影查询，
-//	 * @param hql hql语句
-//	 * @param params hql语句中占位符对应的参数
-//	 * @return List集合，集合中数据是对象数组
-//	 * @throws Exception
-//	 */
-//	@SuppressWarnings("unchecked")
-//	public List<Object[]> findByProjection(String hql, Object[] params) throws Exception {
-//		Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
-//		if (params != null && params.length > 0) {
-//			for (int i = 0; i < params.length; i++)
-//				query.setParameter(i, params[i]);
-//		}
-//		return query.list();
-//	}	/**
+	/**
 	 * @desc 根据hql，按条件进行分页的投影查询
 	 * @param pageNum  页码
 	 * @param pageSize 每页数据个数
