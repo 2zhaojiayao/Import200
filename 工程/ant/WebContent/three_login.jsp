@@ -114,8 +114,13 @@
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
 									记住密码
+<<<<<<< HEAD
+								</label> <a href="toRegister" class="r_float">注册账号</a> <a
+									href="three_sendemail.jsp" class="r_float">忘记密码？</a>
+=======
 								</label> <a href="toRegister" class="r_float">注册账号</a> <a href="#"
 									class="r_float">忘记密码？</a>
+>>>>>>> 31333f00c434f4201c90754f467d25376f43516f
 								<button type="submit">登&nbsp;&nbsp;录</button>
 
 								<p class="tips hidden">登录失败，请检查您的账户与密码</p>
@@ -154,8 +159,13 @@
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
 									记住密码
+<<<<<<< HEAD
+								</label> <a href="toRegister" class="r_float" id="orange">注册账号</a> <a
+									href="three_sendemail.jsp" class="r_float" id="orange">忘记密码？</a>
+=======
 								</label> <a href="toRegister" class="r_float" id="orange">注册账号</a> <a href="#"
 									class="r_float" id="orange">忘记密码？</a>
+>>>>>>> 31333f00c434f4201c90754f467d25376f43516f
 								<button type="submit">登&nbsp;&nbsp;录</button>
 
 								<p class="tips hidden">登录失败，请检查您的账户与密码</p>
@@ -195,8 +205,13 @@
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
 									记住密码
+<<<<<<< HEAD
+								</label> <a href="toRegister" class="r_float">注册账号</a> <a
+									href="three_sendemail.jsp" class="r_float">忘记密码？</a>
+=======
 								</label> <a href="toRegister" class="r_float">注册账号</a> <a href="#"
 									class="r_float">忘记密码？</a>
+>>>>>>> 31333f00c434f4201c90754f467d25376f43516f
 								<button type="submit">登&nbsp;&nbsp;录</button>
 
 								<p class="tips hidden">登录失败，请检查您的账户与密码</p>

@@ -10,30 +10,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.bigdata.ant.activity.service.ShowActivityDetailServiceImpl;
 import com.bigdata.ant.entity.Activity;
 import com.bigdata.ant.entity.ActivityStage;
-	/**
-	 * 
-	 * @ClassName:ShowActivityDetailController
-	 * @Description:获得Activity和ActivityStage对象用于活动详情页显示信息
-	 * @Author zhaojiayao
-	 * @Date:2018年12月10日
-	 *
-	 */
 @Controller
 public class ShowActivityDetailController {
 	@Resource
 	private ShowActivityDetailServiceImpl showActivityDetailServiceImpl;
 
-	/**
-	 * 
-	 * @Title: getActivityDetail  
-	 * @Description: 获得Activity和ActivityStage对象用于活动详情页显示信息
-	 * @param:@param request
-	 * @param:@return (参数)
-	 * @return:String(返回类型)
-	 *
-	 * @param request
-	 * @return
-	 */
 	@RequestMapping(value="/activitydetail",method=RequestMethod.GET)
 	public String getActivityDetail(HttpServletRequest request) {
 		String id = "1";

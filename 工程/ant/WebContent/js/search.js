@@ -77,7 +77,7 @@ $(function() {
 											$('.activities')
 													.append(
 															'<div class="activity_object">\
-						                       <a href="activitydetail?id='
+						                       <a href="student_activitydetail.jsp?id='
 																	+ data[i][0]
 																	+ '"><img src="'
 																	+ data[i][2]

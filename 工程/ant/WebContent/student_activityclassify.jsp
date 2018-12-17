@@ -41,7 +41,11 @@
 				<div class="activity_object">
 					<a href=""><img src="${activity[2]}"></a>
 					<ul>
+<<<<<<< HEAD
 						<li><a href="activitydetail?">${activity[1]}</a></li>
+=======
+						<li><a href="#">${activity[0]}</a></li>
+>>>>>>> dd8abd3f468ded7142e238d6738130d5d19890a0
 						<li><p id="grey">${activity[3]}</p></li>
 						<li id="grey">报名人数:${activity[4]}</li>
 					</ul>
