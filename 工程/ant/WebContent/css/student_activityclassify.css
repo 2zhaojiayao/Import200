@@ -114,7 +114,7 @@ li{
 /**conter*/
 .activities_conter{
 	width: 1080px;
-	height: 700px;
+	/* height: 700px; */
 	margin: 25px auto;
 
 }
@@ -156,68 +156,16 @@ li{
 #grey{
 	color: #a8a8a8;
 }
-/**page
-.page{
-	text-align: center;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	color: #767675;
-}
-.page>a,.page>span{
-	text-decoration: none;
-	border: 1px solid #f9d52b;
-	padding: 5px 7px;
-	color: #767675;
-	cursor: pointer;
-}
-.page>a:hover,.page span:hover{
-	background-color:#fc9700;
-}
-#topage{
-	width: 38px;
-	height: 28px;
-}**/
+
 /*页码*/
-.bottom_page{
-	width:450px;
-	height: 30px;
-	line-height: 30px;
-	margin:20px auto;
-	text-align: center;
+.page{
+    margin:20px auto; 
+	text-align: center; 
 }
-ul.pagination {
-    display: inline-block;
-    padding: 0;
-    margin-top: 30px;
+.page a{
+	color:#222;
+}
+.lastPage,.nextPage,.pageNo{
+	display:inline-block;
 }
 
-ul.pagination li {
-	display: inline;
-}
-
-ul.pagination li a {
-    color: #505050;
-    float: left;
-    margin:0px 5px;
-    padding: 0px 10px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-ul.pagination li a.active {
-    background-color: #fc7a00;
-    color: white;
-    border: 1px solid #fc7a00;
-    border-radius: 4px;
-}
-
-ul.pagination li a:hover{
-	background-color:#fc9700;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-}
-
-
-/**footer**/
