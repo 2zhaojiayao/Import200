@@ -28,6 +28,18 @@ body {
 	content: "";
 }
 
+.l_float {
+	width: 60px;
+}
+
+.l_float1 {
+	color: #fc7a00;
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+
 .r_clear {
 	clear: right;
 	display: block;
@@ -71,13 +83,13 @@ nav>.nav_logo, nav>.nav_logo>img {
 
 .container>.login_body {
 	width: 100%;
-	height: 806px;
+	height: auto;
 	/*轮播图*/
 }
 
 .littlecon {
-	height: 586px;
-	width: 65%;
+	height: auto;
+	width: 1080px;
 	/* background-color: rgba(255,255,255,0.9);*/
 	position: absolute;
 	z-index: 4;
@@ -88,7 +100,7 @@ nav>.nav_logo, nav>.nav_logo>img {
 
 .container>.login_body>#container_img {
 	width: 100%;
-	height: 806px;
+	height: 100%;
 	position: absolute;
 	z-index: 1;
 	overflow: hidden;
@@ -109,7 +121,7 @@ nav>.nav_logo, nav>.nav_logo>img {
 
 .container>.login_body>#container_img>#buttons {
 	position: absolute;
-	left: 880px;
+	left: 45%;
 	bottom: 20px;
 	z-index: 3;
 	height: 10px;
@@ -164,13 +176,17 @@ nav>.nav_logo, nav>.nav_logo>img {
 }
 /**日历*/
 .container>.login_body>.littlecon>.calendar {
-	width: 50%;
-	height: 456px;
+	width: 358px;
+	height: 500px;
+	magin-right: 200px;
 	background-color: rgba(255, 255, 255, 0.75);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
-	position: absolute;
+	position: relative;
 	z-index: 4;
 	right: 0%;
+	background-color: rgba(255, 255, 255, 0.75);
+	float: right;
+	border-radius: 8px;
 }
 
 .container>.login_body>.littlecon>.calendar>.title {
@@ -254,11 +270,18 @@ nav>.nav_logo, nav>.nav_logo>img {
 }
 
 /*登录界面*/
+.container>.login_body>.littlecon {
+	width: 1080px;
+	height: auto;
+}
+
 .container>.login_body>.littlecon>.login_form {
+	margin-left: 10%;
 	width: 400px;
-	position: absolute;
+	position: relative;
 	left: 0%;
 	z-index: 3;
+	float: left;
 }
 
 .container>.login_body>.littlecon>.login_form>.login_top, .container>.login_body>.littlecon>.login_form>.login_con
@@ -383,22 +406,27 @@ nav>.nav_logo, nav>.nav_logo>img {
 .container>.login_body>.littlecon>.login_form>.login_con>form>div>#auth_code,
 	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>#auth_code
 	{
-	width: 140px;
+	width: 60px;
 	font-size: 16px;
 	padding-right: 8px;
+	float: left;
 }
 
 .container>.login_body>.littlecon>.login_form>.login_con>form>div>.auth_code,
 	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>.auth_code
 	{
+	position: inherit;
 	height: 42px;
 	margin-top: 10px;
 	margin-left: 8px;
-	width: 152px;
+	width: 100px;
+	height: 40px;
 	outline: none;
 	border: none;
 	border-bottom: 2px solid #fc7a00;
 	background-color: #fff;
+	float: left;
+	outline: none;
 }
 
 .container>.login_body>.littlecon>.login_form>.login_con>form>div>button[type=submit],

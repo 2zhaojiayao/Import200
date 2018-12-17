@@ -16,9 +16,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.bigdata.ant.entity.ActivityStage;
-import com.bigdata.ant.entity.Student;
-
 /**
  * 
  * @ClassName:Activity
@@ -96,7 +93,7 @@ public class Activity {
 	public void setStudentNumber(Integer studentNumber) {
 		this.studentNumber = studentNumber;
 	}
-
+	
 	@Column(name = "apply_begin")
 	public Date getApplyBegin() {
 		return applyBegin;
