@@ -17,9 +17,10 @@ public class ShowActivityDetailController {
 
 	@RequestMapping(value="/activitydetail",method=RequestMethod.GET)
 	public String getActivityDetail(HttpServletRequest request) {
-		String id = "1";
+		String id = request.getParameter("actid");
 		if(id!=null) {
 			int actId = Integer.parseInt(id);
+			actId = 1;
 			Activity activity = this.showActivityDetailServiceImpl.getActivityDetail(actId);
 			if(activity.equals(null)==false) {
 				request.setAttribute("activitydetail", activity);
