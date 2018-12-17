@@ -245,23 +245,6 @@ public abstract class BaseDao<T, PK extends Serializable> {
 		}
 		return query.list();
 	}
-//	/**
-//	 * 成琼添加
-//	 * @desc 根据hql，按条件进行投影查询，
-//	 * @param hql hql语句
-//	 * @param params hql语句中占位符对应的参数
-//	 * @return List集合，集合中数据是对象数组
-//	 * @throws Exception
-//	 */
-//	@SuppressWarnings("unchecked")
-//	public List<Object[]> findByProjection(String hql, Object[] params) throws Exception {
-//		Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
-//		if (params != null && params.length > 0) {
-//			for (int i = 0; i < params.length; i++)
-//				query.setParameter(i, params[i]);
-//		}
-//		return query.list();
-//	}
 
 	/**
 	 * @desc 根据hql，按条件进行分页的投影查询
