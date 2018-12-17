@@ -27,6 +27,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "activity_information")
 public class Activity {
+
+
+
 	private int id;
 	private String name;
 	private String description;
@@ -216,5 +219,6 @@ public class Activity {
 	public void setActivityStages(Set<ActivityStage> activityStages) {
 		this.activityStages = activityStages;
 	}
+	
 
 }
