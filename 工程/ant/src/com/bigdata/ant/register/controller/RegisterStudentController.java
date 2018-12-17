@@ -33,7 +33,7 @@ public class RegisterStudentController {
 		request.setAttribute("college", registerStudentServiceImpl.findCollege());// 把学院信息查出来
 		request.setAttribute("grade", IncreaseTimeUtil.addDateYear(4));// 把年级信息查出来
 		request.setAttribute("classes", registerStudentServiceImpl.findClasses());// 把班级信息列出来
-		return "three_register";
+		return "three_register.jsp";
 
 	}
 
@@ -85,12 +85,12 @@ public class RegisterStudentController {
 		if (admitStudentRegister.equals("0")) {// 该用户注册成功，待激活
 			registerStudentServiceImpl.processRegister(student);
 			request.setAttribute("msg", "注册成功，去邮箱激活吧");
-			return "register_msg";
+			return "register_msg.jsp";
 		} else {
 			request.setAttribute("admitStudentRegister", admitStudentRegister);
 			request.setAttribute("student", student);
 			request.setAttribute("againpsd", againpsd);
-			return "three_register";
+			return "toRegister";
 		}
 	}
 
@@ -110,7 +110,43 @@ public class RegisterStudentController {
 		String validateCode = request.getParameter("validateCode");
 		String msg = registerStudentServiceImpl.VolidateRegister(email, validateCode);
 		request.setAttribute("msg", msg);
-		return "register_msg";
+		request.setAttribute("email", email);
+		return "toPerfectInformation";
+	}
+	
+	@RequestMapping("/toPerfectInformation")
+	public String toPerfectInformation(HttpServletRequest request) {
+		String email=request.getParameter("email");
+		System.out.println("email"+email);
+		request.setAttribute("college", registerStudentServiceImpl.findCollege());// 把学院信息查出来
+		request.setAttribute("grade", IncreaseTimeUtil.addDateYear(4));// 把年级信息查出来
+		request.setAttribute("classes", registerStudentServiceImpl.findClasses());// 把班级信息列出来
+		request.setAttribute("email", email);
+		return "student_perfectinformation.jsp";
+
+	}
+	@RequestMapping("/afterPerfectInformation")
+	public String afterPerfectInformation(HttpServletRequest request) {
+		String email=request.getParameter("email");
+		System.out.println(email);
+		String college=request.getParameter("college");
+		String profession=request.getParameter("profession");
+		String grade=request.getParameter("grade");
+		String classes=request.getParameter("classes");
+		String admitStudentPerfect = registerStudentServiceImpl.admitStudentPerfect(college, profession, grade, classes);// 获得信息（是否允许注册）
+		if (admitStudentPerfect.equals("0")) {
+			registerStudentServiceImpl.perfectStudentInformation(email, college, profession, grade, classes);
+			request.setAttribute("msg", "信息完善成功");
+			return "register_msg.jsp";
+		} else {
+			request.setAttribute("admitStudentPerfect", admitStudentPerfect);
+			request.setAttribute("collegeSelected", college);
+			request.setAttribute("professionSelected", profession);
+			request.setAttribute("gradeSelected", grade);
+			request.setAttribute("classesSelected", classes);
+			return "toPerfectInformation";
+		}
+
 	}
 
 }

@@ -10,9 +10,13 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bigdata.ant.entity.ClassInfo;
 import com.bigdata.ant.entity.College;
+import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.entity.Student;
+import com.bigdata.ant.register.dao.RegisterClassInfoDaoImpl;
 import com.bigdata.ant.register.dao.RegisterCollegeDaoImpl;
+import com.bigdata.ant.register.dao.RegisterProfessionDaoImpl;
 import com.bigdata.ant.register.dao.RegisterStudentDaoImpl;
 import com.bigdata.ant.utils.IncreaseTimeUtil;
 import com.bigdata.ant.utils.MD5Util;
@@ -26,6 +30,10 @@ public class RegisterStudentServiceImpl {
 	private RegisterStudentDaoImpl registerStudentDaoImpl;
 	@Resource
 	private RegisterCollegeDaoImpl collegeDaoImpl;
+	@Resource
+	private RegisterProfessionDaoImpl registerProfessionDaoImpl;
+	@Resource
+	private RegisterClassInfoDaoImpl registerClassInfoDaoImpl;
 	
 	/**
 	 * 
@@ -215,5 +223,35 @@ public class RegisterStudentServiceImpl {
 			}
 		}
 		return "该邮箱未注册";
+	}
+	
+	public String admitStudentPerfect(String college, String profession, String grade, String classes) {
+		if(college.equals("0")) {
+			return "请选择学院";
+		}
+		if(profession.equals("0")) {
+			return "请选择专业";
+		}
+		if(grade.equals("0")) {
+			return "请选择年级";
+		}
+		if(classes.equals("0")) {
+			return "请选择班级";
+		}
+		return "0";
+	}
+	public ClassInfo getClassInfo(String college,String profession,String grade,String classes) {
+		ClassInfo classInfo=registerClassInfoDaoImpl.getClassInfo(college, profession, grade, classes);
+		if(classInfo==null) {
+			classInfo=new ClassInfo();
+			classInfo.setClassNo(classes);
+			classInfo.setGrade(grade);
+			classInfo.setProfession(registerProfessionDaoImpl.findByName(profession));
+		}		
+		return classInfo;
+	}
+	public void perfectStudentInformation(String email,String college, String profession, String grade, String classes) {
+		Student student=registerStudentDaoImpl.findByEmail(email);
+		student.setClassInfo(getClassInfo(college,profession,grade,classes));
 	}
 }
