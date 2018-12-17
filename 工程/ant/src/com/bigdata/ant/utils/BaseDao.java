@@ -245,6 +245,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 		}
 		return query.list();
 	}
+<<<<<<< HEAD
 //	/**
 //	 * 成琼添加
 //	 * @desc 根据hql，按条件进行投影查询，
@@ -263,6 +264,9 @@ public abstract class BaseDao<T, PK extends Serializable> {
 //		return query.list();
 //	}
 
+=======
+	
+>>>>>>> dd8abd3f468ded7142e238d6738130d5d19890a0
 	/**
 	 * @desc 根据hql，按条件进行分页的投影查询
 	 * @param pageNum  页码

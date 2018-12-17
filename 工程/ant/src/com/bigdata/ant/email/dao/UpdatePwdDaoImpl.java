@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.utils.BaseDao;
+import com.bigdata.ant.utils.MD5Util;
 
 /**
  * 
@@ -31,9 +32,10 @@ public class UpdatePwdDaoImpl extends BaseDao<Student, Integer> {
 	 */
 	public void UpdatePwd(String email, String pwd) {
 		String hql = "from Student s where s.email = ?0";
+		String pass = MD5Util.encode2hex(pwd);
 		try {
 			Student s = this.findOne1(hql, email);
-			s.setPassword(pwd);
+			s.setPassword(pass);
 			this.save(s);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

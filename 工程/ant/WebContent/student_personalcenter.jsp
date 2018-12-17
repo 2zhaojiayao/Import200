@@ -34,15 +34,15 @@
 						</td>
 						<td>
 							<p class="table1-youshang">参加的活动数<br></p>
-							<p class="table1-youxia">56</p>
+							<p class="table1-youxia">${activitynum}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">综测分数<br></p>
-							<p class="table1-youxia">80.99</p>
+							<p class="table1-youxia">${nowscore}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">综测排名<br></p>
-							<p class="table1-youxia">8/24</p>
+							<p class="table1-youxia">${Studentactivitynum}</p>
 						</td>
 					</tr>
 				</table>
@@ -70,7 +70,7 @@
 												<td class="table6-tr0td0">
 													<img src="images/04.png" class="table6-tr0td0-img">
 												</td>
-												<td class="table6-tr0td1"><a href="#" name="table6-tr0td1-a">“麦”dream主持人风采大赛</a>
+												<td class="table6-tr0td1"><a href="#" name="table6-tr0td1-a">麦"dream"主持人风采大赛</a>
 												</td>
 											</tr>
 											<tr><td colspan="2" class="table6-tr1"></td></tr>
@@ -93,7 +93,7 @@
 											<td class="table7-tr0td0">
 												<img src="images/04.png" class="table7-tr0td0-img">
 											</td>
-											<td class="table7-tr0td1"><a href="#" name="table7-tr0td1-a">“麦”dream主持人风采大赛</a>
+											<td class="table7-tr0td1"><a href="#" name="table7-tr0td1-a">麦"dream"主持人风采大赛</a>
 											</td>
 										</tr>
 										<tr><td colspan="2" class="table7-tr1"></td></tr>
@@ -115,7 +115,7 @@
 											<td class="table8-tr0td0">
 												<img src="images/04.png" class="table8-tr0td0-img">
 											</td>
-											<td class="table8-tr0td1"><a href="#" name="table8-tr0td1-a">“麦”dream主持人风采大赛</a>
+											<td class="table8-tr0td1"><a href="#" name="table8-tr0td1-a">麦"dream"主持人风采大赛</a>
 											</td>
 										</tr>
 										<tr><td colspan="2" class="table8-tr1"></td></tr>
@@ -143,7 +143,7 @@
 											<td class="table9-tr0td0">
 												<img src="images/04.png" class="table9-tr0td0-img">
 											</td>
-											<td class="table9-tr0td1"><a href="#" name="table9-tr0td1-a">“麦”dream主持人风采大赛</a>
+											<td class="table9-tr0td1"><a href="#" name="table9-tr0td1-a">麦"dream"主持人风采大赛</a>
 											</td>
 										</tr>
 										<tr><td colspan="2" class="table9-tr1"></td></tr>
@@ -165,7 +165,7 @@
 											<td class="table10-tr0td0">
 												<img src="images/04.png" class="table10-tr0td0-img">
 											</td>
-											<td class="table10-tr0td1"><a href="#" name="table10-tr0td1-a">“麦”dream主持人风采大赛</a>
+											<td class="table10-tr0td1"><a href="#" name="table10-tr0td1-a">麦"dream"主持人风采大赛</a>
 											</td>
 										</tr>
 										<tr><td colspan="2" class="table10-tr1"></td></tr>
@@ -187,7 +187,7 @@
 											<td class="table11-tr0td0">
 												<img src="images/04.png" class="table11-tr0td0-img">
 											</td>
-											<td class="table11-tr0td1"><a href="#" name="table11-tr0td1-a">“麦”dream主持人风采大赛</a>
+											<td class="table11-tr0td1"><a href="#" name="table11-tr0td1-a">麦"dream"主持人风采大赛</a>
 											</td>
 										</tr>
 										<tr><td colspan="2" class="table11-tr1"></td></tr>
@@ -215,7 +215,7 @@
 											<td class="table12-tr0td0">
 												<img src="images/04.png" class="table12-tr0td0-img">
 											</td>
-											<td class="table12-tr0td1"><a href="#" name="table12-tr0td1-a">“麦”dream主持人风采大赛</a>
+											<td class="table12-tr0td1"><a href="#" name="table12-tr0td1-a">麦"dream"主持人风采大赛</a>
 											</td>
 										</tr>
 										<tr><td colspan="2" class="table12-tr1"></td></tr>
@@ -237,7 +237,7 @@
 											<td class="table13-tr0td0">
 												<img src="images/04.png" class="table13-tr0td0-img">
 											</td>
-											<td class="table13-tr0td1"><a href="#" name="table13-tr0td1-a">“麦”dream主持人风采大赛</a>
+											<td class="table13-tr0td1"><a href="#" name="table13-tr0td1-a">麦"dream"主持人风采大赛</a>
 											</td>
 										</tr>
 										<tr><td colspan="2" class="table13-tr1"></td></tr>
@@ -259,7 +259,7 @@
 											<td class="table14-tr0td0">
 												<img src="images/04.png" class="table14-tr0td0-img">
 											</td>
-											<td class="table14-tr0td1"><a href="#" name="table14-tr0td1-a">“麦”dream主持人风采大赛</a>
+											<td class="table14-tr0td1"><a href="#" name="table14-tr0td1-a">麦"dream"主持人风采大赛</a>
 											</td>
 										</tr>
 										<tr><td colspan="2" class="table14-tr1"></td></tr>

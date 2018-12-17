@@ -25,7 +25,7 @@ public class OrganizationServiceImpl {
 
 	/**
 	 * 
-	 * @Title: FindIdAndPwd
+	 * @Title: getOrgByIdAndPwd
 	 * @Description: 验证账号密码是否正确
 	 * @param:@param email
 	 * @param:@param pwd
@@ -36,8 +36,27 @@ public class OrganizationServiceImpl {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean FindIdAndPwd(String email, String pwd) {
-		if (this.organizationDaoImpl.SearchByIdAndPwd(email, pwd)) {
+	public boolean getOrgByEmailAndPwd(String email, String pwd) {
+		if (this.organizationDaoImpl.getOrgByEmailAndPwd(email, pwd)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * 
+	 * @Title: getOrgByEmail
+	 * @Description: 是否存在邮箱
+	 * @param:@param email
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param email
+	 * @return
+	 */
+	public boolean getOrgByEmail(String email) {
+		if (this.organizationDaoImpl.getOrgByEmail(email)) {
 			return true;
 		} else {
 			return false;

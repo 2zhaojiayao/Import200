@@ -8,6 +8,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/JsonpAjax.js"></script>
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/header_footer.css">
 </head>
 <div class="header">
 	<div class="top">
@@ -21,11 +22,10 @@
 				<td class="top_1">
 					<div class="search">
 						<form>
-							<input type="text" placeholder="请输入您要搜索的内容..." id="text">
-							<button type="submit"></button>
-							<div id="word"></div>
-
+							 <input type="text" placeholder="       请输入您要搜索的内容..." id="text" autocomplete="off" > 
+						     <button type="submit"></button> 
 						</form>
+						 <div id="word"></div>
 					</div>
 				</td>
 				<td class="top_1"><img src="images/message.png" class="message"></td>
@@ -42,7 +42,7 @@
 	<div id="nav">
 		<ul>
 			<li><a href="#">首页</a></li>
-			<li><a href="#">活动</a></li>
+			<li><a href="beforeSearch?pageNo=1">活动</a></li>
 			<li><a href="#">个人中心</a></li>
 			<li><a href="personalinformation">个人信息</a></li>
 		</ul>

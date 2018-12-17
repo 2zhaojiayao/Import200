@@ -3,19 +3,21 @@ window.onload = function() {
 	var list = document.getElementById('list');
 	var prev = document.getElementById('prev');
 	var next = document.getElementById('next');
-
 	function animate(offset) {
 		/*
 		 * 获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
 		 * 且style.left获取的是字符串，需要用parseInt()取整转化为数字。
 		 */
+
 		var newLeft = parseInt(list.style.left) + offset;
-		list.style.left = newLeft + 'px';
-		if (newLeft < -9295) {
-			list.style.left = -1859 + 'px';
+
+		list.style.left = newLeft + '%';
+
+		if (newLeft < -500) {
+			list.style.left = -100 + '%';
 		}
-		if (newLeft > -1859) {
-			list.style.left = -9295 + 'px';
+		if (newLeft > -100) {
+			list.style.left = -500 + '%';
 		}
 	}
 	/* 需要定位到按钮的样式 */
@@ -41,7 +43,7 @@ window.onload = function() {
 			index = 5;
 		}
 		buttonShow();
-		animate(1859);
+		animate(100);
 	}
 	/* 下一步 */
 	next.onclick = function() {
@@ -50,7 +52,7 @@ window.onload = function() {
 			index = 1;
 		}
 		buttonShow();
-		animate(-1859);
+		animate(100);
 	}
 	/* 自动循环播放 */
 	var timer;
@@ -79,7 +81,7 @@ window.onload = function() {
 				/* 偏移量的获取：获取鼠标的小圆点的位置，用this把index绑定到对象buttons[i]上 */
 				/* 由于index是自定义属性，需要用到getAttribute()这个dom的2级方法，去获取自定义的index属性 */
 				var clickIndex = parseInt(this.getAttribute('index'));
-				var offset = 1859 * (index - clickIndex);
+				var offset = 100 * (index - clickIndex);
 				animate(offset);
 				index = clickIndex;
 				buttonShow();
@@ -87,7 +89,13 @@ window.onload = function() {
 		})(i)
 	}
 }
-
+// 切换验证码
+function change() {
+	var img = document.getElementById("image");
+	// 切换验证码的原理是点击就重新将src设置一下，但是浏览器有缓存，所以我们需要在后面添加一个参数来让浏览器不断发送请求，后面加的参数为时间，因为时间是不断变化的
+	img.src = "vert?a="
+	new Date().getTime();
+}
 // 日历
 var month_olypic = [ 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];// 闰年每个月份的天数
 var month_normal = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
@@ -162,16 +170,12 @@ function refreshDate() {
 }
 // 调用refreshDate()函数，日历才会出现
 refreshDate();
-// 实现onclick向前或向后移动
-cpre.onclick = function(e) {
-	e.preventDefault();
-	my_month--;
-	if (my_month < 0) {
-		my_year--;
-		my_month = 11; // 即12月份
-	}
-	refreshDate();
-}
+
+/*
+ * //实现onclick向前或向后移动 cpre.onclick = function(e){ e.preventDefault();
+ * my_month--; if(my_month < 0){ my_year--; my_month = 11; //即12月份 }
+ * refreshDate(); }
+ */
 
 cnext.onclick = function(e) {
 	e.preventDefault();
@@ -197,9 +201,6 @@ function PwdLogin() {
 	tags[0].classList.add("active");
 	tags[1].classList.remove("active");
 	tags[2].classList.remove("active");
-	var ad = document.getElementById("AdImg");
-	ad.style.height = "558px";
-	// ad.style.backgroundImage='url(https://static.zcool.cn/v1.1.43/passport4.0/images/login-ground.jpg)';
 }
 function QrcodeLogin() {
 	var login = document.getElementsByClassName("login_con");
@@ -213,8 +214,6 @@ function QrcodeLogin() {
 	tags[1].classList.add("active");
 	tags[0].classList.remove("active");
 	tags[2].classList.remove("active");
-	var ad = document.getElementById("AdImg");
-	ad.style.height = "558px";
 }
 function OgniLogin() {
 	var login = document.getElementsByClassName("login_con");
@@ -228,16 +227,6 @@ function OgniLogin() {
 	tags[0].classList.remove("active");
 	tags[1].classList.remove("active");
 	tags[2].classList.add("active");
-	var ad = document.getElementById("AdImg");
-	ad.style.height = "558px";
-}
-
-// 切换验证码
-function change() {
-	var img = document.getElementById("image");
-	// 切换验证码的原理是点击就重新将src设置一下，但是浏览器有缓存，所以我们需要在后面添加一个参数来让浏览器不断发送请求，后面加的参数为时间，因为时间是不断变化的
-	img.src = "vert?a="
-	new Date().getTime();
 }
 
 // 用户输入错误提示

@@ -1,5 +1,6 @@
 package com.bigdata.ant.entity;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -27,11 +28,21 @@ private int id;
 private String email;
 private String password;
 private String name;
+<<<<<<< HEAD
+=======
+private Integer status;// 状态，0-未激活；1-已激活 ;
+private String validateCode;
+private Date registerTime;
+>>>>>>> dd8abd3f468ded7142e238d6738130d5d19890a0
 private Set<Activity> activities=new HashSet<Activity>();
 
 	public Organization() {
 		// TODO Auto-generated constructor stub
 	}
+<<<<<<< HEAD
+=======
+	@Column(name="organization_id")
+>>>>>>> dd8abd3f468ded7142e238d6738130d5d19890a0
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getId() {
@@ -59,6 +70,29 @@ private Set<Activity> activities=new HashSet<Activity>();
 	public void setName(String name) {
 		this.name = name;
 	}
+<<<<<<< HEAD
+=======
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	@Column(name="validate_code")
+	public String getValidateCode() {
+		return validateCode;
+	}
+	public void setValidateCode(String validateCode) {
+		this.validateCode = validateCode;
+	}
+	@Column(name="register_time")
+	public Date getRegisterTime() {
+		return registerTime;
+	}
+	public void setRegisterTime(Date registerTime) {
+		this.registerTime = registerTime;
+	}
+>>>>>>> dd8abd3f468ded7142e238d6738130d5d19890a0
 	@OneToMany(mappedBy="organization",targetEntity=Activity.class,cascade=CascadeType.ALL)
 	public Set<Activity> getActivities() {
 		return activities;
