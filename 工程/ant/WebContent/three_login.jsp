@@ -80,7 +80,7 @@
 						</div>
 					</div>
 					<div class="login_con">
-						<form action="" method="POST">
+						<form action="stu_login" method="POST">
 							<div>
 								<label for="user_name">用户名</label> <input type="text" name=""
 									id="user_name" placeholder="账号为学号"> <img
@@ -123,18 +123,22 @@
 						</form>
 					</div>
 					<div class="login_con hidden">
-						<form action="" method="POST">
+						<form action="mon_login" method="POST">
 							<div>
 								<label for="user_name">用户名</label> <input type="text" name=""
 									id="user_name" placeholder="账号为班委邮箱"> <img
 									src="images/icons/user.svg">
 								<p class="tips hidden">请检查您的账号</p>
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message1 } </font>
 							</div>
 							<div>
 								<label for="user_pwd">密码</label> <input type="password" name=""
 									id="user_pwd" placeholder="请输入账户密码"> <img
 									src="images/icons/lock.svg">
 								<p class="tips hidden">请检查您的密码</p>
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message2 } </font>
 							</div>
 							<div class="b_clear">
 								<label for="auth_code" class="b_clear">验证码</label> <input
@@ -160,18 +164,22 @@
 
 					</div>
 					<div class="login_con hidden">
-						<form action="" method="POST">
+						<form action="org_login" method="POST">
 							<div>
 								<label for="user_name">用户名</label> <input type="text" name=""
 									id="user_name" placeholder="账号为组织邮箱"> <img
 									src="images/icons/user.svg">
 								<p class="tips hidden">请检查您的账号</p>
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message1 } </font>
 							</div>
 							<div>
 								<label for="user_pwd">密码</label> <input type="password" name=""
 									id="user_pwd" placeholder="请输入账户密码"> <img
 									src="images/icons/lock.svg">
 								<p class="tips hidden">请检查您的密码</p>
+								<!-- 获取信息和显示错误信息 -->
+								<font color="red"> ${message2 } </font>
 							</div>
 							<div class="b_clear">
 								<label for="auth_code" class="b_clear">验证码</label> <input
