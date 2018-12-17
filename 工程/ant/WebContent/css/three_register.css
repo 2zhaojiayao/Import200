@@ -10,6 +10,9 @@ body{
 .hidden{
 	display: none;
 }
+.redWord{
+	color:red;
+}
 .logo{
 	width: 290px;
 	height: 100px;
@@ -72,19 +75,33 @@ input::-webkit-input-placeholder{
 } 
 .normal{
 	margin:0px auto;
-	text-align: center;
+}
+.admitp{
+	text-align：center;
+}
+#admitStudentRegister{
+	margin-left: 38px;
+    width: 430px;
+    height: 30px;
+    line-height:30px;
+    color:red;
 }
 .top_id input{
-	margin: 45px 38px 0px 38px;
+	margin: 20px 38px 0px 38px;
     width: 423px;
     height: 45px;
     display: inline-block;
     border: 1px solid #383838;
     border-radius: 3px;
     padding-left: 15px;
+}
+.top_id p{
+	margin-left: 38px;
+    width: 430px;
+    height: 25px;
 }
 .normal input{
-	margin: 20px 40px 0px 40px;
+	margin: 0px 40px 0px 40px;
     width: 423px;
     height: 45px;
     display: inline-block;
@@ -92,8 +109,13 @@ input::-webkit-input-placeholder{
     border-radius: 3px;
     padding-left: 15px;
 }
+.normal p{
+	margin-left: 38px;
+    width: 430px;
+    height: 25px;
+}
 .sex .sex_span{
-	margin: 20px 40px 0px 40px;
+	margin: 0px 40px 0px 40px;
 	text-align: center;
 	display: inline-block;
 	width: 60px;
@@ -111,8 +133,14 @@ input::-webkit-input-placeholder{
 .sex_woman input{
 	margin-left: 25px;
 }
+#sex_msg{
+	margin-left: 38px;
+    width: 430px;
+    height: 25px;
+    display: inline-block;
+}
 .textCode input{
-	margin: 20px 0px 0px 40px;
+	margin: 0px 0px 0px 40px;
     width: 300px;
     height: 45px;
     border-radius: 3px;
@@ -126,7 +154,13 @@ input::-webkit-input-placeholder{
 	width: 100px;
 	height: 45px;
 	float: right;
-	margin: 20px 40px 0px 0px;
+	margin: 0px 40px 0px 0px;
+}
+#textCode_msg{
+	margin-left: 38px;
+    width: 430px;
+    height: 25px;
+    display: inline-block;
 }
 form .regist input{
 	width: 285px;
@@ -135,7 +169,7 @@ form .regist input{
 	color: #fff;
 	border:none;
 	border-radius: 3px;
-	margin:20px 25px 20px 40px;
+	margin:0px 25px 20px 40px;
 	/*letter-spacing: 10px;*/
 	font-size: 18px;
 	text-align: center;
@@ -160,8 +194,14 @@ form .regist input{
     font-size:16px;  
     color: #a6a6a6;
 }
+.select_college p{
+	margin-left: 38px;
+    width: 430px;
+    height: 25px;
+    display: inline-block;
+}
 .select_normal select{
-	margin: 20px 40px 0px 40px;
+	margin: 0px 40px 0px 40px;
     width: 440px;
     height: 45px;
     display: inline-block;
@@ -170,6 +210,12 @@ form .regist input{
     padding-left: 15px;
     font-size:16px;  
  	color: #a6a6a6;
+}
+.select_normal p{
+	margin-left: 38px;
+    width: 430px;
+    height: 25px;
+    display: inline-block;
 }
 /*
 完善信息

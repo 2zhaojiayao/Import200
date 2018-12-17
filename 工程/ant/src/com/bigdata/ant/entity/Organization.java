@@ -1,5 +1,6 @@
 package com.bigdata.ant.entity;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,6 +29,9 @@ private int id;
 private String email;
 private String password;
 private String name;
+private Integer status;// 状态，0-未激活；1-已激活 ;
+private String validateCode;
+private Date registerTime;
 private Set<Activity> activities=new HashSet<Activity>();
 
 	public Organization() {
@@ -60,6 +64,26 @@ private Set<Activity> activities=new HashSet<Activity>();
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	@Column(name="validate_code")
+	public String getValidateCode() {
+		return validateCode;
+	}
+	public void setValidateCode(String validateCode) {
+		this.validateCode = validateCode;
+	}
+	@Column(name="register_time")
+	public Date getRegisterTime() {
+		return registerTime;
+	}
+	public void setRegisterTime(Date registerTime) {
+		this.registerTime = registerTime;
 	}
 	@OneToMany(mappedBy="organization",targetEntity=Activity.class,cascade=CascadeType.ALL)
 	public Set<Activity> getActivities() {

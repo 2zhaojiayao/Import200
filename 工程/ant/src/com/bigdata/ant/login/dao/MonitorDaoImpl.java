@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.utils.BaseDao;
+import com.bigdata.ant.utils.MD5Util;
 
 /**
  * 
@@ -31,9 +32,10 @@ public class MonitorDaoImpl extends BaseDao<Monitor, String> {
 	 */
 	public boolean getMonByEmailAndPwd(String email, String pwd) {
 		Monitor m = null;
+		String pass = MD5Util.encode2hex(pwd);
 		String hql = "from Monitor m where m.email = ?0 and m.password = ?1";
 		try {
-			m = this.findOne1(hql, email, pwd);
+			m = this.findOne1(hql, email, pass);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
