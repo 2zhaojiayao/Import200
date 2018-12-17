@@ -1,4 +1,3 @@
-
 package com.bigdata.ant.entity;
 
 import java.util.Date;

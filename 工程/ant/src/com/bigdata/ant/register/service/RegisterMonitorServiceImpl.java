@@ -68,6 +68,18 @@ public class RegisterMonitorServiceImpl {
 	 */
 	public String admitMonitorRegister(Monitor monitor, String college, String profession, String grade, String classes,
 			String againpsd) {
+		if(college.equals("0")) {
+			return "请选择学院";
+		}
+		if(profession.equals("0")) {
+			return "请选择职业";
+		}
+		if(grade.equals("0")) {
+			return "请选择年级";
+		}
+		if(classes.equals("0")) {
+			return "请选择班级";
+		}
 		if (monitor.getPassword() == null || monitor.getPassword().equals("")) {
 			return "密码不能为空";
 		}
