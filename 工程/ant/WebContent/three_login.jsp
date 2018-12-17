@@ -114,7 +114,7 @@
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
 									记住密码
-								</label> <a href="#" class="r_float">注册账号</a> <a href="#"
+								</label> <a href="toRegister" class="r_float">注册账号</a> <a href="#"
 									class="r_float">忘记密码？</a>
 								<button type="submit">登&nbsp;&nbsp;录</button>
 
@@ -154,7 +154,7 @@
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
 									记住密码
-								</label> <a href="#" class="r_float" id="orange">注册账号</a> <a href="#"
+								</label> <a href="toRegister" class="r_float" id="orange">注册账号</a> <a href="#"
 									class="r_float" id="orange">忘记密码？</a>
 								<button type="submit">登&nbsp;&nbsp;录</button>
 
@@ -195,7 +195,7 @@
 								<label for="remmber"> <input class="remmber"
 									type="checkbox" name="remmber" id="remmber"> <span></span>
 									记住密码
-								</label> <a href="#" class="r_float">注册账号</a> <a href="#"
+								</label> <a href="toRegister" class="r_float">注册账号</a> <a href="#"
 									class="r_float">忘记密码？</a>
 								<button type="submit">登&nbsp;&nbsp;录</button>
 
