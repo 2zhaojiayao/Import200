@@ -37,8 +37,9 @@ public class StudentController {
 	 */
 	@RequestMapping("/stu_login")
 	public String Login(HttpServletRequest request) {
+		
 		HttpSession session = request.getSession();
-		String id = request.getParameter("id");
+		/*String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		String session_vcode = (String) session.getAttribute("text"); // 从session中获取真正的验证码
 		String form_vcode = request.getParameter("vcode"); // 获取用户输入的验证码
@@ -52,10 +53,20 @@ public class StudentController {
 			return "three_login";
 		} else if (!(session_vcode.equalsIgnoreCase(form_vcode))) // 进行判断
 		{
+<<<<<<< HEAD
+			request.setAttribute("msg", "验证码错误"); // 如果错误就将错误信息发送给客户端
+		}*/
+		boolean b =true; /*this.studentServiceImpl.FindIdAndPwd(id, pwd);*/
+		if (b == false) {
+			return "three_login";
+		} else {
+			Student s = this.studentServiceImpl.FindName("2016011394");
+=======
 			request.setAttribute("message", "验证码错误"); // 如果错误就将错误信息发送给客户端
 			return "three_login";
 		} else {
 			Student s = this.studentServiceImpl.getStuById(id);
+>>>>>>> dd8abd3f468ded7142e238d6738130d5d19890a0
 			session.setAttribute("s", s);
 			return "student_index";
 		}

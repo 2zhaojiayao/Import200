@@ -44,6 +44,7 @@ public class HeaderController {
    @RequestMapping("/search")
    public void findActivitiesNames(@RequestParam("text") String keyword,HttpServletResponse response) {
 	        response.setCharacterEncoding("UTF-8");
+	       response.setCharacterEncoding("UTF-8");
 			List<Object[]> list = null;
 			try {
 				list = headerServiceImpl.findActivitiesNames(keyword);
