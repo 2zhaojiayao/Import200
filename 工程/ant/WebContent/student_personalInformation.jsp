@@ -124,7 +124,7 @@
 								</tr>
 							</table>
 							<div class="content_submit">
-								<input type="submit" name="submit" value="更改信息" class="button">
+								<input type="submit" name="submit" value="保&nbsp&nbsp存" class="button">
 							</div>
 						</form>
 					</div>
