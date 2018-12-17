@@ -245,17 +245,17 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 * @return List集合，集合中数据是对象数组
 	 * @throws Exception
 	 */
-	@SuppressWarnings("unchecked")
-	public List<Object[]> findByProjection(int pageNum, int pageSize, String hql, Object[] params) throws Exception {
-		Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
-		if (params != null && params.length > 0) {
-			for (int i = 0; i < params.length; i++)
-				query.setParameter(i, params[i]);
-		}
-		query.setFirstResult((pageNum - 1) * pageSize);
-		query.setMaxResults(pageSize);
-		return query.list();
-	}
+//	@SuppressWarnings("unchecked")
+//	public List<Object[]> findByProjection(int pageNum, int pageSize, String hql, Object[] params) throws Exception {
+//		Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
+//		if (params != null && params.length > 0) {
+//			for (int i = 0; i < params.length; i++)
+//				query.setParameter(i, params[i]);
+//		}
+//		query.setFirstResult((pageNum - 1) * pageSize);
+//		query.setMaxResults(pageSize);
+//		return query.list();
+//	}
 
 	/**
 	 * @desc 根据hql，按条件进行分页的投影查询
