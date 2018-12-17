@@ -245,7 +245,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 		}
 		return query.list();
 	}
-
+	
 	/**
 	 * @desc 根据hql，按条件进行分页的投影查询
 	 * @param pageNum  页码

@@ -13,8 +13,9 @@ $(function(){
 				 dataType : 'json',
 				success:function(data){
 					$('#word').empty().show();
+					$('#word').removeClass().addClass('wordBorder');
 					 for(var i=0;i<data.length;i++){
-						    $('#word').append('<div class="click_work">'+data[i] +'</div>');
+						    $('#word').append('<div class="click_work"><a href="#">'+data[i] +'</a></div>');
 					}
 				},
 				error:function(){
@@ -22,6 +23,10 @@ $(function(){
 					$('#word').append('<div class="click_work">Fail "' + keywords + '"</div>');
 				}
 			})
+		})
+		$('#searchInput').focus(function(){
+			$
+			
 		})
 //点击搜索数据复制给搜索框
 //		$(document).on('click','.click_work',function(){
