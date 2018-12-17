@@ -1,7 +1,7 @@
 package com.bigdata.ant.entity;
 
-import java.util.Date;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -35,17 +35,12 @@ public class Student {
 	private String gender;
 	private String email;
 	private ClassInfo classInfo;
-<<<<<<< HEAD
 	private Integer status;//状态，0-未激活；1-已激活 ;
 	private String validateCode;
 	private Date registerTime;
-	private List<Activity> scanedActivities=new ArrayList<Activity>();
-	private List<ActivityJoin> joinedActivities=new ArrayList<ActivityJoin>();
-=======
 	private List<Activity> scanedActivities = new ArrayList<Activity>();
 	private List<ActivityJoin> joinedActivities = new ArrayList<ActivityJoin>();
 
->>>>>>> 8f6180178fdccc2d04d11bcf5f7ee8b06015c0bf
 	public Student() {
 	}
 
@@ -91,7 +86,6 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-<<<<<<< HEAD
 	public Integer getStatus() {
 		return status;
 	}
@@ -112,9 +106,6 @@ public class Student {
 	public void setRegisterTime(Date registerTime) {
 		this.registerTime = registerTime;
 	}
-=======
-
->>>>>>> 8f6180178fdccc2d04d11bcf5f7ee8b06015c0bf
 	@ManyToOne
 	@JoinColumn(name = "class_id")
 	public ClassInfo getClassInfo() {
@@ -143,8 +134,5 @@ public class Student {
 	public void setJoinedActivities(List<ActivityJoin> joinedActivities) {
 		this.joinedActivities = joinedActivities;
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> 8f6180178fdccc2d04d11bcf5f7ee8b06015c0bf
 }
