@@ -87,19 +87,17 @@
 									</select></td>
 								</tr>
 								<tr class="tr">
-									<td class="td1">专业:
-<%-- 									${s.classInfo.profession.college.professions} --%>
+									<td class="td1">专业: <%-- 									${s.classInfo.profession.college.professions} --%>
 									</td>
-									<td class="td2">
-										<select>
+									<td class="td2"><select>
 											<option value="apple">${s.classInfo.profession.name}</option>
-											
-											 <c:forEach items="${s.classInfo.profession.college.professions}" var="oneprofession" >
-												<option value="banana">${oneprofession.name }
-												</option>
-											</c:forEach> 
-										</select>
-									</td>
+
+											<c:forEach
+												items="${s.classInfo.profession.college.professions}"
+												var="oneprofession">
+												<option value="banana">${oneprofession.name }</option>
+											</c:forEach>
+									</select></td>
 								</tr>
 								<tr class="tr">
 									<td class="td1">年级:</td>
@@ -124,7 +122,8 @@
 								</tr>
 							</table>
 							<div class="content_submit">
-								<input type="submit" name="submit" value="保&nbsp&nbsp存" class="button">
+								<input type="submit" name="submit" value="保&nbsp&nbsp存"
+									class="button">
 							</div>
 						</form>
 					</div>

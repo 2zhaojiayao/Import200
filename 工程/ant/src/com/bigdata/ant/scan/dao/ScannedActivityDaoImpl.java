@@ -16,7 +16,7 @@ public class ScannedActivityDaoImpl extends BaseDao<Student, Integer> {
 		List<Activity> actList = new ArrayList<Activity>();
 		Student student = new Student();
 		String hql = "from Student s where id = ?0";
-		Object[] obj = {stuId};
+		Object[] obj = { stuId };
 		try {
 			student = this.findOne(hql, obj);
 			actList = student.getScanedActivities();

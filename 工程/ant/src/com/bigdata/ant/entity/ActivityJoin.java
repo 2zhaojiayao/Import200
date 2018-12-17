@@ -24,45 +24,52 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="student_join")
+@Table(name = "student_join")
 public class ActivityJoin {
-private int id;
-private Student student;
-private ActivityStage activityStage;
-private String teamName;
+	private int id;
+	private Student student;
+	private ActivityStage activityStage;
+	private String teamName;
+
 	public ActivityJoin() {
 		// TODO Auto-generated constructor stub
 	}
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	@ManyToOne
-	@JoinColumn(name="student_id")
+	@JoinColumn(name = "student_id")
 	public Student getStudent() {
 		return student;
 	}
+
 	public void setStudent(Student student) {
 		this.student = student;
 	}
-	
+
 	@ManyToOne
-	@JoinColumn(name="score_id")
+	@JoinColumn(name = "score_id")
 	public ActivityStage getActivityStage() {
 		return activityStage;
 	}
+
 	public void setActivityStage(ActivityStage activityStage) {
 		this.activityStage = activityStage;
 	}
-	@Column(name="team_name")
+
+	@Column(name = "team_name")
 	public String getTeamName() {
 		return teamName;
 	}
+
 	public void setTeamName(String teamName) {
 		this.teamName = teamName;
 	}

@@ -93,7 +93,7 @@ public class Activity {
 	public void setStudentNumber(Integer studentNumber) {
 		this.studentNumber = studentNumber;
 	}
-	
+
 	@Column(name = "apply_begin")
 	public Date getApplyBegin() {
 		return applyBegin;
@@ -172,7 +172,6 @@ public class Activity {
 		this.searchType = searchType;
 	}
 
-	@Column(name = "comprehensive_type")
 	public String getComprehensiveType() {
 		return comprehensiveType;
 	}

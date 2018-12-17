@@ -54,7 +54,7 @@
 								<li><a href="javascript:;" class="normal">生命科学学院</a></li>
 								<li><a href="javascript:;" class="normal">资源与环境科学学院</a></li>
 								<li><a href="javascript:;" class="normal">体育学院</a></li>
-								
+
 							</ul>
 						</div>
 					</li>

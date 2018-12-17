@@ -27,15 +27,15 @@ import com.bigdata.ant.personalinformation.service.SaveSInformationServiceImpl;
 public class SaveSInformationController {
 	@Resource
 	private SaveSInformationServiceImpl savesinformationserviceimpl;
-	@RequestMapping(value="/saveSinformation",method=RequestMethod.POST)
-	//@RequestMapping("/saveSinformation")
+
+	@RequestMapping(value = "/saveSinformation", method = RequestMethod.POST)
+	// @RequestMapping("/saveSinformation")
 	public String findStu(Student stu) {
 		System.out.println("hello");
 //		Student student=this.savesinformationserviceimpl.findStu(id);
 //		savesinformationserviceimpl.updateSInf(stu);
-	    System.out.println(stu.getName());
+		System.out.println(stu.getName());
 		return "student_PersonalInformation";
 	}
-	
-	
+
 }

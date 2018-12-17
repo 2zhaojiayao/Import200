@@ -25,16 +25,16 @@ import com.bigdata.ant.utils.BaseDao;
 public class ProfessionInformationDaoImpl extends BaseDao<Profession, Integer> {
 	public List<Profession> professionInformation(int collegeid) {
 		Object[] obj = { collegeid };
-		String hql="from Profession p where p.college.id=?0";
+		String hql = "from Profession p where p.college.id=?0";
 		List<Profession> studentprofession = null;
 		try {
-			studentprofession = this.find(hql,obj);
-		
+			studentprofession = this.find(hql, obj);
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return studentprofession;
 	}
 

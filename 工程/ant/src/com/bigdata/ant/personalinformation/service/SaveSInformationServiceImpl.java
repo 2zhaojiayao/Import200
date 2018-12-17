@@ -27,6 +27,7 @@ import com.bigdata.ant.personalinformation.dao.SaveSInformationDaoImpl;
 public class SaveSInformationServiceImpl {
 	@Resource
 	private SaveSInformationDaoImpl savesinformationdaoimpl;
+
 //	public Student findStu(String id) {
 //		Student student=this.savesinformationdaoimpl.findStu(id);
 //		return student;

@@ -25,28 +25,29 @@ import com.bigdata.ant.utils.BaseDao;
  */
 @Repository
 public class PersonalInformationDaoImpl extends BaseDao<College, Integer> {
-	//查询所有学院
-	public List<College> collegeInformation(){
-		String hql="from College";
+	// 查询所有学院
+	public List<College> collegeInformation() {
+		String hql = "from College";
 		List<College> studentcollege = null;
 		try {
 			studentcollege = this.findAll();
-			
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			return studentcollege;
-	
+		return studentcollege;
+
 	}
+
 	/**
-	* @Title: find  
-	* @Description: TODO(这里用一句话描述这个方法的作用) 
-	* @param:@param hql
-	* @param:@param collegeid
-	* @param:@return (参数)
-	* @return:List<College>(返回类型)
-	*
+	 * @Title: find
+	 * @Description: TODO(这里用一句话描述这个方法的作用)
+	 * @param:@param hql
+	 * @param:@param collegeid
+	 * @param:@return (参数)
+	 * @return:List<College>(返回类型)
+	 *
 	 * @param hql
 	 * @param collegeid
 	 * @return
@@ -55,8 +56,5 @@ public class PersonalInformationDaoImpl extends BaseDao<College, Integer> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
-	
 
 }

@@ -81,12 +81,12 @@ input, button {
 	border-radius: 42px;
 	transition: .3s linear;
 	float: right;
-	padding-left:15px;
+	padding-left: 15px;
 }
 
- .search input:focus {
+.search input:focus {
 	width: 300px;
-} 
+}
 
 .search button {
 	width: 35px;
@@ -110,22 +110,27 @@ input, button {
 	font-family: FontAwesome;
 	color: #ff8d1a;
 }
-#word{
-	background-color:#fff;
-	width:290px;
-	margin-left:-20px;
-	margin-top:5px;
+
+#word {
+	background-color: #fff;
+	width: 290px;
+	margin-left: -20px;
+	/* 	margin-top:5px; */
 	/* margin-top:20px; */
 }
-.wordBorder{
+
+.wordBorder {
 	border: 1px solid #CCC;
 }
-.click_word{
-	height:30px;
+
+.click_word {
+	height: 30px;
 }
- .click_word a:hover{
-	background-color:#eee;
+
+.click_word a:hover {
+	background-color: #eee;
 }
+
 .top_1 .message {
 	width: 25px;
 	height: 25px;

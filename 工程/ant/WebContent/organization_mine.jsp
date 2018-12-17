@@ -4,40 +4,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>组织者页面_我的</title>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
-	<link rel="stylesheet" type="text/css" href="css/organization_mine.css">
+<title>组织者页面_我的</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/header_footer.css">
+<link rel="stylesheet" type="text/css" href="css/organization_mine.css">
 </head>
 <body>
 	<div class="wrapper">
-	<!-- 页头 -->
-	<%@include file="organization_header.jsp"%>
+		<!-- 页头 -->
+		<%@include file="organization_header.jsp"%>
 		<!-- 主要部分 -->
 		<div class="main">
 			<!-- 上部分 -->
 			<div class="top_org">
 				<div class="top_nav">
-					<a href="#">首页</a>/
-					<span>我的</span>
+					<a href="#">首页</a>/ <span>我的</span>
 				</div>
 				<div class="top_list">
 					<div class="top_list_part">
 						<div class="box">
-							<div class="box_top"><span>未开始</span></div>
-							<div class="box_bottom"><span>?个活动</span></div>
+							<div class="box_top">
+								<span>未开始</span>
+							</div>
+							<div class="box_bottom">
+								<span>?个活动</span>
+							</div>
 						</div>
 					</div>
 					<div class="top_list_part">
 						<div class="box">
-							<div class="box_top"><span>进行中</span></div>
-							<div class="box_bottom"><span>?个活动</span></div>
+							<div class="box_top">
+								<span>进行中</span>
+							</div>
+							<div class="box_bottom">
+								<span>?个活动</span>
+							</div>
 						</div>
 					</div>
 					<div class="top_list_part">
 						<div class="box">
-							<div class="box_top"><span>已完成</span></div>
-							<div class="box_bottom"><span>?个活动</span></div>
+							<div class="box_top">
+								<span>已完成</span>
+							</div>
+							<div class="box_bottom">
+								<span>?个活动</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -52,10 +63,18 @@
 						</div>
 						<div class="bottom_nav_right">
 							<div class="button">
-								<div class="btn active"><a href="#">全部</a></div>
-								<div class="btn"><a href="#">未开始</a></div>
-								<div class="btn"><a href="#">进行中</a></div>
-								<div class="btn"><a href="#">已结束</a></div>
+								<div class="btn active">
+									<a href="#">全部</a>
+								</div>
+								<div class="btn">
+									<a href="#">未开始</a>
+								</div>
+								<div class="btn">
+									<a href="#">进行中</a>
+								</div>
+								<div class="btn">
+									<a href="#">已结束</a>
+								</div>
 							</div>
 							<div class="search_org">
 								<form>
@@ -91,19 +110,18 @@
 								</div>
 								<div class="progress">
 									<div class="statusList">
-									　　<div class="scheduleGray">
-									  　　<div class="scheduleGreen"></div>
-									　　</div>
+										<div class="scheduleGray">
+											<div class="scheduleGreen"></div>
+										</div>
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a>
-									<select class="form-control">
+									<a href="#">编辑</a> <select class="form-control">
 										<option value="">更多</option>
 										<option value="apple">查看报名信息</option>
 										<option value="banana">查看参赛信息</option>
 										<option value="orange">删除本次活动</option>
-									</select>									
+									</select>
 								</div>
 							</div>
 						</div>
@@ -129,19 +147,18 @@
 								</div>
 								<div class="progress">
 									<div class="statusList">
-									　　<div class="scheduleGray">
-									  　　<div class="scheduleGreen"></div>
-									　　</div>
+										<div class="scheduleGray">
+											<div class="scheduleGreen"></div>
+										</div>
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a>
-									<select class="form-control">
+									<a href="#">编辑</a> <select class="form-control">
 										<option value="">更多</option>
 										<option value="apple">苹果</option>
 										<option value="banana">香蕉</option>
 										<option value="orange">桔子</option>
-									</select>									
+									</select>
 								</div>
 							</div>
 						</div>
@@ -168,19 +185,18 @@
 								</div>
 								<div class="progress">
 									<div class="statusList">
-									　　<div class="scheduleGray">
-									  　　<div class="scheduleGreen"></div>
-									　　</div>
+										<div class="scheduleGray">
+											<div class="scheduleGreen"></div>
+										</div>
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a>
-									<select class="form-control">
+									<a href="#">编辑</a> <select class="form-control">
 										<option value="">更多</option>
 										<option value="apple">苹果</option>
 										<option value="banana">香蕉</option>
 										<option value="orange">桔子</option>
-									</select>									
+									</select>
 								</div>
 							</div>
 						</div>
@@ -209,19 +225,18 @@
 								</div>
 								<div class="progress">
 									<div class="statusList">
-									　　<div class="scheduleGray">
-									  　　<div class="scheduleGreen"></div>
-									　　</div>
+										<div class="scheduleGray">
+											<div class="scheduleGreen"></div>
+										</div>
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a>
-									<select class="form-control">
+									<a href="#">编辑</a> <select class="form-control">
 										<option value="">更多</option>
 										<option value="apple">苹果</option>
 										<option value="banana">香蕉</option>
 										<option value="orange">桔子</option>
-									</select>									
+									</select>
 								</div>
 							</div>
 						</div>
@@ -249,19 +264,18 @@
 								</div>
 								<div class="progress">
 									<div class="statusList">
-									　　<div class="scheduleGray">
-									  　　<div class="scheduleGreen"></div>
-									　　</div>
+										<div class="scheduleGray">
+											<div class="scheduleGreen"></div>
+										</div>
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a>
-									<select class="form-control">
+									<a href="#">编辑</a> <select class="form-control">
 										<option value="">更多</option>
 										<option value="apple">苹果</option>
 										<option value="banana">香蕉</option>
 										<option value="orange">桔子</option>
-									</select>									
+									</select>
 								</div>
 							</div>
 						</div>
@@ -289,19 +303,18 @@
 								</div>
 								<div class="progress">
 									<div class="statusList">
-									　　<div class="scheduleGray">
-									  　　<div class="scheduleGreen"></div>
-									　　</div>
+										<div class="scheduleGray">
+											<div class="scheduleGreen"></div>
+										</div>
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a>
-									<select class="form-control">
+									<a href="#">编辑</a> <select class="form-control">
 										<option value="">更多</option>
 										<option value="apple">苹果</option>
 										<option value="banana">香蕉</option>
 										<option value="orange">桔子</option>
-									</select>									
+									</select>
 								</div>
 							</div>
 						</div>
@@ -310,15 +323,15 @@
 					<div class="bottom_page">
 						<div class="page">
 							<ul class="pagination">
-							  <li><a href="#">«</a></li>
-							  <li><a href="#">1</a></li>
-							  <li><a class="active" href="#">2</a></li>
-							  <li><a href="#">3</a></li>
-							  <li><a href="#">4</a></li>
-							  <li><a href="#">5</a></li>
-							  <li><a href="#">6</a></li>
-							  <li><a href="#">7</a></li>
-							  <li><a href="#">»</a></li>
+								<li><a href="#">«</a></li>
+								<li><a href="#">1</a></li>
+								<li><a class="active" href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">6</a></li>
+								<li><a href="#">7</a></li>
+								<li><a href="#">»</a></li>
 							</ul>
 						</div>
 					</div>
@@ -329,5 +342,6 @@
 		<%@include file="footer.jsp"%>
 	</div>
 </body>
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>
