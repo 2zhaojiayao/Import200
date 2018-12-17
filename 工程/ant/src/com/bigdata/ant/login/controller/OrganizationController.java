@@ -46,10 +46,10 @@ public class OrganizationController {
 		boolean a = this.organizationServiceImpl.getOrgByEmail(email);
 		boolean b = this.organizationServiceImpl.getOrgByEmailAndPwd(email, pwd);
 		if (a == false) {
-			request.setAttribute("message1", "用户名错误");
+			request.setAttribute("message5", "请输入正确的邮箱！");
 			return "three_login";
 		} else if (b == false) {
-			request.setAttribute("message2", "密码错误");
+			request.setAttribute("message6", "请输入正确的密码！");
 			return "three_login";
 		} else if (!(session_vcode.equalsIgnoreCase(form_vcode))) // 进行判断
 		{
