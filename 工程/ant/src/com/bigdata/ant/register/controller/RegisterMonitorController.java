@@ -45,6 +45,7 @@ public class RegisterMonitorController {
 			request.setAttribute("msg", "注册成功，去邮箱激活吧");
 			return "register_msg";
 		} else {
+			System.out.println("admit");
 			request.setAttribute("admitMonitorRegister", admitMonitorRegister);
 			request.setAttribute("collegeSelected", college);
 			request.setAttribute("professionSelected", profession);
@@ -53,6 +54,7 @@ public class RegisterMonitorController {
 			request.setAttribute("monitor", monitor);
 			request.setAttribute("monitor", monitor);
 			request.setAttribute("againpsd", againpsd);
+			System.out.println(college);
 			return "three_register";
 		}
 	}

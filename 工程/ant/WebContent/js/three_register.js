@@ -1,4 +1,4 @@
-// 登录按钮切换
+// 注册按钮切换
 
 function personReg() {
     var reg = document.getElementsByClassName("reg");

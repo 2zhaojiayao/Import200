@@ -70,7 +70,7 @@
                         <select id="college" name="college">
                             <option value="0">学院</option>
                             <c:forEach items="${college }" var="col">
-						        <option value="${col }">${col.name }<c:if test="${col==collegeSelected}">selected</c:if></option>
+						        <option value="${col.name }">${col.name }<c:if test="${col.name==collegeSelected}">selected</c:if></option>
 						   	</c:forEach>
                         </select>
                         <p id="college_msg"></p>
@@ -80,7 +80,7 @@
                             <option value="0">专业</option>
                             <c:forEach items="${college }" var="col">
 						        <c:forEach items="${col.professions }" var="pro">
-						        	<option value="${pro.id }">${pro.name }<c:if test="${pro==collegeSelected}">selected</c:if></option>
+						        	<option value="${pro.name }">${pro.name }<c:if test="${pro.name==collegeSelected}">selected</c:if></option>
 						   		</c:forEach>
 						   	</c:forEach>
                         </select>
@@ -90,7 +90,7 @@
                         <select id="grade" name="grade">
                             <option value="0">年级</option>
                             <c:forEach items="${grade }" var="gra">
-						        <option value="${gra }">${gra }级</option>
+						        <option value="${gra }">${gra }级<c:if test="${gra==gradeSelected}">selected</c:if></option>
 						   	</c:forEach>
                         </select>
                         <p id="grade_msg"></p>
@@ -99,7 +99,7 @@
                         <select id="classes" name="classes">
                         	<option value="0">班级</option>
 	                        <c:forEach items="${classes }" var="cla">
-							     <option value="${cla }">${cla }班</option>
+							     <option value="${cla }">${cla }班<c:if test="${cla==classesSelected}">selected</c:if></option>
 							</c:forEach>  
                         </select>
                         <p id="classes_msg"></p>
