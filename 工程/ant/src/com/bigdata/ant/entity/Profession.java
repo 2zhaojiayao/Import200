@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 /**
  * 
  * @ClassName:Profession
@@ -17,17 +18,19 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="profession_information")
+@Table(name = "profession_information")
 public class Profession {
 	private int id;
 	private String name;
 	private College college;
+
 	public Profession() {
 		// TODO Auto-generated constructor stub
 	}
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="profession_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "profession_id")
 	public int getId() {
 		return id;
 	}
@@ -43,8 +46,9 @@ public class Profession {
 	public void setName(String name) {
 		this.name = name;
 	}
-@ManyToOne
-@JoinColumn(name="college_id")
+
+	@ManyToOne
+	@JoinColumn(name = "college_id")
 	public College getCollege() {
 		return college;
 	}
@@ -52,7 +56,5 @@ public class Profession {
 	public void setCollege(College college) {
 		this.college = college;
 	}
-
-	
 
 }
