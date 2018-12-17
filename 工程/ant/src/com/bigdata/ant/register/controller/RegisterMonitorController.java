@@ -46,10 +46,10 @@ public class RegisterMonitorController {
 			return "register_msg";
 		} else {
 			request.setAttribute("admitMonitorRegister", admitMonitorRegister);
-			request.setAttribute("college", college);
-			request.setAttribute("profession", profession);
-			request.setAttribute("grade", grade);
-			request.setAttribute("classes", classes);
+			request.setAttribute("collegeSelected", college);
+			request.setAttribute("professionSelected", profession);
+			request.setAttribute("gradeSelected", grade);
+			request.setAttribute("classesSelected", classes);
 			request.setAttribute("monitor", monitor);
 			request.setAttribute("monitor", monitor);
 			request.setAttribute("againpsd", againpsd);

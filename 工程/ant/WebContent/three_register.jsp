@@ -70,7 +70,7 @@
                         <select id="college" name="college">
                             <option value="0">学院</option>
                             <c:forEach items="${college }" var="col">
-						        <option value="${col }">${col.name }</option>
+						        <option value="${col }">${col.name }<c:if test="${col==collegeSelected}">selected</c:if></option>
 						   	</c:forEach>
                         </select>
                         <p id="college_msg"></p>
@@ -80,7 +80,7 @@
                             <option value="0">专业</option>
                             <c:forEach items="${college }" var="col">
 						        <c:forEach items="${col.professions }" var="pro">
-						        	<option value="${pro.id }">${pro.name }</option>
+						        	<option value="${pro.id }">${pro.name }<c:if test="${pro==collegeSelected}">selected</c:if></option>
 						   		</c:forEach>
 						   	</c:forEach>
                         </select>
