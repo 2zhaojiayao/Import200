@@ -66,8 +66,8 @@ public class Monitor {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	
-	@Column(name="validate_code")
+
+	@Column(name = "validate_code")
 	public String getValidateCode() {
 		return validateCode;
 	}
@@ -75,8 +75,8 @@ public class Monitor {
 	public void setValidateCode(String validateCode) {
 		this.validateCode = validateCode;
 	}
-	
-	@Column(name="register_time")
+
+	@Column(name = "register_time")
 	public Date getRegisterTime() {
 		return registerTime;
 	}

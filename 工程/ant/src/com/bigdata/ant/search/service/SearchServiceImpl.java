@@ -6,6 +6,7 @@
  * @Date:2018年12月10日
  */
 package com.bigdata.ant.search.service;
+
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
@@ -20,27 +21,31 @@ import com.bigdata.ant.search.dao.SearchDaoImpl;
  *
  */
 @Service
-@Transactional(readOnly=true)
+@Transactional(readOnly = true)
 public class SearchServiceImpl {
 	@Resource
 	private SearchDaoImpl searchDaoImpl;
+
 	public SearchServiceImpl() {
 		// TODO Auto-generated constructor stub
 	}
-	public List<Object[]> listActivities(Object[] types){
+
+	public List<Object[]> listActivities(Object[] types) {
 //		if(type_header.equals("按类别:")) {
 //			type_header="searchType";
 //		}
 //		if(type_header.equals("按级别:")) {
 //			type_header="level";
 //		}
-		List<Object[]> activities=searchDaoImpl.listActivities(types);
+		List<Object[]> activities = searchDaoImpl.listActivities(types);
 		return activities;
-	} 
-	public List<Object[]> listActivitiesByPopular(int pageNo){
+	}
+
+	public List<Object[]> listActivitiesByPopular(int pageNo) {
 		return searchDaoImpl.listActivitiesByPopular(pageNo);
 	}
-    public Long findActivityCount() {
-    	return searchDaoImpl.findActivityCount();
-    }
- }
+
+	public Long findActivityCount() {
+		return searchDaoImpl.findActivityCount();
+	}
+}

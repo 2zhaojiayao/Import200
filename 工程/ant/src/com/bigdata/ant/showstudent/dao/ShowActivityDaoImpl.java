@@ -22,15 +22,15 @@ public class ShowActivityDaoImpl extends BaseDao<Activity, Integer> {
 	 */
 
 	public Long CountActivity() {
-			Long sum = null;
-			String hql = "from Activity a where a.id is not null";
-			Object[] params =null;
-			try {
-				sum = this.findCount(hql,params);
-				return sum;
-			} catch(Exception e){
-				e.printStackTrace();
-				return null;
-			}
+		Long sum = null;
+		String hql = "from Activity a where a.id is not null";
+		Object[] params = null;
+		try {
+			sum = this.findCount(hql, params);
+			return sum;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
 		}
+	}
 }

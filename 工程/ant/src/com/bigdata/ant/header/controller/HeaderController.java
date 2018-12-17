@@ -6,6 +6,7 @@
  * @Date:2018年12月5日
  */
 package com.bigdata.ant.header.controller;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -27,8 +28,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bigdata.ant.header.service.HeaderServiceImpl;
 import com.google.gson.Gson;
 
-
-
 /**
  * @ClassName:HeaderController
  * @Description:TODO（用一句话描述这个类的作用）
@@ -39,29 +38,29 @@ import com.google.gson.Gson;
 @Controller
 @RequestMapping("/header")
 public class HeaderController {
-   @Resource
-   private HeaderServiceImpl headerServiceImpl;
-   @RequestMapping("/search")
-   public void findActivitiesNames(@RequestParam("text") String keyword,HttpServletResponse response) {
-			List<Object[]> list = null;
-			try {
-				list = headerServiceImpl.findActivitiesNames(keyword);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		    Gson gson = new Gson();
-			String re=gson.toJson(list);
-			System.out.println(re+"json");
-			try {
-				response.getWriter().print(re);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				System.out.println("wrong");
-				e.printStackTrace();
-			}
+	@Resource
+	private HeaderServiceImpl headerServiceImpl;
 
+	@RequestMapping("/search")
+	public void findActivitiesNames(@RequestParam("text") String keyword, HttpServletResponse response) {
+		response.setCharacterEncoding("UTF-8");
+		List<Object[]> list = null;
+		try {
+			list = headerServiceImpl.findActivitiesNames(keyword);
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
- 
-	
+		Gson gson = new Gson();
+		String re = gson.toJson(list);
+		System.out.println(re + "json");
+		try {
+			response.getWriter().print(re);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("wrong");
+			e.printStackTrace();
+		}
+
+	}
 
 }

@@ -10,7 +10,7 @@ import com.bigdata.ant.register.dao.RegisterOrganizationDaoImpl;
 @Service
 @Transactional(readOnly = false)
 public class RegisterOrganizationServiceImpl {
-	
+
 	@Resource
 	private RegisterOrganizationDaoImpl registerOrganizationDaoImpl;
 }

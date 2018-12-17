@@ -6,13 +6,14 @@ import org.springframework.stereotype.Repository;
 
 import com.bigdata.ant.entity.ActivityStage;
 import com.bigdata.ant.utils.BaseDao;
+
 @Repository
 public class ShowActivityStageDaoImpl extends BaseDao<ActivityStage, Integer> {
 
 	public ActivityStage getActivityStage(int actId) {
 		String hql = "from ActivityStage a where a.id=?0";
 		Object[] obj = { actId };
-		List<ActivityStage> lastage=null;
+		List<ActivityStage> lastage = null;
 		try {
 			lastage = this.find(hql, obj);
 			if (lastage != null) {

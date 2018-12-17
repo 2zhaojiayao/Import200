@@ -25,7 +25,7 @@ public class ShowstudentController {
 		
 		Long activitynum = this.showStudentServiceImpl.CountActivity();
 		model.addAttribute("activitynum", activitynum);
-		String id = request.getParameter("studentid");;
+		String id = request.getParameter("studentid");
 				
 		if (id != null) {
 			Comprehensive nowscore = this.showStudentServiceImpl.FindScore(id);
@@ -33,6 +33,7 @@ public class ShowstudentController {
 			model.addAttribute("nowscore", nowscore);
 			model.addAttribute("Studentactivitynum", Studentactivitynum);
 		}
+		
 		return "student_personalcenter";
 		
 	}

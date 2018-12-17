@@ -85,7 +85,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	/**
 	 * 
 	 * @Title: findOne1
-	 * @Description: 占位符的变长参数实现
+	 * @Description: TODO(这里用一句话描述这个方法的作用)
 	 * @param:@param hql
 	 * @param:@param params
 	 * @param:@return
@@ -94,8 +94,8 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 *
 	 * @param hql
 	 * @param params
+	 * @author xjm
 	 * @return
-	 * @author xujunmei
 	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked")
@@ -147,6 +147,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 				.createQuery("select count(" + entityClass.getSimpleName() + ") from " + entityClass.getSimpleName());
 		return (Long) query.uniqueResult();
 	}
+
 	/**
 	 * @desc 统计全部数据数量
 	 * @return 全部数据的数量
@@ -158,6 +159,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 				.createQuery("select count(*) from " + entityClass.getSimpleName());
 		return (Long) query.uniqueResult();
 	}
+
 	/**
 	 * @desc 分页查询全部数据
 	 * @param pageNum  页码
@@ -245,7 +247,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 		}
 		return query.list();
 	}
-	
+
 	/**
 	 * @desc 根据hql，按条件进行分页的投影查询
 	 * @param pageNum  页码

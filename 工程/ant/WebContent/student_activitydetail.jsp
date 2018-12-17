@@ -35,7 +35,7 @@
 		<div class="content_box">
 			<div class="content_left">
 				<div class="content_img">
-					<img src="images/center.jpg">
+					<img src="${activitydetail.image }">
 				</div>
 				<div class="content_text">
 					<form action="#" name="fileForm">

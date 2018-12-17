@@ -10,14 +10,17 @@ body {
 	line-height: 22px;
 	background-color: #fcfcdd
 }
+
 a {
 	text-decoration: none;
 	cursor: pointer;
 	color: #fc9700;
 }
+
 a:hover {
 	color: #f00;
 }
+
 .center {
 	width: 1080px;
 	height: 700px;
@@ -36,7 +39,7 @@ a:hover {
 }
 
 .center_submit {
-	width:1080px;
+	width: 1080px;
 	margin: 0 auto;
 	padding-top: 0px;
 	position: absolute;
@@ -60,11 +63,12 @@ a:hover {
 .button:hover {
 	background-color: #fff;
 	color: #fc9700;
-	border: 1px solid #fc9700;	
+	border: 1px solid #fc9700;
 	cursor: pointer;
 }
-.center_text{
+
+.center_text {
 	font-size: 20px;
 	color: #fc9700;
-	margin-top:10px;
+	margin-top: 10px;
 }

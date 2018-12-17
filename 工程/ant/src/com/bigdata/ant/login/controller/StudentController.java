@@ -37,6 +37,7 @@ public class StudentController {
 	 */
 	@RequestMapping("/stu_login")
 	public String Login(HttpServletRequest request) {
+
 		HttpSession session = request.getSession();
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
@@ -52,7 +53,7 @@ public class StudentController {
 			return "three_login";
 		} else if (!(session_vcode.equalsIgnoreCase(form_vcode))) // 进行判断
 		{
-			request.setAttribute("message", "验证码错误"); // 如果错误就将错误信息发送给客户端
+			request.setAttribute("msg", "验证码错误"); // 如果错误就将错误信息发送给客户端
 			return "three_login";
 		} else {
 			Student s = this.studentServiceImpl.getStuById(id);
