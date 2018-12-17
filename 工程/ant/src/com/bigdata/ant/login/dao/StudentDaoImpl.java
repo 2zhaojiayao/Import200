@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.utils.BaseDao;
+import com.bigdata.ant.utils.MD5Util;
 
 /**
  * 
@@ -31,9 +32,10 @@ public class StudentDaoImpl extends BaseDao<Student, Integer> {
 	 */
 	public boolean getStuByIdAndPwd(String id, String pwd) {
 		Student s = null;
+		String pass = MD5Util.encode2hex(pwd);
 		String hql = "from Student s where s.id = ?0 and s.password = ?1";
 		try {
-			s = this.findOne1(hql, id, pwd);
+			s = this.findOne1(hql, id, pass);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

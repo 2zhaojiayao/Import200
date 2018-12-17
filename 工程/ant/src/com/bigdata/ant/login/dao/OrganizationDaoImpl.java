@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bigdata.ant.entity.Organization;
 import com.bigdata.ant.utils.BaseDao;
+import com.bigdata.ant.utils.MD5Util;
 
 /**
  * 
@@ -31,9 +32,10 @@ public class OrganizationDaoImpl extends BaseDao<Organization, Integer> {
 	 */
 	public boolean getOrgByEmailAndPwd(String email, String pwd) {
 		Organization o = null;
+		String pass = MD5Util.encode2hex(pwd);
 		String hql = "from Organization o where o.email = ?0 and o.password = ?1";
 		try {
-			o = this.findOne1(hql, email, pwd);
+			o = this.findOne1(hql, email, pass);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
