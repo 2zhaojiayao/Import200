@@ -1,15 +1,25 @@
 @charset "utf-8";
 
-body {
-	background-color: #e5ecf5;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-* {
-	margin: 0px auto;
+body {
+	width: 100%;
+	height: auto;
+	background-image: url('images/2.jpg');
+	background-repeat: no-repeat;
 }
 
 .l_float {
 	float: left;
+}
+
+.l_float1 {
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
 }
 
 .m_float {
@@ -56,7 +66,7 @@ header {
 }
 
 header>nav {
-	width: 1859px;
+	width: 100%;
 	margin: 0 auto;
 	/* background-color: orange; */
 	padding: 10px 0;
@@ -69,31 +79,27 @@ nav>.nav_logo, nav>.nav_logo>img {
 }
 
 .container>.login_body {
-	width: 1859px;
-	height: 806px;
+	width: 100%;
+	height: auto;
 	/*轮播图*/
 }
 
 .container>.login_body>#container_img {
-	width: 1080px;
+	width: 100%;
 	height: 806px;
 	position: absolute;
 	z-index: 1;
 	overflow: hidden;
-	left: 10px;
-}
-
-.container>.login_body>#container_img>#list {
-	position: absolute;
-	z-index: 2;
-	width: 13013px;
-	height: 806px;
 }
 
 .container>.login_body>#container_img>#list img {
-	float: left;
-	width: 1859px;
-	height: 806px;
+	width: 100%;
+	height: auto;
+}
+
+.container>.login_body>#container_img>#list img {
+	width: 100%;
+	height: auto;
 }
 
 .container>.login_body>#container_img>#buttons {
@@ -152,39 +158,38 @@ nav>.nav_logo, nav>.nav_logo>img {
 	right: 20px;
 }
 /**日历*/
-.container>.login_body>.calendar {
-	margin: 55px;
-	margin-top: 120px;
-	width: 450px;
-	height: 350px;
+.container>.login_body>.littlecon>.calendar {
+	width: 50%;
+	height: 456px;
 	background-color: rgba(255, 255, 255, 0.75);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
 	position: absolute;
 	z-index: 4;
-	left: 220px;
+	right: 0%;
 }
 
-.container>.login_body>.calendar>.title {
+.container>.login_body>.littlecon>.calendar>.title {
 	height: 70px;
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 	position: relative;
 	text-align: center;
+	margin-top: 30px;
 }
 
-.container>.login_body>.calendar>.title>#calendar-title {
+.container>.login_body>.littlecon>.calendar>.title>#calendar-title {
 	font-size: 25px;
 	text-transform: uppercase;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 14px 0 0 0;
 }
 
-.container>.login_body>.calendar>.title>#calendar-year {
+.container>.login_body>.littlecon>.calendar>.title>#calendar-year {
 	font-size: 15px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
 }
 
-.container>.login_body>.calendar>.title>#cpre {
+.container>.login_body>.littlecon>.calendar>.title>#cpre {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -192,7 +197,7 @@ nav>.nav_logo, nav>.nav_logo>img {
 	height: 70px;
 }
 
-.container>.login_body>.calendar>.title>#cnext {
+.container>.login_body>.littlecon>.calendar>.title>#cnext {
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -244,41 +249,41 @@ nav>.nav_logo, nav>.nav_logo>img {
 }
 
 /*登录界面*/
-.container>.login_body>.login_form {
+.container>.login_body>.littlecon>.login_form {
 	width: 400px;
 	position: absolute;
-	left: 1020px;
+	left: 0%;
 	z-index: 3;
-	margin-top: 100px;
 }
 
-.container>.login_body>.login_form>.login_top, .container>.login_body>.login_form>.login_con
+.container>.login_body>.littlecon>.login_form>.login_top, .container>.login_body>.littlecon>.login_form>.login_con
 	{
 	background-color: rgba(255, 255, 255, 0.75);
 }
 
-.container>.login_body>.login_form>.login_top {
+.container>.login_body>.littlecon>.login_form>.login_top {
 	/* padding-bottom: 30px; */
 	padding: 20px 30px 10px 30px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
 
-.container>.login_body>.login_form>.login_top>img {
+.container>.login_body>.littlecon>.login_form>.login_top>img {
 	height: 40px;
 }
 
-.container>.login_body>.login_form>.login_top>.login_tags {
+.container>.login_body>.littlecon>.login_form>.login_top>.login_tags {
 	/*    border-bottom: 2px solid #d9d9d9;*/
 	padding: 10px 0 0;
 }
 
-.container>.login_body>.login_form>.login_top>.login_tags {
+.container>.login_body>.littlecon>.login_form>.login_top>.login_tags {
 	/* margin: 10px 0 20px 0; */
 	
 }
 
-.container>.login_body>.login_form>.login_top>.login_tags>span {
+.container>.login_body>.littlecon>.login_form>.login_top>.login_tags>span
+	{
 	padding: 10px;
 	text-align: center;
 	width: 33%;
@@ -286,68 +291,75 @@ nav>.nav_logo, nav>.nav_logo>img {
 	border-bottom: 1px solid #d9d9d9;
 }
 
-.container>.login_body>.login_form>.login_top>.login_tags>.active {
+.container>.login_body>.littlecon>.login_form>.login_top>.login_tags>.active
+	{
 	border-bottom: 2px solid #fc7a00;
 }
 
-.container>.login_body>.login_form>.login_con hidden, .container>.login_body>.login_form>.login_con
-	{
+.container>.login_body>.littlecon>.login_form>.login_con hidden,
+	.container>.login_body>.littlecon>.login_form>.login_con {
 	padding: 20px 30px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
 
-.container>.login_body>.login_form>.login_con>form>div，
-.container>.login_body>.login_form>.login_con hidden>form>div {
+.container>.login_body>.littlecon>.login_form>.login_con>form>div，
+.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div
+	{
 	padding-bottom: 20px;
 	position: relative;
 }
 
-.container>.login_body>.login_form>.login_con>form>div>img, .container>.login_body>.login_form>.login_con hidden>form>div>img
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>img,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>img
 	{
 	width: 24px;
 	position: relative;
 	bottom: 35px;
 }
 
-.container>.login_body>.login_form>.login_con>form>div>.tips, .container>.login_body>.login_form>.login_con hidden>form>div>.tips
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>.tips,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>.tips
 	{
-	position: absolute;
+	position: relative;
 	bottom: 0px;
 	font-size: 12px;
 	right: 0;
 	color: #fc7a00;
 }
 
-.container>.login_body>.login_form>.login_con>form>.submit>.tips,
-	.container>.login_body>.login_form>.login_con hidden>form>.submit>.tips
+.container>.login_body>.littlecon>.login_form>.login_con>form>.submit>.tips,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>.submit>.tips
 	{
 	text-align: center;
 	bottom: -3px;
 	left: 0;
 }
 
-.container>.login_body>.login_form>.login_con>form>.submit>a {
+.container>.login_body>.littlecon>.login_form>.login_con>form>.submit>a
+	{
 	color: #fc7a00;
 }
 
-.container>.login_body>.login_form>.login_con>form>div>label, .container>.login_body>.login_form>.login_con hidden>form>div>label
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>label,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>label
 	{
 	font-size: 14px;
 }
 
-.container>.login_body>.login_form>.login_con>form>div>input, .container>.login_body>.login_form>.login_con hidden>form>div>input
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>input,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>input
 	{
 	display: block;
 	margin-top: 10px;
 }
 
-.container>.login_body>.login_form>.login_con>form>div>input[type=text],
-	.container>.login_body>.login_form>.login_con>form>div>input[type=password],
-	.container>.login_body>.login_form>.login_con>form>div>button[type=submit],
-	.container>.login_body>.login_form>.login_con hidden>form>div>input[type=text],
-	.container>.login_body>.login_form>.login_con hidden>form>div>input[type=password],
-	.container>.login_body>.login_form>.login_con hidden>form>div>button[type=submit]
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>input[type=text],
+	.container>.login_body>.littlecon>.login_form>.login_con>form>div>input[type=password],
+	.container>.login_body>.littlecon>.login_form>.login_con>form>div>button[type=submit],
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>input[type=text],
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>input[type=password],
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>button[type=submit]
 	{
 	padding: 0 28px;
 	outline: none;
@@ -360,35 +372,32 @@ nav>.nav_logo, nav>.nav_logo>img {
 	/*    position: relative;*/
 }
 
-.b_clear a {
-	color: #fc7a00;
-}
+/*记住密码*/
 
-.container>.login_body>.login_form>.login_con>form>div>#auth_code,
-	.container>.login_body>.login_form>.login_con hidden>form>div>#auth_code
+/**/
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>#auth_code,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>#auth_code
 	{
-	width: 60px;
+	width: 140px;
 	font-size: 16px;
 	padding-right: 8px;
-	padding-left: 8px;
-	float: left;
 }
 
-.container>.login_body>.login_form>.login_con>form>div>.auth_code,
-	.container>.login_body>.login_form>.login_con hidden>form>div>.auth_code
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>.auth_code,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>.auth_code
 	{
 	height: 42px;
-	margin-top: 45px;
+	margin-top: 10px;
 	margin-left: 8px;
-	width: 100px;
+	width: 152px;
 	outline: none;
 	border: none;
 	border-bottom: 2px solid #fc7a00;
 	background-color: #fff;
 }
 
-.container>.login_body>.login_form>.login_con>form>div>button[type=submit],
-	.container>.login_body>.login_form>.login_con hidden>form>div>button[type=submit]
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>button[type=submit],
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>button[type=submit]
 	{
 	background-color: #fc7a00;
 	width: 340px;
@@ -401,29 +410,33 @@ nav>.nav_logo, nav>.nav_logo>img {
 	font-weight: bold;
 }
 
-.container>.login_body>.login_form>.login_con>form>div>button[type=submit]:hover,
-	.container>.login_body>.login_form>.login_con hideen>form>div>button[type=submit]:hover
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>button[type=submit]:hover,
+	.container>.login_body>.littlecon>.login_form>.login_con hideen>form>div>button[type=submit]:hover
 	{
 	background-color: rgba(252, 122, 0, .8);
 }
 
-.container>.login_body>.login_form>.login_con>form>div>a, .container>.login_body>.login_form>.login_con hidden>form>div>a
+.container>.login_body>.littlecon>.login_form>.login_con>form>div>a,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>form>div>a
 	{
 	font-size: 12px;
 	line-height: 40px;
 }
 
-.container>.login_body>.login_form>.login_con>.qr_code, .container>.login_body>.login_form>.login_con hidden>.qr_code
+.container>.login_body>.littlecon>.login_form>.login_con>.qr_code,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>.qr_code
 	{
 	text-align: center;
 }
 
-.container>.login_body>.login_form>.login_con>.qr_code>img, .container>.login_body>.login_form>.login_con hidden>.qr_code>img
+.container>.login_body>.littlecon>.login_form>.login_con>.qr_code>img,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>.qr_code>img
 	{
 	width: 140px;
 }
 
-.container>.login_body>.login_form>.login_con>.qr_code>p, .container>.login_body>.login_form>.login_con hidden>.qr_code>p
+.container>.login_body>.littlecon>.login_form>.login_con>.qr_code>p,
+	.container>.login_body>.littlecon>.login_form>.login_con hidden>.qr_code>p
 	{
 	font-size: 12px;
 	margin-top: 10px;
@@ -437,6 +450,7 @@ nav>.nav_logo, nav>.nav_logo>img {
     border-bottom-left-radius: 10px;
 
 }
+.container>.login_body>.login_form>.login_otherAccount>span{
     margin-right: 4px;
 
 }
@@ -449,58 +463,58 @@ nav>.nav_logo, nav>.nav_logo>img {
     vertical-align: middle;
 }
 */
-.container>.login_body>.login_ad {
-	width: 700px;
-	height: 558px;;
-	overflow: hidden;
-	background-image: url('../imgs/timg.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	position: relative;
-	text-align: center;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.35);
 
-	/* height: 100%; */
+/*.container>.login_body>.login_ad{
+    width: 700px;
+    height: 558px;;
+    overflow: hidden;
+    background-image: url('../imgs/timg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    text-align: center;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.35);
+
+     height: 100%; 
+   
 }
+.container>.login_body>.login_ad>a{
+    
+    border-radius: 50px;
+    position: absolute;
+    bottom: 15.5%;
+    left: 296px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #703EFF;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #703EFF;
 
-.container>.login_body>.login_ad>a {
-	border-radius: 50px;
-	position: absolute;
-	bottom: 15.5%;
-	left: 296px;
-	padding: 10px 20px;
-	text-decoration: none;
-	background-color: #703EFF;
-	color: #fff;
-	font-size: 14px;
-	border: 1px solid #703EFF;
+    /* left: 0; */
+/*}
+.container>.login_body>.login_ad>a:hover{
 
-	/* left: 0; */
+    background-color: #fff;
+    border: 1px solid #703EFF;
+    color: #703EFF;
 }
-
-.container>.login_body>.login_ad>a:hover {
-	background-color: #fff;
-	border: 1px solid #703EFF;
-	color: #703EFF;
-}
-
-.footer {
-	font-size: 12px;
-	padding: 0 10px;
-	text-align: center;
-	margin-top: 32px;
-	/* position: absolute;
+.footer{
+    font-size: 12px;
+    padding: 0 10px;
+    text-align: center;
+    margin-top: 32px;
+    /* position: absolute;
     bottom: 0;
     left: 50% */
-	/* width: 1200px; */
-	/* margin: 20px auto; */
-	/* position: absolute;
-    bottom: 0 */
-}
-
+/* width: 1200px; */
+/* margin: 20px auto; */
+/* position: absolute;
+    bottom: 0 
+}*/
 .footer a:link {
 	color: #999999;
 }

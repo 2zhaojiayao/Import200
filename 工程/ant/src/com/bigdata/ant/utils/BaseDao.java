@@ -147,7 +147,17 @@ public abstract class BaseDao<T, PK extends Serializable> {
 				.createQuery("select count(" + entityClass.getSimpleName() + ") from " + entityClass.getSimpleName());
 		return (Long) query.uniqueResult();
 	}
-
+	/**
+	 * @desc 统计全部数据数量
+	 * @return 全部数据的数量
+	 * @author 成琼
+	 * @throws Exception
+	 */
+	public Long findCount1() throws Exception {
+		Query query = this.sessionFactory.getCurrentSession()
+				.createQuery("select count(*) from " + entityClass.getSimpleName());
+		return (Long) query.uniqueResult();
+	}
 	/**
 	 * @desc 分页查询全部数据
 	 * @param pageNum  页码

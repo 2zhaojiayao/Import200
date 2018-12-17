@@ -81,7 +81,7 @@ input, button {
 	border-radius: 42px;
 	transition: .3s linear;
 	float: right;
-	padding-left: 25px;
+	padding-left:15px;
 }
 
 .search input:focus {
@@ -110,7 +110,12 @@ input, button {
 	font-family: FontAwesome;
 	color: #ff8d1a;
 }
-
+#word{
+	background-color:#fff;
+	border: 1px solid #CCC;
+	width:300px;
+	/* margin-top:20px; */
+}
 .top_1 .message {
 	width: 25px;
 	height: 25px;

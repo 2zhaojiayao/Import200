@@ -5,7 +5,6 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.login.dao.MonitorDaoImpl;
 
 /**
@@ -25,7 +24,7 @@ public class MonitorServiceImpl {
 
 	/**
 	 * 
-	 * @Title: FindIdAndPwd
+	 * @Title: getMonByIdAndPwd
 	 * @Description: 验证账号密码是否正确
 	 * @param:@param email
 	 * @param:@param pwd
@@ -36,8 +35,29 @@ public class MonitorServiceImpl {
 	 * @param pwd
 	 * @return
 	 */
-	public boolean FindIdAndPwd(String email, String pwd) {
-		if (this.monitorDaoImpl.SearchByIdAndPwd(email, pwd)) {
+	public boolean getMonByEmailAndPwd(String email, String pwd) {
+		if (this.monitorDaoImpl.getMonByEmailAndPwd(email, pwd)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * 
+	 * @Title: getMonByEmail
+	 * @Description: TODO(这里用一句话描述这个方法的作用)
+	 * @param:@param email
+	 * @param:@param pwd
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param email
+	 * @param pwd
+	 * @return
+	 */
+	public boolean getMonByEmail(String email) {
+		if (this.monitorDaoImpl.getMonByEmail(email)) {
 			return true;
 		} else {
 			return false;
