@@ -23,162 +23,163 @@ import com.bigdata.ant.utils.BaseDao;
  *
  */
 @Repository
-public class SearchDaoImpl extends BaseDao<Activity,Integer>{
-	//按用户选择的类型查询
-public List<Object[]> listActivities(Object[] types){
-	//System.out.println(type_header+" "+type_detail);
-	List<Object[]> activities=null;
-	String hql=null;
-	Date date=new Date();
-	//Object[] params=new Object[1];
-	if(types[0].equals("全部")) {
-		if(types[1].equals("全部")) {
-			if(types[2].equals("全部")) {
-				 hql="select id,name,image,description,studentNumber from Activity ORDER BY studentNumber desc";
-				 Object[] params=null;
-				 try {
-						activities=findByProjection(hql, params);
+public class SearchDaoImpl extends BaseDao<Activity, Integer> {
+	// 按用户选择的类型查询
+	public List<Object[]> listActivities(Object[] types) {
+		// System.out.println(type_header+" "+type_detail);
+		List<Object[]> activities = null;
+		String hql = null;
+		Date date = new Date();
+		// Object[] params=new Object[1];
+		if (types[0].equals("全部")) {
+			if (types[1].equals("全部")) {
+				if (types[2].equals("全部")) {
+					hql = "select id,name,image,description,studentNumber from Activity ORDER BY studentNumber desc";
+					Object[] params = null;
+					try {
+						activities = findByProjection(hql, params);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-			}else {
-				if(types[2].equals("报名中")) {
-					hql="select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 ORDER BY studentNumber desc ";
-				}
-				if(types[2].equals("进行中")) {
-					hql="select id,name,image,description,studentNumber from Activity where holdBegin<?0 and holdEnd>?0 ORDER BY studentNumber desc";
-						}
-				if(types[2].equals("已结束")) {
-					hql="select id,name,image,description,studentNumber,holdEnd from Activity where holdEnd<?0 ORDER BY studentNumber desc";
-						}
-				Object[] params= {date};
-				try {
-					activities=findByProjection(hql, params);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				System.out.println(activities.get(0)[5]+"数据库时间"+date+"系统时间");
-			}
-		}else {
-			if(types[2].equals("全部")) {
-				 hql="select id,name,image,description,studentNumber from Activity where level=?0 ORDER BY studentNumber desc";
-				 Object[] params= {types[1]};
-				 try {
-						activities=findByProjection(hql, params);
+				} else {
+					if (types[2].equals("报名中")) {
+						hql = "select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 ORDER BY studentNumber desc ";
+					}
+					if (types[2].equals("进行中")) {
+						hql = "select id,name,image,description,studentNumber from Activity where holdBegin<?0 and holdEnd>?0 ORDER BY studentNumber desc";
+					}
+					if (types[2].equals("已结束")) {
+						hql = "select id,name,image,description,studentNumber,holdEnd from Activity where holdEnd<?0 ORDER BY studentNumber desc";
+					}
+					Object[] params = { date };
+					try {
+						activities = findByProjection(hql, params);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-			}else {
-				if(types[2].equals("报名中")) {
-					hql="select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and level=?1 ORDER BY studentNumber desc";
+					System.out.println(activities.get(0)[5] + "数据库时间" + date + "系统时间");
 				}
-				if(types[2].equals("进行中")) {
-					hql="select id,name,image,description,studentNumber from Activity where holdBegin<?0 and holdEnd>?0 and level=?1 ORDER BY studentNumber desc";
-						}
-				if(types[2].equals("已结束")) {
-					hql="select id,name,image,description,studentNumber from Activity where applyEnd<?0 and level=?1 ORDER BY studentNumber desc";
-						}
-				Object[] params= {date,types[1]};
-				try {
-					activities=findByProjection(hql, params);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		}
-	}else {
-		if(types[1].equals("全部")) {
-			if(types[2].equals("全部")) {
-				 hql="select id,name,image,description,studentNumber from Activity where searchType=?0 ORDER BY studentNumber desc";
-				 Object[] params= {types[0]};
-				 try {
-						activities=findByProjection(hql, params);
+			} else {
+				if (types[2].equals("全部")) {
+					hql = "select id,name,image,description,studentNumber from Activity where level=?0 ORDER BY studentNumber desc";
+					Object[] params = { types[1] };
+					try {
+						activities = findByProjection(hql, params);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-			}else {
-				if(types[2].equals("报名中")) {
-					hql="select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and searchType=?1 ORDER BY studentNumber desc";
-				}
-				if(types[2].equals("进行中")) {
-					hql="select id,name,image,description,studentNumber from Activity where holdBegin<?0 and holdEnd>?0 and searchType=?1 ORDER BY studentNumber desc";
-						}
-				if(types[2].equals("已结束")) {
-					hql="select id,name,image,description,studentNumber from Activity where applyEnd<?0 and searchType=?1 ORDER BY studentNumber desc";
-						}
-				Object[] params= {date,types[0]};
-				try {
-					activities=findByProjection(hql, params);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-			}
-		}else {
-			if(types[2].equals("全部")) {
-				 hql="select id,name,image,description,studentNumber from Activity where searchType=?0 and level=?1 ORDER BY studentNumber desc";
-				 Object[] params= {types[0],types[1]};
-				 try {
-						activities=findByProjection(hql, params);
+				} else {
+					if (types[2].equals("报名中")) {
+						hql = "select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and level=?1 ORDER BY studentNumber desc";
+					}
+					if (types[2].equals("进行中")) {
+						hql = "select id,name,image,description,studentNumber from Activity where holdBegin<?0 and holdEnd>?0 and level=?1 ORDER BY studentNumber desc";
+					}
+					if (types[2].equals("已结束")) {
+						hql = "select id,name,image,description,studentNumber from Activity where applyEnd<?0 and level=?1 ORDER BY studentNumber desc";
+					}
+					Object[] params = { date, types[1] };
+					try {
+						activities = findByProjection(hql, params);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-			}else {
-				if(types[2].equals("报名中")) {
-					hql="select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and searchType=?1 and level=?2 ORDER BY studentNumber desc";
-				}
-				if(types[2].equals("进行中")) {
-					hql="select id,name,image,description,studentNumber from Activity where holdBegin<?0 and holdEnd>?0 and searchType=?1 and level=?2 ORDER BY studentNumber desc";
-						}
-				if(types[2].equals("已结束")) {
-					hql="select id,name,image,description,studentNumber from Activity where applyEnd<?0 and searchType=?1 and level=?2 ORDER BY studentNumber desc";
-						}
-				Object[] params= {date,types[0],types[1]};
-				try {
-					activities=findByProjection(hql, params);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 				}
 			}
-		}
-	}
-  return activities;
-}
+		} else {
+			if (types[1].equals("全部")) {
+				if (types[2].equals("全部")) {
+					hql = "select id,name,image,description,studentNumber from Activity where searchType=?0 ORDER BY studentNumber desc";
+					Object[] params = { types[0] };
+					try {
+						activities = findByProjection(hql, params);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} else {
+					if (types[2].equals("报名中")) {
+						hql = "select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and searchType=?1 ORDER BY studentNumber desc";
+					}
+					if (types[2].equals("进行中")) {
+						hql = "select id,name,image,description,studentNumber from Activity where holdBegin<?0 and holdEnd>?0 and searchType=?1 ORDER BY studentNumber desc";
+					}
+					if (types[2].equals("已结束")) {
+						hql = "select id,name,image,description,studentNumber from Activity where applyEnd<?0 and searchType=?1 ORDER BY studentNumber desc";
+					}
+					Object[] params = { date, types[0] };
+					try {
+						activities = findByProjection(hql, params);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 
-public List<Object[]> listActivitiesByPopular(int pageNo){
-	
-	 String hql="select id,name,image,description,studentNumber from Activity ORDER BY studentNumber desc";
-	 Object[] params=null;
-	 List<Object[]> popularActivities=null;
-	try {
-		popularActivities = findByProjection(pageNo,8,hql,params);
-	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+				}
+			} else {
+				if (types[2].equals("全部")) {
+					hql = "select id,name,image,description,studentNumber from Activity where searchType=?0 and level=?1 ORDER BY studentNumber desc";
+					Object[] params = { types[0], types[1] };
+					try {
+						activities = findByProjection(hql, params);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} else {
+					if (types[2].equals("报名中")) {
+						hql = "select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and searchType=?1 and level=?2 ORDER BY studentNumber desc";
+					}
+					if (types[2].equals("进行中")) {
+						hql = "select id,name,image,description,studentNumber from Activity where holdBegin<?0 and holdEnd>?0 and searchType=?1 and level=?2 ORDER BY studentNumber desc";
+					}
+					if (types[2].equals("已结束")) {
+						hql = "select id,name,image,description,studentNumber from Activity where applyEnd<?0 and searchType=?1 and level=?2 ORDER BY studentNumber desc";
+					}
+					Object[] params = { date, types[0], types[1] };
+					try {
+						activities = findByProjection(hql, params);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+		return activities;
 	}
-	 return popularActivities;
-}
-public long findActivityCount() {
-	long count = 0;
-	try {
-		count = findCount1();
-		System.out.println(count);
-	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+
+	public List<Object[]> listActivitiesByPopular(int pageNo) {
+
+		String hql = "select id,name,image,description,studentNumber from Activity ORDER BY studentNumber desc";
+		Object[] params = null;
+		List<Object[]> popularActivities = null;
+		try {
+			popularActivities = findByProjection(pageNo, 8, hql, params);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return popularActivities;
 	}
-	return count;
-}
+
+	public long findActivityCount() {
+		long count = 0;
+		try {
+			count = findCount1();
+			System.out.println(count);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return count;
+	}
+
 	public SearchDaoImpl() {
 		// TODO Auto-generated constructor stub
 	}
 }
-

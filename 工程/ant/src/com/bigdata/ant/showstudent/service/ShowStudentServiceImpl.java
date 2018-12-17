@@ -1,4 +1,5 @@
 package com.bigdata.ant.showstudent.service;
+
 /*
  * @ClassName:ShowStudentServiceImpl
  * @Description:个人中心页，顶部展示数据的查询
@@ -18,19 +19,19 @@ import com.bigdata.ant.showstudent.dao.ShowstudentactivityDaoImpl;
 @Service
 @Transactional(readOnly = false)
 public class ShowStudentServiceImpl {
-	
+
 	@Resource
 	private ShowActivityDaoImpl showActivityDaoImpl;
 	@Resource
 	private ShowStudentscoreDaoImpl showStudentscoreDaoImpl;
 	@Resource
 	private ShowstudentactivityDaoImpl showStudentactivityDaoImpl;
-	
+
 	public Long CountActivity() {
 		Long countactivity = this.showActivityDaoImpl.CountActivity();
 		return countactivity;
 	}
-	
+
 	public Comprehensive FindScore(String id) {
 		Comprehensive nowscore = this.showStudentscoreDaoImpl.getStudentscore(id);
 		return nowscore;

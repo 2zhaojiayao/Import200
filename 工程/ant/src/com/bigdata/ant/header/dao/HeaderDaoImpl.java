@@ -6,6 +6,7 @@
  * @Date:2018年12月5日
  */
 package com.bigdata.ant.header.dao;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
@@ -28,8 +29,6 @@ import com.bigdata.ant.utils.BaseDao;
 //import com.demo.fenye.domain.Student;
 //import com.demo.fenye.utils.C3P0Utils;
 
-
-
 /**
  * @ClassName:HeaderDao
  * @Description:TODO（用一句话描述这个类的作用）
@@ -39,15 +38,15 @@ import com.bigdata.ant.utils.BaseDao;
  */
 @Repository
 
-public class HeaderDaoImpl extends BaseDao<Activity,Integer> {
+public class HeaderDaoImpl extends BaseDao<Activity, Integer> {
 
-	public List<Object[]> findActivitiesNames(String keyword)  {
-		List<Object[]> activities=null;
-		String hql="select name from Activity where name like ?0";
-		Object[] params= {"%"+keyword+"%"};
-		
+	public List<Object[]> findActivitiesNames(String keyword) {
+		List<Object[]> activities = null;
+		String hql = "select name from Activity where name like ?0";
+		Object[] params = { "%" + keyword + "%" };
+
 		try {
-			 activities=findByProjection(hql, params);
+			activities = findByProjection(hql, params);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

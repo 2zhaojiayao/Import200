@@ -1,4 +1,5 @@
 package com.bigdata.ant.entity;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 /**
  * 
  * @ClassName:ActivityStage
@@ -20,19 +22,21 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="activity_score")
+@Table(name = "activity_score")
 public class ActivityStage {
-private int id;
-private String stage;
-private float score;
-private Activity activity;
+	private int id;
+	private String stage;
+	private float score;
+	private Activity activity;
 //private Set<Student> students=new HashSet<Student>();
-private Set<ActivityJoin> joinedActivities=new HashSet<ActivityJoin>();
+	private Set<ActivityJoin> joinedActivities = new HashSet<ActivityJoin>();
+
 	public ActivityStage() {
 		// TODO Auto-generated constructor stub
 	}
-@Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
@@ -56,6 +60,7 @@ private Set<ActivityJoin> joinedActivities=new HashSet<ActivityJoin>();
 	public void setScore(float score) {
 		this.score = score;
 	}
+
 //   @ManyToMany(mappedBy="joinedActivities")
 //	public Set<Student> getStudents() {
 //		return students;
@@ -65,17 +70,20 @@ private Set<ActivityJoin> joinedActivities=new HashSet<ActivityJoin>();
 //		this.students = students;
 //	}
 	@ManyToOne
-	@JoinColumn(name="activity_id")
+	@JoinColumn(name = "activity_id")
 	public Activity getActivity() {
 		return activity;
 	}
+
 	public void setActivity(Activity activity) {
 		this.activity = activity;
 	}
-	@OneToMany(mappedBy="student",targetEntity=ActivityJoin.class,cascade= {CascadeType.ALL})
+
+	@OneToMany(mappedBy = "student", targetEntity = ActivityJoin.class, cascade = { CascadeType.ALL })
 	public Set<ActivityJoin> getJoinedActivities() {
 		return joinedActivities;
 	}
+
 	public void setJoinedActivities(Set<ActivityJoin> joinedActivities) {
 		this.joinedActivities = joinedActivities;
 	}

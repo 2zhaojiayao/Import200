@@ -27,6 +27,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "activity_information")
 public class Activity {
+
 	private int id;
 	private String name;
 	private String description;
@@ -93,7 +94,7 @@ public class Activity {
 	public void setStudentNumber(Integer studentNumber) {
 		this.studentNumber = studentNumber;
 	}
-	
+
 	@Column(name = "apply_begin")
 	public Date getApplyBegin() {
 		return applyBegin;

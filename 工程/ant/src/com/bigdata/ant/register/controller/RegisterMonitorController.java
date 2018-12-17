@@ -15,8 +15,13 @@ import com.bigdata.ant.register.service.RegisterMonitorServiceImpl;
 @Controller
 public class RegisterMonitorController {
 	@Resource
+<<<<<<< HEAD
 	private RegisterMonitorServiceImpl registerMonitorServiceImpl;
 	
+=======
+	private RegisterMonitorServiceImpl registermonitorServiceImpl;
+
+>>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 	@RequestMapping("/checkMonitorEmail")
 	public void checkMonitorEmail(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String mon_email = request.getParameter("mon_email");
@@ -29,10 +34,10 @@ public class RegisterMonitorController {
 			response.getWriter().print("ok");
 		}
 	}
-	
-	
+
 	@RequestMapping("/monitorRegister")
 	public String monitorRegister(HttpServletRequest request, Monitor monitor) {
+<<<<<<< HEAD
 		String againpsd = request.getParameter("againpsd");
 		System.out.println("againpsd"+againpsd);
 		String college=request.getParameter("college");
@@ -41,6 +46,16 @@ public class RegisterMonitorController {
 		String classes=request.getParameter("classes");
 
 		String admitMonitorRegister = registerMonitorServiceImpl.admitMonitorRegister(monitor, college,profession,grade,classes,againpsd);// 获得信息（是否允许注册）
+=======
+		String againpsd = request.getParameter("againpwd");
+		String college = request.getParameter("college");
+		String profession = request.getParameter("profession");
+		String grade = request.getParameter("grade");
+		String classes = request.getParameter("classes");
+
+		String admitMonitorRegister = registermonitorServiceImpl.admitMonitorRegister(monitor, college, profession,
+				grade, classes, againpsd);// 获得信息（是否允许注册）
+>>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 		if (admitMonitorRegister.equals("0")) {// 该用户注册成功，待激活
 			registerMonitorServiceImpl.processMonitorRegister(monitor,college,profession,grade,classes);
 			request.setAttribute("msg", "注册成功，去邮箱激活吧");
@@ -78,4 +93,3 @@ public class RegisterMonitorController {
 		return "register_msg.jsp";
 	}
 }
-

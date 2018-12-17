@@ -10,26 +10,36 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.bigdata.ant.activity.service.ShowActivityDetailServiceImpl;
 import com.bigdata.ant.entity.Activity;
 import com.bigdata.ant.entity.ActivityStage;
+
+/**
+ * 
+ * @ClassName:ShowActivityDetailController
+ * @Description:通过获得的活动Id，查询活动的详细信息
+ * @Author zhaojiayao
+ * @Date:2018年12月10日
+ *
+ */
 @Controller
 public class ShowActivityDetailController {
 	@Resource
 	private ShowActivityDetailServiceImpl showActivityDetailServiceImpl;
 
-	@RequestMapping(value="/activitydetail",method=RequestMethod.GET)
+	@RequestMapping(value = "/activitydetail", method = RequestMethod.GET)
 	public String getActivityDetail(HttpServletRequest request) {
-		String id = "1";
-		if(id!=null) {
+		String id = request.getParameter("actid");
+		if (id != null) {
 			int actId = Integer.parseInt(id);
+			actId = 1;
 			Activity activity = this.showActivityDetailServiceImpl.getActivityDetail(actId);
-			if(activity.equals(null)==false) {
+			if (activity.equals(null) == false) {
 				request.setAttribute("activitydetail", activity);
 				ActivityStage astage = this.showActivityDetailServiceImpl.getActivityStage(actId);
-				if(astage!=null) {
+				if (astage != null) {
 					request.setAttribute("activitystage", astage);
-				}else {
+				} else {
 					request.setAttribute("activitystagemsg", "活动信息错误！");
 				}
-			}else {
+			} else {
 				request.setAttribute("activitydetailmsg", "该活动已不存在！");
 			}
 		}

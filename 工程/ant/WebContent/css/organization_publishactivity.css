@@ -4,13 +4,13 @@
 
 body {
 	font-size: 16px;
-	font-family: "Î¢ÈíÑÅºÚ";
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
 	color: #383838;
 	background-color: #fcfcdd;
 }
 
 .content {
-	margin-top:10px;
+	margin-top: 10px;
 	width: 1080px;
 	height: 1386px;
 }
@@ -80,7 +80,7 @@ body {
 	width: 505px;
 	height: 150px;
 	padding: 10px;
-	font-family: "Î¢ÈíÑÅºÚ";
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
 	border: 1px solid #e5e5e5;
 	margin-bottom: 15px;
 	margin-left: 59px;
@@ -232,7 +232,7 @@ body {
 	width: 320px;
 	height: 45px;
 	color: #fc7a00;
-	text-shadow:0.7px 0px #333;
+	text-shadow: 0.7px 0px #333;
 	margin-top: 56px;
 	border-radius: 10px;
 	background-color: #ffc985;

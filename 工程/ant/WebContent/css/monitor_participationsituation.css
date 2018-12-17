@@ -1,24 +1,24 @@
-.conter{
+.conter {
 	height: 515px;
 	width: 1080px;
 	margin: 20px auto;
-	padding-top:  110px;
-
+	padding-top: 110px;
 }
-.conter>p{
-	
+
+.conter>p {
 	margin-bottom: 80px;
 	height: 150px;
 	font-size: 22px;
 	margin-left: 150px;
 }
-.button{
+
+.button {
 	width: 1080px;
 	height: 150px;
 	margin-left: 140px;
-
 }
-#get1{
+
+#get1 {
 	height: 60px;
 	width: 250px;
 	float: left;
@@ -29,11 +29,12 @@
 	font-size: 20px;
 	border-radius: 3%;
 	box-shadow: 1px 1px 1px 1px #aaa;
-	text-align:center;
+	text-align: center;
 	line-height: 60px;
 	color: #fcfcdd;
 }
-#get2{
+
+#get2 {
 	height: 60px;
 	width: 250px;
 	float: left;
@@ -43,16 +44,18 @@
 	font-size: 20px;
 	border-radius: 3%;
 	box-shadow: 1px 1px 1px 1px #aaa;
-	text-align:center;
+	text-align: center;
 	line-height: 60px;
 	color: #fcfcdd;
 }
-#get1:hover,#get2:hover{
-	background-color: rgba(252,122,0,.8);
+
+#get1:hover, #get2:hover {
+	background-color: rgba(252, 122, 0, .8);
 }
-.conter>.button>a>#get1>img{
+
+.conter>.button>a>#get1>img {
 	height: 30px;
 	width: 30px;
 	position: absolute;
-	margin-top:13px;
+	margin-top: 13px;
 }

@@ -18,7 +18,7 @@ import com.bigdata.ant.utils.MailUtil;
 @Service
 @Transactional(readOnly = false)
 public class RegisterOrganizationServiceImpl {
-	
+
 	@Resource
 	private RegisterOrganizationDaoImpl registerOrganizationDaoImpl;
 	

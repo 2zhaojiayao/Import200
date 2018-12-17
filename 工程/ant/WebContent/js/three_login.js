@@ -89,7 +89,13 @@ window.onload = function() {
 		})(i)
 	}
 }
-
+// 切换验证码
+function change() {
+	var img = document.getElementById("image");
+	// 切换验证码的原理是点击就重新将src设置一下，但是浏览器有缓存，所以我们需要在后面添加一个参数来让浏览器不断发送请求，后面加的参数为时间，因为时间是不断变化的
+	img.src = "vert?a="
+	new Date().getTime();
+}
 // 日历
 var month_olypic = [ 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];// 闰年每个月份的天数
 var month_normal = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];

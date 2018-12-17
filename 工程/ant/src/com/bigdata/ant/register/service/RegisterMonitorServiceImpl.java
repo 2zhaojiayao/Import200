@@ -79,16 +79,21 @@ public class RegisterMonitorServiceImpl {
 	 */
 	public String admitMonitorRegister(Monitor monitor, String college, String profession, String grade, String classes,
 			String againpsd) {
-		if(college.equals("0")) {
+		if (college.equals("0")) {
 			return "请选择学院";
 		}
+<<<<<<< HEAD
 		if(profession.equals("0")) {
 			return "请选择专业";
+=======
+		if (profession.equals("0")) {
+			return "请选择职业";
+>>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 		}
-		if(grade.equals("0")) {
+		if (grade.equals("0")) {
 			return "请选择年级";
 		}
-		if(classes.equals("0")) {
+		if (classes.equals("0")) {
 			return "请选择班级";
 		}
 		if (monitor.getPassword().equals("")||monitor.getPassword() == null) {
