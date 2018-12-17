@@ -42,6 +42,7 @@ public class Activity {
 	private String searchType;// 搜索类型
 	private String comprehensiveType;// 综测类型
 	private String isInterview;
+	private Integer studentNumber;
 	private Organization organization;
 	private Set<Student> students = new HashSet<Student>();
 	private Set<ActivityStage> activityStages = new HashSet<ActivityStage>();
@@ -84,6 +85,15 @@ public class Activity {
 		this.level = level;
 	}
 
+	@Column(name = "student_number")
+	public Integer getStudentNumber() {
+		return studentNumber;
+	}
+
+	public void setStudentNumber(Integer studentNumber) {
+		this.studentNumber = studentNumber;
+	}
+	
 	@Column(name = "apply_begin")
 	public Date getApplyBegin() {
 		return applyBegin;
