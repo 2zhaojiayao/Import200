@@ -57,8 +57,13 @@ public class StudentController {
 			return "three_login";
 		} else {
 			Student s = this.studentServiceImpl.getStuById(id);
-			session.setAttribute("s", s);
-			return "student_index";
+			if (s.getStatus() == 0) {
+				request.setAttribute("message1", "该用户未被激活！");
+				return "three_login";
+			} else {
+				session.setAttribute("s", s);
+				return "student_index";
+			}
 		}
 	}
 }
