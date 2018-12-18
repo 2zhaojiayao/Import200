@@ -2,7 +2,9 @@ package com.bigdata.ant.register.service;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 import javax.annotation.Resource;
@@ -12,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bigdata.ant.entity.ClassInfo;
 import com.bigdata.ant.entity.College;
-import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.register.dao.RegisterClassInfoDaoImpl;
 import com.bigdata.ant.register.dao.RegisterCollegeDaoImpl;
@@ -30,15 +31,10 @@ public class RegisterStudentServiceImpl {
 	private RegisterStudentDaoImpl registerStudentDaoImpl;
 	@Resource
 	private RegisterCollegeDaoImpl collegeDaoImpl;
-<<<<<<< HEAD
-	@Resource
-	private RegisterProfessionDaoImpl registerProfessionDaoImpl;
 	@Resource
 	private RegisterClassInfoDaoImpl registerClassInfoDaoImpl;
-	
-=======
-
->>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
+	@Resource
+	private RegisterProfessionDaoImpl registerProfessionDaoImpl;
 	/**
 	 * 
 	 * @Title: findCollege
@@ -250,11 +246,15 @@ public class RegisterStudentServiceImpl {
 			classInfo.setClassNo(classes);
 			classInfo.setGrade(grade);
 			classInfo.setProfession(registerProfessionDaoImpl.findByName(profession));
+			classInfo.setStudents(new HashSet<Student>());
 		}		
 		return classInfo;
 	}
 	public void perfectStudentInformation(String email,String college, String profession, String grade, String classes) {
 		Student student=registerStudentDaoImpl.findByEmail(email);
-		student.setClassInfo(getClassInfo(college,profession,grade,classes));
+		ClassInfo classInfo=getClassInfo(college,profession,grade,classes);
+		student.setClassInfo(classInfo);
+		Set<Student> students=classInfo.getStudents();
+		students.add(student);
 	}
 }

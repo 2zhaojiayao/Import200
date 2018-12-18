@@ -82,13 +82,8 @@ public class RegisterMonitorServiceImpl {
 		if (college.equals("0")) {
 			return "请选择学院";
 		}
-<<<<<<< HEAD
 		if(profession.equals("0")) {
 			return "请选择专业";
-=======
-		if (profession.equals("0")) {
-			return "请选择职业";
->>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 		}
 		if (grade.equals("0")) {
 			return "请选择年级";

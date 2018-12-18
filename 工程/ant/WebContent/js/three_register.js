@@ -207,19 +207,11 @@ $(function() {
 			$("#mon_againpsd_msg").html("密码前后一致");
 			$("#mon_againpsd_msg").removeClass("redWord");
 		}
-<<<<<<< HEAD
-	});	
-	$("#mon_email").blur(function(){
-		var mon_email=$("#mon_email").val();
-		var textEmail=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-		if(!textEmail.test(mon_email)){
-=======
 	});
 	$("#mon_email").blur(function() {
 		var email = $("#mon_email").val();
 		var textEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 		if (!textEmail.test(email)) {
->>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 			$("#mon_email_msg").html("请填写正确格式的邮箱地址");
 			$("#mon_email_msg").addClass("redWord");
 		} else {
@@ -241,42 +233,10 @@ $(function() {
 			});
 		}
 	});
-<<<<<<< HEAD
-//	组织
-	$("#belong").blur(function(){
-		var belong=$('#belong').val();
-		if(belong=="0"){
-=======
-	$("#student_id").blur(function() {
-		var student_id = $("#student_id").val();
-		var textId = /^\d{10}$/;
-		if (!textId.test(student_id)) {
-			$("#top_id_msg").html("学号必须由10位数字组成");
-			$("#top_id_msg").addClass("redWord");
-		} else {
-			$.ajax({
-				url : "checkStudentId",
-				type : "POST",
-				data : {
-					"student_id" : student_id
-				},
-				success : function(data) {
-					if ("no" == data) {
-						$("#top_id_msg").html("该学号已被注册");
-						$("#top_id_msg").addClass("redWord");
-					} else if ("ok" == data) {
-						$("#top_id_msg").html("该学号可以注册");
-						$("#top_id_msg").removeClass("redWord");
-					}
-				}
-			});
-		}
-	});
 	// 组织
 	$("#belong").blur(function() {
 		var belong = $('#belong').val();
 		if (belong == "0") {
->>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 			$("#belong_msg").html("请选择所属单位");
 			$("#belong_msg").addClass("redWord");
 		} else {
@@ -315,7 +275,6 @@ $(function() {
 			$("#org_againpsd_msg").html("密码前后一致");
 			$("#org_againpsd_msg").removeClass("redWord");
 		}
-<<<<<<< HEAD
 	});	
 	$("#org_email").blur(function(){
 		var org_email=$("#org_email").val();
@@ -338,18 +297,6 @@ $(function() {
 		        	}
 		        }
 		    });
-=======
-	});
-	$("#org_email").blur(function() {
-		var email = $("#org_email").val();
-		var textEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-		if (!textEmail.test(email)) {
-			$("#org_email_msg").html("请填写正确格式的邮箱地址");
-			$("#org_email_msg").addClass("redWord");
-		} else {
-			$("#org_email_msg").html("邮箱符合要求");
-			$("#org_email_msg").removeClass("redWord");
->>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 		}
 	});
-});
+})

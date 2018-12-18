@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-<<<<<<< HEAD
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-=======
-	pageEncoding="UTF-8"%>
->>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +12,6 @@
 <script type="text/javascript" src="js/three_register.js"></script>
 </head>
 <body>
-<<<<<<< HEAD
     <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
     <div class="wrapper">
         <div class="logo"><img src="images/logo2.png"></div>
@@ -77,62 +72,5 @@
     </div>
     <!-- 页尾 -->
     <%@include file="footer.jsp"%>
-=======
-	<script type="text/javascript"
-		src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
-	<div class="wrapper">
-		<div class="logo">
-			<img src="images/logo2.png">
-		</div>
-		<div class="msg">
-			<span>为了统计您的活动参与情况，请完善您的信息 </span>
-		</div>
-		<div class="article">
-			<div class="reg">
-				<form>
-					<div class="select_college">
-						<select>
-							<option value="">学院</option>
-							<option value="apple">软件学院</option>
-							<option value="banana">数信学院</option>
-							<option value="orange">化学学院</option>
-						</select>
-					</div>
-					<div class="select_normal">
-						<select>
-							<option value="">专业</option>
-							<option value="apple">软件学院</option>
-							<option value="banana">数信学院</option>
-							<option value="orange">化学学院</option>
-						</select>
-					</div>
-					<div class="select_normal">
-						<select>
-							<option value="">年级</option>
-							<option value="apple">软件学院</option>
-							<option value="banana">数信学院</option>
-							<option value="orange">化学学院</option>
-						</select>
-					</div>
-					<div class="select_normal">
-						<select>
-							<option value="">班级</option>
-							<option value="apple">软件学院</option>
-							<option value="banana">数信学院</option>
-							<option value="orange">化学学院</option>
-						</select>
-					</div>
-					<div class="submit">
-						<input type="submit" class="submit" value="提交">
-					</div>
-				</form>
-			</div>
-		</div>
-		<!-- 页尾 -->
-		<%@include file="footer.jsp"%>
-	</div>
->>>>>>> 115aa59a60a0970095b2266ec79fafa8e855dceb
 </body>
-<script type="text/javascript"
-	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>
