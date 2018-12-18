@@ -233,31 +233,6 @@ $(function() {
 			});
 		}
 	});
-	$("#student_id").blur(function() {
-		var student_id = $("#student_id").val();
-		var textId = /^\d{10}$/;
-		if (!textId.test(student_id)) {
-			$("#top_id_msg").html("学号必须由10位数字组成");
-			$("#top_id_msg").addClass("redWord");
-		} else {
-			$.ajax({
-				url : "checkStudentId",
-				type : "POST",
-				data : {
-					"student_id" : student_id
-				},
-				success : function(data) {
-					if ("no" == data) {
-						$("#top_id_msg").html("该学号已被注册");
-						$("#top_id_msg").addClass("redWord");
-					} else if ("ok" == data) {
-						$("#top_id_msg").html("该学号可以注册");
-						$("#top_id_msg").removeClass("redWord");
-					}
-				}
-			});
-		}
-	});
 	// 组织
 	$("#belong").blur(function() {
 		var belong = $('#belong').val();
@@ -300,16 +275,28 @@ $(function() {
 			$("#org_againpsd_msg").html("密码前后一致");
 			$("#org_againpsd_msg").removeClass("redWord");
 		}
-	});
-	$("#org_email").blur(function() {
-		var email = $("#org_email").val();
-		var textEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-		if (!textEmail.test(email)) {
+	});	
+	$("#org_email").blur(function(){
+		var org_email=$("#org_email").val();
+		var textEmail=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+		if(!textEmail.test(org_email)){
 			$("#org_email_msg").html("请填写正确格式的邮箱地址");
 			$("#org_email_msg").addClass("redWord");
-		} else {
-			$("#org_email_msg").html("邮箱符合要求");
-			$("#org_email_msg").removeClass("redWord");
+		}else{
+			$.ajax({
+		    	url:"checkOrganizationEmail",
+		        type:"POST",
+		        data:{"org_email":org_email},
+		        success: function(data) {
+		        	if("no"==data){
+		        		$("#org_email_msg").html("该邮箱已被注册");
+		        		$("#org_email_msg").addClass("redWord");
+		        	}else if("ok"==data){
+		        		$("#org_email_msg").html("该邮箱可以注册");
+		        		$("#org_email_msg").removeClass("redWord");
+		        	}
+		        }
+		    });
 		}
 	});
-});
+})

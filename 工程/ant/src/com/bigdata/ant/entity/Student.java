@@ -113,7 +113,7 @@ public class Student {
 		this.registerTime = registerTime;
 	}
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "class_id")
 	public ClassInfo getClassInfo() {
 		return classInfo;
