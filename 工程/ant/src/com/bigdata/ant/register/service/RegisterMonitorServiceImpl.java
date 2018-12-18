@@ -8,8 +8,10 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bigdata.ant.entity.ClassInfo;
 import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.register.dao.RegisterMonitorDaoImpl;
+import com.bigdata.ant.register.dao.RegisterProfessionDaoImpl;
 import com.bigdata.ant.utils.IncreaseTimeUtil;
 import com.bigdata.ant.utils.MD5Util;
 import com.bigdata.ant.utils.MailUtil;
@@ -20,6 +22,8 @@ public class RegisterMonitorServiceImpl {
 
 	@Resource
 	private RegisterMonitorDaoImpl registerMonitorDaoImpl;
+	@Resource
+	private RegisterProfessionDaoImpl registerProfessionDaoImpl;
 
 	/**
 	 * 
@@ -45,6 +49,13 @@ public class RegisterMonitorServiceImpl {
 		}
 	}
 
+	public ClassInfo getClassInfo(String college,String profession,String grade,String classes) {
+		ClassInfo classInfo=new ClassInfo();
+		classInfo.setClassNo(classes);
+		classInfo.setGrade(grade);
+		classInfo.setProfession(registerProfessionDaoImpl.findByName(profession));
+		return classInfo;
+	}
 	/**
 	 * 
 	 * @Title: admitMonitorRegister
@@ -71,8 +82,8 @@ public class RegisterMonitorServiceImpl {
 		if (college.equals("0")) {
 			return "请选择学院";
 		}
-		if (profession.equals("0")) {
-			return "请选择职业";
+		if(profession.equals("0")) {
+			return "请选择专业";
 		}
 		if (grade.equals("0")) {
 			return "请选择年级";
@@ -80,7 +91,7 @@ public class RegisterMonitorServiceImpl {
 		if (classes.equals("0")) {
 			return "请选择班级";
 		}
-		if (monitor.getPassword() == null || monitor.getPassword().equals("")) {
+		if (monitor.getPassword().equals("")||monitor.getPassword() == null) {
 			return "密码不能为空";
 		}
 		if (againpsd.equals("") || againpsd == null) {
@@ -143,7 +154,7 @@ public class RegisterMonitorServiceImpl {
 	 * @param monitor
 	 * @return
 	 */
-	public String processMonitorRegister(Monitor monitor) {
+	public String processMonitorRegister(Monitor monitor,String college,String profession,String grade,String classes) {
 		// 激活码由email产生
 		String validateCode = MD5Util.encode2hex(monitor.getEmail());
 		// 发送邮件
@@ -151,6 +162,8 @@ public class RegisterMonitorServiceImpl {
 		sb.append("<a href=\"http://localhost:8080/ant/activeMonitor?email=").append(monitor.getEmail())
 				.append("&validateCode=").append(validateCode).append("\">点此链接激活账户").append("</a>");
 		MailUtil.send(monitor.getEmail(), sb.toString());
+		
+		monitor.setClassInfo(getClassInfo(college,profession,grade,classes));
 		monitor.setStatus(0);
 		monitor.setValidateCode(validateCode);
 		monitor.setRegisterTime(new Date());
@@ -167,7 +180,7 @@ public class RegisterMonitorServiceImpl {
 				// 验证链接是否过期
 				if (currentTime.before(IncreaseTimeUtil.addDateMinut(monitor.getRegisterTime(), 24))) {
 					if (monitor.getValidateCode().equals(validateCode)) {
-//						monitorDaoImpl.updateStatus();
+						registerMonitorDaoImpl.updateStatus();
 						return "激活成功";
 					}
 				} else {

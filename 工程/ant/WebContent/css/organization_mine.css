@@ -284,7 +284,7 @@ a {
 }
 
 .time {
-	width: 180px;
+	width: 150px;
 	height: 45px;
 	float: left;
 	/*background-color: yellow;*/
@@ -323,7 +323,7 @@ a {
 }
 /*操作*/
 .operation {
-	width: 150px;
+	width: 180px;
 	height: 45px;
 	line-height: 45px;
 	float: right;

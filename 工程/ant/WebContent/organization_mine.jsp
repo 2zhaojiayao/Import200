@@ -115,8 +115,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="operation">
-									<a href="#">编辑活动</a>
+								<div class="operation">									<a href="#">编辑活动</a>
 									<a href="#">参与详情</a>
 									<a href="#">删除活动</a>
 								</div>
@@ -150,12 +149,9 @@
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a> <select class="form-control">
-										<option value="">更多</option>
-										<option value="apple">苹果</option>
-										<option value="banana">香蕉</option>
-										<option value="orange">桔子</option>
-									</select>
+									<a href="#">编辑活动</a>
+									<a href="#">参与详情</a>
+									<a href="#">删除活动</a>
 								</div>
 							</div>
 						</div>
@@ -188,12 +184,9 @@
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a> <select class="form-control">
-										<option value="">更多</option>
-										<option value="apple">苹果</option>
-										<option value="banana">香蕉</option>
-										<option value="orange">桔子</option>
-									</select>
+									<a href="#">编辑活动</a>
+									<a href="#">参与详情</a>
+									<a href="#">删除活动</a>
 								</div>
 							</div>
 						</div>
@@ -228,12 +221,9 @@
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a> <select class="form-control">
-										<option value="">更多</option>
-										<option value="apple">苹果</option>
-										<option value="banana">香蕉</option>
-										<option value="orange">桔子</option>
-									</select>
+									<a href="#">编辑活动</a>
+									<a href="#">参与详情</a>
+									<a href="#">删除活动</a>
 								</div>
 							</div>
 						</div>
@@ -267,12 +257,9 @@
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a> <select class="form-control">
-										<option value="">更多</option>
-										<option value="apple">苹果</option>
-										<option value="banana">香蕉</option>
-										<option value="orange">桔子</option>
-									</select>
+									<a href="#">编辑活动</a>
+									<a href="#">参与详情</a>
+									<a href="#">删除活动</a>
 								</div>
 							</div>
 						</div>
@@ -306,12 +293,9 @@
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a> <select class="form-control">
-										<option value="">更多</option>
-										<option value="apple">苹果</option>
-										<option value="banana">香蕉</option>
-										<option value="orange">桔子</option>
-									</select>
+									<a href="#">编辑活动</a>
+									<a href="#">参与详情</a>
+									<a href="#">删除活动</a>
 								</div>
 							</div>
 						</div>
