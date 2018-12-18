@@ -116,12 +116,9 @@
 									</div>
 								</div>
 								<div class="operation">
-									<a href="#">编辑</a> <select class="form-control">
-										<option value="">更多</option>
-										<option value="apple">查看报名信息</option>
-										<option value="banana">查看参赛信息</option>
-										<option value="orange">删除本次活动</option>
-									</select>
+									<a href="#">编辑活动</a>
+									<a href="#">参与详情</a>
+									<a href="#">删除活动</a>
 								</div>
 							</div>
 						</div>

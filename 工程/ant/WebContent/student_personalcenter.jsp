@@ -25,7 +25,7 @@
 					<tr>
 						<td><img src="images/01.png" class="img1"></td>
 						<td>
-							<p class="table1-ninhao">您好，赵家瑶！</p>
+							<p class="table1-ninhao">您好，${s.name }！</p>
 							<br>
 							<p class="table1-little">LittleAnt| 最权威的活动展示和统计平台</p>
 						</td>
