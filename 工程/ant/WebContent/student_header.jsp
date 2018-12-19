@@ -44,7 +44,7 @@
 		<ul>
 			<li><a href="student_index.jsp">首页</a></li>
 			<li><a href="beforeSearch?pageNo=1">活动</a></li>
-			<li><a href="getScannedActivity">个人中心</a></li>
+			<li><a href="personalcenter">个人中心</a></li>
 			<li><a href="personalinformation">个人信息</a></li>
 		</ul>
 	</div>

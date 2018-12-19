@@ -16,26 +16,38 @@ import com.bigdata.ant.utils.BaseDao;
 
 /**
  * @ClassName:ProfessionInformationDaoImpl
- * @Description:TODO（用一句话描述这个类的作用）
+ * @Description:获得所有专业
  * @Author 吕凝慧
  * @Date:2018年12月14日
  *
  */
 @Repository
 public class ProfessionInformationDaoImpl extends BaseDao<Profession, Integer> {
-	public List<Profession> professionInformation(int collegeid) {
-		Object[] obj = { collegeid };
-		String hql = "from Profession p where p.college.id=?0";
+	public List<Profession> professionInformationall() {
+		String hql = "from Profession";
 		List<Profession> studentprofession = null;
 		try {
-			studentprofession = this.find(hql, obj);
-
+			studentprofession = this.findAll();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return studentprofession;
 	}
 
+//	public List<Profession> professionInformation(int collegeid) {
+//		Object[] obj = { collegeid };
+//		String hql = "from Profession p where p.college.id=?0";
+//		List<Profession> studentprofession = null;
+//		try {
+//			studentprofession = this.find(hql, obj);
+//
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//
+//		return studentprofession;
+//	}
+	
 }

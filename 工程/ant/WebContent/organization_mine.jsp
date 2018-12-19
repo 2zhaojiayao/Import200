@@ -115,11 +115,9 @@
 										</div>
 									</div>
 								</div>
-								<div class="operation">
-									<a href="#">编辑活动</a>
+								<div class="operation">									<a href="#">编辑活动</a>
 									<a href="#">参与详情</a>
-									<a href="#">删除活动</a>										
-									</select>
+									<a href="#">删除活动</a>
 								</div>
 							</div>
 						</div>

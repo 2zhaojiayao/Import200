@@ -67,7 +67,7 @@
 							<table>
 								<tr class="tr">
 									<td class="td1">姓名:</td>
-									<td class="td2"><input type="text" value="${s.name }"></td>
+									<td class="td2"><input type="text" value="${s.name }" name="sname"></td>
 								</tr>
 								<tr class="tr">
 									<td class="td1">学号:</td>
@@ -75,49 +75,49 @@
 								</tr>
 								<tr class="tr">
 									<td class="td1">邮箱:</td>
-									<td class="td2"><input type="text" value="${s.email }"></td>
+									<td class="td2"><input type="text" value="${s.email }" name="semail"></td>
 								</tr>
 								<tr class="tr">
 									<td class="td1">学院:</td>
 									<td class="td2"><select>
-											<option value="apple">${s.classInfo.profession.college.name}</option>
-											<c:forEach items="${college }" var="onecollege">
-												<option value="banana" class="">${onecollege.name}</option>
-											</c:forEach>
+										<option value="apple">${s.classInfo.profession.college.name}</option>
+										<c:forEach items="${college }" var="onecollege">
+											<option value="banana" class="">${onecollege.name}</option>
+										</c:forEach>
 									</select></td>
 								</tr>
 								<tr class="tr">
-									<td class="td1">专业: <%-- 									${s.classInfo.profession.college.professions} --%>
+									<td class="td1">专业: <%--
+									${s.classInfo.profession.college.professions} --%>
 									</td>
-									<td class="td2"><select>
-											<option value="apple">${s.classInfo.profession.name}</option>
-
-											<c:forEach
-												items="${s.classInfo.profession.college.professions}"
-												var="oneprofession">
-												<option value="banana">${oneprofession.name }</option>
+									<td class="td2"><select name="sprofession">
+										<option value="${s.classInfo.profession.name}" name="sprofession">${s.classInfo.profession.name}</option>
+<%-- 										<c:forEach items="${s.classInfo.profession.college.professions}" var="oneprofession"> --%>
+<%-- 											<option value="banana">${oneprofession.name }</option> --%>
+<%-- 										</c:forEach> --%>
+											<c:forEach items="${profession}" var="oneprofession">
+												<option value="${oneprofession.id }">${oneprofession.name }</option>
 											</c:forEach>
 									</select></td>
 								</tr>
 								<tr class="tr">
 									<td class="td1">年级:</td>
-									<td class="td2"><select>
-											<option value="apple">${s.classInfo.grade}级</option>
+									<td class="td2"><select name="sgrade">
+											<option value="${s.classInfo.grade}">${s.classInfo.grade}级</option>
 											<c:forEach var="i" begin="2015" end="2018">
-												<option value="banana"><c:out value="${i}级"></c:out>
+												<option value="${i}"><c:out value="${i}级"></c:out>
 												</option>
 											</c:forEach>
 									</select></td>
 								</tr>
 								<tr class="tr">
 									<td class="td1">班级:</td>
-									<td class="td2"><select>
-
-											<option value="apple">${s.classInfo.classNo}</option>
-											<c:forEach var="i" begin="1" end="8">
-												<option value="banana"><c:out value="${i}"></c:out>
-												</option>
-											</c:forEach>
+									<td class="td2"><select name="sclass">
+										<option value="${s.classInfo.classNo}">${s.classInfo.classNo}</option>
+										<c:forEach var="i" begin="1" end="8">
+											<option value="${i}"><c:out value="${i}"></c:out>
+											</option>
+										</c:forEach>
 									</select></td>
 								</tr>
 							</table>
@@ -125,8 +125,8 @@
 								<input type="submit" name="submit" value="保&nbsp&nbsp存"
 									class="button">
 							</div>
-						</form>
-					</div>
+						</form> 
+					</div>	
 				</div>
 			</div>
 		</div>
