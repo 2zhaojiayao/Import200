@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.login.dao.MonitorDaoImpl;
 
 /**
@@ -62,5 +63,20 @@ public class MonitorServiceImpl {
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * 
+	 * @Title: getMonitor
+	 * @Description: 按email找到用户
+	 * @param:@param email
+	 * @param:@return (参数)
+	 * @return:Monitor(返回类型)
+	 *
+	 * @param email
+	 * @return
+	 */
+	public Monitor getMonitor(String email) {
+		return this.monitorDaoImpl.getMonitor(email);
 	}
 }
