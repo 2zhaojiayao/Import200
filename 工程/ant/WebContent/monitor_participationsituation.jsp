@@ -18,7 +18,7 @@
 		<div class="button">
 			<a href="download"><div id="get1">
 					下载活动参与情况表<img src="images/download.png">
-				</div></a> <a href="#"><div id="get2">修改活动参与情况</div></a>
+				</div></a> <a href="monitor_updateactivity.jsp"><div id="get2">修改活动参与情况</div></a>
 		</div>
 	</div>
 

@@ -33,7 +33,7 @@ public class RegisterStudentController {
 		request.setAttribute("college", registerStudentServiceImpl.findCollege());// 把学院信息查出来
 		request.setAttribute("grade", IncreaseTimeUtil.addDateYear(4));// 把年级信息查出来
 		request.setAttribute("classes", registerStudentServiceImpl.findClasses());// 把班级信息列出来
-		return "three_register.jsp";
+		return "three_register";
 
 	}
 
