@@ -38,7 +38,28 @@ public class DownloadController {
 	public void download(HttpServletResponse response) throws IOException {
 		String FILEPATH = "活动汇总表.xls";
 		deleteFile(FILEPATH);
-		// 首行表头信息
+		int num = 0;
+		int w = 0;
+		List<ActivitySum> alist = this.downloadServiceImpl.listAll();
+		List<Map<String, Object>> list = new ArrayList<>();
+		for (ActivitySum a : alist) {
+			Map<String, Object> map = new HashMap<>();
+			map.put("序号", a.getId());
+			map.put("学号", a.getStudentId());
+			List<ActivitySum> l = this.downloadServiceImpl.getIdList(a.getStudentId());
+			for (ActivitySum as : l) {
+				map.put("活动名称", as.getActivityName());
+				map.put("年份", as.getYear());
+				map.put("分数", as.getScore());
+				map.put("类型", as.getType());
+			}
+			System.out.println(w);
+			if (w > num) {
+				num = w;
+			}
+			System.out.println(num);
+			list.add(map);
+		}
 		List<String> ll = new ArrayList<>();
 		ll.add("序号");
 		ll.add("学号");
@@ -46,47 +67,51 @@ public class DownloadController {
 		ll.add("年份");
 		ll.add("分数");
 		ll.add("类型");
-		// 获取所有用户信息
-		List<ActivitySum> alist = this.downloadServiceImpl.listAll();
-		// 将用户的相关信息遍历到 List<Map<String, Object>> 中
-		List<Map<String, Object>> list = new ArrayList<>();
-		for (ActivitySum a : alist) {
-			Map<String, Object> map = new HashMap<>();
-			map.put("序号", a.getId());
-			map.put("学号", a.getStudentId());
-			map.put("活动名称", a.getActivityName());
-			map.put("年份", a.getYear());
-			map.put("分数", a.getScore());
-			map.put("类型", a.getType());
-			list.add(map);
-		}
+		ll.add("活动名称");
+		ll.add("年份");
+		ll.add("分数");
+		ll.add("类型");
+		ll.add("活动名称");
+		ll.add("年份");
+		ll.add("分数");
+		ll.add("类型");
+		ll.add("活动名称");
+		ll.add("年份");
+		ll.add("分数");
+		ll.add("类型");
+		ll.add("活动名称");
+		ll.add("年份");
+		ll.add("分数");
+		ll.add("类型");
+		ll.add("活动名称");
+		ll.add("年份");
+		ll.add("分数");
+		ll.add("类型");
 		try {
-			// 第一个参数：表格中的数据
-			// 第二个参数：表格保存的路径
-			// 第三个参数：表格第二行的列信息
-			// 第四个参数：表格第一行的表头信息
-			// 参照效果图看会清楚些
 			MakeExcel.CreateExcelFile(list, new File(FILEPATH), ll, "活动汇总");
 		} catch (WriteException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// 调用浏览器下载接口
 		MakeExcel.send(FILEPATH, response);
 		deleteFile(FILEPATH);
 	}
 
 	/**
-	 * 删除单个文件
 	 * 
-	 * @param sPath 被删除文件的文件名
-	 * @return 单个文件删除成功返回true，否则返回false
+	 * @Title: deleteFile
+	 * @Description: 删除单个文件
+	 * @param:@param sPath
+	 * @param:@return (参数)
+	 * @return:boolean(返回类型)
+	 *
+	 * @param sPath
+	 * @return
 	 */
 	public boolean deleteFile(String sPath) {
 		boolean flag = false;
 		File file = new File(sPath);
-		// 路径为文件且不为空则进行删除
 		if (file.isFile() && file.exists()) {
 			file.delete();
 			flag = true;

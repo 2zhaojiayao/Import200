@@ -17,8 +17,32 @@ public class DownloadServiceImpl {
 	@Resource
 	private DownloadDaoImpl downloadDaoImpl;
 
+	/**
+	 * 
+	 * @Title: listAll
+	 * @Description: 查询活动汇总表中的所有数据
+	 * @param:@return (参数)
+	 * @return:List<ActivitySum>(返回类型)
+	 *
+	 * @return
+	 */
 	public List<ActivitySum> listAll() {
 		return this.downloadDaoImpl.listAll();
+	}
+
+	/**
+	 * 
+	 * @Title: getIdList
+	 * @Description: 查出id相同的集合
+	 * @param:@param id
+	 * @param:@return (参数)
+	 * @return:List(返回类型)
+	 *
+	 * @param id
+	 * @return
+	 */
+	public List getIdList(String id) {
+		return this.downloadDaoImpl.getIdList(id);
 	}
 
 }

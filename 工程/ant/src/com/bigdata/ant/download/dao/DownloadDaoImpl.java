@@ -37,4 +37,27 @@ public class DownloadDaoImpl extends BaseDao<ActivitySum, Integer> {
 		}
 	}
 
+	/**
+	 * 
+	 * @Title: getIdList
+	 * @Description: 查询相同学号的记录集合
+	 * @param:@param id
+	 * @param:@return (参数)
+	 * @return:List<ActivitySum>(返回类型)
+	 *
+	 * @param id
+	 * @return
+	 */
+	public List<ActivitySum> getIdList(String id) {
+		String hql = "from ActivitySum a where a.studentId = ?0";
+		List<ActivitySum> list = null;
+		try {
+			list = this.find0(hql, id);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
+	}
+
 }

@@ -94,7 +94,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 *
 	 * @param hql
 	 * @param params
-	 * @author xjm
+	 * @author xujunmei
 	 * @return
 	 * @throws Exception
 	 */
@@ -129,6 +129,32 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<T> find(String hql, Object[] params) throws Exception {
+		Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
+		if (params != null && params.length > 0) {
+			for (int i = 0; i < params.length; i++)
+				query.setParameter(i, params[i]);
+		}
+		return query.list();
+	}
+
+	/**
+	 * 
+	 * @Title: find0
+	 * @Description: 查询id相同的集合
+	 * @param:@param hql
+	 * @param:@param params
+	 * @param:@return
+	 * @param:@throws Exception (参数)
+	 * @return:List<T>(返回类型)
+	 * @author xujunmei
+	 *
+	 * @param hql
+	 * @param params
+	 * @return
+	 * @throws Exception
+	 */
+	@SuppressWarnings("unchecked")
+	public List<T> find0(String hql, Object... params) throws Exception {
 		Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
 		if (params != null && params.length > 0) {
 			for (int i = 0; i < params.length; i++)
