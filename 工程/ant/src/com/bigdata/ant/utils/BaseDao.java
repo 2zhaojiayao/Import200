@@ -178,7 +178,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	}
 
 	/**
-	 * @desc 根据hql，按条件查询数据数量
+	 * @desc 根据hql，按条件查询数据数量(注：查不出来)
 	 * @param hql    hql语句
 	 * @param params hql语句中占位符对应的参数
 	 * @return 数据数量
@@ -191,6 +191,21 @@ public abstract class BaseDao<T, PK extends Serializable> {
 				query.setParameter(i, params[i]);
 		}
 		return (Long) query.uniqueResult();
+	}
+
+	/**
+	 * @desc 统计数据数量
+	 * @return 数据的数量
+	 * @author wangmengzhen
+	 * @throws Exception
+	 */
+	public int findCount0(String hql, Object[] params) throws Exception {
+		Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
+		if (params != null && params.length > 0) {
+			for (int i = 0; i < params.length; i++)
+				query.setParameter(i, params[i]);
+		}
+		return query.list().size();
 	}
 
 	/**

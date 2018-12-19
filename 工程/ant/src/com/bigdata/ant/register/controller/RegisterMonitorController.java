@@ -3,6 +3,7 @@ package com.bigdata.ant.register.controller;
 import java.io.IOException;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -31,7 +32,7 @@ public class RegisterMonitorController {
 	}
 
 	@RequestMapping("/monitorRegister")
-	public String monitorRegister(HttpServletRequest request, Monitor monitor) {
+	public String monitorRegister(HttpServletRequest request,HttpServletResponse response,Monitor monitor) throws ServletException, IOException {
 		String againpsd = request.getParameter("againpsd");
 		String college=request.getParameter("college");
 		String profession=request.getParameter("profession");
@@ -43,7 +44,7 @@ public class RegisterMonitorController {
 		if (admitMonitorRegister.equals("0")) {// 该用户注册成功，待激活
 			registerMonitorServiceImpl.processMonitorRegister(monitor,college,profession,grade,classes);
 			request.setAttribute("msg", "注册成功，去邮箱激活吧");
-			return "register_msg.jsp";
+			return "register_msg";
 		} else {
 			System.out.println("admit");
 			request.setAttribute("admitMonitorRegister", admitMonitorRegister);
@@ -54,7 +55,8 @@ public class RegisterMonitorController {
 			request.setAttribute("monitor", monitor);
 			request.setAttribute("againpsd", againpsd);
 			System.out.println(college);
-			return "toRegister";
+			request.getRequestDispatcher("toRegister").forward(request, response);
+			return null;
 		}
 	}
 
@@ -74,6 +76,6 @@ public class RegisterMonitorController {
 		String validateCode = request.getParameter("validateCode");
 		String msg = registerMonitorServiceImpl.VolidateMonitorRegister(email, validateCode);
 		request.setAttribute("msg", msg);
-		return "register_msg.jsp";
+		return "register_msg";
 	}
 }

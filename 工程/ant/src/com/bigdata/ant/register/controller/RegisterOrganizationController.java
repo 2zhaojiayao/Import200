@@ -3,6 +3,7 @@ package com.bigdata.ant.register.controller;
 import java.io.IOException;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -33,7 +34,7 @@ public class RegisterOrganizationController {
 	
 	
 	@RequestMapping("/organizationRegister")
-	public String organizationRegister(HttpServletRequest request, Organization organization) {
+	public String organizationRegister(HttpServletRequest request, HttpServletResponse response,Organization organization) throws ServletException, IOException {
 		String againpsd = request.getParameter("againpsd");
 		String belong = request.getParameter("belong");
 		String orgName=request.getParameter("org_name");
@@ -42,7 +43,7 @@ public class RegisterOrganizationController {
 		if (admitOrganizationRegister.equals("0")) {// 该用户注册成功，待激活
 			registerOrganizationServiceImpl.processOrganizationRegister(organization, belong,orgName,againpsd);
 			request.setAttribute("msg", "注册成功，去邮箱激活吧");
-			return "register_msg.jsp";
+			return "register_msg";
 		} else {
 			System.out.println("admit");
 			request.setAttribute("admitOrganizationRegister", admitOrganizationRegister);
@@ -50,7 +51,8 @@ public class RegisterOrganizationController {
 			request.setAttribute("orgNameSelected", orgName);
 			request.setAttribute("organization", organization);
 			request.setAttribute("againpsd", againpsd);
-			return "toRegister";
+			request.getRequestDispatcher("toRegister").forward(request, response);
+			return null;
 		}
 	}
 
@@ -70,6 +72,6 @@ public class RegisterOrganizationController {
 		String validateCode = request.getParameter("validateCode");
 		String msg = registerOrganizationServiceImpl.VolidateOrganizationRegister(email, validateCode);
 		request.setAttribute("msg", msg);
-		return "register_msg.jsp";
+		return "register_msg";
 	}
 }
