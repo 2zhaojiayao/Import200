@@ -145,11 +145,14 @@
 							<div class="b_clear">
 								<label for="auth_code" class="b_clear">验证码</label> <input
 									type="text" name="vcode" id="auth_code" class="l_float"
-									maxlength="5" size="3"> <img src="vert" id="image"
-									class="auth_code l_float">&nbsp;<a
-									href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
+									maxlength="5" size="3"> <img src="vert"
+									onclick="this.src='vert?'+Math.random()" id="image1"
+									class="auth_code l_float" /> &nbsp;<a
+									href="javascript:void(0);" onclick="change1()" class="l_float1">看不清，换一张</a>
+								&nbsp;<br />
 
 							</div>
+							<br>
 							<!-- 获取信息和显示错误信息 -->
 							<font color="red"> ${message } </font>
 							<div class="b_clear submit">
@@ -187,11 +190,14 @@
 							<div class="b_clear">
 								<label for="auth_code" class="b_clear">验证码</label> <input
 									type="text" name="vcode" id="auth_code" class="l_float"
-									maxlength="5" size="3"> <img src="vert" id="image"
-									class="auth_code l_float">&nbsp;<a
-									href="javascript:change()" class="l_float1">看不清，换一张</a> &nbsp;<br />
+									maxlength="5" size="3"> <img src="vert"
+									onclick="this.src='vert?'+Math.random()" id="image2"
+									class="auth_code l_float" /> &nbsp;<a
+									href="javascript:void(0);" onclick="change2()" class="l_float1">看不清，换一张</a>
+								&nbsp;<br />
 
 							</div>
+							<br>
 							<!-- 获取信息和显示错误信息 -->
 							<font color="red"> ${message } </font>
 							<div class="b_clear submit">
@@ -215,14 +221,7 @@
 			<!-- 页尾 -->
 			<%@include file="footer.jsp"%>
 </body>
-<script type="text/javascript">
-	//切换验证码
-	function change() {
-		var img = document.getElementById("image");
-		// 切换验证码的原理是点击就重新将src设置一下，但是浏览器有缓存，所以我们需要在后面添加一个参数来让浏览器不断发送请求，后面加的参数为时间，因为时间是不断变化的
-		img.src = "vert?t=" + Math.random();
-	}
-</script>
+
 <script src="js/three_login.js"></script>
 <script type="text/javascript"
 	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
