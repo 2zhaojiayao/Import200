@@ -158,7 +158,7 @@ public class RegisterMonitorServiceImpl {
 		// 激活码由email产生
 		String validateCode = MD5Util.encode2hex(monitor.getEmail());
 		// 发送邮件
-		StringBuffer sb = new StringBuffer("点击下面链接激活账号，1小时内有效，否则重新注册账号，链接只能使用一次，请尽快激活！</br>");
+		StringBuffer sb = new StringBuffer("点击下面链接激活账号，24小时内有效，否则重新注册账号，链接只能使用一次，请尽快激活！</br>");
 		sb.append("<a href=\"http://localhost:8080/ant/activeMonitor?email=").append(monitor.getEmail())
 				.append("&validateCode=").append(validateCode).append("\">点此链接激活账户").append("</a>");
 		MailUtil.send(monitor.getEmail(), sb.toString());
