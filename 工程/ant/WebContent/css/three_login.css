@@ -33,11 +33,12 @@ body {
 }
 
 .l_float1 {
+	cursor: pointer;
 	color: #fc7a00;
-	float: left;
 	margin-top: 20px;
 	margin-left: 10px;
 	float: left;
+	color: #fc7a00;
 }
 
 .r_clear {

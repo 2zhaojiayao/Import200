@@ -18,7 +18,7 @@ import com.bigdata.ant.utils.BaseDao;
 
 /**
  * @ClassName:PersonalInformationDaoImpl
- * @Description:TODO（用一句话描述这个类的作用）
+ * @Description:查询所有学院
  * @Author 吕凝慧
  * @Date:2018年12月14日
  *

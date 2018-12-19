@@ -155,6 +155,7 @@
 											<p class="text">${o.name }</p>
 										</div>
 									</div>
+<<<<<<< HEAD
 									<div class="bottom_list_detail_right">
 										<div class="time">
 											<p class="text">活动开始时间</p>
@@ -178,6 +179,39 @@
 										</div>
 										<div class="operation">
 											<a href="#">编辑活动</a> <a href="#">参与详情</a> <a href="#">删除活动</a>
+=======
+								</div>
+								<div class="operation">									<a href="#">编辑活动</a>
+									<a href="#">参与详情</a>
+									<a href="#">删除活动</a>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="bottom_list_detail">
+							<div class="bottom_list_detail_left">
+								<div class="num">
+									<span>2</span>
+								</div>
+								<div class="detail">
+									<p class="title">已发布过的活动名称</p>
+									<p class="text">活动简介，这是一段比较长的活动简介</p>
+								</div>
+								<div class="author">
+									<p class="text">发布者</p>
+									<p class="text">Owner's name</p>
+								</div>
+							</div>
+							<div class="bottom_list_detail_right">
+								<div class="time">
+									<p class="text">发布时间</p>
+									<p class="text">2018-11-28 16:20</p>
+								</div>
+								<div class="progress">
+									<div class="statusList">
+										<div class="scheduleGray">
+											<div class="scheduleGreen"></div>
+>>>>>>> f1a012f1194511463d7e6702439df2c275976d23
 										</div>
 									</div>
 								</div>

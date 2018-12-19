@@ -10,16 +10,21 @@
 	href="css/monitor_updateactivity.css" />
 
 <script type="text/javascript" src="js/monitor_updateactivity.js"></script>
+
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <link type="text/css" rel="stylesheet"
 	href="css/monitor_updateactivitymin.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/monitor_updateactivitytheme.css">
+<link type="text/css" rel="stylesheet"
+	href="css/jquery.dataTables.min.css" />
+<!--link rel="stylesheet" type="text/css"
+	href="css/monitor_updateactivitytheme.css">  -->
 </head>
 <body>
+
 	<!-- center -->
 	<div class="center">
 		<div class="center_text">点击以修改活动</div>
-		<div id="jsGrid" class="center_jsGrid jsgrid"></div>
+		<div id="myTable" class="center_jsGrid jsgrid"></div>
 		<div class="center_submit">
 			<input type="submit" name="submit" value="提 交" class="button">
 		</div>

@@ -25,7 +25,7 @@
 					<tr>
 						<td><img src="images/01.png" class="img1"></td>
 						<td>
-							<p class="table1-ninhao">您好，赵家瑶！</p>
+							<p class="table1-ninhao">您好，${s.name }！</p>
 							<br>
 							<p class="table1-little">LittleAnt| 最权威的活动展示和统计平台</p>
 						</td>
@@ -33,19 +33,19 @@
 							<p class="table1-youshang">
 								参加的活动数<br>
 							</p>
-							<p class="table1-youxia">${activitynum}</p>
+							<p class="table1-youxia">${activityNum}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">
 								综测分数<br>
 							</p>
-							<p class="table1-youxia">${nowscore}</p>
+							<p class="table1-youxia">${nowScore.score}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">
 								综测排名<br>
 							</p>
-							<p class="table1-youxia">${Studentactivitynum}</p>
+							<p class="table1-youxia">${studentActivityNum}</p>
 						</td>
 					</tr>
 				</table>

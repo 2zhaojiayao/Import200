@@ -40,6 +40,9 @@ public class PersonalInformationController {
 		// 查询所有的学院信息
 		List<College> collegeinformation = this.personalinformationserviceimpl.collegeInformation();
 		request.setAttribute("college", collegeinformation);
+		//查询所有的专业信息
+		List<Profession> professioninformationall=this.personalinformationserviceimpl.professionInformationall();
+		request.setAttribute("profession", professioninformationall);
 		// 查询所在学院的专业信息
 		// int collegeid=student.getClassInfo().getProfession().getCollege().getId();
 		// List<Profession>
