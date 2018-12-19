@@ -78,9 +78,9 @@ function orgReg() {
 $(function() {
 	$("#student_id").blur(function() {
 		var student_id = $("#student_id").val();
-		var textId = /^\d{10}$/;
+		var textId = /^20\d{8}$/;
 		if (!textId.test(student_id)) {
-			$("#top_id_msg").html("学号必须由10位数字组成");
+			$("#top_id_msg").html("学号必须由10位数字组成,且以20开头");
 			$("#top_id_msg").addClass("redWord");
 		} else {
 			$.ajax({
@@ -103,9 +103,9 @@ $(function() {
 	});
 	$("#name").blur(function() {
 		var name = $("#name").val();
-		var textName = /[\u4e00-\u9fa5]{2,20}|[a-zA-Z\.\s]{1,20}/;
+		var textName =/(^[\u4e00-\u9fa5]{1}[\u4e00-\u9fa5\.·。]{0,8}[\u4e00-\u9fa5]{1}$)|(^[a-zA-Z]{1}[a-zA-Z\s]{0,8}[a-zA-Z]{1}$)/;
 		if (!textName.test(name)) {
-			$("#name_msg").html("请填写您的真实姓名，长度在20个字符以内");
+			$("#name_msg").html("请填写您的真实姓名（中英文），长度在10个字符以内");
 			$("#name_msg").addClass("redWord");
 		} else {
 			$("#name_msg").html("姓名符合要求");
