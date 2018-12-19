@@ -5,7 +5,7 @@ import com.bigdata.ant.entity.Comprehensive;
 import com.bigdata.ant.utils.BaseDao;
 
 @Repository
-public class ShowStudentscoreDaoImpl extends BaseDao<Comprehensive, String> {
+public class ShowStudentScoreDaoImpl extends BaseDao<Comprehensive, String> {
 	/**
 	 * 
 	 * @Title: findStudentscoreCount
@@ -18,13 +18,12 @@ public class ShowStudentscoreDaoImpl extends BaseDao<Comprehensive, String> {
 	 * @param params
 	 * @return Comprehensive
 	 */
-	public Comprehensive getStudentscore(String id) {
-		Object[] params = null;
-		String hql = "from Comprehensive ss where ss.id = ?0";
-		Comprehensive studentscore = new Comprehensive();
+	public Comprehensive getStudentScore(String id) {
+		String hql = "from Comprehensive c where c.id = ?0";
+		Object[] params = {id };
 		try {
-			studentscore = this.findOne(hql, params);
-			return studentscore;
+			Comprehensive studentScore = this.findOne(hql, params);
+			return studentScore;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

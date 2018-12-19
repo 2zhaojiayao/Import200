@@ -33,19 +33,19 @@
 							<p class="table1-youshang">
 								参加的活动数<br>
 							</p>
-							<p class="table1-youxia">${activitynum}</p>
+							<p class="table1-youxia">${activityNum}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">
 								综测分数<br>
 							</p>
-							<p class="table1-youxia">${nowscore}</p>
+							<p class="table1-youxia">${nowScore.score}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">
 								综测排名<br>
 							</p>
-							<p class="table1-youxia">${Studentactivitynum}</p>
+							<p class="table1-youxia">${studentActivityNum}</p>
 						</td>
 					</tr>
 				</table>
