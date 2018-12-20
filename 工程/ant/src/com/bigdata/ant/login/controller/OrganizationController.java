@@ -61,8 +61,9 @@ public class OrganizationController {
 				request.setAttribute("message5", "该用户未被激活！");
 				return "three_login";
 			} else {
-			session.setAttribute("o", o);
-			return "organization_index";
+				session.setAttribute("o", o);
+				return "organization_index";
+			}
 		}
 	}
 }
