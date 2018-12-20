@@ -2,11 +2,9 @@ html, body {
 	width: 100%;
 	background-color: #fcfcdd;
 }
-
 a {
 	cursor: pointer;
 }
-
 .main {
 	width: 1080px;
 	margin: 20px auto;
@@ -254,6 +252,7 @@ a {
 }
 
 .detail .title {
+	display:block;
 	width: 255px;
 	height: 22px;
 	line-height: 22px;
@@ -378,7 +377,9 @@ ul.pagination li a {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
-
+ul.pagination li .currentPage{
+	border:none;
+}
 ul.pagination li a.active {
 	background-color: #fc7a00;
 	color: white;

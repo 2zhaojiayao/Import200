@@ -61,7 +61,7 @@
                     </div>
                     <div class="regist">
                         <input id="student_submit" type="submit" class="submit" value="注册">
-                        <a href="#">已有账户？登录</a>
+                        <a href="three_login.jsp">已有账户？登录</a>
                     </div>
                 </form>
             </div>
@@ -122,7 +122,7 @@
                     </div>
                     <div class="regist">
                         <input type="submit" class="submit" value="注册">
-                        <a href="">已有账户？登录</a>
+                        <a href="three_login.jsp">已有账户？登录</a>
                     </div>
                 </form>
             </div>
@@ -165,7 +165,7 @@
                     </div>        
                     <div class="regist">
                         <input type="submit" class="submit" value="注册">
-                        <a href="">已有账户？登录</a>
+                        <a href="three_login.jsp">已有账户？登录</a>
                     </div>
                 </form>
             </div>

@@ -122,11 +122,11 @@ public class RegisterStudentServiceImpl {
 		if (student.getEmail() == null) {
 			return "邮箱不能为空";
 		}
-		Pattern pattern = Pattern.compile("^\\d{10}$");
+		Pattern pattern = Pattern.compile("^20\\d{8}$");
 		if (!(pattern.matcher(student.getId()).matches())) {
 			return "学号必须由10位数字组成";
 		}
-		pattern = Pattern.compile("[\\u4e00-\\u9fa5]{2,20}|[a-zA-Z\\.\\s]{1,20}");
+		pattern = Pattern.compile("(^[\\u4e00-\\u9fa5]{1}[\\u4e00-\\u9fa5\\.·。]{0,8}[\\u4e00-\\u9fa5]{1}$)|(^[a-zA-Z]{1}[a-zA-Z\\s]{0,8}[a-zA-Z]{1}$)");
 		if (!(pattern.matcher(student.getName()).matches())) {
 			return "请填写您的真实姓名，长度在20个字符以内";
 		}
@@ -178,7 +178,7 @@ public class RegisterStudentServiceImpl {
 		// 激活码由email产生
 		String validateCode = MD5Util.encode2hex(student.getEmail());
 		// 发送邮件
-		StringBuffer sb = new StringBuffer("点击下面链接激活账号，1小时内有效，否则重新注册账号，链接只能使用一次，请尽快激活！</br>");
+		StringBuffer sb = new StringBuffer("点击下面链接激活账号，24小时内有效，否则重新注册账号，链接只能使用一次，请尽快激活！</br>");
 		sb.append("<a href=\"http://localhost:8080/ant/activeStudent?email=").append(student.getEmail())
 				.append("&validateCode=").append(validateCode).append("\">点此链接激活账户").append("</a>");
 		MailUtil.send(student.getEmail(), sb.toString());

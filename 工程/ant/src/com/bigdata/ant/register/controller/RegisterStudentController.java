@@ -77,20 +77,22 @@ public class RegisterStudentController {
 	 * @param response
 	 * @param student
 	 * @throws IOException
+	 * @throws ServletException 
 	 */
 	@RequestMapping("/studentRegister")
-	public String studentRegister(HttpServletRequest request, Student student) throws IOException {
+	public String studentRegister(HttpServletRequest request,HttpServletResponse response, Student student) throws IOException, ServletException {
 		String againpsd = request.getParameter("againpwd");
 		String admitStudentRegister = registerStudentServiceImpl.admitStudentRegister(student, againpsd);// 获得信息（是否允许注册）
 		if (admitStudentRegister.equals("0")) {// 该用户注册成功，待激活
 			registerStudentServiceImpl.processRegister(student);
 			request.setAttribute("msg", "注册成功，去邮箱激活吧");
-			return "register_msg.jsp";
+			return "register_msg";
 		} else {
 			request.setAttribute("admitStudentRegister", admitStudentRegister);
 			request.setAttribute("student", student);
 			request.setAttribute("againpsd", againpsd);
-			return "toRegister";
+			request.getRequestDispatcher("toRegister").forward(request, response);
+			return null;
 		}
 	}
 

@@ -11,7 +11,7 @@ import com.bigdata.ant.utils.BaseDao;
 public class RegisterClassInfoDaoImpl extends BaseDao<ClassInfo,Integer>{
 	
 	@Resource
-	private RegisterProfessionDaoImpl registerProfessionDaoImpl;
+	private RegisterProfessionDaoImpl registerProfessionDaoImpl;	
 	public ClassInfo getClassInfo(String college,String profession,String grade,String classes) {
 		try {
 			String sql="from ClassInfo ci where profession=?0 and grade=?1 and classNo=?2";
