@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import org.springframework.stereotype.Service;
 
+import com.bigdata.ant.entity.ActivityJoin;
 import com.bigdata.ant.entity.Comprehensive;
 import com.bigdata.ant.showstudent.dao.ShowActivityDaoImpl;
 import com.bigdata.ant.showstudent.dao.ShowStudentActivityDaoImpl;
@@ -32,8 +33,8 @@ public class ShowStudentServiceImpl {
 		return countAct;
 	}
 
-	public Comprehensive FindScore(String id) {
-		Comprehensive nowScore = this.showStudentScoreDaoImpl.getStudentScore(id);
+	public float FindScore(String id) {
+		float nowScore = this.showStudentScoreDaoImpl.getStudentScore(id);
 		return nowScore;
 	}
 

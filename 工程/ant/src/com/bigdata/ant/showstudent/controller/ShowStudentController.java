@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bigdata.ant.entity.Activity;
+import com.bigdata.ant.entity.ActivityJoin;
 import com.bigdata.ant.entity.Comprehensive;
 import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.scan.service.ScannedActivityServiceImpl;
@@ -28,7 +29,7 @@ public class ShowStudentController {
 		Student student = (Student) session.getAttribute("s");
 		String id = student.getId();
 		if (id != null) {
-			Comprehensive nowScore = this.showStudentServiceImpl.FindScore(id);
+			float nowScore = this.showStudentServiceImpl.FindScore(id);
 			Long studentActivityNum = this.showStudentServiceImpl.CountStudentactivity(id);
 			model.addAttribute("nowScore", nowScore);
 			model.addAttribute("studentActivityNum", studentActivityNum);
