@@ -37,11 +37,10 @@ public class Organization {
 	public Organization() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Id
 
-	
-	@Column(name="organization_id")
+	@Column(name = "organization_id")
 	public int getId() {
 		return id;
 	}
@@ -73,6 +72,7 @@ public class Organization {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public Integer getStatus() {
 		return status;
 	}
@@ -107,6 +107,5 @@ public class Organization {
 	public void setActivities(Set<Activity> activities) {
 		this.activities = activities;
 	}
-
 
 }

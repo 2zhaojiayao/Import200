@@ -1,4 +1,3 @@
-
 package com.bigdata.ant.entity;
 
 import java.text.ParseException;
@@ -27,7 +26,6 @@ import javax.persistence.Table;
  *
  */
 @Entity
-
 public class Activity {
 	private int id;
 	private String name;
@@ -54,7 +52,6 @@ public class Activity {
 	}
 
 	@Id
-	
 	public int getId() {
 		return id;
 	}
@@ -87,7 +84,6 @@ public class Activity {
 		this.level = level;
 	}
 
-	
 	public Integer getStudentNumber() {
 		return studentNumber;
 	}
@@ -96,7 +92,6 @@ public class Activity {
 		this.studentNumber = studentNumber;
 	}
 
-	
 	public Date getApplyBegin() {
 		return applyBegin;
 	}
@@ -112,7 +107,6 @@ public class Activity {
 
 	}
 
-	
 	public Date getApplyEnd() {
 		return applyEnd;
 	}
@@ -128,7 +122,6 @@ public class Activity {
 
 	}
 
-	
 	public Date getHoldBegin() {
 		return holdBegin;
 	}
@@ -143,7 +136,6 @@ public class Activity {
 		}
 	}
 
-	
 	public Date getHoldEnd() {
 		return holdEnd;
 	}
@@ -158,7 +150,6 @@ public class Activity {
 		}
 	}
 
-	
 	public String getHoldPlace() {
 		return holdPlace;
 	}
@@ -191,7 +182,6 @@ public class Activity {
 		this.image = image;
 	}
 
-	
 	public String getSearchType() {
 		return searchType;
 	}
@@ -208,7 +198,6 @@ public class Activity {
 		this.comprehensiveType = comprehensiveType;
 	}
 
-	
 	public String getIsInterview() {
 		return isInterview;
 	}
@@ -218,7 +207,7 @@ public class Activity {
 	}
 
 	@ManyToOne
-	
+
 	public Organization getOrganization() {
 		return organization;
 	}
@@ -227,7 +216,6 @@ public class Activity {
 		this.organization = organization;
 	}
 
-	
 	public Set<Student> getStudents() {
 		return students;
 	}
@@ -236,7 +224,6 @@ public class Activity {
 		this.students = students;
 	}
 
-	
 	public Set<ActivityStage> getActivityStages() {
 		return activityStages;
 	}

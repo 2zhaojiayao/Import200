@@ -21,13 +21,13 @@
 			<a href="#">首页</a> &nbsp/&nbsp <a href="#" id="orange">活动</a>
 		</div>
 		<div id="search">
-			
-				<form action="searchByName" method="get">
-					<input type="text" placeholder="       请输入您要搜索的内容..." class="text"
-						autocomplete="off" name="name">
-					<button type="submit"></button>
-				</form>
-				<div class="word"></div>
+
+			<form action="searchByName" method="get">
+				<input type="text" placeholder="       请输入您要搜索的内容..." class="text"
+					autocomplete="off" name="name">
+				<button type="submit"></button>
+			</form>
+			<div class="word"></div>
 		</div>
 
 		<div class="out_type">
@@ -43,7 +43,8 @@
 			<c:forEach var="activity" items="${activities}">
 				<%-- 	<c:forEach var="c" items="${popcake}"> --%>
 				<div class="activity_object">
-					<a href="activitydetail?actid=${activity[0]}"><img src="${activity[2]}"></a>
+					<a href="activitydetail?actid=${activity[0]}"><img
+						src="${activity[2]}"></a>
 					<ul>
 						<li><a href="activitydetail?id=activity[0]">${activity[1]}</a></li>
 						<li><p id="grey">${activity[3]}</p></li>

@@ -29,8 +29,8 @@ import com.bigdata.ant.publish.service.PublishServiceImpl;
 
 /**
  * @ClassName:PublishController
- * @Description:TODO（用一句话描述这个类的作用）
- * @Author Admin
+ * @Description:TODO（发布活动页面的功能实现）
+ * @Author 成琼
  * @Date:2018年12月18日
  *
  *
@@ -44,19 +44,20 @@ public class PublishController {
 	public PublishController() {
 		// TODO Auto-generated constructor stub
 	}
+
 	/**
 	 * 
-	* @Title: listHotActivities  
-	* @Description: TODO(查询热门活动) 
-	* @param:@param model (参数)
-	* @return:void(展示发布活动页面)
+	 * @Title: listHotActivities
+	 * @Description: TODO(查询热门活动)
+	 * @param:@param model (参数)
+	 * @return:void(展示发布活动页面)
 	 */
 	@RequestMapping("/listHotActivities")
 	public String listHotActivities(Model model) {
-		List<Object[]> activities=publishServiceImpl.listHotActivities();
+		List<Object[]> activities = publishServiceImpl.listHotActivities();
 		model.addAttribute("hotActivities", activities);
-		//System.out.println("已传递热门活动"+activities.size());
-		
+		// System.out.println("已传递热门活动"+activities.size());
+
 		return "organization_publishactivity";
 	}
 
@@ -96,7 +97,7 @@ public class PublishController {
 	 * @param:@param score 分数
 	 * @param:@param stage 阶段
 	 * @param:@return (参数)
-	 * @return:String(发布成功到成功页面，失败回到本页重新发布) 
+	 * @return:String(发布成功到成功页面，失败回到本页重新发布)
 	 */
 	@RequestMapping(value = "/saveActivity", method = RequestMethod.POST)
 	public String saveActivity(Activity activity, @RequestParam("score") String score,

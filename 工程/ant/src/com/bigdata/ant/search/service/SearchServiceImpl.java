@@ -30,13 +30,15 @@ public class SearchServiceImpl {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * 
+	 * @Title: listActivities
+	 * @Description: TODO(通过类型查询活动)
+	 * @param:@param types 类型
+	 * @param:@return ()
+	 * @return:List<Object[]>(活动的list集合)
+	 */
 	public List<Object[]> listActivities(Object[] types) {
-//		if(type_header.equals("按类别:")) {
-//			type_header="searchType";
-//		}
-//		if(type_header.equals("按级别:")) {
-//			type_header="level";
-//		}
 		List<Object[]> activities = searchDaoImpl.listActivities(types);
 		return activities;
 	}
@@ -58,6 +60,13 @@ public class SearchServiceImpl {
 
 	}
 
+	/**
+	 * 
+	 * @Title: findActivityCount
+	 * @Description: TODO(查询活动的总数)
+	 * @param:@return (参数)
+	 * @return:Long(活动数量)
+	 */
 	public Long findActivityCount() {
 		return searchDaoImpl.findActivityCount();
 	}

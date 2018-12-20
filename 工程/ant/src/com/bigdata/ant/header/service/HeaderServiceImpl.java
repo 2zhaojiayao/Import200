@@ -19,7 +19,7 @@ import com.bigdata.ant.header.dao.HeaderDaoImpl;
 
 /**
  * @ClassName:HeaderService
- * @Description:TODO（用一句话描述这个类的作用）
+ * @Description:TODO（根据关键字查找活动名称）
  * @Author 成琼
  * @Date:2018年12月5日
  *
@@ -30,6 +30,15 @@ public class HeaderServiceImpl {
 	@Resource
 	private HeaderDaoImpl headerDao;
 
+	/**
+	 * 
+	 * @Title: findActivitiesNames
+	 * @Description: TODO(根据关键字查找活动名称)
+	 * @param:@param keyword
+	 * @param:@return
+	 * @param:@throws SQLException (关键字)
+	 * @return:List<Object[]>(活动名称的list集合)
+	 */
 	public List<Object[]> findActivitiesNames(String keyword) throws SQLException {
 		List<Object[]> list = headerDao.findActivitiesNames(keyword);
 		return list;
