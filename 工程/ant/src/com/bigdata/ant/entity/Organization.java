@@ -22,7 +22,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-
+@Table(name = "organization_user")
 public class Organization {
 
 	private int id;
@@ -39,7 +39,7 @@ public class Organization {
 	}
 
 	@Id
-
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "organization_id")
 	public int getId() {
 		return id;
