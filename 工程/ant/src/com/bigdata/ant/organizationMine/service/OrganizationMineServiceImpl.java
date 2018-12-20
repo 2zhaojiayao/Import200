@@ -10,8 +10,6 @@ import com.bigdata.ant.entity.Organization;
 import com.bigdata.ant.organizationMine.dao.OrganizationMineActivityDaoImpl;
 import com.bigdata.ant.utils.Page;
 
-@Service
-@Transactional(readOnly = true)
 /**
  * 
  * @ClassName:OrganizationMineServiceImpl
@@ -20,6 +18,8 @@ import com.bigdata.ant.utils.Page;
  * @Date:2018年12月19日
  *
  */
+@Service
+@Transactional(readOnly = true)
 public class OrganizationMineServiceImpl {
 
 	@Resource 

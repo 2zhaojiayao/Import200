@@ -9,7 +9,6 @@ import com.bigdata.ant.entity.Organization;
 import com.bigdata.ant.utils.BaseDao;
 import com.bigdata.ant.utils.Page;
 
-@Repository
 /**
  * 
  * @ClassName:OrganizationMineActivityDaoImpl
@@ -18,6 +17,7 @@ import com.bigdata.ant.utils.Page;
  * @Date:2018年12月19日
  *
  */
+@Repository
 public class OrganizationMineActivityDaoImpl extends BaseDao<Activity, Integer> {
 	/**
 	 * 

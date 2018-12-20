@@ -14,7 +14,6 @@ import com.bigdata.ant.entity.Organization;
 import com.bigdata.ant.organizationMine.service.OrganizationMineServiceImpl;
 import com.bigdata.ant.utils.Page;
 
-@Controller
 /**
  * 
  * @ClassName:OrganizationMineController
@@ -23,6 +22,7 @@ import com.bigdata.ant.utils.Page;
  * @Date:2018年12月19日
  *
  */
+@Controller
 public class OrganizationMineController {
 
 	@Resource
@@ -77,7 +77,6 @@ public class OrganizationMineController {
 	 */
 	@RequestMapping(value = "displayBeforeTime")
 	public String displayBeforeTime(HttpServletRequest request) {
-		System.out.println("displayBeforeTime");
 		HttpSession session=request.getSession();
 		Organization organization=(Organization) session.getAttribute("o");
 		String pageNum=(String) request.getParameter("pageNum");
