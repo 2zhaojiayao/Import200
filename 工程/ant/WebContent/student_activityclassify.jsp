@@ -8,8 +8,7 @@
 <title>个人页面_活动分类</title>
 <link rel="stylesheet" type="text/css"
 	href="css/student_activityclassify.css">
-<!-- <link rel="stylesheet" type="text/css"
-	href="css/student_activityclassify_ul.css"> -->
+
 </head>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/JsonpAjax.js"></script>
@@ -22,6 +21,7 @@
 			<a href="#">首页</a> &nbsp/&nbsp <a href="#" id="orange">活动</a>
 		</div>
 		<div id="search">
+			
 				<form action="searchByName" method="get">
 					<input type="text" placeholder="       请输入您要搜索的内容..." class="text"
 						autocomplete="off" name="name">
@@ -43,9 +43,9 @@
 			<c:forEach var="activity" items="${activities}">
 				<%-- 	<c:forEach var="c" items="${popcake}"> --%>
 				<div class="activity_object">
-					<a href="student_activitydetail?id=${activity[0]}"><img src="${activity[2]}"></a>
+					<a href="activitydetail?actid=${activity[0]}"><img src="${activity[2]}"></a>
 					<ul>
-						<li><a href="student_activitydetail?id=${activity[0]}">${activity[1]}</a></li>
+						<li><a href="activitydetail?id=activity[0]">${activity[1]}</a></li>
 						<li><p id="grey">${activity[3]}</p></li>
 						<li id="grey">报名人数:${activity[4]}</li>
 					</ul>

@@ -57,8 +57,14 @@ public class OrganizationController {
 			return "three_login";
 		} else {
 			Organization o = this.organizationServiceImpl.FindName(email);
-			session.setAttribute("o", o);
-			return "organization_index";
+			if (o.getStatus() == 0) {
+				request.setAttribute("message5", "该用户未被激活！");
+				return "three_login";
+			} else {
+				session.setAttribute("o", o);
+				return "organization_index";
+			}
 		}
 	}
+
 }

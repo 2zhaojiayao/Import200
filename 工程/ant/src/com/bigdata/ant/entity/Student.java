@@ -35,7 +35,7 @@ public class Student {
 	private String gender;
 	private String email;
 	private ClassInfo classInfo;
-	private Integer status;//状态，0-未激活；1-已激活 ;
+	private Integer status;// 状态，0-未激活；1-已激活 ;
 	private String validateCode;
 	private Date registerTime;
 	private List<Activity> scanedActivities = new ArrayList<Activity>();
@@ -86,27 +86,34 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public Integer getStatus() {
 		return status;
 	}
+
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	@Column(name="validate_code")
+
+	@Column(name = "validate_code")
 	public String getValidateCode() {
 		return validateCode;
 	}
+
 	public void setValidateCode(String validateCode) {
 		this.validateCode = validateCode;
 	}
-	@Column(name="register_time")
+
+	@Column(name = "register_time")
 	public Date getRegisterTime() {
 		return registerTime;
 	}
+
 	public void setRegisterTime(Date registerTime) {
 		this.registerTime = registerTime;
 	}
-	@ManyToOne
+
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "class_id")
 	public ClassInfo getClassInfo() {
 		return classInfo;

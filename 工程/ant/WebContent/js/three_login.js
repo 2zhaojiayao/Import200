@@ -93,8 +93,17 @@ window.onload = function() {
 function change() {
 	var img = document.getElementById("image");
 	// 切换验证码的原理是点击就重新将src设置一下，但是浏览器有缓存，所以我们需要在后面添加一个参数来让浏览器不断发送请求，后面加的参数为时间，因为时间是不断变化的
-	img.src = "vert?a="
-	new Date().getTime();
+	img.src = "vert?t=" + Math.random();
+}
+function change1() {
+	var img = document.getElementById("image1");
+	// 切换验证码的原理是点击就重新将src设置一下，但是浏览器有缓存，所以我们需要在后面添加一个参数来让浏览器不断发送请求，后面加的参数为时间，因为时间是不断变化的
+	img.src = "vert?t=" + Math.random();
+}
+function change2() {
+	var img = document.getElementById("image2");
+	// 切换验证码的原理是点击就重新将src设置一下，但是浏览器有缓存，所以我们需要在后面添加一个参数来让浏览器不断发送请求，后面加的参数为时间，因为时间是不断变化的
+	img.src = "vert?t=" + Math.random();
 }
 // 日历
 var month_olypic = [ 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];// 闰年每个月份的天数
@@ -278,23 +287,5 @@ UserPwd.onblur = function() {
 	if (UserPwd.value == '') {
 		InputNull(1);
 		UserPwdTips.innerHTML = "请检查您的密码，密码不能为空";
-	}
-}
-
-AuthCode.oninput = function() {
-	if (AuthCode.value == '' || AuthCode.value !== '666666') {
-		InputNull(2);
-		AuthCodeTips.innerHTML = "请检查验证码，验证码错误";
-	} else if (AuthCode.value == '666666') {
-		InputNull(2);
-		AuthCodeTips.innerHTML = "验证码正确";
-	} else {
-		InputNoNull(2);
-	}
-}
-AuthCode.onblur = function() {
-	if (AuthCode.value == '') {
-		InputNull(2);
-		AuthCodeTips.innerHTML = "请检查验证码，验证码错误";
 	}
 }

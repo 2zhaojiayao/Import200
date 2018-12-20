@@ -27,7 +27,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "activity_information")
+
 public class Activity {
 	private int id;
 	private String name;
@@ -54,7 +54,7 @@ public class Activity {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	public int getId() {
 		return id;
 	}
@@ -87,7 +87,7 @@ public class Activity {
 		this.level = level;
 	}
 
-	@Column(name = "student_number")
+	
 	public Integer getStudentNumber() {
 		return studentNumber;
 	}
@@ -96,7 +96,7 @@ public class Activity {
 		this.studentNumber = studentNumber;
 	}
 
-	@Column(name = "apply_begin")
+	
 	public Date getApplyBegin() {
 		return applyBegin;
 	}
@@ -112,7 +112,7 @@ public class Activity {
 
 	}
 
-	@Column(name = "apply_end")
+	
 	public Date getApplyEnd() {
 		return applyEnd;
 	}
@@ -128,7 +128,7 @@ public class Activity {
 
 	}
 
-	@Column(name = "hold_begin")
+	
 	public Date getHoldBegin() {
 		return holdBegin;
 	}
@@ -143,7 +143,7 @@ public class Activity {
 		}
 	}
 
-	@Column(name = "hold_end")
+	
 	public Date getHoldEnd() {
 		return holdEnd;
 	}
@@ -158,7 +158,7 @@ public class Activity {
 		}
 	}
 
-	@Column(name = "hold_place")
+	
 	public String getHoldPlace() {
 		return holdPlace;
 	}
@@ -191,7 +191,7 @@ public class Activity {
 		this.image = image;
 	}
 
-	@Column(name = "search_type")
+	
 	public String getSearchType() {
 		return searchType;
 	}
@@ -208,7 +208,7 @@ public class Activity {
 		this.comprehensiveType = comprehensiveType;
 	}
 
-	@Column(name = "is_interview")
+	
 	public String getIsInterview() {
 		return isInterview;
 	}
@@ -218,7 +218,7 @@ public class Activity {
 	}
 
 	@ManyToOne
-	@JoinColumn(name = "organization_id")
+	
 	public Organization getOrganization() {
 		return organization;
 	}
@@ -227,7 +227,7 @@ public class Activity {
 		this.organization = organization;
 	}
 
-	@ManyToMany(mappedBy = "scanedActivities")
+	
 	public Set<Student> getStudents() {
 		return students;
 	}
@@ -236,7 +236,7 @@ public class Activity {
 		this.students = students;
 	}
 
-	@OneToMany(mappedBy = "activity", targetEntity = ActivityStage.class, cascade = CascadeType.ALL)
+	
 	public Set<ActivityStage> getActivityStages() {
 		return activityStages;
 	}

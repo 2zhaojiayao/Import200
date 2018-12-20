@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+
 /**
  * 
  * @ClassName:Comprehensive
@@ -16,33 +17,31 @@ import org.hibernate.annotations.GenericGenerator;
  *
  */
 @Entity
-@Table(name="student_comprehensive")
+@Table(name = "student_comprehensive")
 public class Comprehensive {
-private String id;
-private String name;
-private float score;
+	private String id;
+	private float score;
+
 	public Comprehensive() {
 		// TODO Auto-generated constructor stub
 	}
+
 	@Id
-	@GenericGenerator(name="assigned-generator",strategy="assigned")
-	@GeneratedValue(generator="assigned-generator")
-    @Column(name="student_id")
+	@GenericGenerator(name = "assigned-generator", strategy = "assigned")
+	@GeneratedValue(generator = "assigned-generator")
+	@Column(name = "student_id")
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
 	public float getScore() {
 		return score;
 	}
+
 	public void setScore(float score) {
 		this.score = score;
 	}

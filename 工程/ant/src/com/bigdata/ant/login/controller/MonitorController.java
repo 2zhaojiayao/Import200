@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.login.service.MonitorServiceImpl;
 
 /**
@@ -54,8 +55,14 @@ public class MonitorController {
 			request.setAttribute("message", "验证码错误"); // 如果错误就将错误信息发送给客户端
 			return "three_login";
 		} else {
-			session.setAttribute("email", email);
-			return "monitor_index";
+			Monitor m = this.monitorServiceImpl.getMonitor(email);
+			if (m.getStatus() == 0) {
+				request.setAttribute("message3", "该用户未被激活！");
+				return "three_login";
+			} else {
+				session.setAttribute("m", m);
+				return "monitor_index";
+			}
 		}
 	}
 }

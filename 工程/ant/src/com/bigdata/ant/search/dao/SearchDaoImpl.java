@@ -23,6 +23,7 @@ import com.bigdata.ant.utils.BaseDao;
  *
  */
 @Repository
+
 public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 	// 按用户选择的类型查询
 	/**
@@ -50,6 +51,7 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+			
 				} else {
 					if (types[2].equals("报名中")) {
 						hql = "select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 ORDER BY studentNumber desc ";
@@ -69,6 +71,7 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 					}
 					System.out.println(activities.get(0)[5] + "数据库时间" + date + "系统时间");
 				}
+				
 			} else {
 				if (types[2].equals("全部")) {
 					hql = "select id,name,image,description,studentNumber from Activity where level=?0 ORDER BY studentNumber desc";
@@ -79,6 +82,7 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+			
 				} else {
 					if (types[2].equals("报名中")) {
 						hql = "select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and level=?1 ORDER BY studentNumber desc";
@@ -97,7 +101,7 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 						e.printStackTrace();
 					}
 				}
-			}
+				
 		} else {
 			if (types[1].equals("全部")) {
 				if (types[2].equals("全部")) {
@@ -109,6 +113,7 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+			
 				} else {
 					if (types[2].equals("报名中")) {
 						hql = "select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and searchType=?1 ORDER BY studentNumber desc";
@@ -128,6 +133,7 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 					}
 
 				}
+				
 			} else {
 				if (types[2].equals("全部")) {
 					hql = "select id,name,image,description,studentNumber from Activity where searchType=?0 and level=?1 ORDER BY studentNumber desc";
@@ -138,6 +144,7 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+			
 				} else {
 					if (types[2].equals("报名中")) {
 						hql = "select id,name,image,description,studentNumber from Activity where applyBegin<?0 and applyEnd>?0 and searchType=?1 and level=?2 ORDER BY studentNumber desc";
@@ -156,6 +163,7 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 						e.printStackTrace();
 					}
 				}
+				
 			}
 		}
 		return activities;

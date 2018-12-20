@@ -14,6 +14,7 @@ body {
 	margin:0px auto;
 }
 .content {
+	
 	margin:10px auto 0; 
 	width: 1080px;
 	height: 1500px;
@@ -239,7 +240,7 @@ body {
 	width: 320px;
 	height: 45px;
 	color: #fc7a00;
-	text-shadow:0.7px 0px #333;
+	text-shadow: 0.7px 0px #333;
 	margin-top: 56px;
 	border-radius: 10px;
 	background-color: #ffc985;

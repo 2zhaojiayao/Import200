@@ -16,20 +16,20 @@ import com.bigdata.ant.utils.BaseDao;
  *
  */
 @Repository
-public class RegisterCollegeDaoImpl extends BaseDao<College,Integer>{
-	
+public class RegisterCollegeDaoImpl extends BaseDao<College, Integer> {
+
 	/**
 	 * 
-	* @Title: findCollege  
-	* @Description: TODO(这里用一句话描述这个方法的作用)查找到所有学院 
-	* @param:@return (参数)
-	* @return:List<College>(返回类型)
-	*
+	 * @Title: findCollege
+	 * @Description: TODO(这里用一句话描述这个方法的作用)查找到所有学院
+	 * @param:@return (参数)
+	 * @return:List<College>(返回类型)
+	 *
 	 * @return
 	 */
 	public List<College> findCollege() {
 		try {
-			List<College> list=findAll();
+			List<College> list = findAll();
 			return list;
 		} catch (Exception e) {
 			return null;

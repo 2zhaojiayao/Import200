@@ -31,6 +31,7 @@ import com.google.gson.Gson;
  */
 @Controller
 public class SearchController {
+  
 	@Resource
 	private SearchServiceImpl searchServiceImpl;
 
@@ -39,6 +40,7 @@ public class SearchController {
 	}
 
 	@RequestMapping("/beforeSearch")
+	
 	public String searchActivities(Model model, @RequestParam("pageNo") int pageNo) {
 		// response.setCharacterEncoding("UTF-8");
 		List<Object[]> activities = searchServiceImpl.listActivitiesByPopular(pageNo);
@@ -50,6 +52,7 @@ public class SearchController {
 			pageNum = (int) (count / 8 + 1);
 		}
 		// Long pageNum=searchServiceImpl.findActivityCount();
+		
 		System.out.println("pageNo" + pageNo + "pageNum" + pageNum);
 		model.addAttribute("activities", activities);
 		model.addAttribute("pageNo", pageNo);
@@ -59,11 +62,13 @@ public class SearchController {
 	}
 
 	@RequestMapping("/search")
+	
 	public void searchActivities(@RequestParam("types") Object[] types, HttpServletResponse response, Model model) {
 		response.setCharacterEncoding("UTF-8");
 		System.out.println("hi" + types[0]);
 		List<Object[]> activities = searchServiceImpl.listActivities(types);
 		Gson gson = new Gson();
+		
 		String re = gson.toJson(activities);
 		System.out.println(re + "json");
 		try {
@@ -72,6 +77,7 @@ public class SearchController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	
 		System.out.println(activities.size() + "controller查到数据");
 		model.addAttribute("activities", activities);
 	}
@@ -80,7 +86,8 @@ public class SearchController {
 	public String listActivitiesByName(@RequestParam("name") String name,Model model) {
 		List<Object[]> activities = searchServiceImpl.listActivitiesByName(name);
 		model.addAttribute("activities",activities);
+
 		return "student_activityclassify";
-		
+
 	}
 }

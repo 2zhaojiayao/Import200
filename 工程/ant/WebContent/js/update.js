@@ -310,10 +310,10 @@ var clients = [ {
 
 ];
 $("#jsGrid").jsGrid({
-	 inserting: true,
-	 editing: true,
-	 sorting: true,
-	 paging: true,
+	inserting : true,
+	editing : true,
+	sorting : true,
+	paging : true,
 	data : clients,
 
 	fields : [ {

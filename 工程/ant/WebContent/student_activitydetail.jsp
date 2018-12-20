@@ -35,7 +35,7 @@
 		<div class="content_box">
 			<div class="content_left">
 				<div class="content_img">
-					<img src="images/center.jpg">
+					<img src="${activitydetail.image }">
 				</div>
 				<div class="content_text">
 					<form action="#" name="fileForm">
@@ -135,11 +135,11 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="detail.jsp">去看看</a>
+							<a href="404.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="#">我要报名</a>
+							<a href="403.jsp">我要报名</a>
 						</div>
 					</div>
 				</div>
@@ -155,11 +155,11 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="detail.jsp">去看看</a>
+							<a href="404.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="#">我要报名</a>
+							<a href="403.jsp">我要报名</a>
 						</div>
 					</div>
 				</div>
@@ -175,11 +175,11 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="detail.jsp">去看看</a>
+							<a href="404.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="#">我要报名</a>
+							<a href="403.jsp">我要报名</a>
 						</div>
 					</div>
 				</div>
@@ -195,11 +195,11 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="detail.jsp">去看看</a>
+							<a href="404.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="#">我要报名</a>
+							<a href="403.jsp">我要报名</a>
 						</div>
 					</div>
 				</div>

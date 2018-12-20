@@ -3,6 +3,7 @@ package com.bigdata.ant.register.controller;
 import java.io.IOException;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,12 +16,12 @@ import com.bigdata.ant.register.service.RegisterMonitorServiceImpl;
 @Controller
 public class RegisterMonitorController {
 	@Resource
-	private RegisterMonitorServiceImpl registermonitorServiceImpl;
+	private RegisterMonitorServiceImpl registerMonitorServiceImpl;
 	
 	@RequestMapping("/checkMonitorEmail")
 	public void checkMonitorEmail(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String mon_email = request.getParameter("mon_email");
-		Boolean bool = registermonitorServiceImpl.findMonitorByEmail(mon_email);
+		Boolean bool = registerMonitorServiceImpl.findMonitorByEmail(mon_email);
 		if (bool == true) {// 数据库中已存在该班委
 			System.out.println("已存在班委");
 			response.getWriter().print("no");
@@ -29,19 +30,19 @@ public class RegisterMonitorController {
 			response.getWriter().print("ok");
 		}
 	}
-	
-	
+
 	@RequestMapping("/monitorRegister")
-	public String monitorRegister(HttpServletRequest request, Monitor monitor) {
-		String againpsd = request.getParameter("againpwd");
+	public String monitorRegister(HttpServletRequest request,HttpServletResponse response,Monitor monitor) throws ServletException, IOException {
+		String againpsd = request.getParameter("againpsd");
 		String college=request.getParameter("college");
 		String profession=request.getParameter("profession");
 		String grade=request.getParameter("grade");
 		String classes=request.getParameter("classes");
 
-		String admitMonitorRegister = registermonitorServiceImpl.admitMonitorRegister(monitor, college,profession,grade,classes,againpsd);// 获得信息（是否允许注册）
+		String admitMonitorRegister = registerMonitorServiceImpl.admitMonitorRegister(monitor, college,profession,grade,classes,againpsd);// 获得信息（是否允许注册）
+
 		if (admitMonitorRegister.equals("0")) {// 该用户注册成功，待激活
-			registermonitorServiceImpl.processMonitorRegister(monitor);
+			registerMonitorServiceImpl.processMonitorRegister(monitor,college,profession,grade,classes);
 			request.setAttribute("msg", "注册成功，去邮箱激活吧");
 			return "register_msg";
 		} else {
@@ -52,10 +53,10 @@ public class RegisterMonitorController {
 			request.setAttribute("gradeSelected", grade);
 			request.setAttribute("classesSelected", classes);
 			request.setAttribute("monitor", monitor);
-			request.setAttribute("monitor", monitor);
 			request.setAttribute("againpsd", againpsd);
 			System.out.println(college);
-			return "three_register";
+			request.getRequestDispatcher("toRegister").forward(request, response);
+			return null;
 		}
 	}
 
@@ -69,13 +70,12 @@ public class RegisterMonitorController {
 	 * @throws ServletException
 	 *
 	 */
-//	@RequestMapping("/activeStudent")
-//	public String activeStudent(HttpServletRequest request, HttpServletResponse response) {
-//		String email = request.getParameter("email");
-//		String validateCode = request.getParameter("validateCode");
-//		String msg = registerServiceImpl.VolidateRegister(email, validateCode);
-//		request.setAttribute("msg", msg);
-//		return "register_msg";
-//	}
+	@RequestMapping("/activeMonitor")
+	public String activeMonitor(HttpServletRequest request, HttpServletResponse response) {
+		String email = request.getParameter("email");
+		String validateCode = request.getParameter("validateCode");
+		String msg = registerMonitorServiceImpl.VolidateMonitorRegister(email, validateCode);
+		request.setAttribute("msg", msg);
+		return "register_msg";
+	}
 }
-

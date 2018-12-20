@@ -73,4 +73,26 @@ public class MonitorDaoImpl extends BaseDao<Monitor, String> {
 			return false;
 		}
 	}
+
+	/**
+	 * 
+	 * @Title: getMonitor
+	 * @Description: 按email找到用户
+	 * @param:@param email
+	 * @param:@return (参数)
+	 * @return:Monitor(返回类型)
+	 *
+	 * @param email
+	 * @return
+	 */
+	public Monitor getMonitor(String email) {
+		String hql = "from Monitor m where m.email = ?0";
+		try {
+			return this.findOne1(hql, email);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
 }

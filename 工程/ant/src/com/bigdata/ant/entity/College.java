@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 /**
  * 
  * @ClassName:College
@@ -21,20 +22,23 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="college_information")
+@Table(name = "college_information")
 public class College {
- private int id;
- private String name;
- private Set<Profession> professions=new HashSet<Profession>();
+	private int id;
+	private String name;
+	private Set<Profession> professions = new HashSet<Profession>();
+
 	public College() {
 		// TODO Auto-generated constructor stub
 	}
-@Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
-@Column(name="college_id")
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "college_id")
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -42,10 +46,13 @@ public class College {
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	@OneToMany(mappedBy="college",targetEntity=Profession.class,cascade= {CascadeType.ALL},fetch = FetchType.EAGER)
+
+	@OneToMany(mappedBy = "college", targetEntity = Profession.class, cascade = {
+			CascadeType.ALL }, fetch = FetchType.EAGER)
 	public Set<Profession> getProfessions() {
 		return professions;
 	}
@@ -53,7 +60,5 @@ public class College {
 	public void setProfessions(Set<Profession> professions) {
 		this.professions = professions;
 	}
-	
-	
 
 }

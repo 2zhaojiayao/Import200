@@ -28,7 +28,7 @@
 				<td class="top_1"><img src="images/person.png" class="head_img"></td>
 				<td class="top_1">
 					<div class="name">
-						<span>${email }</span>
+						<span>${m.email }</span>
 					</div>
 				</td>
 			</tr>

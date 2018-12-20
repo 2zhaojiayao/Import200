@@ -31,31 +31,50 @@ import com.bigdata.ant.personalinformation.dao.ProfessionInformationDaoImpl;
 public class PersonalInformationServiceImpl {
 	@Resource
 	private PersonalInformationDaoImpl personalinformationdaoimpl;
+	@Resource
 	private ProfessionInformationDaoImpl professioninformationdaoimpl;
+
 	/**
-	* @Title: collegeInformation  
-	* @Description: 找出所有学院
-	* @param:@return (参数)
-	* @return:List<College>(返回类型)
-	*
+	 * @Title: collegeInformation
+	 * @Description: 找出所有学院
+	 * @param:@return (参数)
+	 * @return:List<College>(返回类型)
+	 *
 	 * @return
 	 */
 	public List<College> collegeInformation() {
 		return this.personalinformationdaoimpl.collegeInformation();
 	}
+
 	/**
-	* @Title: professionInformation  
-	* @Description: 找出所在学院的所有专业
-	* @param:@param collegeid
-	* @param:@return (参数)
-	* @return:List<Profession>(返回类型)
-	*
+	 * @Title: professionInformation
+	 * @Description: 找出所在学院的所有专业
+	 * @param:@param collegeid
+	 * @param:@return (参数)
+	 * @return:List<Profession>(返回类型)
+	 *
 	 * @param collegeid
 	 * @return
 	 */
-	public List<Profession> professionInformation(int collegeid) {
-		
-		return professioninformationdaoimpl.professionInformation(collegeid);
+//	public List<Profession> professionInformation(int collegeid) {
+//
+//		return professioninformationdaoimpl.professionInformation(collegeid);
+//	}
+
+	/**
+	* @Title: professionInformationall  
+	* @Description: 找出所有专业 
+	* @param:@return (参数)
+	* @return:List<Profession>(返回类型)
+	*
+	 * @return
+	 */
+	public List<Profession> professionInformationall() {
+		List<Profession> profession=this.professioninformationdaoimpl.professionInformationall();
+		if(profession==null) {
+			return null;
+		}
+			return profession;
 	}
 
 }
