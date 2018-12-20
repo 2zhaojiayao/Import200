@@ -8,10 +8,11 @@
 <title>个人页面_活动分类</title>
 <link rel="stylesheet" type="text/css"
 	href="css/student_activityclassify.css">
-<link rel="stylesheet" type="text/css"
-	href="css/student_activityclassify_ul.css">
-
+<!-- <link rel="stylesheet" type="text/css"
+	href="css/student_activityclassify_ul.css"> -->
 </head>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/JsonpAjax.js"></script>
 <body>
 	<!-- header -->
 	<%@include file="student_header.jsp"%>
@@ -21,11 +22,14 @@
 			<a href="#">首页</a> &nbsp/&nbsp <a href="#" id="orange">活动</a>
 		</div>
 		<div id="search">
-			<form>
-				<input type="text" placeholder="  请输入您要搜索的内容...">
-				<button type="submit"></button>
-			</form>
+				<form action="searchByName" method="get">
+					<input type="text" placeholder="       请输入您要搜索的内容..." class="text"
+						autocomplete="off" name="name">
+					<button type="submit"></button>
+				</form>
+				<div class="word"></div>
 		</div>
+
 		<div class="out_type">
 			<div class="label" id="orange">分类</div>
 		</div>
@@ -39,9 +43,9 @@
 			<c:forEach var="activity" items="${activities}">
 				<%-- 	<c:forEach var="c" items="${popcake}"> --%>
 				<div class="activity_object">
-					<a href=""><img src="${activity[2]}"></a>
+					<a href="student_activitydetail?id=${activity[0]}"><img src="${activity[2]}"></a>
 					<ul>
-						<li><a href="#">${activity[0]}</a></li>
+						<li><a href="student_activitydetail?id=${activity[0]}">${activity[1]}</a></li>
 						<li><p id="grey">${activity[3]}</p></li>
 						<li id="grey">报名人数:${activity[4]}</li>
 					</ul>
@@ -51,19 +55,23 @@
 		<div class="clear"></div>
 		<!--  <a class="nextPage" href="#"> 下一页</a> -->
 		<div class="page">
+
 			<div class="lastPage">
 				<c:if test="${pageNo>1}">
 					<a href="beforeSearch?pageNo=${pageNo-1}">上一页</a>
 				</c:if>
 			</div>
 			<div class="pageNo">
-				<span>${pageNo}</span>/<span>${pageNum}</span>
+				<c:if test="${pageNo!=null}">
+					<span>${pageNo}</span>/<span>${pageNum}</span>
+				</c:if>
 			</div>
 			<div class="nextPage">
 				<c:if test="${pageNo<pageNum}">
 					<a href="beforeSearch?pageNo=${pageNo+1}">下一页</a>
 				</c:if>
 			</div>
+
 		</div>
 	</div>
 

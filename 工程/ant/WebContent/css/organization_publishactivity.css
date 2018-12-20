@@ -1,18 +1,23 @@
 * {
-	margin: 0px auto;
+	margin:0px auto;
 }
 
 body {
 	font-size: 16px;
-	font-family: "Î¢ÈíÑÅºÚ";
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
 	color: #383838;
 	background-color: #fcfcdd;
 }
-
-.content {
-	margin-top:10px;
+.header #nav ul {
+	display: block;
 	width: 1080px;
-	height: 1386px;
+	margin:0px auto;
+}
+.content {
+	margin:10px auto 0; 
+	width: 1080px;
+	height: 1500px;
+	
 }
 
 .content_top {
@@ -39,7 +44,7 @@ body {
 
 .left {
 	width: 680px;
-	height: 1186px;
+	height: 1300px;
 	background-color: #fff;
 	padding: 20px;
 	margin-right: 5px;
@@ -52,10 +57,11 @@ body {
 
 .addimg {
 	width: 524px;
-	height: 60px;
+	height: 150px;
 	display: inline-block;
-	border: 1px dashed #999;
+	/* border: 1px dashed #999; */
 	margin-bottom: 15px;
+	margin-left:132px;
 }
 
 .upimg {
@@ -80,10 +86,10 @@ body {
 	width: 505px;
 	height: 150px;
 	padding: 10px;
-	font-family: "Î¢ÈíÑÅºÚ";
+	font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
 	border: 1px solid #e5e5e5;
 	margin-bottom: 15px;
-	margin-left: 59px;
+	margin-left:150px;
 }
 
 .inputframe {
@@ -92,7 +98,8 @@ body {
 	height: 35px;
 	font-size: 16px;
 	border: 1px solid #e5e5e5;
-	padding-left: 10px;
+    padding-left:10px;
+   
 	margin-bottom: 18px;
 	color: #666;
 }
@@ -159,7 +166,7 @@ body {
 
 .right {
 	width: 310px;
-	height: 1186px;
+	height: 1300px;
 	background-color: #fff;
 	padding: 20px;
 	margin-left: 5px;

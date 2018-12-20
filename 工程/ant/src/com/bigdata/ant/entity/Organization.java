@@ -33,9 +33,9 @@ private Set<Activity> activities=new HashSet<Activity>();
 	public Organization() {
 		// TODO Auto-generated constructor stub
 	}
-	@Column(name="organization_id")
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="organization_id")
 	public int getId() {
 		return id;
 	}
