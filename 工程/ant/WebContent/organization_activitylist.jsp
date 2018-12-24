@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
 				<table class="table2-2">
 					<tr>
 						<!-- 首页/活动列表 -->
-						<td><a href="#" class="table2-2-tr0td0-a0">首页 </a>/ <a
+						<td><a href="organization_index.jsp" class="table2-2-tr0td0-a0">首页 </a>/ <a
 							href="#" class="table2-2-tr0td0-a1"> 活动列表</a></td>
 					</tr>
 					<tr>
@@ -46,8 +47,8 @@
 					<table class="table2-3" cellpadding="0" cellspacing="0"
 						align="left">
 						<tr>
-							<td><a href="#">按创建时间</a></td>
-							<td><a href="#">按报名热度</a></td>
+							<td><a href="listByTime">按报名时间</a></td>
+							<td><a href="listByHot">按报名热度</a></td>
 						</tr>
 					</table>
 				</div>
@@ -58,225 +59,176 @@
 			<td class="table2-1tr2td0">
 				<table class="table2-4" cellpadding="0" cellspacing="0">
 					<!-- “德艺双馨”志愿活动1 -->
-					<tr>
-						<td class="table2-4-tr0td0">
-							<div class="table2-4-tr0td0-div">
-								<table cellspacing="0" cellpadding="0" class="table2-5"
-									width="1020px">
-									<table width="1020px" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-5-tr0td0" style="width: 22%"><a
-												href="跳转到详情页">“德艺双馨”志愿活动</a></td>
-											<td class="table2-5-tr0td1"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-5-tr1td0" style="width: 8%">志愿活动</td>
-											<td class="table2-5-tr1td1" style="width: 1%"></td>
-											<td class="table2-5-tr1td2" style="width: 18%">河北省组织部举办</td>
-											<td class="table2-5-tr1td3" style="width: 1%"></td>
-											<td class="table2-5-tr1td4" style="width: 5%">省级</td>
-											<td class="table2-5-tr1td5"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-5-tr2td0" style="width: 100%"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-5-tr3td0">
-												段落示意：两天的赛场，志愿者们身穿队服，胸带工作牌热情高涨，为维护赛场秩序，各自坚守岗位分工合作，并积极配合主办方做好现场工作，保障了活动圆满成功，在为期两天的活动当中，中国公益在线公益志愿者服务团体因工作勤恳，服务态度良好，得到了主办方的赞许。
-											</td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-5-tr4td0" colspan="102"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-5-tr5td0" colspan="3" style="width: 3%"><a
-												href="跳转到个人中心"><img src="images/05.png"></a></td>
-											<td class="table2-5-tr5td1" style="width: 1%"></td>
-											<td class="table2-5-tr5td2" style="width: 20%">软件学院青年志愿者协会承办</td>
-											<td class="table2-5-tr5td3"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-5-tr6td0" style="width: 2%"><img
-												src="images/06.png" width="20" height="20"></td>
-											<td class="table2-5-tr6td1" style="width: 6%">156</td>
-											<td class="table2-5-tr6td2" style="width: 2%"><img
-												src="images/07.png" width="20" height="20"></td>
-											<td class="table2-5-tr6td3" style="width: 6%">156</td>
-											<td class="table2-5-tr6td4"></td>
-											<td class="table2-5-tr6td5" style="width: 22%">举办时间：2018-10-31
-												18:00</td>
-										</tr>
-									</table>
-									<tr>
-										<td></td>
-									</tr>
-								</table>
+					<c:if test="${key eq '1' }">
+						<c:forEach items="${pageByTime.list }" var="byTime">
+							<tr>
+								<td class="table2-4-tr0td0">
+									<div class="table2-4-tr0td0-div">
+										<table cellspacing="0" cellpadding="0" class="table2-5"
+											width="1020px">
+											<table width="1020px" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr0td0" style="width: 22%"><a
+														href="跳转到详情页">${byTime.name }</a></td>
+													<td class="table2-5-tr0td1"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr1td0" style="width: 8%">${byTime.searchType }</td>
+													<td class="table2-5-tr1td1" style="width: 1%"></td>
+													<td class="table2-5-tr1td2" style="width: 18%">${byTime.organization.name }</td>
+													<td class="table2-5-tr1td3" style="width: 1%"></td>
+													<td class="table2-5-tr1td4" style="width: 5%">${byTime.level }</td>
+													<td class="table2-5-tr1td5"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr2td0" style="width: 100%"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr3td0">
+														${byTime.description }
+													</td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr4td0" colspan="102"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr5td0" colspan="3" style="width: 3%"><a
+														href="跳转到个人中心"><img src="images/05.png"></a></td>
+													<td class="table2-5-tr5td1" style="width: 1%"></td>
+													<td class="table2-5-tr5td2" style="width: 20%">${byTime.organization.name }承办</td>
+													<td class="table2-5-tr5td3"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr6td0" style="width: 2%"><img
+														src="images/06.png" width="20" height="20"></td>
+													<td class="table2-5-tr6td1" style="width: 6%">156</td>
+													<td class="table2-5-tr6td2" style="width: 2%"><img
+														src="images/07.png" width="20" height="20"></td>
+													<td class="table2-5-tr6td3" style="width: 6%">156</td>
+													<td class="table2-5-tr6td4"></td>
+													<td class="table2-5-tr6td5" style="width: 22%">举办时间：${byTime.holdBegin }</td>
+												</tr>
+											</table>
+											<tr>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</c:forEach>
+						<div class="bottom_page">
+							<div class="page">
+								<ul class="pagination">
+									<li><a href="listByTime?pageNum=1">首页</a></li>
+									<li><a
+										href="listByTime?pageNum=${pageByTime.prePageNum }">上一页</a></li>
+									<li><a href="#" class="currentPage active">${pageByTime.currentPageNum }/${pageByTime.totalPageNum }</a></li>
+									<li><a
+										href="listByTime?pageNum=${pageByTime.nextPageNum }">下一页</a></li>
+									<li><a
+										href="listByTime?pageNum=${pageByTime.totalPageNum }">尾页</a></li>
+								</ul>
 							</div>
-						</td>
-					</tr>
-					<!-- “德艺双馨”志愿活动2 -->
-					<tr>
-						<td class="table2-4-tr1td0">
-							<div class="table2-6-tr0td0-div">
-								<table cellspacing="0" cellpadding="0" class="table2-7"
-									width="1020px">
-									<table width="1020px" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-7-tr0td0" style="width: 22%"><a
-												href="跳转到详情页">“德艺双馨”志愿活动</a></td>
-											<td class="table2-7-tr0td1"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-7-tr1td0" style="width: 8%">志愿活动</td>
-											<td class="table2-7-tr1td1" style="width: 1%"></td>
-											<td class="table2-7-tr1td2" style="width: 18%">河北省组织部举办</td>
-											<td class="table2-7-tr1td3" style="width: 1%"></td>
-											<td class="table2-7-tr1td4" style="width: 5%">省级</td>
-											<td class="table2-7-tr1td5"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-7-tr2td0" style="width: 100%"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-7-tr3td0">
-												段落示意：两天的赛场，志愿者们身穿队服，胸带工作牌热情高涨，为维护赛场秩序，各自坚守岗位分工合作，并积极配合主办方做好现场工作，保障了活动圆满成功，在为期两天的活动当中，中国公益在线公益志愿者服务团体因工作勤恳，服务态度良好，得到了主办方的赞许。
-											</td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-7-tr4td0" colspan="102"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-7-tr5td0" colspan="3" style="width: 3%"><a
-												href="跳转到个人中心"><img src="images/05.png"></a></td>
-											<td class="table2-7-tr5td1" style="width: 1%"></td>
-											<td class="table2-7-tr5td2" style="width: 20%">软件学院青年志愿者协会承办</td>
-											<td class="table2-7-tr5td3"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-7-tr6td0" style="width: 2%"><img
-												src="images/06.png" width="20" height="20"></td>
-											<td class="table2-7-tr6td1" style="width: 6%">156</td>
-											<td class="table2-7-tr6td2" style="width: 2%"><img
-												src="images/07.png" width="20" height="20"></td>
-											<td class="table2-7-tr6td3" style="width: 6%">156</td>
-											<td class="table2-7-tr6td4"></td>
-											<td class="table2-7-tr6td5" style="width: 22%">举办时间：2018-10-31
-												18:00</td>
-										</tr>
-									</table>
-									<tr>
-										<td></td>
-									</tr>
-								</table>
+						</div>
+					</c:if>
+					<c:if test="${key eq '2' }">
+						<c:forEach items="${pageByHot.list }" var="byHot">
+							<tr>
+								<td class="table2-4-tr0td0">
+									<div class="table2-4-tr0td0-div">
+										<table cellspacing="0" cellpadding="0" class="table2-5"
+											width="1020px">
+											<table width="1020px" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr0td0" style="width: 22%"><a
+														href="跳转到详情页">${byHot.name }</a></td>
+													<td class="table2-5-tr0td1"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr1td0" style="width: 8%">${byHot.searchType }</td>
+													<td class="table2-5-tr1td1" style="width: 1%"></td>
+													<td class="table2-5-tr1td2" style="width: 18%">${byHot.organization.name }</td>
+													<td class="table2-5-tr1td3" style="width: 1%"></td>
+													<td class="table2-5-tr1td4" style="width: 5%">${byHot.level }</td>
+													<td class="table2-5-tr1td5"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr2td0" style="width: 100%"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr3td0">
+														${byHot.description }
+													</td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr4td0" colspan="102"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr5td0" colspan="3" style="width: 3%"><a
+														href="跳转到个人中心"><img src="images/05.png"></a></td>
+													<td class="table2-5-tr5td1" style="width: 1%"></td>
+													<td class="table2-5-tr5td2" style="width: 20%">${byHot.organization.name }承办</td>
+													<td class="table2-5-tr5td3"></td>
+												</tr>
+											</table>
+											<table width="1020" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="table2-5-tr6td0" style="width: 2%"><img
+														src="images/06.png" width="20" height="20"></td>
+													<td class="table2-5-tr6td1" style="width: 6%">156</td>
+													<td class="table2-5-tr6td2" style="width: 2%"><img
+														src="images/07.png" width="20" height="20"></td>
+													<td class="table2-5-tr6td3" style="width: 6%">156</td>
+													<td class="table2-5-tr6td4"></td>
+													<td class="table2-5-tr6td5" style="width: 22%">举办时间：${byHot.holdBegin }</td>
+												</tr>
+											</table>
+											<tr>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</c:forEach>
+						<div class="bottom_page">
+							<div class="page">
+								<ul class="pagination">
+									<li><a href="listByHot?pageNum=1">首页</a></li>
+									<li><a
+										href="listByHot?pageNum=${pageByHot.prePageNum }">上一页</a></li>
+									<li><a href="#" class="currentPage active">${pageByHot.currentPageNum }/${pageByHot.totalPageNum }</a></li>
+									<li><a
+										href="listByHot?pageNum=${pageByHot.nextPageNum }">下一页</a></li>
+									<li><a
+										href="listByHot?pageNum=${pageByHot.totalPageNum }">尾页</a></li>
+								</ul>
 							</div>
-						</td>
-					</tr>
-					<!-- “德艺双馨”志愿活动3 -->
-					<tr>
-						<td class="table2-4-tr2td0">
-							<div class="table2-8-tr0td0-div">
-								<table cellspacing="0" cellpadding="0" class="table2-9"
-									width="1020px">
-									<table width="1020px" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-9-tr0td0" style="width: 22%"><a
-												href="跳转到详情页">“德艺双馨”志愿活动</a></td>
-											<td class="table2-9-tr0td1"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-9-tr1td0" style="width: 8%">志愿活动</td>
-											<td class="table2-9-tr1td1" style="width: 1%"></td>
-											<td class="table2-9-tr1td2" style="width: 18%">河北省组织部举办</td>
-											<td class="table2-9-tr1td3" style="width: 1%"></td>
-											<td class="table2-9-tr1td4" style="width: 5%">省级</td>
-											<td class="table2-9-tr1td5"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-9-tr2td0" style="width: 100%"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-9-tr3td0">
-												段落示意：两天的赛场，志愿者们身穿队服，胸带工作牌热情高涨，为维护赛场秩序，各自坚守岗位分工合作，并积极配合主办方做好现场工作，保障了活动圆满成功，在为期两天的活动当中，中国公益在线公益志愿者服务团体因工作勤恳，服务态度良好，得到了主办方的赞许。
-											</td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-9-tr4td0" colspan="102"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-9-tr5td0" colspan="3" style="width: 3%"><a
-												href="跳转到个人中心"><img src="images/05.png"></a></td>
-											<td class="table2-9-tr5td1" style="width: 1%"></td>
-											<td class="table2-9-tr5td2" style="width: 20%">软件学院青年志愿者协会承办</td>
-											<td class="table2-9-tr5td3"></td>
-										</tr>
-									</table>
-									<table width="1020" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table2-9-tr6td0" style="width: 2%"><img
-												src="images/06.png" width="20" height="20"></td>
-											<td class="table2-9-tr6td1" style="width: 6%">156</td>
-											<td class="table2-9-tr6td2" style="width: 2%"><img
-												src="images/07.png" width="20" height="20"></td>
-											<td class="table2-9-tr6td3" style="width: 6%">156</td>
-											<td class="table2-9-tr6td4"></td>
-											<td class="table2-9-tr6td5" style="width: 22%">举办时间：2018-10-31
-												18:00</td>
-										</tr>
-									</table>
-									<tr>
-										<td></td>
-									</tr>
-								</table>
-							</div>
-						</td>
-					</tr>
-					<!-- 加载更多… -->
-					<tr>
-						<td class="table2-4-tr3td0">
-							<table cellpadding="0" cellspacing="0" width="1020"
-								class="table2-10">
-								<tr>
-									<td valign="center" align="center"><input type="button"
-										name="" height="32" width="166" value="加载更多" /></td>
-								</tr>
-
-							</table>
-						</td>
-					</tr>
+						</div>
+					</c:if>
 				</table>
 			</td>
 		</tr>
