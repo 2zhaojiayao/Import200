@@ -34,6 +34,6 @@ public class UpdateServiceImpl {
 	 * @return
 	 */
 	public List listId() {
-		return this.listId();
+		return this.updateDaoImpl.listId();
 	}
 }
