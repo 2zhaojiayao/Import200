@@ -5,32 +5,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>班委页面_修改活动</title>
+<link rel="stylesheet" href="css/amazeui.min.css">
+<script type="text/javascript" src="js/amazeui.min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <link type="text/css" rel="stylesheet"
 	href="css/monitor_updateactivity.css" />
-
 <script type="text/javascript" src="js/monitor_updateactivity.js"></script>
-
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <link type="text/css" rel="stylesheet"
-	href="css/monitor_updateactivitymin.css" />
-<link type="text/css" rel="stylesheet"
 	href="css/jquery.dataTables.min.css" />
-<!--link rel="stylesheet" type="text/css"
-	href="css/monitor_updateactivitytheme.css">  -->
 </head>
 <body>
+	<table id="example" class="display" cellspacing="0" width="100%">
+		<thead>
+			<tr>
+				<th>学号</th>
+				<th>活动名称</th>
+				<th>分数</th>
+				<th>活动名称</th>
+				<th>分数</th>
+				<th>活动名称</th>
+				<th>分数</th>
+				<th>活动名称</th>
 
-	<!-- center -->
-	<div class="center">
-		<div class="center_text">点击以修改活动</div>
-		<div id="myTable" class="center_jsGrid jsgrid"></div>
-		<div class="center_submit">
-			<input type="submit" name="submit" value="提 交" class="button">
-		</div>
-	</div>
-	<script type="text/javascript" src="js/update.js"></script>
+			</tr>
+		</thead>
+
+		<tfoot>
+			<tr>
+				<th>Name</th>
+				<th>Position</th>
+				<th>Office</th>
+				<th>Age</th>
+				<th>Start date</th>
+				<th>Salary</th>
+				<td>2008/12/19</td>
+				<td>$90,560</td>
+			</tr>
+		</tfoot>
+
+		<tbody>
+			<tr>
+				<td>Tiger Nixon</td>
+				<td>System Architect</td>
+				<td>Edinburgh</td>
+				<td>61</td>
+				<td>2011/04/25</td>
+				<td>$320,800</td>
+				<td>2008/12/19</td>
+				<td>$90,560</td>
+			</tr>
+
+		</tbody>
+	</table>
 </body>
-<script type="text/javascript"
-	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>

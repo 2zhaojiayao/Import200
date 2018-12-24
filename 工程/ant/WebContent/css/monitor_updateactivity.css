@@ -28,16 +28,6 @@ a:hover {
 	text-align: center;
 }
 
-#jsGrid {
-	clear: both;
-	width: 1080px;
-	height: auto;
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 10px;
-	margin-left: 25px;
-}
-
 .center_submit {
 	width: 1080px;
 	margin: 0 auto;
