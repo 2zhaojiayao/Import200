@@ -41,10 +41,10 @@
 
 		<tbody>
 			<tr>
-				<td>2016011000</td>
+				<td>${list.get(0) }</td>
 				<c:forEach var="i" begin="0" end="14">
-					<td>德艺双馨</td>
-					<td>3</td>
+					<td><input type="text" name="activity" value="哈哈哈" /></td>
+					<td><input type="text" name="score" value="3" /></td>
 				</c:forEach>
 			</tr>
 
