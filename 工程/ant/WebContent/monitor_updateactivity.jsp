@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,43 +21,35 @@
 		<thead>
 			<tr>
 				<th>学号</th>
-				<th>活动名称</th>
-				<th>分数</th>
-				<th>活动名称</th>
-				<th>分数</th>
-				<th>活动名称</th>
-				<th>分数</th>
-				<th>活动名称</th>
+				<c:forEach var="i" begin="0" end="14">
+					<th>活动名称</th>
+					<th>分数</th>
+				</c:forEach>
 
 			</tr>
 		</thead>
 
 		<tfoot>
 			<tr>
-				<th>Name</th>
-				<th>Position</th>
-				<th>Office</th>
-				<th>Age</th>
-				<th>Start date</th>
-				<th>Salary</th>
-				<td>2008/12/19</td>
-				<td>$90,560</td>
+				<th></th>
+				<c:forEach var="i" begin="0" end="14">
+					<th></th>
+					<th></th>
+				</c:forEach>
 			</tr>
 		</tfoot>
 
 		<tbody>
 			<tr>
-				<td>Tiger Nixon</td>
-				<td>System Architect</td>
-				<td>Edinburgh</td>
-				<td>61</td>
-				<td>2011/04/25</td>
-				<td>$320,800</td>
-				<td>2008/12/19</td>
-				<td>$90,560</td>
+				<td>2016011000</td>
+				<c:forEach var="i" begin="0" end="14">
+					<td>德艺双馨</td>
+					<td>3</td>
+				</c:forEach>
 			</tr>
 
 		</tbody>
 	</table>
+	<button class="button" type="submit">提交表单</button>
 </body>
 </html>

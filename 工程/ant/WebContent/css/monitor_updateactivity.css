@@ -5,10 +5,10 @@
 
 body {
 	width: 1080px;
+	margin: 0 auto;
 	height: auto;
-	font-size: 22px;
-	line-height: 22px;
-	background-color: #fcfcdd
+	background-color: #fcfcdd;
+	margin-top: 20px;
 }
 
 a {
@@ -36,7 +36,16 @@ a:hover {
 	margin-top: 645px;
 }
 
+.center_text {
+	font-size: 20px;
+	color: #fc9700;
+	margin-top: 10px;
+}
+
 .button {
+	margin: 0 auto;
+	margin-left: 45%;
+	margin-bottom: 10px;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	background-color: #fc9700;
@@ -48,17 +57,23 @@ a:hover {
 	display: inline-block;
 	font-size: 16px;
 	border-radius: 8px;
+	-webkit-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
 }
 
 .button:hover {
-	background-color: #fff;
+	background-color: #fcfcdd;
 	color: #fc9700;
 	border: 1px solid #fc9700;
 	cursor: pointer;
 }
 
-.center_text {
-	font-size: 20px;
-	color: #fc9700;
-	margin-top: 10px;
+th, td {
+	white-space: nowrap;
+}
+
+div.dataTables_wrapper {
+	width: 1080px;
+	margin: 0 auto;
 }
