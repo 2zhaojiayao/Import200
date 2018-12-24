@@ -48,10 +48,36 @@ public class DownloadController {
 			map.put("学号", a.getStudentId());
 			List<ActivitySum> l = this.downloadServiceImpl.getIdList(a.getStudentId());
 			for (ActivitySum as : l) {
-				map.put("活动名称", as.getActivityName());
-				map.put("年份", as.getYear());
-				map.put("分数", as.getScore());
-				map.put("类型", as.getType());
+				map.put("活动名称", as.getActivityName1());
+				map.put("分数", as.getScore1());
+				map.put("活动名称", as.getActivityName2());
+				map.put("分数", as.getScore2());
+				map.put("活动名称", as.getActivityName3());
+				map.put("分数", as.getScore3());
+				map.put("活动名称", as.getActivityName4());
+				map.put("分数", as.getScore4());
+				map.put("活动名称", as.getActivityName5());
+				map.put("分数", as.getScore5());
+				map.put("活动名称", as.getActivityName6());
+				map.put("分数", as.getScore6());
+				map.put("活动名称", as.getActivityName7());
+				map.put("分数", as.getScore7());
+				map.put("活动名称", as.getActivityName8());
+				map.put("分数", as.getScore8());
+				map.put("活动名称", as.getActivityName9());
+				map.put("分数", as.getScore9());
+				map.put("活动名称", as.getActivityName10());
+				map.put("分数", as.getScore10());
+				map.put("活动名称", as.getActivityName11());
+				map.put("分数", as.getScore11());
+				map.put("活动名称", as.getActivityName12());
+				map.put("分数", as.getScore12());
+				map.put("活动名称", as.getActivityName13());
+				map.put("分数", as.getScore13());
+				map.put("活动名称", as.getActivityName14());
+				map.put("分数", as.getScore14());
+				map.put("活动名称", as.getActivityName15());
+				map.put("分数", as.getScore15());
 			}
 			System.out.println(w);
 			if (w > num) {
@@ -63,30 +89,10 @@ public class DownloadController {
 		List<String> ll = new ArrayList<>();
 		ll.add("序号");
 		ll.add("学号");
-		ll.add("活动名称");
-		ll.add("年份");
-		ll.add("分数");
-		ll.add("类型");
-		ll.add("活动名称");
-		ll.add("年份");
-		ll.add("分数");
-		ll.add("类型");
-		ll.add("活动名称");
-		ll.add("年份");
-		ll.add("分数");
-		ll.add("类型");
-		ll.add("活动名称");
-		ll.add("年份");
-		ll.add("分数");
-		ll.add("类型");
-		ll.add("活动名称");
-		ll.add("年份");
-		ll.add("分数");
-		ll.add("类型");
-		ll.add("活动名称");
-		ll.add("年份");
-		ll.add("分数");
-		ll.add("类型");
+		for (int i = 0; i < 15; i++) {
+			ll.add("活动名称");
+			ll.add("分数");
+		}
 		try {
 			MakeExcel.CreateExcelFile(list, new File(FILEPATH), ll, "活动汇总");
 		} catch (WriteException e) {

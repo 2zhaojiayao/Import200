@@ -1,5 +1,7 @@
 package com.bigdata.ant.update.service;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.Resource;
@@ -33,7 +35,11 @@ public class UpdateServiceImpl {
 	 *
 	 * @return
 	 */
-	public Set listId() {
+	public Map listId() {
 		return this.updateDaoImpl.listId();
+	}
+
+	public List listScoreById(String id) {
+		return this.updateDaoImpl.listScoreById(id);
 	}
 }

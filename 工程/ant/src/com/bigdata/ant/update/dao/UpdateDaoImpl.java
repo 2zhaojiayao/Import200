@@ -1,7 +1,11 @@
 package com.bigdata.ant.update.dao;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.springframework.stereotype.Repository;
@@ -29,9 +33,11 @@ public class UpdateDaoImpl extends BaseDao<ActivityJoin, Integer> {
 	 *
 	 * @return
 	 */
-	public Set listId() {
+	public Map listId() {
 		String hql = "select a from ActivityJoin a";
 		List<ActivityJoin> l = null;
+		List<Object[]> list = null;
+		Map<String, List<Object[]>> map = new HashMap<String, List<Object[]>>();
 		try {
 			l = this.find0(hql);
 		} catch (Exception e) {
@@ -42,7 +48,40 @@ public class UpdateDaoImpl extends BaseDao<ActivityJoin, Integer> {
 		for (int i = 0; i < l.size(); i++) {
 			set.add(l.get(i).getStudent().getId());
 		}
-		return set;
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			list = this.listScoreById(it.next());
+			map.put(it.next(), list);
+		}
+		return map;
+	}
+
+	/**
+	 * 
+	 * @Title: listScoreById
+	 * @Description: 按学号查出活动名称及分数
+	 * @param:@param id
+	 * @param:@return (参数)
+	 * @return:List(返回类型)
+	 *
+	 * @param id
+	 * @return
+	 */
+	public List listScoreById(String id) {
+		String hql = "from ActivityJoin a where a.student.id = ?0";
+		List<ActivityJoin> l = null;
+		try {
+			l = this.find0(hql, id);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		List<Object[]> list = new ArrayList<Object[]>();
+		for (int i = 0; i < l.size(); i++) {
+			list.add(new Object[] { l.get(i).getActivityStage().getActivity().getName(),
+					l.get(i).getActivityStage().getScore() });
+		}
+		return list;
 	}
 
 }

@@ -1,5 +1,9 @@
 package com.bigdata.ant.update.controller;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.Resource;
@@ -37,9 +41,16 @@ public class UpdateController {
 	 */
 	@RequestMapping("/update")
 	public String update(HttpServletRequest request) {
-		Set set = this.updateServiceImpl.listId();
+		Map map = this.updateServiceImpl.listId();
+//		List<Object[]> list = null;
+//		Iterator<String> it = set.iterator();
+//		while (it.hasNext()) {
+//			list = this.updateServiceImpl.listScoreById(it.next());
+//		
 
-		request.setAttribute("set", set);
+//		System.out.println(map.get("2016011000").get(0).toString());
+//		System.out.println(map.get(2016011000).get(0).toString());
+		request.setAttribute("map", map);
 		return "monitor_updateactivity";
 	}
 
