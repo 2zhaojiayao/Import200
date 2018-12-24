@@ -10,6 +10,14 @@ import org.springframework.transaction.annotation.Transactional;
 import com.bigdata.ant.download.dao.DownloadDaoImpl;
 import com.bigdata.ant.entity.ActivitySum;
 
+/**
+ * 
+ * @ClassName:DownloadServiceImpl
+ * @Description:下载
+ * @Author xujunmei
+ * @Date:2018年12月18日
+ *
+ */
 @Service
 @Transactional(readOnly = false)
 public class DownloadServiceImpl {
