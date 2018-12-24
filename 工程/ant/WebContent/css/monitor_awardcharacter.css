@@ -141,7 +141,7 @@ ol {
 	display: inline-block;
 }
 
-.button1 {
+.button1{
 	width: 200px;
 	height: 50px;
 	background-color: #fc7a00;
@@ -151,4 +151,29 @@ ol {
 
 .button1 a {
 	color: #fff;
+}
+#excel_file{
+	display:none;
+}
+.span_msg{
+	text-align:center;
+}
+.upload_btn{
+	margin-top: 50px;
+	text-align: center;
+}
+#excel_button{
+	background-color: #fc9700;
+	border: 1px solid #fc9700;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	width: 200px;
+	height: 50px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 3px;
+	cursor: pointer;
 }
