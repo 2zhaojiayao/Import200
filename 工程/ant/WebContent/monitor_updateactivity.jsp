@@ -40,13 +40,16 @@
 		</tfoot>
 
 		<tbody>
-			<tr>
-				<td>${list.get(0) }</td>
-				<c:forEach var="i" begin="0" end="14">
-					<td><input type="text" name="activity" value="哈哈哈" /></td>
-					<td><input type="text" name="score" value="3" /></td>
-				</c:forEach>
-			</tr>
+			<c:forEach items="${set }" var="s">
+				<tr>
+					<td>${s}</td>
+					<c:forEach var="i" begin="0" end="14">
+						<td>哈哈哈哈哈</td>
+						<td class="grade"><input type="text" name="score" value="3" /></td>
+					</c:forEach>
+				</tr>
+			</c:forEach>
+
 
 		</tbody>
 	</table>
