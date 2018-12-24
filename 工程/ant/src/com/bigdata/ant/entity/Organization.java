@@ -24,6 +24,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "organization_user")
 public class Organization {
+
 	private int id;
 	private String email;
 	private String password;
@@ -71,6 +72,7 @@ public class Organization {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public Integer getStatus() {
 		return status;
 	}
@@ -105,6 +107,5 @@ public class Organization {
 	public void setActivities(Set<Activity> activities) {
 		this.activities = activities;
 	}
-
 
 }

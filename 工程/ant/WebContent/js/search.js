@@ -50,10 +50,13 @@ $(function() {
 										'types' : types
 									},
 									dataType : 'json',
-									traditional : true,
+									traditional : true,//阻止深度序列化，可以传递数组
 									success : function(data) {
 										data1 = data;
-										pageNum = Math.ceil(data.length / 8)
+										pageNum = Math.ceil(data.length / 8);
+										if(pageNum==0){
+											pageNum=1
+										}
 										// alert("chengqiong");
 										$('.activities').empty().show;
 										$('.nextPage').empty().show;

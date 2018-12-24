@@ -30,7 +30,7 @@ import com.google.gson.Gson;
 
 /**
  * @ClassName:HeaderController
- * @Description:TODO（用一句话描述这个类的作用）
+ * @Description:TODO（搜素框自动补全功能）
  * @Author 成琼
  * @Date:2018年12月5日
  *
@@ -41,6 +41,14 @@ public class HeaderController {
 	@Resource
 	private HeaderServiceImpl headerServiceImpl;
 
+	/**
+	 * 
+	 * @Title: findActivitiesNames
+	 * @Description: TODO(根据关键字查找包含此关键字的活动名称)
+	 * @param:@param keyword
+	 * @param:@param response (关键字)
+	 * @return:void(返回类型)
+	 */
 	@RequestMapping("/search")
 	public void findActivitiesNames(@RequestParam("text") String keyword, HttpServletResponse response) {
 		response.setCharacterEncoding("UTF-8");

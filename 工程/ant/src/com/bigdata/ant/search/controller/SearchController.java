@@ -1,7 +1,7 @@
 /**
  * @Title:SearchController.java
  * @Package:com.bigdata.ant.search.controller
- * @Description:TODO(用一句话描述该文件做什么)
+ * @Description:TODO(个人活动列表页查询活动)
  * @Author:Admin
  * @Date:2018年12月10日
  */
@@ -24,13 +24,14 @@ import com.google.gson.Gson;
 
 /**
  * @ClassName:SearchController
- * @Description:TODO（用一句话描述这个类的作用）
+ * @Description:TODO（个人活动列表页查询活动）
  * @Author 成琼
  * @Date:2018年12月10日
  *
  */
 @Controller
 public class SearchController {
+
 	@Resource
 	private SearchServiceImpl searchServiceImpl;
 
@@ -38,9 +39,17 @@ public class SearchController {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * 
+	 * @Title: searchActivities
+	 * @Description: TODO(跳到活动列表页时，查询热门活动，按参与人数排序分页显示)
+	 * @param:@param model
+	 * @param:@param pageNo
+	 * @param:@return (第几页)
+	 * @return:String(跳到活动列表页)
+	 */
 	@RequestMapping("/beforeSearch")
 	public String searchActivities(Model model, @RequestParam("pageNo") int pageNo) {
-		// response.setCharacterEncoding("UTF-8");
 		List<Object[]> activities = searchServiceImpl.listActivitiesByPopular(pageNo);
 		Long count = (searchServiceImpl.findActivityCount());
 		int pageNum;
@@ -49,15 +58,22 @@ public class SearchController {
 		} else {
 			pageNum = (int) (count / 8 + 1);
 		}
-		// Long pageNum=searchServiceImpl.findActivityCount();
 		System.out.println("pageNo" + pageNo + "pageNum" + pageNum);
 		model.addAttribute("activities", activities);
 		model.addAttribute("pageNo", pageNo);
 		model.addAttribute("pageNum", pageNum);
-		System.out.println("pageNo" + pageNo + "pageNum" + pageNum + "后面");
 		return "student_activityclassify";
 	}
 
+	/**
+	 * 
+	 * @Title: searchActivities
+	 * @Description: TODO(根据分类查询活动)
+	 * @param:@param types
+	 * @param:@param response
+	 * @param:@param model (所查询的类型)
+	 * @return:void(返回类型)
+	 */
 	@RequestMapping("/search")
 	public void searchActivities(@RequestParam("types") Object[] types, HttpServletResponse response, Model model) {
 		response.setCharacterEncoding("UTF-8");
@@ -74,9 +90,23 @@ public class SearchController {
 		}
 		System.out.println(activities.size() + "controller查到数据");
 		model.addAttribute("activities", activities);
-//		model.addAttribute("abc", "abc");
-//		request.getSession().setAttribute("abc","abc");
-//		request.getServletContext().setAttribute("123", "123");
+	}
+
+	/**
+	 * 
+	 * @Title: listActivitiesByName
+	 * @Description: TODO(搜索框查找活动)
+	 * @param:@param name
+	 * @param:@param model
+	 * @param:@return (活动名称)
+	 * @return:String(返回活动列表页)
+	 */
+	@RequestMapping("searchByName")
+	public String listActivitiesByName(@RequestParam("name") String name, Model model) {
+		List<Object[]> activities = searchServiceImpl.listActivitiesByName(name);
+		model.addAttribute("activities", activities);
+
+		return "student_activityclassify";
 
 	}
 }

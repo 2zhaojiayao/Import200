@@ -67,7 +67,7 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 根据hql语句，查询单个实体类的对象
-	 * @param hql    hql语句
+	 * @param hql hql语句
 	 * @param params hql语句中占位符对应的参数
 	 * @return 单个实体类的对象
 	 * @throws Exception
@@ -122,7 +122,8 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	/**
 	 * 
 	 * @desc 根据hql语句，按条件查询数据
-	 * @param hql    hql语句
+	
+	 * @param hql hql语句
 	 * @param params hql语句中占位符对应的参数
 	 * @return 按条件查询出数据的List集合
 	 * @throws Exception
@@ -188,7 +189,8 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 分页查询全部数据
-	 * @param pageNum  页码
+	
+	 * @param pageNum 页码
 	 * @param pageSize 每页数据个数
 	 * @return Page的对象
 	 * @throws Exception
@@ -204,8 +206,10 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	}
 
 	/**
+	
 	 * @desc 根据hql，按条件查询数据数量(注：查不出来)
-	 * @param hql    hql语句
+	
+	 * @param hql hql语句
 	 * @param params hql语句中占位符对应的参数
 	 * @return 数据数量
 	 * @throws Exception
@@ -236,10 +240,12 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 按条件分页查询数据
-	 * @param pageNum  页码
+	
+	 * @param pageNum 页码
 	 * @param pageSize 每页数据个数
-	 * @param hql      hql语句
-	 * @param params   hql语句中占位符对应的参数
+	
+	 * @param hql hql语句
+	 * @param params hql语句中占位符对应的参数
 	 * @return 查询出的数据，List集合
 	 * @throws Exception
 	 */
@@ -257,11 +263,13 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 分页查询
-	 * @param pageNum  页码
+
+	 * @param pageNum 页码
 	 * @param pageSize 每页数据个数
 	 * @param hqlCount 用于统计数据个数的hql语句
-	 * @param hqlList  用于查询数据的hql语句
-	 * @param params   hql语句中占位符对应的参数
+	
+	 * @param hqlList 用于查询数据的hql语句
+	 * @param params hql语句中占位符对应的参数
 	 * @return Page对象
 	 * @throws Exception
 	 */
@@ -274,7 +282,8 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 根据hql，按条件进行投影查询
-	 * @param hql    hql语句
+
+	 * @param hql hql语句
 	 * @param params hql语句中占位符对应的参数
 	 * @return List集合，集合中数据是对象数组
 	 * @throws Exception
@@ -290,11 +299,35 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	}
 
 	/**
+	 * 
+	* @Title: findByProjection  
+	* @Description: TODO(根据hql,按条件投影查询，查询前几个) 
+	* @author 成琼
+	* @param:@param hql hql语句
+	* @param:@param params hql语句中占位符对应的参数
+	* @param:@param num 查询数目
+	* @param:@return
+	* @param:@throws Exception (参数)
+	* @return:List<Object[]>( List集合，集合中数据是对象数组)
+	 */
+	@SuppressWarnings("unchecked")
+	public List<Object[]> findByProjection(String hql, Object[] params,int num) throws Exception {
+		Query query = this.sessionFactory.getCurrentSession().createQuery(hql);
+		if (params != null && params.length > 0) {
+			for (int i = 0; i < params.length; i++)
+				query.setParameter(i, params[i]);
+		}
+		query.setMaxResults(num);
+		return query.list();
+	}
+	/**
 	 * @desc 根据hql，按条件进行分页的投影查询
-	 * @param pageNum  页码
+	
+	 * @param pageNum 页码
 	 * @param pageSize 每页数据个数
-	 * @param hql      hql语句
-	 * @param params   hql语句中占位符对应的参数
+	
+	 * @param hql hql语句
+	 * @param params hql语句中占位符对应的参数
 	 * @return List集合，集合中数据是对象数组
 	 * @throws Exception
 	 */
@@ -312,11 +345,13 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 根据hql，按条件进行分页的投影查询
-	 * @param pageNum  页码
+	
+	 * @param pageNum 页码
 	 * @param pageSize 每页数据个数
 	 * @param hqlCount 用于统计数量的hql语句
-	 * @param hqlList  用于查询的hql语句
-	 * @param params   hql语句中占位符对应的参数
+	
+	 * @param hqlList 用于查询的hql语句
+	 * @param params hql语句中占位符对应的参数
 	 * @return Page对象
 	 * @throws Exception
 	 */
@@ -330,7 +365,8 @@ public abstract class BaseDao<T, PK extends Serializable> {
 	// **************SQL***************************
 	/**
 	 * @desc 通过原生SQL进行新增，修改，删除
-	 * @param sql    sql语句
+
+	 * @param sql sql语句
 	 * @param params sql语句中占位符对应的参数
 	 * @return 执行sql语句所影响的行数
 	 * @throws Exception
@@ -346,7 +382,8 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 通过原生SQL进行查询，返回单个结果集，以Map<String, Object>形式存放
-	 * @param sql    sql语句
+
+	 * @param sql sql语句
 	 * @param params sql语句中占位符对应的参数
 	 * @return 查询出的数据
 	 * @throws Exception
@@ -364,9 +401,11 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 通过原生SQL进行查询，返回多个结果集，以List<Map<String, Object>>形式存放
-	 * @param sql    sql语句
+
+	 * @param sql sql语句
 	 * @param params sql语句中占位符对应的参数
-	 * @return
+
+	 * @return 
 	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked")
@@ -382,7 +421,8 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 分页原生SQL进行统计数量
-	 * @param sql    sql语句
+
+	 * @param sql sql语句
 	 * @param params sql语句中占位符对应的参数
 	 * @return 统计的数量
 	 * @throws Exception
@@ -398,11 +438,13 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 分页原生SQL进行查询
-	 * @param sql      sql语句
-	 * @param params   sql语句中占位符对应的参数
-	 * @param pageNum  页码
+	
+	 * @param sql sql语句
+	 * @param params sql语句中占位符对应的参数
+	 * @param pageNum 页码
 	 * @param pageSize 每页数据个数
-	 * @return
+	
+	 * @return 
 	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked")
@@ -421,16 +463,19 @@ public abstract class BaseDao<T, PK extends Serializable> {
 
 	/**
 	 * @desc 分页原生SQL进行查询
-	 * @param pageNum  页码
+
+	 * @param pageNum 页码
 	 * @param pageSize 每页数据个数
 	 * @param sqlCount 统计数据总数的sql语句
-	 * @param sqlList  查询分页数据的sql语句
+	
+	 * @param sqlList 查询分页数据的sql语句
 	 * @param params
 	 * @return
 	 * @throws Exception
 	 */
-	public Page<Map<String, Object>> findPageBySql(int pageNum, int pageSize, String sqlCount, String sqlList,
-			Object[] params) throws Exception {
+	
+	public Page<Map<String, Object>> findPageBySql(int pageNum, int pageSize, String sqlCount, String sqlList, Object[] params)
+			throws Exception {
 		long total = this.findCountBySql(sqlCount, params);
 		List<Map<String, Object>> rows = this.findBySql(sqlList, params, pageNum, pageSize);
 		return new Page<Map<String, Object>>(pageNum, pageSize, (int) total, rows);

@@ -1,5 +1,5 @@
 * {
-	margin:0px auto;
+	margin: 0px auto;
 }
 
 body {
@@ -8,17 +8,11 @@ body {
 	color: #383838;
 	background-color: #fcfcdd;
 }
-.header #nav ul {
-	display: block;
-	width: 1080px;
-	margin:0px auto;
-}
+
 .content {
-	
-	margin:10px auto 0; 
+	margin-top: 10px;
 	width: 1080px;
-	height: 1500px;
-	
+	height: 1386px;
 }
 
 .content_top {
@@ -45,7 +39,7 @@ body {
 
 .left {
 	width: 680px;
-	height: 1300px;
+	height: 1186px;
 	background-color: #fff;
 	padding: 20px;
 	margin-right: 5px;
@@ -58,11 +52,10 @@ body {
 
 .addimg {
 	width: 524px;
-	height: 150px;
+	height: 60px;
 	display: inline-block;
-	/* border: 1px dashed #999; */
+	border: 1px dashed #999;
 	margin-bottom: 15px;
-	margin-left:132px;
 }
 
 .upimg {
@@ -90,7 +83,7 @@ body {
 	font-family: "΢���ź�";
 	border: 1px solid #e5e5e5;
 	margin-bottom: 15px;
-	margin-left:150px;
+	margin-left: 59px;
 }
 
 .inputframe {
@@ -99,8 +92,7 @@ body {
 	height: 35px;
 	font-size: 16px;
 	border: 1px solid #e5e5e5;
-    padding-left:10px;
-   
+	padding-left: 10px;
 	margin-bottom: 18px;
 	color: #666;
 }
@@ -167,7 +159,7 @@ body {
 
 .right {
 	width: 310px;
-	height: 1300px;
+	height: 1186px;
 	background-color: #fff;
 	padding: 20px;
 	margin-left: 5px;

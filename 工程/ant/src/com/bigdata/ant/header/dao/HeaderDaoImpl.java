@@ -31,15 +31,21 @@ import com.bigdata.ant.utils.BaseDao;
 
 /**
  * @ClassName:HeaderDao
- * @Description:TODO（用一句话描述这个类的作用）
+ * @Description:TODO（根据关键字查找活动名称）
  * @Author 成琼
  * @Date:2018年12月5日
  *
  */
 @Repository
-
 public class HeaderDaoImpl extends BaseDao<Activity, Integer> {
-
+	/**
+	 * 
+	 * @Title: findActivitiesNames
+	 * @Description: TODO(根据关键字查找活动名称)
+	 * @param:@param keyword
+	 * @param:@return (关键字)
+	 * @return:List<Object[]>(活动名称的list集合)
+	 */
 	public List<Object[]> findActivitiesNames(String keyword) {
 		List<Object[]> activities = null;
 		String hql = "select name from Activity where name like ?0";

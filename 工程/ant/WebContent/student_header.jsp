@@ -21,11 +21,13 @@
 				</td>
 				<td class="top_1">
 					<div class="search">
-						<form>
+
+						<form action="searchByName" method="get">
 							<input type="text" placeholder="       请输入您要搜索的内容..." id="text"
-								autocomplete="off">
+								autocomplete="off" name="name">
 							<button type="submit"></button>
 						</form>
+
 						<div id="word"></div>
 					</div>
 				</td>
@@ -42,8 +44,10 @@
 
 	<div id="nav">
 		<ul>
+
 			<li><a href="student_index.jsp">首页</a></li>
 			<li><a href="beforeSearch?pageNo=1">活动</a></li>
+
 			<li><a href="personalcenter">个人中心</a></li>
 			<li><a href="personalinformation">个人信息</a></li>
 		</ul>
