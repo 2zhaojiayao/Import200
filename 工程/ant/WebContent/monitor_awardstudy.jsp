@@ -6,9 +6,35 @@
 <meta charset="utf-8">
 <link type="text/css" href="css/monitor_awardstudy.css" rel="stylesheet">
 <link type="text/css" href="css/header_footer.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
 <title>班委页面_评奖评优_导入学业成绩</title>
-</head>
+<script>
+	$(document).ready(function() {
+		$('#btn_study').click(function() {
+			$('#excel_file').click();
+		});
 
+	});
+	function changeName(e){
+		var span = document.getElementById('span');
+		span.innerHTML = e.currentTarget.files[0].name;
+	}
+	//JS校验form表单信息  
+    function checkData(){  
+       var fileDir = $("#excel_file").val();  
+       var suffix = fileDir.substr(fileDir.lastIndexOf("."));  
+       if("" == fileDir){  
+           alert("选择需要导入的Excel文件！");  
+           return false;  
+       }  
+       if(".xls" != suffix && ".xlsx" != suffix ){  
+           alert("选择Excel格式的文件导入！");  
+           return false;  
+       }  
+       return true;  
+    }   
+</script>
+</head>
 <body>
 	<%@include file="monitor_header.jsp"%>
 	<div class="content">
@@ -48,7 +74,16 @@
 			<img src="images/tips.svg"> <span>提示：在导入学业水平成绩之前，请确认核对活动参与情况</span>
 		</div>
 		<div class="button1">
-			<a href="#">导入学生学业水平成绩</a>
+			<a href="#" id="btn_study">导入学生学业水平成绩</a>
+		</div>
+		<div class="span_msg">
+			<span id="span"></span>
+		</div>
+		<div class="upload_btn">
+			<form action="addressSubmitStudy" method="post" enctype="multipart/form-data">
+				<input id="excel_file" type="file" name="upfile" accept="xlsx" size="80" onchange="changeName(event)"/> 
+				<input id="excel_button" type="submit" value="提交" onclick="return checkData()"/>
+			</form>
 		</div>
 	</div>
 	<%@include file="footer.jsp"%>
