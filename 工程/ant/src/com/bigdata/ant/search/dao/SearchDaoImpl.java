@@ -65,7 +65,6 @@ public class SearchDaoImpl extends BaseDao<Activity, Integer> {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					System.out.println(activities.get(0)[5] + "数据库时间" + date + "系统时间");
 				}
 			} else {
 				if (types[2].equals("全部")) {
