@@ -35,11 +35,11 @@ public class UpdateServiceImpl {
 	 *
 	 * @return
 	 */
-	public Map listId() {
+	public Set listId() {
 		return this.updateDaoImpl.listId();
 	}
 
-	public List listScoreById(String id) {
+	public Map listScoreById(String id) {
 		return this.updateDaoImpl.listScoreById(id);
 	}
 }

@@ -33,11 +33,11 @@ public class UpdateDaoImpl extends BaseDao<ActivityJoin, Integer> {
 	 *
 	 * @return
 	 */
-	public Map listId() {
+	public Set listId() {
 		String hql = "select a from ActivityJoin a";
 		List<ActivityJoin> l = null;
 		List<Object[]> list = null;
-		Map<String, List<Object[]>> map = new HashMap<String, List<Object[]>>();
+//		Map<String, List<Object[]>> map = new HashMap<String, List<Object[]>>();
 		try {
 			l = this.find0(hql);
 		} catch (Exception e) {
@@ -48,12 +48,14 @@ public class UpdateDaoImpl extends BaseDao<ActivityJoin, Integer> {
 		for (int i = 0; i < l.size(); i++) {
 			set.add(l.get(i).getStudent().getId());
 		}
-		Iterator<String> it = set.iterator();
-		while (it.hasNext()) {
-			list = this.listScoreById(it.next());
-			map.put(it.next(), list);
-		}
-		return map;
+//		System.out.println(set.size());
+//		Iterator<String> it = set.iterator();
+//		while (it.hasNext()) {
+//			System.out.println(it.next());
+//			list = this.listScoreById(it.next());
+//			map.put(it.next(), list);
+//		}
+		return set;
 	}
 
 	/**
@@ -67,7 +69,7 @@ public class UpdateDaoImpl extends BaseDao<ActivityJoin, Integer> {
 	 * @param id
 	 * @return
 	 */
-	public List listScoreById(String id) {
+	public Map listScoreById(String id) {
 		String hql = "from ActivityJoin a where a.student.id = ?0";
 		List<ActivityJoin> l = null;
 		try {
@@ -76,12 +78,17 @@ public class UpdateDaoImpl extends BaseDao<ActivityJoin, Integer> {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		List<Object[]> list = new ArrayList<Object[]>();
+		System.out.println(id);
+//		List<Object[]> list = new ArrayList<Object[]>();
+		Map<String, Float> map = new HashMap<String, Float>();
 		for (int i = 0; i < l.size(); i++) {
-			list.add(new Object[] { l.get(i).getActivityStage().getActivity().getName(),
-					l.get(i).getActivityStage().getScore() });
+			map.put(l.get(i).getActivityStage().getActivity().getName(), l.get(i).getActivityStage().getScore());
+//			list.add(Object[]{ l.get(i).getActivityStage().getActivity().getName(),
+//					l.get(i).getActivityStage().getScore() });
+//			System.out.println(l.get(i).getActivityStage().getActivity().getName());
+//			System.out.println(l.get(i).getActivityStage().getScore());
 		}
-		return list;
+		return map;
 	}
 
 }

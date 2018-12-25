@@ -41,16 +41,16 @@ public class UpdateController {
 	 */
 	@RequestMapping("/update")
 	public String update(HttpServletRequest request) {
-		Map map = this.updateServiceImpl.listId();
-//		List<Object[]> list = null;
-//		Iterator<String> it = set.iterator();
-//		while (it.hasNext()) {
-//			list = this.updateServiceImpl.listScoreById(it.next());
-//		
-
-//		System.out.println(map.get("2016011000").get(0).toString());
-//		System.out.println(map.get(2016011000).get(0).toString());
+		Set set = this.updateServiceImpl.listId();
+		Map map = null;
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			map = this.updateServiceImpl.listScoreById(it.next());
+		}
 		request.setAttribute("map", map);
+		System.out.println(map.keySet());
+		
+		request.setAttribute("set", set);
 		return "monitor_updateactivity";
 	}
 

@@ -40,15 +40,15 @@
 		</tfoot>
 
 		<tbody>
-			<c:forEach items="${map }" var="m">
+			<c:forEach items="${set }" var="s">
 				<tr>
-					<td>${m.key}</td>
+					<td>${s}</td>
 					<c:forEach var="i" begin="0" end="14">
-						<c:if test="${not empty m.value }">
-							<td>${m[m.key].value }</td>
+						<c:if test="${not empty map}">
+							<td>${map.key}</td>
 							<td class="grade"><input type="text" name="score"
-								value="${m[m.key].value[1] }" /></td>
-		
+								value="${map.value }" /></td>
+
 						</c:if>
 					</c:forEach>
 				</tr>
