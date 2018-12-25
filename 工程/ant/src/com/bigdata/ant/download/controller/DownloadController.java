@@ -32,20 +32,27 @@ public class DownloadController {
 
 	@RequestMapping("/download")
 	public void download(HttpServletResponse response, HttpSession session) throws IOException {
+		Student[] a = null;
 		Monitor m = (Monitor) session.getAttribute("m");
 		System.out.println(m.getEmail());
+		System.out.println(m.getClass());
+		System.out.println(m.getClassInfo());
 		Set<Student> set = m.getClassInfo().getStudents();
-		Iterator<Student> it = set.iterator();
-		while (it.hasNext()) {
-			Student str = it.next();
-			List<ActivitySum> li = str.getSumActivities();
-			for (int i = 0; i < li.size(); i++) {
-				System.out.println(li.get(i).getActivityName());
-				System.out.println(li.get(i).getScore());
-				System.out.println(li.get(i).getType());
-				System.out.println(li.get(i).getYear());
-			}
-		}
+		m.getClassInfo().getStudents().toArray(a);
+		System.out.println(a.length);
+		System.out.println(a.toString());
+//		
+//		Iterator<Student> it = set.iterator();
+//		while (it.hasNext()) {
+//			Student str = it.next();
+//			List<ActivitySum> li = str.getSumActivities();
+//			for (int i = 0; i < li.size(); i++) {
+//				System.out.println(li.get(i).getActivityName());
+//				System.out.println(li.get(i).getScore());
+//				System.out.println(li.get(i).getType());
+//				System.out.println(li.get(i).getYear());
+//			}
+//		}
 	}
 }
 //		String FILEPATH = "活动汇总表.xls";
