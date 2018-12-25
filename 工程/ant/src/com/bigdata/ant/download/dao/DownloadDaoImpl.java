@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.bigdata.ant.entity.ActivitySum;
+import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.utils.BaseDao;
 
 /**
@@ -27,7 +28,7 @@ public class DownloadDaoImpl extends BaseDao<ActivitySum, Integer> {
 	 *
 	 * @return
 	 */
-	public List<ActivitySum> listAll() {
+	public List<ActivitySum> listAll(Student s) {
 		try {
 			return this.findAll();
 		} catch (Exception e) {

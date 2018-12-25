@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bigdata.ant.download.dao.DownloadDaoImpl;
 import com.bigdata.ant.entity.ActivitySum;
+import com.bigdata.ant.entity.Student;
 
 /**
  * 
@@ -34,8 +35,8 @@ public class DownloadServiceImpl {
 	 *
 	 * @return
 	 */
-	public List<ActivitySum> listAll() {
-		return this.downloadDaoImpl.listAll();
+	public List<ActivitySum> listAll(Student s) {
+		return this.downloadDaoImpl.listAll(s);
 	}
 
 	/**
