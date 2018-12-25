@@ -38,7 +38,7 @@
 	<div id="nav">
 		<ul>
 			<li><a href="#">首页</a></li>
-			<li><a href="#">活动列表</a></li>
+			<li><a href="listByTime">活动列表</a></li>
 			<li><a href="listHotActivities">发布活动</a></li>
             <li><a href="toDisplayOrganizationMine">我的</a></li>
 		</ul>
