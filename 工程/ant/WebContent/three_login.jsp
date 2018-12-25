@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="css/three_login.css">
 </head>
 <body>
-
 	<header>
 		<nav class="b_clear">
 			<div class="nav_logo l_float">
@@ -18,8 +17,6 @@
 
 		</nav>
 	</header>
-
-
 	<!--轮播图-->
 	<div class="container">
 		<div class="login_body l_clear">

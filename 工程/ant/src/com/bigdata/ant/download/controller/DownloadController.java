@@ -5,12 +5,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bigdata.ant.download.service.DownloadServiceImpl;
 import com.bigdata.ant.entity.ActivitySum;
 import com.bigdata.ant.entity.Monitor;
 import com.bigdata.ant.entity.Student;
@@ -27,24 +29,21 @@ import com.bigdata.ant.entity.Student;
 @Controller
 public class DownloadController {
 
-//	@Resource
-//	private DownloadServiceImpl downloadServiceImpl;
+	@Resource
+	private DownloadServiceImpl downloadServiceImpl;
 
 	@RequestMapping("/download")
 	public void download(HttpServletResponse response, HttpSession session) throws IOException {
-		Student[] a = null;
 		Monitor m = (Monitor) session.getAttribute("m");
 		System.out.println(m.getEmail());
-		System.out.println(m.getClass());
-		System.out.println(m.getClassInfo());
 		Set<Student> set = m.getClassInfo().getStudents();
-		m.getClassInfo().getStudents().toArray(a);
-		System.out.println(a.length);
-		System.out.println(a.toString());
-//		
-//		Iterator<Student> it = set.iterator();
-//		while (it.hasNext()) {
-//			Student str = it.next();
+		Iterator<Student> it = set.iterator();
+		while (it.hasNext()) {
+			Student str = it.next();
+			System.out.println(str.getId());
+			List list = this.downloadServiceImpl.getIdList(str.getId());
+			System.out.println(list.size());
+			System.out.println(list.get(0).toString());
 //			List<ActivitySum> li = str.getSumActivities();
 //			for (int i = 0; i < li.size(); i++) {
 //				System.out.println(li.get(i).getActivityName());
@@ -52,7 +51,7 @@ public class DownloadController {
 //				System.out.println(li.get(i).getType());
 //				System.out.println(li.get(i).getYear());
 //			}
-//		}
+		}
 	}
 }
 //		String FILEPATH = "活动汇总表.xls";
