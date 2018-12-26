@@ -36,7 +36,7 @@
 		<div class="content_box">
 			<div class="content_left">
 				<div class="content_img">
-					<img src="images/center.jpg">
+					<img src="${activitydetail.image }">
 				</div>
 				<div class="content_text">
 					<form action="applyActivity" name="fileForm" method="post">
@@ -47,7 +47,7 @@
 							</tr>
 							<tr class="tr">
 								<td class="td1">活动简介</td>
-								<td class="td2"><div id="td2_box">${activitydetail.description }------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div></td>
+								
 							</tr>
 							<tr class="tr">
 								<td class="td1">级别</td>
@@ -137,88 +137,28 @@
 			<div class="content_right">
 				<div class="content_right_word">热门活动推荐</div>
 				<hr>
-				<div class="content_right_box">
-					<div class="content_right_box_inside1">
-						<img src="images/inside.svg" class="content_right_img">
-						<div class="content_right_text">
-							<div class="content_right_text1">活动名称</div>
-							<div class="content_right_text2">
-								这是一段很长的活动简介，很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长......</div>
-						</div>
-
+				<div class="content_right_box_inside2">
+							<div class="content_right_box1">
+								<a href="activitydetail?actid=${hotact.id}">去看看</a>
+							</div>
+							<div class="content_right_line"></div>
+							<div class="content_right_box2">
+								<a href="activitydetail?actid=${hotact.id}">去报名</a>
+							</div>
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
 							<a href="detail.jsp">去看看</a>
 						</div>
-						<div class="content_right_line"></div>
-						<div class="content_right_box2">
-							<a href="#">我要报名</a>
-						</div>
+						<div class="content_right_box_inside2">
+							<div class="content_right_box1">
+								<a href="activitydetail?actid=${hotact.id}">去看看</a>
+							</div>
+							<div class="content_right_line"></div>
+							<div class="content_right_box2">
+								<a href="activitydetail?actid=${hotact.id}">去报名</a>
+							</div>						</div>
 					</div>
-				</div>
-				<div class="content_right_box">
-					<div class="content_right_box_inside1">
-						<img src="images/inside.svg" class="content_right_img">
-						<div class="content_right_text">
-							<div class="content_right_text1">活动名称</div>
-							<div class="content_right_text2">
-								这是一段很长的活动简介，很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长......</div>
-						</div>
-
-					</div>
-					<div class="content_right_box_inside2">
-						<div class="content_right_box1">
-							<a href="detail.jsp">去看看</a>
-						</div>
-						<div class="content_right_line"></div>
-						<div class="content_right_box2">
-							<a href="#">我要报名</a>
-						</div>
-					</div>
-				</div>
-				<div class="content_right_box">
-					<div class="content_right_box_inside1">
-						<img src="images/inside.svg" class="content_right_img">
-						<div class="content_right_text">
-							<div class="content_right_text1">活动名称</div>
-							<div class="content_right_text2">
-								这是一段很长的活动简介，很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长......</div>
-						</div>
-
-					</div>
-					<div class="content_right_box_inside2">
-						<div class="content_right_box1">
-							<a href="detail.jsp">去看看</a>
-						</div>
-						<div class="content_right_line"></div>
-						<div class="content_right_box2">
-							<a href="#">我要报名</a>
-						</div>
-					</div>
-				</div>
-				<div class="content_right_box">
-					<div class="content_right_box_inside1">
-						<img src="images/inside.svg" class="content_right_img">
-						<div class="content_right_text">
-							<div class="content_right_text1">活动名称</div>
-							<div class="content_right_text2">
-								这是一段很长的活动简介，很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长......</div>
-						</div>
-
-					</div>
-					<div class="content_right_box_inside2">
-						<div class="content_right_box1">
-							<a href="detail.jsp">去看看</a>
-						</div>
-						<div class="content_right_line"></div>
-						<div class="content_right_box2">
-							<a href="#">我要报名</a>
-						</div>
-					</div>
-				</div>
-				<div class="content_submit_two">
-					<a href="#"><div class="button">其它热门活动</div></a>
 				</div>
 			</div>
 		</div>

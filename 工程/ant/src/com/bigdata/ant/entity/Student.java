@@ -39,10 +39,10 @@ public class Student {
 	private Integer status;// 状态，0-未激活；1-已激活 ;
 	private String validateCode;
 	private Date registerTime;
+	private String photo;
 	private List<Activity> scanedActivities = new ArrayList<Activity>();
 	private List<ActivityJoin> joinedActivities = new ArrayList<ActivityJoin>();
 	private List<ActivitySum> sumActivities = new ArrayList<ActivitySum>();
-
 
 	public Student() {
 	}
@@ -144,8 +144,9 @@ public class Student {
 	public void setJoinedActivities(List<ActivityJoin> joinedActivities) {
 		this.joinedActivities = joinedActivities;
 	}
-	@OneToMany(mappedBy = "student",targetEntity = ActivitySum.class, cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-//	@JoinColumn(name="id",nullable=true)	
+
+	@OneToMany(mappedBy = "student", targetEntity = ActivitySum.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//	@JoinColumn(name="id",nullable=true)
 	public List<ActivitySum> getSumActivities() {
 		return sumActivities;
 	}
@@ -153,4 +154,13 @@ public class Student {
 	public void setSumActivities(List<ActivitySum> sumActivities) {
 		this.sumActivities = sumActivities;
 	}
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+
 }

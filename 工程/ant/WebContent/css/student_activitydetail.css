@@ -23,7 +23,7 @@ body {
 
 .main {
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 10px;
 	width: 1080px;
 	height: 129px;
 	background-color: #fff;
@@ -82,8 +82,7 @@ body {
 	margin: 0px auto;
 	width: 1080px;
 	height: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .content_box {
@@ -172,7 +171,7 @@ body {
 	margin-left: 20px;
 	padding: 40px 0px;
 	width: 424px;
-	height: auto;
+	height:990px;
 	background-color: #fff;
 	float: left;
 	margin-left: 20px;
@@ -251,7 +250,7 @@ hr {
 .content_right_text2 {
 	clear: both;
 	width: 210px;
-	height: 65px;
+	height: 45px;
 	margin-top: 10px;
 	font-size: 14px;
 	overflow: hidden;
@@ -260,8 +259,12 @@ hr {
 	float: left;
 	text-align: left;
 }
-
-.content_right_box1 {
+.content_right_text3{
+	height: 20px;
+	font-size: 14px;
+	color:#a6a6a6;
+	float: left;
+}.content_right_box1 {
 	width: 169px;
 	font-size: 16px;
 	color: #383838;
