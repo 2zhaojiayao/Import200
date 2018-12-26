@@ -47,8 +47,8 @@ public class PublishServiceImpl {
 	* @param:@return (参数)
 	* @return:Boolean(返回类型)
 	 */
-	public Boolean saveActivity(Activity activity,String stage,String score) {
-		if(publishDaoImpl.saveActivity(activity,stage,Float.parseFloat(score))) {
+	public Boolean saveActivity(Activity activity,String stage,String score,int organizationId) {
+		if(publishDaoImpl.saveActivity(activity,stage,Float.parseFloat(score),organizationId)) {
 			return true;
 		}else {
 			return false;
