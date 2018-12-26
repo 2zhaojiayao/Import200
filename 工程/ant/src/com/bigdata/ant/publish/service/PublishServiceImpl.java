@@ -15,7 +15,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bigdata.ant.entity.Activity;
+import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.publish.dao.PublishDaoImpl;
+import com.bigdata.ant.publish.dao.StudentPhotoDaoImpl;
 
 /**
  * @ClassName:PublishServiceImpl
@@ -30,6 +32,8 @@ import com.bigdata.ant.publish.dao.PublishDaoImpl;
 public class PublishServiceImpl {
 	@Resource
 	public PublishDaoImpl publishDaoImpl;
+	@Resource
+	public StudentPhotoDaoImpl studentPhotoDaoImpl;
 	/*public PublishServiceImpl() {
 		// TODO Auto-generated constructor stub
 	}
@@ -65,5 +69,14 @@ public class PublishServiceImpl {
    public List<Object[]> listHotActivities(){
 	   return publishDaoImpl.listHotActivities();
    }
-
+   /**
+    * 
+   * @Title: updateStudent  
+   * @Description: TODO(更改学生头像) 
+   * @param:@param s (参数)
+   * @return:void(返回类型)
+    */
+public void updateStudent(Student s) {
+	studentPhotoDaoImpl.updateStudent(s);
+}
 }

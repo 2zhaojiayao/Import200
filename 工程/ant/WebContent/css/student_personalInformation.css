@@ -59,8 +59,13 @@ html, body {
 	width: 180px;
 	height: 180px;
 	border-radius: 3px;
-	background-image: url(../images/photo.jpg);
+	/* background-image: url(../images/photo.jpg); */
 	background-size: 180px 180px;
+}
+
+#image {
+	width: 180px;
+	height: 180px;
 }
 
 .bottom_left .blanket {
@@ -128,6 +133,8 @@ html, body {
 /*按钮*/
 .sumbtn {
 	margin-top: 40px;
+	/* marign-left:100px;  */
+	padding-left: 30px;
 }
 
 .sumbtn .btn {
@@ -139,6 +146,7 @@ html, body {
 	background-color: #fff;
 	margin-top: 10px;
 	border: 1px solid #fc9700;
+	marign-left: 50px;
 }
 
 .sumbtn .btn a {
@@ -186,6 +194,10 @@ html, body {
 	font-size: 15px;
 }
 /*表格*/
+table {
+	margin: 0 auto;
+}
+
 input::-webkit-input-placeholder {
 	font-size: 14px;
 	color: #383838;
@@ -195,6 +207,7 @@ input::-webkit-input-placeholder {
 	padding-left: 40px;
 	padding-top: 0px;
 	margin-top: 40px;
+	text-align: center;
 }
 
 .bottom_right .tr {

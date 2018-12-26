@@ -72,12 +72,12 @@ public class PublishDaoImpl extends BaseDao<Activity, Integer> {
 		int count1 = 0;
 		// 因为date的问题，无法插入整个对象
 		// 先向activity_information中插入信息
-		String sql = "insert into activity_information(name,description,organization_id,level,apply_begin,apply_end,hold_begin,hold_end,hold_place,style,participant,search_type,comprehensive_type,is_interview,image) values(?0,?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14)";
+		String sql = "insert into activity_information(name,description,organization_id,level,apply_begin,apply_end,hold_begin,hold_end,hold_place,style,participant,search_type,comprehensive_type,is_interview,image,student_number) values(?0,?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15)";
 		Object[] params = { activity.getName(), activity.getDescription(),organizationId, activity.getLevel(),
 				new Timestamp(activity.getApplyBegin().getTime()), new Timestamp(activity.getApplyEnd().getTime()),
 				new Timestamp(activity.getHoldBegin().getTime()), new Timestamp(activity.getHoldEnd().getTime()),
 				activity.getHoldPlace(), activity.getStyle(), activity.getParticipant(), activity.getSearchType(),
-				activity.getComprehensiveType(), activity.getIsInterview(), activity.getImage() };
+				activity.getComprehensiveType(), activity.getIsInterview(), activity.getImage(),0 };
 		try {
 			count = excuteBySql(sql, params);
 		} catch (Exception e) {
@@ -112,4 +112,4 @@ public class PublishDaoImpl extends BaseDao<Activity, Integer> {
 			return false;
 		}
 	}
-}
+	}
