@@ -190,7 +190,6 @@
 					// 裁剪完成的回调函数。this指向图片对象，会将裁剪出的图像数据DataURL作为参数传入
 					console.log(dataURL);
 					file1 = dataURL;
-					alert(file1);
 				}
 			});
 
