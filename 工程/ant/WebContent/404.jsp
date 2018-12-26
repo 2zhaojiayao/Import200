@@ -8,7 +8,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script language="javascript" type="text/javascript">
 	setTimeout(function() {
-		this.location.href = "index.jsp"
+		this.location.href = "three_login.jsp"
 	}, 5000);
 </script>
 <link rel="stylesheet" type="text/css" href="css/404.css">
@@ -23,7 +23,7 @@
 			<p class="center_p">呀！出错了！</p>
 			<p class="center_p1">亲爱的用户，您访问的页面不存在...</p>
 			<p class="center_p2">
-				<span class="time"></span>秒后将跳回首页
+				<span class="time"></span>秒后将跳回登录页面
 			</p>
 		</div>
 	</div>

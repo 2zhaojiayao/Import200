@@ -1,15 +1,15 @@
 package com.bigdata.ant.update.controller;
 
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
+import java.io.File;
+import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.swing.JFileChooser;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bigdata.ant.entity.ActivitySum;
 import com.bigdata.ant.update.service.UpdateServiceImpl;
 
 /**
@@ -38,18 +38,31 @@ public class UpdateController {
 	 * @return
 	 */
 	@RequestMapping("/update")
-	public String update(HttpServletRequest request) {
-		Set set = this.updateServiceImpl.listId();
-		Map map = null;
-		Iterator<String> it = set.iterator();
-		while (it.hasNext()) {
-			map = this.updateServiceImpl.listScoreById(it.next());
+	public void update(HttpServletRequest request) { // 得到表格中所有的数据
+//		String filePath = null;
+//		JFileChooser fileChooser = new JFileChooser("C:\\");
+//		fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+//		int returnVal = fileChooser.showOpenDialog(fileChooser);
+//		if (returnVal == JFileChooser.APPROVE_OPTION) {
+//			filePath = fileChooser.getSelectedFile().getAbsolutePath();
+//		}
+		List<ActivitySum> listExcel = this.updateServiceImpl.getAllByExcel();
+		for (ActivitySum a : listExcel) {
+			this.updateServiceImpl.setAS(a.getStudent(), a.getActivityName(), a.getScore());
 		}
-		request.setAttribute("map", map);
-		System.out.println(map.keySet());
-		
-		request.setAttribute("set", set);
-		return "monitor_updateactivity";
 	}
 
 }
+
+//			if (!StuService.isExist(id)) {
+// 不存在就添加
+//			String sql = "insert into stu (name,sex,num) values(?,?,?)";
+//			String[] str = new String[] { a.getName(), a.getSex(), a.getNum() + "" };
+//			db.AddU(sql, str);
+//			} else {
+// 存在就更新
+//				String sql = "update stu set name=?,sex=?,num=? where id=?";
+//				String[] str = new String[] { stuEntity.getName(), stuEntity.getSex(), stuEntity.getNum() + "",
+//						id + "" };
+//				db.AddU(sql, str);
+//			}
