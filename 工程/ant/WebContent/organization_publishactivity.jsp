@@ -31,7 +31,7 @@
 				<form class="alignform" action="saveActivity" method="post"
 					enctype="multipart/form-data">
 					<lable class="sign">*</lable>
-					<label class="prompt">添加活动海报：</label><br />
+					<label class="prompt">添加活动海报：</label>
 					<lable class="addimg"> <%@include file="image_upload.jsp"%>
 					</lable>
 					<!-- <lable class="sign">*</lable>
@@ -39,7 +39,7 @@
 				    <lable class="addimg">  <input type="file" name="img"
 						class="upimg" /></lable> 
 						 -->
-					<br />
+					<br/>
 					<lable class="sign">*</lable>
 					<label class="prompt">活动名称：</label> <input class="inputframe"
 						type="text" name="name" placeholder="请输入活动名称" /><br> <label

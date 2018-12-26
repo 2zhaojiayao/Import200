@@ -177,7 +177,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="#">编辑活动</a> <a href="#">参与详情</a> <a href="#">删除活动</a>
+											<a href="#">编辑活动</a> <a href="toparticipationall?name=${all[0] }">参与详情</a> <a href="#">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -213,7 +213,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="#">编辑活动</a> <a href="#">参与详情</a> <a href="#">删除活动</a>
+											<a href="#">编辑活动</a> <a href="toparticipationba?name=${ba[0] }">参与详情</a> <a href="#">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -251,7 +251,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="#">编辑活动</a> <a href="#">参与详情</a> <a href="#">删除活动</a>
+											<a href="#">编辑活动</a> <a href="toparticipationia?name=${ia[0] }">参与详情</a> <a href="#">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -287,7 +287,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="#">编辑活动</a> <a href="#">参与详情</a> <a href="#">删除活动</a>
+											<a href="#">编辑活动</a> <a href="toparticipationaa?name=${aa[0] }">参与详情</a> <a href="#">删除活动</a>
 										</div>
 									</div>
 								</div>

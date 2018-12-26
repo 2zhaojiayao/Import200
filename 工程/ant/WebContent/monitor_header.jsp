@@ -38,8 +38,7 @@
 	<div id="nav">
 		<ul>
 			<li><a href="#">首页</a></li>
-			<li><a href="addressComprehensive">评奖评优</a></li>
-		</ul>
+			<li><a href="monitor_participationsituation.jsp">评奖评优</a></li>		</ul>
 	</div>
 </div>
 </html>

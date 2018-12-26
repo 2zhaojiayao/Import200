@@ -5,6 +5,14 @@ import org.springframework.stereotype.Repository;
 import com.bigdata.ant.entity.MoralScore;
 import com.bigdata.ant.utils.BaseDao;
 
+/**
+ * 
+ * @ClassName:ComprehensiveMoralDaoImpl
+ * @Description:TODO（用一句话描述这个类的作用）获得和品德成绩相关数据库内容
+ * @Author wangmengzhen
+ * @Date:2018年12月26日
+ *
+ */
 @Repository
 public class ComprehensiveMoralDaoImpl extends BaseDao<MoralScore, String>{
 	

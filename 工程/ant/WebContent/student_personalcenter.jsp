@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css"
 	href="css/student_personalcenter.css" />
 <link rel="stylesheet" type="text/css" href="css/header_footer.css" />
+<script type="text/javascript" src="js/student_personalcenter2.js"></script>
 </head>
 <body>
 	<%@include file="student_header.jsp"%>
@@ -19,31 +20,30 @@
 			<td>
 				<table class="table1">
 					<tr>
-						<td class="tr0td0"><a href="#">首页</a> / <a href="#">个人中心</a>
-						</td>
+						<td class="tr0td0"><a href="student_index.jsp">首页</a> / <a
+							href="personalcenter">个人中心</a></td>
 					</tr>
 					<tr>
 						<td><img src="images/01.png" class="img1"></td>
 						<td>
-							<p class="table1-ninhao">您好，${s.name }！</p>
-							<br>
-							<p class="table1-little">LittleAnt| 最权威的活动展示和统计平台</p>
+							<p class="table1-welcome">您好，${s.name }！</p> <br>
+							<p class="table1-little">LittleAnt | 最权威的活动展示和统计平台</p>
 						</td>
 						<td>
 							<p class="table1-youshang">
-								当前活动数<br>
+								参加活动数<br>
 							</p>
 							<p class="table1-youxia">${activityNum}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">
-								当前已加分数<br>
+								参加活动得分<br>
 							</p>
 							<p class="table1-youxia">${nowScore}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">
-								已参加活动数<br>
+								可报名活动数<br>
 							</p>
 							<p class="table1-youxia">${studentActivityNum}</p>
 						</td>
@@ -53,7 +53,7 @@
 		</tr>
 		<tr>
 
-			<table class="table2" cellpadding="0px" cellspacing="0px">
+			<table class="table2">
 				<tr>
 					<td class="table2-tr0td0">
 						<!--我报名过的活动-->
@@ -61,251 +61,141 @@
 							<tr>
 								<td colspan="3" class="table5-tr0">我报名过的活动</td>
 							</tr>
-							<!--已报名-->
+							<!--未开始-->
 							<tr class="table5-tr1">
-								<td colspan="3" class="table5-tr1td0"><a href="#"><img
-										src="images/03.png" width="14" height="14"></a>已报名</td>
-							</tr>
-							<tr class="table5-tr2">
-								<td class="table5-tr2td0">
-									<div class="table5-tr2td0-div">
-										<table class="table6" cellspacing="0" cellpadding="0">
-											<tr>
-												<td class="table6-tr0td0"><img src="images/04.png"
-													class="table6-tr0td0-img"></td>
-												<td class="table6-tr0td1"><a href="#"
-													name="table6-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-											</tr>
-											<tr>
-												<td colspan="2" class="table6-tr1"></td>
-											</tr>
-											<tr>
-												<td colspan="2" class="table6-tr2">
-													&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-											</tr>
-											<tr>
-												<td colspan="2" class="table6-tr3"></td>
-											</tr>
-											<tr>
-												<td class="table6-tr4td0">数学与信息技术学院</td>
-												<td class="table6-tr4td1">2017-03-25</td>
-											</tr>
-										</table>
+								<td colspan="3" class="table5-tr1td0">
+									<div class="module" onclick="changestatus1()">
+										<img src="images/03.png" class="status1" id="status1">
+										<lable class="prompt">未开始</lable>
 									</div>
 								</td>
-								<td class="table5-tr2td1">
-									<table class="table7" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table7-tr0td0"><img src="images/04.png"
-												class="table7-tr0td0-img"></td>
-											<td class="table7-tr0td1"><a href="#"
-												name="table7-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table7-tr1"></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table7-tr2">
-												&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table7-tr3"></td>
-										</tr>
-										<tr>
-											<td class="table7-tr4td0">数学与信息技术学院</td>
-											<td class="table7-tr4td1">2017-03-25</td>
-										</tr>
-									</table>
-								</td>
-								<td class="table5-tr2td2">
-									<table class="table8" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table8-tr0td0"><img src="images/04.png"
-												class="table8-tr0td0-img"></td>
-											<td class="table8-tr0td1"><a href="#"
-												name="table8-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table8-tr1"></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table8-tr2">
-												&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table8-tr3"></td>
-										</tr>
-										<tr>
-											<td class="table8-tr4td0">数学与信息技术学院</td>
-											<td class="table8-tr4td1">2017-03-25</td>
-										</tr>
-									</table>
-								</td>
+							</tr>
+							<tr class="table5-tr2" name="hidde1">
+								<c:forEach items="${appliedActsWithNotBegin }" var="notBeginAct"
+									varStatus="abc">
+									<td class="table5-tr2td0">
+										<div class="table5-tr2td0-div">
+											<table class="table6" cellspacing="0" cellpadding="5">
+												<tr>
+													<td class="table6-tr0td0"><img src="images/tag.png"
+														class="table6-tr0td0-img"></td>
+													<td class="table6-tr0td1"><a class="table6-tr0td1-a"
+														href="activitydetail?actid=${notBeginAct.id }"
+														name="table6-tr0td1-a">${notBeginAct.name }</a></td>
+												</tr>
+												<tr>
+													<td colspan="2" class="table6-tr2"><div class="des">
+														${notBeginAct.description }</div></td>
+												</tr>
+												<tr>
+													<td class="table6-tr4td0">${notBeginAct.organization.name }</td>
+													<td class="table6-tr4td1">Begin:${notBeginAct.holdBegin }</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+									<c:if test="${abc.count%3==0 }">
+							</tr>
+							<tr class="table5-tr2" name="hidde1">
+								</c:if>
+								</c:forEach>
 							</tr>
 							<!--进行中-->
 							<tr class="table5-tr3">
-								<td colspan="3" class="table5-tr3td0"><a href="#"><img
-										src="images/03.png" width="14" height="14"></a>进行中</td>
-							</tr>
-							<tr class="table5-tr4">
-								<td class="table5-tr4td0">
-									<table class="table9" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table9-tr0td0"><img src="images/04.png"
-												class="table9-tr0td0-img"></td>
-											<td class="table9-tr0td1"><a href="#"
-												name="table9-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table9-tr1"></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table9-tr2">
-												&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table9-tr3"></td>
-										</tr>
-										<tr>
-											<td class="table9-tr4td0">数学与信息技术学院</td>
-											<td class="table9-tr4td1">2017-03-25</td>
-										</tr>
-									</table>
-								</td>
-								<td class="table5-tr4td1">
-									<table class="table10" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table10-tr0td0"><img src="images/04.png"
-												class="table10-tr0td0-img"></td>
-											<td class="table10-tr0td1"><a href="#"
-												name="table10-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table10-tr1"></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table10-tr2">
-												&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table10-tr3"></td>
-										</tr>
-										<tr>
-											<td class="table10-tr4td0">数学与信息技术学院</td>
-											<td class="table10-tr4td1">2017-03-25</td>
-										</tr>
-									</table>
-								</td>
-								<td class="table5-tr4td2">
-									<table class="table11" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table11-tr0td0"><img src="images/04.png"
-												class="table11-tr0td0-img"></td>
-											<td class="table11-tr0td1"><a href="#"
-												name="table11-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table11-tr1"></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table11-tr2">
-												&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table11-tr3"></td>
-										</tr>
-										<tr>
-											<td class="table11-tr4td0">数学与信息技术学院</td>
-											<td class="table11-tr4td1">2017-03-25</td>
-										</tr>
-									</table>
+								<td colspan="3" class="table5-tr3td0">
+									<div class="module" onclick="changestatus2()">
+										<img src="images/03.png" class="status2" id="status2">
+										<lable class="prompt">进行中</lable>
+									</div>
 								</td>
 							</tr>
-							<!--已完成-->
+							<tr class="table5-tr4" name="hidde2">
+								<c:forEach items="${appliedActsOnHolding }" var="onHoldingAct"
+									varStatus="abc">
+									<td class="table5-tr2td0">
+										<div class="table5-tr2td0-div">
+											<table class="table6" cellspacing="0" cellpadding="5">
+												<tr>
+													<td class="table6-tr0td0"><img src="images/tag.png"
+														class="table6-tr0td0-img"></td>
+													<td class="table6-tr0td1"><a class="table6-tr0td1-a"
+														href="activitydetail?actid=${onHoldingAct.id }"
+														name="table6-tr0td1-a">${onHoldingAct.name }</a></td>
+												</tr>
+												<tr>
+													<td colspan="2" class="table6-tr1"></td>
+												</tr>
+												<tr>
+													<td colspan="2" class="table6-tr2">
+														${onHoldingAct.description }</td>
+												</tr>
+												<tr>
+													<td colspan="2" class="table6-tr3"></td>
+												</tr>
+												<tr>
+													<td class="table6-tr4td0">${onHoldingAct.organization.name }</td>
+													<td class="table6-tr4td1">Begin:${onHoldingAct.holdBegin }</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+									<c:if test="${abc.count%3==0 }">
+							</tr>
+							<tr class="table5-tr4" name="hidde2">
+								</c:if>
+								</c:forEach>
+							</tr>
+							<!--已结束-->
 							<tr class="table5-tr5">
-								<td colspan="3" class="table5-tr5td0"><a href="#"><img
-										src="images/03.png" width="14" height="14"></a>已完成</td>
+								<td colspan="3" class="table5-tr5td0">
+									<div class="module" onclick="changestatus3()">
+										<img src="images/03.png" class="status3" id="status3">
+										<lable class="prompt">已结束</lable>
+									</div>
+								</td>
 							</tr>
-							<tr class="table5-tr6">
-								<td class="table5-tr6td0">
-									<table class="table12" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table12-tr0td0"><img src="images/04.png"
-												class="table12-tr0td0-img"></td>
-											<td class="table12-tr0td1"><a href="#"
-												name="table12-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table12-tr1"></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table12-tr2">
-												&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table12-tr3"></td>
-										</tr>
-										<tr>
-											<td class="table12-tr4td0">数学与信息技术学院</td>
-											<td class="table12-tr4td1">2017-03-25</td>
-										</tr>
-									</table>
-								</td>
-								<td class="table5-tr6td1">
-									<table class="table13" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table13-tr0td0"><img src="images/04.png"
-												class="table13-tr0td0-img"></td>
-											<td class="table13-tr0td1"><a href="#"
-												name="table13-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table13-tr1"></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table13-tr2">
-												&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table13-tr3"></td>
-										</tr>
-										<tr>
-											<td class="table13-tr4td0">数学与信息技术学院</td>
-											<td class="table13-tr4td1">2017-03-25</td>
-										</tr>
-									</table>
-								</td>
-								<td class="table5-tr6td2">
-									<table class="table14" cellspacing="0" cellpadding="0">
-										<tr>
-											<td class="table14-tr0td0"><img src="images/04.png"
-												class="table14-tr0td0-img"></td>
-											<td class="table14-tr0td1"><a href="#"
-												name="table14-tr0td1-a">麦"dream"主持人风采大赛</a></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table14-tr1"></td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table14-tr2">
-												&nbsp&nbsp&nbsp大赛是面向软件学院全体学生，为提升学生的临场应变能力和语言表...</td>
-										</tr>
-										<tr>
-											<td colspan="2" class="table14-tr3"></td>
-										</tr>
-										<tr>
-											<td class="table14-tr4td0">数学与信息技术学院</td>
-											<td class="table14-tr4td1">2017-03-25</td>
-										</tr>
-									</table>
-								</td>
+							<tr class="table5-tr6" name="hidde3">
+								<c:forEach items="${appliedActsWithAlreadyEnd }" var="endActs"
+									varStatus="abc">
+									<td class="table5-tr2td0">
+										<div class="table5-tr2td0-div">
+											<table class="table6" cellspacing="0" cellpadding="5">
+												<tr>
+													<td class="table6-tr0td0"><img src="images/tag.png"
+														class="table6-tr0td0-img"></td>
+													<td class="table6-tr0td1"><a class="table6-tr0td1-a"
+														href="activitydetail?actid=${endActs.id }"
+														name="table6-tr0td1-a">${endActs.name }</a></td>
+												</tr>
+												<tr>
+													<td colspan="2" class="table6-tr1"></td>
+												</tr>
+												<tr>
+													<td colspan="2" class="table6-tr2">
+														${endActs.description }</td>
+												</tr>
+												<tr>
+													<td colspan="2" class="table6-tr3"></td>
+												</tr>
+												<tr>
+													<td class="table6-tr4td0">${endActs.organization.name }</td>
+													<td class="table6-tr4td1">End:${endActs.holdEnd }</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+									<c:if test="${abc.count%3==0 }">
+							</tr>
+							<tr class="table5-tr6" name="hidde3">
+								</c:if>
+								</c:forEach>
 							</tr>
 						</table>
 					</td>
 					<!--留白宽20px-->
 					<td class="table2-tr0td1"></td>
 					<!--日历+浏览历史-->
-					<td>
+					<td class="add">
 						<table class="table3" cellpadding="0px" cellspacing="0px">
 							<tr>
 								<td class="table3-tr0td0">
@@ -329,12 +219,12 @@
 										<div class="table4-div">
 											<ul class="table4-divul1">
 												<c:forEach items="${scannedActList }" var="scannedAct">
-													<li><a href="#">${scannedAct.name }</a></li>
+													<li><a onclick="getactid()"
+														href="activitydetail?actid=${scannedAct.id }">${scannedAct.name }</a>
+														<lable class="scannedhidid" id="idvalue">${scannedAct.id }</lable></li>
 												</c:forEach>
 											</ul>
 										</div>
-										<a href="#" class="table4-a"><img src="images/02.png"
-											width="40px" height="40px"></a>
 									</div>
 								</td>
 							</tr>

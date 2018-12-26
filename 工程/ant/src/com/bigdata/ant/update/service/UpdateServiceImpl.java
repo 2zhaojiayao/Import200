@@ -1,6 +1,8 @@
 package com.bigdata.ant.update.service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import javax.annotation.Resource;
 
@@ -27,13 +29,17 @@ public class UpdateServiceImpl {
 	/**
 	 * 
 	 * @Title: listId
-	 * @Description:查出所有学号
+	 * @Description: 查出所有的学号
 	 * @param:@return (参数)
-	 * @return:List(返回类型)
+	 * @return:Set(返回类型)
 	 *
 	 * @return
 	 */
-	public List listId() {
+	public Set listId() {
 		return this.updateDaoImpl.listId();
+	}
+
+	public Map listScoreById(String id) {
+		return this.updateDaoImpl.listScoreById(id);
 	}
 }

@@ -5,6 +5,14 @@ import org.springframework.stereotype.Repository;
 import com.bigdata.ant.entity.Comprehensive;
 import com.bigdata.ant.utils.BaseDao;
 
+/**
+ * 
+ * @ClassName:ComprehensiveDaoImpl
+ * @Description:TODO（用一句话描述这个类的作用）获得和综测成绩相关数据库内容
+ * @Author wangmengzhen
+ * @Date:2018年12月26日
+ *
+ */
 @Repository
 public class ComprehensiveDaoImpl extends BaseDao<Comprehensive, String>{
 	public Comprehensive getComprehensive(String id) {

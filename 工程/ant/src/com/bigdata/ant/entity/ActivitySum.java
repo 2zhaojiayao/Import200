@@ -1,10 +1,3 @@
-/**
- * @Title:ActivitySum.java
- * @Package:com.bigdata.ant.entity
- * @Description:TODO(用一句话描述该文件做什么)
- * @Author:Admin
- * @Date:2018年12月18日
- */
 package com.bigdata.ant.entity;
 
 import javax.persistence.Column;

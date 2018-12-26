@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +20,8 @@
 	<!--main-->
 	<div class="main">
 		<div class="main_top">
-			<span class="main_top_left1"><a href="index.jsp">首页</a></span>
-			&nbsp;/&nbsp; <span class="main_top_left1"><a href="#">活动</a></span>
+			<span class="main_top_left1"><a href="student_index.jsp">首页</a></span>
+			&nbsp;/&nbsp; <span class="main_top_left1"><a href="beforeSearch?pageNo=1">活动</a></span>
 			&nbsp;/&nbsp; <span class="main_top_left2">活动详情</span>
 		</div>
 		<div class="main_center">
@@ -35,10 +36,10 @@
 		<div class="content_box">
 			<div class="content_left">
 				<div class="content_img">
-					<img src="${activitydetail.image }">
+					<img src="images/center.jpg">
 				</div>
 				<div class="content_text">
-					<form action="#" name="fileForm">
+					<form action="applyActivity" name="fileForm" method="post">
 						<table>
 							<tr class="tr">
 								<td class="td1">活动名称</td>
@@ -84,29 +85,42 @@
 								<td class="td1">综测加分</td>
 								<td class="td2">${activitystage.score }</td>
 							</tr>
+							<%-- ${activitydetail.style} --%>
 						</table>
-						<div class="content_submit">
-							<input type='button' id="text1" class="button" value="我要报名">
-						</div>
-
+						<input type="text" name="stage" value="${activitystage.id}"
+							style="display: none">
+							<input type="text" name="activityId" value="${activitydetail.id}"
+							style="display: none">
+						<c:if test="${activitydetail.style=='团体'}">
+							<div class="content_submit">
+								<input type='button' id="text1" class="button" value="我要报名">
+							</div>
+						</c:if>
+						<c:if test="${activitydetail.style=='个人'}">
+							<div class="content_submit">
+								<input type='submit' class="button" value="我要报名">
+							</div>
+						</c:if>
 						<div id="light" class="main-fixed-comp popup-mask">
 							<div class="popup no-bottom boxtop">
 								<div class="popup-title">项目协作成员</div>
 								<div class="popup-content invite-popup">
-									<input class="popup-input search-input" placeholder="请输入团队名称"><br>
+									<input class="popup-input search-input" placeholder="请输入团队名称"
+										name="teamName"><br>
 									<div id="InputsWrapper">
 										<div class="extend">
-											<input type="text" name="mytext[]" id="field_1"
+											<input type="text" name="mytext[]" id="last"
 												class="popup-input search-input" placeholder="请输入队员 1 的学号" />
 											<input type='button' rel="external nofollow"
 												class="removeclass" value='删除'>
 										</div>
 									</div>
+									<div id="msg"></div>
 									<div class="popup-content cooperator-popup">
 										<input type='button' rel="external nofollow"
 											id="AddMoreFileBox" class="base-btn invite-btn" value="添加成员">
 										<div class="btn2">
-											<input type='button' id="text" class="base-btn invite-btn"
+											<input type='submit' id="text" class="base-btn invite-btn"
 												value="确定"> <input type='button' id="text2"
 												class="base-btn invite-btn" value="取消">
 										</div>
@@ -135,11 +149,11 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="404.jsp">去看看</a>
+							<a href="detail.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="403.jsp">我要报名</a>
+							<a href="#">我要报名</a>
 						</div>
 					</div>
 				</div>
@@ -155,11 +169,11 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="404.jsp">去看看</a>
+							<a href="detail.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="403.jsp">我要报名</a>
+							<a href="#">我要报名</a>
 						</div>
 					</div>
 				</div>
@@ -175,11 +189,11 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="404.jsp">去看看</a>
+							<a href="detail.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="403.jsp">我要报名</a>
+							<a href="#">我要报名</a>
 						</div>
 					</div>
 				</div>
@@ -195,11 +209,11 @@
 					</div>
 					<div class="content_right_box_inside2">
 						<div class="content_right_box1">
-							<a href="404.jsp">去看看</a>
+							<a href="detail.jsp">去看看</a>
 						</div>
 						<div class="content_right_line"></div>
 						<div class="content_right_box2">
-							<a href="403.jsp">我要报名</a>
+							<a href="#">我要报名</a>
 						</div>
 					</div>
 				</div>
