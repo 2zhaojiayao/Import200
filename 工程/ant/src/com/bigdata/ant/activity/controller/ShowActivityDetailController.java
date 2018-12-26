@@ -1,5 +1,7 @@
 package com.bigdata.ant.activity.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bigdata.ant.activity.service.ShowActivityDetailServiceImpl;
+import com.bigdata.ant.activity.service.ShowHotActivitiesServiceImpl;
 import com.bigdata.ant.entity.Activity;
 import com.bigdata.ant.entity.ActivityStage;
 
@@ -23,7 +26,8 @@ import com.bigdata.ant.entity.ActivityStage;
 public class ShowActivityDetailController {
 	@Resource
 	private ShowActivityDetailServiceImpl showActivityDetailServiceImpl;
-
+	@Resource
+	private ShowHotActivitiesServiceImpl showHotActivitiesServiceImpl;
 	@RequestMapping(value = "/activitydetail", method = RequestMethod.GET)
 	public String getActivityDetail(HttpServletRequest request) {
 		String id = request.getParameter("actid");
@@ -42,6 +46,8 @@ public class ShowActivityDetailController {
 				request.setAttribute("activitydetailmsg", "该活动已不存在！");
 			}
 		}
+		List<Activity> hotActList = this.showHotActivitiesServiceImpl.ListHotActivities();
+		request.setAttribute("hotActList", hotActList);
 		return "student_activitydetail";
 	}
 }
