@@ -61,6 +61,7 @@ public class StudentController {
 				request.setAttribute("message1", "该用户未被激活！");
 				return "three_login";
 			} else {
+				s.setPhoto("images/photo.jpg");
 				session.setAttribute("s", s);
 				return "student_index";
 			}
