@@ -58,6 +58,7 @@ public class ActivitySum {
 //	public void setStudentId(String studentId) {
 //		this.studentId = studentId;
 //	}
+	
 
 	@Column(name = "activity_name")
 	public String getActivityName() {

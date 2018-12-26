@@ -43,6 +43,7 @@ public class Student {
 	private List<ActivityJoin> joinedActivities = new ArrayList<ActivityJoin>();
 	private List<ActivitySum> sumActivities = new ArrayList<ActivitySum>();
 
+
 	public Student() {
 	}
 
@@ -143,9 +144,8 @@ public class Student {
 	public void setJoinedActivities(List<ActivityJoin> joinedActivities) {
 		this.joinedActivities = joinedActivities;
 	}
-
-	@OneToMany(mappedBy = "student", targetEntity = ActivitySum.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//	@JoinColumn(name="id",nullable=true)
+	@OneToMany(mappedBy = "student",targetEntity = ActivitySum.class, cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+//	@JoinColumn(name="id",nullable=true)	
 	public List<ActivitySum> getSumActivities() {
 		return sumActivities;
 	}
@@ -153,5 +153,4 @@ public class Student {
 	public void setSumActivities(List<ActivitySum> sumActivities) {
 		this.sumActivities = sumActivities;
 	}
-
 }
