@@ -26,6 +26,7 @@ li {
 	width: 1080px;
 	background-color: #fff;
 	height: 150px;
+	border:1px solid #ffe3c0;
 }
 
 .activity_type li {

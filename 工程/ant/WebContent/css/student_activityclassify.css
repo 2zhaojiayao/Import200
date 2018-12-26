@@ -33,7 +33,7 @@ li {
 
 .assembly {
 	width: 1080px;
-	height: 150px;
+	height: 140px;
 	margin-top: 10px;
 }
 
@@ -87,10 +87,10 @@ li {
 	width: 80px;
 	height: 40px;
 	font-size: 18px;
-	color: #fff;
+	color: #333;
 	text-shadow: 1px 0px 1px #333;
 	text-align: center;
-	background-color: #fc7a00;
+	background-color: #ffae48;
 	margin-left: 0px;
 	padding-top: 8px;
 	text-align: center;

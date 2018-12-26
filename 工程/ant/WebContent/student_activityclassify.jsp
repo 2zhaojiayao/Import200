@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>个人页面_活动分类</title>
+<title>活动分类</title>
 <link rel="stylesheet" type="text/css"
 	href="css/student_activityclassify.css">
 
@@ -33,7 +33,7 @@
 	<%@include file="student_activityclassify_ul.jsp"%>
 	<script type="text/javascript" src="js/student_activityclassify_ul.js"></script>
 
-	<!--conter-->
+	<!--center-->
 	<div class="activities_conter">
 		<div class="activities">
 			<c:forEach var="activity" items="${activities}">
