@@ -21,8 +21,8 @@
 	<div class="main">
 		<div class="main_top">
 			<span class="main_top_left1"><a href="student_index.jsp">首页</a></span>
-			&nbsp;/&nbsp; <span class="main_top_left1"><a href="beforeSearch?pageNo=1">活动</a></span>
-			&nbsp;/&nbsp; <span class="main_top_left2">活动详情</span>
+			&nbsp;&nbsp;/&nbsp;&nbsp; <span class="main_top_left1"><a href="beforeSearch?pageNo=1">活动</a></span>
+			&nbsp;&nbsp;/&nbsp;&nbsp; <span class="main_top_left2">活动详情</span>
 		</div>
 		<div class="main_center">
 			<span class="main_center_left">${activitydetail.name }</span>

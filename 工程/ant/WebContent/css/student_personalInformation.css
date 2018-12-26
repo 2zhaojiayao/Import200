@@ -14,31 +14,34 @@ html, body {
 /*上部分*/
 .top_set {
 	width: 1080px;
-	height: 35px;
+	height: 38px;
 	/*margin-bottom: 20px;*/
 	background-color: #fff;
 }
 
 .top_nav {
-	height: 35px;
-	line-height: 35px;
+	height: 38px;
+	line-height: 38px;
 	padding-left: 40px;
 }
 
-.top_nav a {
-	font-size: 16px;
-	color: #a6a6a6;
+.toplink {
+	font-size: 15px;
+	color: #ccc;
+	text-decoration: none;
 }
 
-.top_nav span {
-	font-size: 16px;
-	color: #383838;
+.currentpage {
+	font-size: 15px;
+	color: #666;
+	text-decoration: none;
 }
+
 /*下部分*/
 .bottom_set {
 	height: 520px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 /*下左部分*/
 .bottom_left {
@@ -91,10 +94,23 @@ html, body {
 	color: #fc9700;
 }
 /*欢迎文字*/
-.bottom_left .welcome {
-	padding-top: 20px;
-	padding-left: 40px;
-	height: 30px;
+.welcome {
+	width: 100px; text-align : center; margin : 0px auto;
+	margin-top: 15px;
+	font-color: #333;
+	text-align: center;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.welcome1 {
+	font-size: 20px;
+	line-height: 42px;
+}
+
+.welcome2 {
+	font-size: 18px;
+	line-height: 32px;
 }
 
 .bottom_left .welcome p {
@@ -103,7 +119,7 @@ html, body {
 }
 /*已报名的活动数*/
 .bottom_left .activity_word {
-	padding-top: 40px;
+	padding-top: 10px;
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
@@ -111,11 +127,11 @@ html, body {
 
 .bottom_left .activity_word span {
 	color: #808080;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 .bottom_left .activity_num {
-	padding-top: 20px;
+	padding-top: 10px;
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
@@ -127,7 +143,7 @@ html, body {
 }
 /*按钮*/
 .sumbtn {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 .sumbtn .btn {

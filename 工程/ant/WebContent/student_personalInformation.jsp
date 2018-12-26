@@ -19,7 +19,7 @@
 			<!-- 上部分 -->
 			<div class="top_set">
 				<div class="top_nav">
-					<a href="#">首页</a>/ <span>设置</span>
+					<a class="toplink" href="student_index.jsp">首页</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="personalinformation" class="currentpage">设置</a>
 				</div>
 			</div>
 			<!-- 下部分 -->
@@ -35,8 +35,8 @@
 							</div>
 						</div>
 						<div class="welcome">
-							<p>Welcome,</p>
-							<p>${s.name }</p>
+							<lable class="welcome1">Welcome</lable><br>
+							<lable class="welcome2">${s.name }</lable>
 						</div>
 						<div class="activity">
 							<div class="activity_word">

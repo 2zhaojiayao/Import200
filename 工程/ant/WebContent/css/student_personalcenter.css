@@ -13,15 +13,20 @@ body {
 	margin-top: 10px;
 }
 
-.table1 tr td a {
-	color: #a6a6a6;
-	font-size: 13px;
-	font-family: "寰蒋闆呴粦";
+.tr0td0 {
+	padding-left: 35px;
+}
+
+.toplink {
+	font-size: 15px;
+	color: #ccc;
 	text-decoration: none;
 }
 
-.tr0td0 {
-	padding-left: 35px;
+.currentpage {
+	font-size: 15px;
+	color: #666;
+	text-decoration: none;
 }
 
 .img1 {

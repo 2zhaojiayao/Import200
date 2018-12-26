@@ -1,7 +1,6 @@
 * {
 	margin: 0 auto;
 	padding: 0;
-	
 }
 
 body {
@@ -18,100 +17,84 @@ li {
 	list-style: none;
 }
 
-#orange {
-	color: #fc7a00;
+.toplink {
+	font-size: 15px;
+	color: #ccc;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.currentpage {
+	font-size: 15px;
+	color: #666;
+	text-decoration: none;
+	vertical-align: middle;
 }
 
 .assembly {
 	width: 1080px;
-	height: 90px;
-	margin-top: 18px;
+	height: 140px;
+	margin-top: 10px;
 }
 
 .breadcrumb {
 	width: 1080px;
-	height: 30px;
-	color: #a6a6a6;
+	height: 42px;
+	padding-top: 8px;
+	padding-left: 40px;
+	background-color: #fff;
 }
 /**search*/
 #search {
-	width: 284px;
-	height: 30px;
-	margin-left: 766px;
+	border: 1px solid #fc7a00;
+	border-radius: 3px;
+	width: 452px;
+	height: 48px;
+	margin-top: 10px;
+	vertical-align: middle;
 }
 
-.search {
-	width: 284px;
-	height: 34px;
-	margin-top: 40px;
-	float: left;
-}
-
-.search form, #search form {
-	position: relative;
-	height: 34px;
-}
-
-
-#search input{
+#search input {
 	outline: none;
-	border: 1px solid #CCC;
 	background-color: #fff;
-	width: 284px;
-	height: 34px;
-	border-radius: 42px;
+	width: 368px;
+	height: 46px;
 	transition: .3s linear;
-	float: right;
-	padding-left:15px;
+	padding-left: 15px;
+	font-size: 15px;
+	color: #666;
+	folot: left;
 }
 
 .search input:focus, #search input:focus {
-	width: 300px;
+	width: 368px;
 }
 
 .search button, #search button {
-	width: 35px;
-	height: 35px;
+	width: 80px;
+	height: 46px;
 	display: inline;
-	margin-right: 10px;
 	cursor: pointer;
-	background: none;
-	color: #ff8d1a;
+	background-color: #fc7a00;
+	border-radius: 2px;
+	font-size: 18px;
+	color: #fff;
 	cursor: pointer;
-	position: absolute;
-	right: 0;
-}
-
-.search button:before, #search button:before {
-	width: 35px;
-	height: 35px;
-	display: inline;
-	margin-right: 10px;
-	content: "\f002";
-	font-family: FontAwesome;
-	color: #ff8d1a;
-}
-
-/*搜索*/
-.assembly #search img {
-	width: 15px;
-	height: 15px;
-}
-
-.out_type {
-	width: 1080px;
-	height: 33px;
+	float: right;
 }
 
 .label {
-	width: 65px;
-	height: 33px;
-	padding: 4px;
+	width: 80px;
+	height: 40px;
 	font-size: 18px;
+	color: #333;
+	text-shadow: 1px 0px 1px #333;
 	text-align: center;
-	background-color: rgba(255, 195, 0, 0.4);
-	margin-left: 0;
-	box-shadow: 0 0 0 1px #fc7a00;
+	background-color: #ffae48;
+	margin-left: 0px;
+	padding-top: 8px;
+	text-align: center;
+	color: #fff;
 }
 
 .clear {
@@ -121,8 +104,8 @@ li {
 /**conter*/
 .activities_conter {
 	width: 1080px;
-	/* height: 700px; */
-	margin: 25px auto;
+	margin: 10px auto;
+	background-color: #fff;
 }
 
 .activity_object {
@@ -130,8 +113,8 @@ li {
 	height: 290px;
 	float: left;
 	margin: 10px;
+	border: 1px solid #eee;
 	background-color: #fff;
-	box-shadow: 1px 2px #aaa;
 }
 
 .activity_object>a {
@@ -169,17 +152,20 @@ li {
 }
 
 #grey {
-	color: #a8a8a8;
+	color: #aaa;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 /*页码*/
 .page {
-	margin: 20px auto;
+	margin: 10px auto;
 	text-align: center;
 }
 
 .page a {
-	color: #222;
+	color: #333;
 }
 
 .lastPage, .nextPage, .pageNo {
