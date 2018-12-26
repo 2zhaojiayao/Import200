@@ -265,6 +265,7 @@ hr {
 	height: 20px;
 	font-size: 14px;
 	color:#a6a6a6;
+	float: left;
 }
 .content_right_box1 {
 	width: 169px;

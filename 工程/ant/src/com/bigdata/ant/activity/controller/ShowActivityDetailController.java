@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.hibernate.dialect.identity.SybaseAnywhereIdentityColumnSupport;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,6 +37,7 @@ public class ShowActivityDetailController {
 			Activity activity = this.showActivityDetailServiceImpl.getActivityDetail(actId);
 			if (activity.equals(null) == false) {
 				request.setAttribute("activitydetail", activity);
+				System.out.println(activity.getName());
 				ActivityStage astage = this.showActivityDetailServiceImpl.getActivityStage(actId);
 				if (astage != null) {
 					request.setAttribute("activitystage", astage);
