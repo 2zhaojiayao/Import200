@@ -16,7 +16,7 @@
 	<div class="conter">
 		<p>如确认表格中活动参与情况不完善，班委可在此页面对活动参与情况作修改。</p>
 		<div class="button">
-			<a href="getset">
+			<a href="download">
 				<div id="get1">
 					下载活动参与情况表 <img src="images/download.png">
 				</div>

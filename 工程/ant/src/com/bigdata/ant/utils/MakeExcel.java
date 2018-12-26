@@ -135,29 +135,4 @@ public class MakeExcel {
 		}
 	}
 
-	public static void main(String[] args) {
-		List<Map<String, Object>> list = new ArrayList<>();
-		for (int i = 0; i < 195534; i++) {
-			Map<String, Object> map = new HashMap<>();
-			map.put("a", "a" + i);
-			map.put("b", "b" + i);
-			map.put("c", "c" + i);
-			map.put("d", "d" + i);
-			list.add(map);
-		}
-		// 首行表头信息
-		List<String> ll = new ArrayList<>();
-		ll.add("a");
-		ll.add("b");
-		ll.add("c");
-		ll.add("d");
-		try {
-			CreateExcelFile(list, new File("d:/a.xls"), ll, "单据");
-		} catch (WriteException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
 }
