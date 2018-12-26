@@ -82,7 +82,6 @@ public class MakeExcel {
 					if (name != null) {
 						sheet.addCell(new Label(index, 1, name, wcf_center));
 						index++;
-
 					}
 				}
 				int i = 0;
