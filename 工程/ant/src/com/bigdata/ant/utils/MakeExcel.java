@@ -70,9 +70,8 @@ public class MakeExcel {
 				wcf_center.setVerticalAlignment(VerticalAlignment.CENTRE); // 文字垂直对齐
 				wcf_center.setAlignment(Alignment.CENTRE); // 文字水平对齐
 				wcf_center.setWrap(false); // 文字是否换行
-				// wcf_center.setBackground(Colour.LIGHT_GREEN);// 单元格背景颜色
 				for (int i = 0; i < headList.size() + 1; i++) {
-					sheet.setColumnView(i, 30);// 设置第i列的宽度
+					sheet.setColumnView(i, 26);// 设置第i列的宽度
 				}
 				// 合并首行
 				sheet.mergeCells(0, 0, headList.size() - 1, 0);
@@ -80,8 +79,11 @@ public class MakeExcel {
 
 				index = 0;
 				for (String name : headList) {
-					sheet.addCell(new Label(index, 1, name, wcf_center));
-					index++;
+					if (name != null) {
+						sheet.addCell(new Label(index, 1, name, wcf_center));
+						index++;
+
+					}
 				}
 				int i = 0;
 				int t = 2;
@@ -89,8 +91,11 @@ public class MakeExcel {
 					index = 0;
 					if (i < 65534) {
 						for (String name : headList) {
-							sheet.addCell(new Label(index, t, list.get(flagList - 1).get(name) + "", wcf_center));
-							index++;
+							if (list.get(flagList - 1).get(name) != null) {
+								sheet.addCell(new Label(index, t, list.get(flagList - 1).get(name) + "", wcf_center));
+								index++;
+							}
+
 						}
 						i++;
 						t++;
