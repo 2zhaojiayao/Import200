@@ -49,7 +49,7 @@
 			<img src="images/tips.svg"> <span>提示：在生成综测成绩表之前，请先核对之前的信息</span>
 		</div>
 		<div class="button1">
-			<a href="#" id="btn_study">生成综测汇总表</a>
+			<a href="addressComprehensive" id="btn_study">生成综测汇总表</a>
 		</div>
 	</div>
 	<%@include file="footer.jsp"%>

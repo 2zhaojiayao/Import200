@@ -107,13 +107,14 @@ public class RegisterStudentController {
 	 *
 	 */
 	@RequestMapping("/activeStudent")
-	public String activeStudent(HttpServletRequest request, HttpServletResponse response) {
+	public String activeStudent(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
 		String validateCode = request.getParameter("validateCode");
 		String msg = registerStudentServiceImpl.VolidateRegister(email, validateCode);
 		request.setAttribute("msg", msg);
 		request.setAttribute("email", email);
-		return "toPerfectInformation";
+		request.getRequestDispatcher("toPerfectInformation").forward(request, response);
+		return null;
 	}
 	
 	@RequestMapping("/toPerfectInformation")
@@ -124,11 +125,11 @@ public class RegisterStudentController {
 		request.setAttribute("grade", IncreaseTimeUtil.addDateYear(4));// 把年级信息查出来
 		request.setAttribute("classes", registerStudentServiceImpl.findClasses());// 把班级信息列出来
 		request.setAttribute("email", email);
-		return "student_perfectinformation.jsp";
+		return "student_perfectinformation";
 
 	}
 	@RequestMapping("/afterPerfectInformation")
-	public String afterPerfectInformation(HttpServletRequest request) {
+	public String afterPerfectInformation(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 		String email=request.getParameter("email");
 		System.out.println(email);
 		String college=request.getParameter("college");
@@ -139,14 +140,15 @@ public class RegisterStudentController {
 		if (admitStudentPerfect.equals("0")) {
 			registerStudentServiceImpl.perfectStudentInformation(email, college, profession, grade, classes);
 			request.setAttribute("msg", "信息完善成功");
-			return "register_msg.jsp";
+			return "register_msg";
 		} else {
 			request.setAttribute("admitStudentPerfect", admitStudentPerfect);
 			request.setAttribute("collegeSelected", college);
 			request.setAttribute("professionSelected", profession);
 			request.setAttribute("gradeSelected", grade);
 			request.setAttribute("classesSelected", classes);
-			return "toPerfectInformation";
+			request.getRequestDispatcher("toPerfectInformation").forward(request, response);
+			return null;
 		}
 
 	}

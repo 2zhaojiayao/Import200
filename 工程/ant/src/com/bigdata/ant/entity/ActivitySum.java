@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -26,7 +28,7 @@ import javax.persistence.Table;
 @Table(name = "activity_sum")
 public class ActivitySum {
 	private int id;
-	private String studentId;
+	private Student student;
 	private String activityName;
 	private String year;
 	private Float score;
@@ -46,14 +48,24 @@ public class ActivitySum {
 		this.id = id;
 	}
 
-	@Column(name = "student_id")
-	public String getStudentId() {
-		return studentId;
+//	@Column(name = "student_id")
+	@ManyToOne
+	@JoinColumn(name = "student_id")
+	public Student getStudent() {
+		return student;
 	}
 
-	public void setStudentId(String studentId) {
-		this.studentId = studentId;
+	public void setStudent(Student student) {
+		this.student = student;
 	}
+//	public String getStudentId() {
+//		return studentId;
+//	}
+//
+//	public void setStudentId(String studentId) {
+//		this.studentId = studentId;
+//	}
+	
 
 	@Column(name = "activity_name")
 	public String getActivityName() {
