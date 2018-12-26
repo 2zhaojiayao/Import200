@@ -52,8 +52,8 @@ public class DownloadServiceImpl {
 	 * @param id
 	 * @return
 	 */
-	public List getIdList(String id) {
-		return this.downloadDaoImpl.getIdList(id);
-	}
+//	public List getIdList(String id) {
+//		return this.downloadDaoImpl.getIdList(id);
+//	}
 
 }

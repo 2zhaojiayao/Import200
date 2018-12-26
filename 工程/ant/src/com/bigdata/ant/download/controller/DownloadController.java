@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -33,17 +34,32 @@ public class DownloadController {
 	private DownloadServiceImpl downloadServiceImpl;
 
 	@RequestMapping("/download")
-	public void download(HttpServletResponse response, HttpSession session) throws IOException {
-		Monitor m = (Monitor) session.getAttribute("m");
-		System.out.println(m.getEmail());
-		Set<Student> set = m.getClassInfo().getStudents();
+	public void download(HttpServletResponse response,HttpServletRequest request, HttpSession session) throws IOException {
+		
+		Set<Student> set = (Set<Student>) request.getAttribute("set");
 		Iterator<Student> it = set.iterator();
 		while (it.hasNext()) {
 			Student str = it.next();
 			System.out.println(str.getId());
-			List list = this.downloadServiceImpl.getIdList(str.getId());
-			System.out.println(list.size());
-			System.out.println(list.get(0).toString());
+			System.out.println(str.getSumActivities().size());
+			List<ActivitySum> li = str.getSumActivities();
+			for (int i = 0; i < li.size(); i++) {
+				System.out.println(li.get(i).getActivityName());
+				System.out.println(li.get(i).getScore());
+				System.out.println(li.get(i).getType());
+				System.out.println(li.get(i).getYear());
+			}
+		}
+		
+//		Monitor m = (Monitor) session.getAttribute("m");
+//		System.out.println(m.getEmail());
+//		Set<Student> set = m.getClassInfo().getStudents();
+//		Iterator<Student> it = set.iterator();
+//		while (it.hasNext()) {
+//			Student str = it.next();
+//			System.out.println(str.getId());
+//			List list = this.downloadServiceImpl.getIdList(str.getId());
+//			System.out.println(list.get(0).toString());
 //			List<ActivitySum> li = str.getSumActivities();
 //			for (int i = 0; i < li.size(); i++) {
 //				System.out.println(li.get(i).getActivityName());
@@ -52,7 +68,6 @@ public class DownloadController {
 //				System.out.println(li.get(i).getYear());
 //			}
 		}
-	}
 }
 //		String FILEPATH = "活动汇总表.xls";
 //		deleteFile(FILEPATH);

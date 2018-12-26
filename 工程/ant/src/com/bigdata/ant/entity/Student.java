@@ -135,8 +135,7 @@ public class Student {
 		this.scanedActivities = scanedActivities;
 	}
 
-	@OneToMany(targetEntity = ActivityJoin.class, cascade = CascadeType.ALL)
-	@JoinColumn(name="id",nullable = true)
+	@OneToMany(mappedBy = "student", targetEntity = ActivityJoin.class, cascade = CascadeType.ALL)
 	public List<ActivityJoin> getJoinedActivities() {
 		return joinedActivities;
 	}
@@ -145,8 +144,8 @@ public class Student {
 		this.joinedActivities = joinedActivities;
 	}
 
-	@OneToMany(targetEntity = ActivitySum.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "id", nullable = true)
+	@OneToMany(mappedBy = "student", targetEntity = ActivitySum.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//	@JoinColumn(name="id",nullable=true)
 	public List<ActivitySum> getSumActivities() {
 		return sumActivities;
 	}

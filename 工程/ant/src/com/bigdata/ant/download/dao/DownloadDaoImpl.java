@@ -57,16 +57,35 @@ public class DownloadDaoImpl extends BaseDao<ActivitySum, Integer> {
 	 * @param id
 	 * @return
 	 */
-	public List getIdList(String id) {
-		String hql = "select a.activityName,a.score,a.year,a.type from ActivitySum a where a.studentId = ?0";
-		List list = null;
-		try {
-			list = this.find0(hql, id);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return list;
-	}
-
+//	public List getNameById(String id) {
+//		String hql = "select a.activityNamea.year,a.type from ActivitySum a where a.studentId = ?0";
+//		List list = null;
+//		try {
+//			list = this.find0(hql, id);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return list;
+//	}
+//
+//	public List getScoreById(String id) {
+//		String hql = "select a.score from ActivitySum a where a.studentId = ?0";
+//		List list = null;
+//		try {
+//			list = this.find0(hql, id);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return list;
+//	}
+//
+//	public List getYearById(String id) {
+//
+//	}
+//
+//	public List getTypeById(String id) {
+//
+//	}
 }
