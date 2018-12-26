@@ -8,6 +8,7 @@ body {
 }
 /*<!-- 首页活动列表 -->*/
 .table2-1tr0td0 {
+	margin-top:10px;
 	height: 150px;
 	/*background-color: blue;*/
 	background-color: #fff;
@@ -547,4 +548,48 @@ body {
 	height: 100px;
 	color: #505050;
 	font-size: 14px;
+}
+/*页码*/
+.bottom_page {
+	width: 450px;
+	height: 30px;
+	line-height: 30px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+ul.pagination {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+ul.pagination li {
+	display: inline;
+}
+
+ul.pagination li a {
+	color: #505050;
+	float: left;
+	margin: 0px 5px;
+	padding: 0px 10px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+ul.pagination li .currentPage{
+	border:none;
+}
+ul.pagination li a.active {
+	background-color: #fc7a00;
+	color: white;
+	border: 1px solid #fc7a00;
+	border-radius: 4px;
+}
+
+ul.pagination li a:hover:not (.active ) {
+	color: #fc7a00;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
