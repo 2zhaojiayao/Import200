@@ -20,8 +20,8 @@
 			<td>
 				<table class="table1">
 					<tr>
-						<td class="tr0td0"><a href="student_index.jsp">首页</a> / <a
-							href="personalcenter">个人中心</a></td>
+						<td class="tr0td0"><a href="student_index.jsp" class="toplink">首页</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+							href="personalcenter" class="currentpage">个人中心</a></td>
 					</tr>
 					<tr>
 						<td><img src="images/01.png" class="img1"></td>

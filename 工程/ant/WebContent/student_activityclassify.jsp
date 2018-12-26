@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>个人页面_活动分类</title>
+<title>活动分类</title>
 <link rel="stylesheet" type="text/css"
 	href="css/student_activityclassify.css">
 
@@ -18,26 +18,22 @@
 	<!--type-->
 	<div class="assembly">
 		<div class="breadcrumb">
-			<a href="student_index.jsp">首页</a> &nbsp/&nbsp <a href="beforeSearch?pageNo=1" id="orange">活动</a>
+			<a href="student_index.jsp" class="toplink">首页</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+				href="beforeSearch?pageNo=1" id="orange" class="currentpage">活动</a>
 		</div>
 		<div id="search">
-
 			<form action="searchByName" method="get">
-				<input type="text" placeholder="       请输入您要搜索的内容..." class="text"
+				<input type="text" placeholder="请输入您要搜索的活动关键字" class="text"
 					autocomplete="off" name="name">
-				<button type="submit"></button>
+				<button type="submit">搜&nbsp;&nbsp;索</button>
 			</form>
-			<div class="word"></div>
 		</div>
-
-		<div class="out_type">
-			<div class="label" id="orange">分类</div>
-		</div>
+		<div class="label">分&nbsp;类</div>
 	</div>
 	<%@include file="student_activityclassify_ul.jsp"%>
 	<script type="text/javascript" src="js/student_activityclassify_ul.js"></script>
 
-	<!--conter-->
+	<!--center-->
 	<div class="activities_conter">
 		<div class="activities">
 			<c:forEach var="activity" items="${activities}">

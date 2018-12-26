@@ -20,6 +20,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Table(name = "student_comprehensive")
 public class Comprehensive {
 	private String id;
+	private String name;
 	private float score;
 
 	public Comprehensive() {
@@ -36,6 +37,14 @@ public class Comprehensive {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+	@Column(name = "student_name")
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public float getScore() {

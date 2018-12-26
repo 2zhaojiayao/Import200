@@ -5,7 +5,7 @@
 }
 
 body {
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 22px;
 	background-color: #fcfcd
 }
@@ -26,6 +26,7 @@ li {
 	width: 1080px;
 	background-color: #fff;
 	height: 150px;
+	border:1px solid #ffe3c0;
 }
 
 .activity_type li {
@@ -40,32 +41,36 @@ li {
 	margin: 15px;
 }
 
+.small_type li {
+	
+}
+
 .small_type li a {
 	display: inline-block;
-	width: 60px;
-	height: 20px;
-	font: 400 12px '微软雅黑';
-	border: 1px solid #eee;
-	margin: 14px;
-	border-radius: 7px;
+	padding-top: 2px; width : 68px;
+	height: 28px;
+	font: 400 14px '微软雅黑';
+	vertical-align: middle; border : 1px solid #eee;
+	margin: 11px;
+	border-radius: 2px;
 	text-align: center;
 	line-height: 20px;
-	color: #222;
+	color: #333;
+	border: 1px solid #eee;
+	width: 68px;
 }
 
 .small_type a:not (.selected ):hover {
 	color: #fc9700;
 }
-/* .small_type a:visited{
-	color: #fff;
-}  */
+
 .small_type .selected {
-	background-color: #fc9700;
+	background-color: #fc7a00;
 	color: #fff;
 }
 
 .small_type .selected1 {
-	background-color: #fc9700;
+	background-color: #fc7a00;
 	color: #fff;
 }
 
@@ -78,9 +83,9 @@ li {
 
 #ul {
 	list-style: none;
-	width: 150px;
-	height: 400px;
-	border: 1px solid #999;
+	width: 165px;
+	height: 512px;
+	border: 1px solid #eee;
 	background-color: #fff;
 	display: none;
 	margin-left: 10px;
@@ -90,10 +95,11 @@ li {
 
 #ipt {
 	margin-left: 10px;
-	margin-top: 15px;
-	width: 150px;
+	margin-top: 10px;
+	width: 165px;
+	height:28px;
 	text-align: center;
-	border-radius: 5px;
+	border-radius: 3px;
 	border: solid 1px #eee;
 	cursor: pointer;
 }
@@ -101,11 +107,10 @@ li {
 #ul li a {
 	display: inline-block;
 	text-decoration: none;
-	color: #222;
-	width: 150px;
+	color: #333;
+	width: 165px;
 	margin: 0;
 	border: solid 0;
-	border-radius: 0px;
 }
 
 #ul  li a:hover {
