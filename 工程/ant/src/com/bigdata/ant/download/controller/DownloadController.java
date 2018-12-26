@@ -56,8 +56,12 @@ public class DownloadController {
 			throws IOException {
 		// 获取当前时间
 		Calendar cal = Calendar.getInstance();
-		int year = cal.get(Calendar.YEAR);
+		int y = cal.get(Calendar.YEAR);
 		int month = cal.get(Calendar.MONTH);
+		if (month <= 9) {
+			y = y - 1;
+		}
+		String year = Integer.toString(y);
 		// 设置默认excel名
 		String FILEPATH = "活动汇总表.xls";
 		deleteFile(FILEPATH);
@@ -79,21 +83,24 @@ public class DownloadController {
 			int size = li.size() + 1;
 			Map<String, Object> map = new HashMap<>();
 			for (int i = 1; i < size; i++) {
-				int r = i - 1;
-				String s1 = "活动名称" + i;
-				String s2 = "分数" + i;
-				map.put("学号", li.get(r).getStudent().getId());
-				map.put(s1, li.get(r).getActivityName());
-				map.put(s2, li.get(r).getScore());
-				list.add(map);
+				if (li.get(i).getYear() != year) {
+					break;
+				} else {
+					int r = i - 1;
+					String s1 = "活动名称" + i;
+					String s2 = "分数" + i;
+					map.put("学号", li.get(r).getStudent().getId());
+					map.put(s1, li.get(r).getActivityName());
+					map.put(s2, li.get(r).getScore());
+					list.add(map);
+				}
 			}
 		}
 		HashSet h = new HashSet(list);
 		list.clear();
 		list.addAll(h);
 		try {
-
-			String title = cal.get(Calendar.YEAR) + "年活动汇总";
+			String title = year + "年活动汇总";
 			MakeExcel.CreateExcelFile(list, new File(FILEPATH), ll, "活动汇总");
 		} catch (WriteException e) {
 			e.printStackTrace();
