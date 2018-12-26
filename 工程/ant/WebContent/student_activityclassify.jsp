@@ -18,7 +18,7 @@
 	<!--type-->
 	<div class="assembly">
 		<div class="breadcrumb">
-			<a href="#">首页</a> &nbsp/&nbsp <a href="#" id="orange">活动</a>
+			<a href="student_index.jsp">首页</a> &nbsp/&nbsp <a href="beforeSearch?pageNo=1" id="orange">活动</a>
 		</div>
 		<div id="search">
 
