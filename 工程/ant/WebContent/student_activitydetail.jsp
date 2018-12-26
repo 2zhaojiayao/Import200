@@ -21,15 +21,14 @@
 	<div class="main">
 		<div class="main_top">
 			<span class="main_top_left1"><a href="student_index.jsp">首页</a></span>
-			&nbsp;&nbsp;/&nbsp;&nbsp; <span class="main_top_left1"><a
-				href="beforeSearch?pageNo=1">活动</a></span> &nbsp;&nbsp;/&nbsp;&nbsp; <span
-				class="main_top_left2">活动详情</span>
+			&nbsp;&nbsp;/&nbsp;&nbsp; <span class="main_top_left1"><a href="beforeSearch?pageNo=1">活动</a></span>
+			&nbsp;&nbsp;/&nbsp;&nbsp; <span class="main_top_left2">活动详情</span>
 		</div>
 		<div class="main_center">
 			<span class="main_center_left">${activitydetail.name }</span>
 		</div>
 		<div class="main_bottom">
-			<span class="main_bottom_left">--------------------以下是关于此次活动相关信息的简介--------------------</span>
+			<span class="main_bottom_left">这里是活动内容的简介---------------------------------大概会有一行文字---------------------------------</span>
 		</div>
 	</div>
 	<!--content-->
@@ -48,7 +47,7 @@
 							</tr>
 							<tr class="tr">
 								<td class="td1">活动简介</td>
-								<td class="td2"><div id="td2_box">${activitydetail.description }</div></td>
+								
 							</tr>
 							<tr class="tr">
 								<td class="td1">级别</td>
@@ -89,8 +88,8 @@
 							<%-- ${activitydetail.style} --%>
 						</table>
 						<input type="text" name="stage" value="${activitystage.id}"
-							style="display: none"> <input type="text"
-							name="activityId" value="${activitydetail.id}"
+							style="display: none">
+							<input type="text" name="activityId" value="${activitydetail.id}"
 							style="display: none">
 						<c:if test="${activitydetail.style=='团体'}">
 							<div class="content_submit">
@@ -138,17 +137,18 @@
 			<div class="content_right">
 				<div class="content_right_word">热门活动推荐</div>
 				<hr>
-				<c:forEach items="${hotActList}" var="hotact" begin="0" end="9">
-					<div class="content_right_box">
-						<div class="content_right_box_inside1">
-							<img src="images/inside.svg" class="content_right_img">
-							<div class="content_right_text">
-								<div class="content_right_text1">
-									<a href="activitydetail?actid=${hotact.id}">${hotact.name }</a>
-								</div>
-								<div class="content_right_text2">${hotact.description }</div>
-								<div class="content_right_text3">报名人数：${hotact.studentNumber }</div>
+				<div class="content_right_box_inside2">
+							<div class="content_right_box1">
+								<a href="activitydetail?actid=${hotact.id}">去看看</a>
 							</div>
+							<div class="content_right_line"></div>
+							<div class="content_right_box2">
+								<a href="activitydetail?actid=${hotact.id}">去报名</a>
+							</div>
+					</div>
+					<div class="content_right_box_inside2">
+						<div class="content_right_box1">
+							<a href="detail.jsp">去看看</a>
 						</div>
 						<div class="content_right_box_inside2">
 							<div class="content_right_box1">
@@ -157,12 +157,8 @@
 							<div class="content_right_line"></div>
 							<div class="content_right_box2">
 								<a href="activitydetail?actid=${hotact.id}">去报名</a>
-							</div>
-						</div>
+							</div>						</div>
 					</div>
-				</c:forEach>
-				<div class="content_submit_two">
-					<a href="beforeSearch?pageNo=1" class="button">其它热门活动</a>
 				</div>
 			</div>
 		</div>

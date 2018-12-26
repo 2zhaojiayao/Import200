@@ -72,7 +72,7 @@ public class MakeExcel {
 				wcf_center.setWrap(false); // 文字是否换行
 				// wcf_center.setBackground(Colour.LIGHT_GREEN);// 单元格背景颜色
 				for (int i = 0; i < headList.size() + 1; i++) {
-					sheet.setColumnView(i, 30);// 设置第i列的宽度
+					sheet.setColumnView(i, 25);// 设置第i列的宽度
 				}
 				// 合并首行
 				sheet.mergeCells(0, 0, headList.size() - 1, 0);
@@ -80,8 +80,11 @@ public class MakeExcel {
 
 				index = 0;
 				for (String name : headList) {
-					sheet.addCell(new Label(index, 1, name, wcf_center));
-					index++;
+					if (name != null) {
+						sheet.addCell(new Label(index, 1, name, wcf_center));
+						index++;
+					}
+
 				}
 				int i = 0;
 				int t = 2;
@@ -89,8 +92,10 @@ public class MakeExcel {
 					index = 0;
 					if (i < 65534) {
 						for (String name : headList) {
-							sheet.addCell(new Label(index, t, list.get(flagList - 1).get(name) + "", wcf_center));
-							index++;
+							if (list.get(flagList - 1).get(name) != null) {
+								sheet.addCell(new Label(index, t, list.get(flagList - 1).get(name) + "", wcf_center));
+								index++;
+							}
 						}
 						i++;
 						t++;
@@ -134,30 +139,4 @@ public class MakeExcel {
 			e.printStackTrace();
 		}
 	}
-
-	public static void main(String[] args) {
-		List<Map<String, Object>> list = new ArrayList<>();
-		for (int i = 0; i < 195534; i++) {
-			Map<String, Object> map = new HashMap<>();
-			map.put("a", "a" + i);
-			map.put("b", "b" + i);
-			map.put("c", "c" + i);
-			map.put("d", "d" + i);
-			list.add(map);
-		}
-		// 首行表头信息
-		List<String> ll = new ArrayList<>();
-		ll.add("a");
-		ll.add("b");
-		ll.add("c");
-		ll.add("d");
-		try {
-			CreateExcelFile(list, new File("d:/a.xls"), ll, "单据");
-		} catch (WriteException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
 }
