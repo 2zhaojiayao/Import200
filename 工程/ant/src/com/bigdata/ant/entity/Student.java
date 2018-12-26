@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -40,6 +41,7 @@ public class Student {
 	private Date registerTime;
 	private List<Activity> scanedActivities = new ArrayList<Activity>();
 	private List<ActivityJoin> joinedActivities = new ArrayList<ActivityJoin>();
+	private List<ActivitySum> sumActivities = new ArrayList<ActivitySum>();
 
 	public Student() {
 	}
@@ -113,7 +115,7 @@ public class Student {
 		this.registerTime = registerTime;
 	}
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "class_id")
 	public ClassInfo getClassInfo() {
 		return classInfo;
@@ -140,6 +142,16 @@ public class Student {
 
 	public void setJoinedActivities(List<ActivityJoin> joinedActivities) {
 		this.joinedActivities = joinedActivities;
+	}
+
+	@OneToMany(mappedBy = "student", targetEntity = ActivitySum.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//	@JoinColumn(name="id",nullable=true)
+	public List<ActivitySum> getSumActivities() {
+		return sumActivities;
+	}
+
+	public void setSumActivities(List<ActivitySum> sumActivities) {
+		this.sumActivities = sumActivities;
 	}
 
 }

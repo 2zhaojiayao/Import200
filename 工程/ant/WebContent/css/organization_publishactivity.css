@@ -57,12 +57,14 @@ body {
 }
 
 .addimg {
-	width: 524px;
-	height: 150px;
+	width: 400px;
+	height: 140px;
 	display: inline-block;
 	/* border: 1px dashed #999; */
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	margin-left:132px;
+	margin-top:-35px;
+	
 }
 
 .upimg {
@@ -84,13 +86,14 @@ body {
 }
 
 .textarea {
-	width: 505px;
+	width:505px;
 	height: 150px;
 	padding: 10px;
 	font-family: "΢���ź�";
 	border: 1px solid #e5e5e5;
 	margin-bottom: 15px;
 	margin-left:150px;
+	margin-top:-20px;
 }
 
 .inputframe {

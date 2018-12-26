@@ -11,10 +11,12 @@ $(document)
 									function(e) {
 										if (x <= MaxInputs) {
 											FieldCount++;
+											$(InputsWrapper).children().last()
+													.children().first()
+													.removeAttr("id");
 											$(InputsWrapper)
 													.append(
-															'<div><input type="text"  name="mytext[]" class="popup-input search-input"  id="field_'
-																	+ FieldCount
+															'<div><input type="text"  name="mytext[]" class="popup-input search-input"  id="last'
 																	+ '" placeholder="请输入队员 '
 																	+ FieldCount
 																	+ ' 的学号"/><input type="button" rel="external nofollow" class="removeclass" value="删除"></div>');
@@ -49,5 +51,43 @@ $(document)
 					$("#text").on("click", function() {
 						document.fileForm.submit();
 					});
+
+					$('body')
+							.on(
+									"blur",
+									"#last",
+									function() {
+										var studentId = $(this).val();
+										if (window.XMLHttpRequest) {
+											// IE7+, Firefox, Chrome, Opera,
+											// Safari 浏览器执行代码
+											xmlhttp = new XMLHttpRequest();
+										} else {
+											// IE6, IE5 浏览器执行代码
+											xmlhttp = new ActiveXObject(
+													"Microsoft.XMLHTTP");
+										}
+										/* 发送请求 */
+										xmlhttp.open("post",
+												"checkStudent?studentId="
+														+ studentId, true);
+										xmlhttp.send();
+
+										xmlhttp.onreadystatechange = function() {
+											if (xmlhttp.readyState == 4
+													&& xmlhttp.status == 200) {
+
+												var res = xmlhttp.responseText;
+												if (res == "no") {
+													document
+															.getElementById("msg").innerHTML = "该同学还没有注册，请先注册！";
+												} else {
+													document
+															.getElementById("msg").innerHTML = "";
+												}
+											}
+
+										}
+									});
 
 				});
