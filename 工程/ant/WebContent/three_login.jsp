@@ -14,7 +14,6 @@
 			<div class="nav_logo l_float">
 				<img src="images/logo2.png" alt="">
 			</div>
-
 		</nav>
 	</header>
 	<!--轮播图-->

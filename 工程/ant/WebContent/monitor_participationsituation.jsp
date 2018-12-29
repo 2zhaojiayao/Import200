@@ -45,15 +45,15 @@
 			</ol>
 		</div>
 		<div class="tips">
-			<img src="images/tips.svg"> <span>提示：如确认表格中活动参与情况不完善，班委可在此页面对活动参与情况作修改</span>
+			<img src="images/tips.svg"> <span>提示：请下载并确认活动汇总表中活动参与情况是否完善，如不完善，班委可在此页面上传新的活动汇总表</span>
 		</div>
 		<!--conter-->
 		<div class="conter">
 			<div class="button1">
-				<a href="#" id="btn_study">查看活动参与情况</a>
+				<a href="download" id="btn_study">下载活动汇总表</a>
 			</div>
 			<div class="button2">
-				<a href="#" id="btn_study">下载活动参与情况</a>
+				<a href="update" id="btn_study">上传活动汇总表</a>
 			</div>
 		</div>
 	</div>
