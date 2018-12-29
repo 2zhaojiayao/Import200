@@ -53,7 +53,7 @@
 				<a href="download" id="btn_study">下载活动汇总表</a>
 			</div>
 			<div class="button2">
-				<a href="update" id="btn_study">上传活动汇总表</a>
+				<a href="upload1" id="btn_study">上传活动汇总表</a>
 			</div>
 		</div>
 	</div>
