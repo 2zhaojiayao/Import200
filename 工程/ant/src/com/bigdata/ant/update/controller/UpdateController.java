@@ -1,6 +1,7 @@
 package com.bigdata.ant.update.controller;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -64,12 +65,23 @@ public class UpdateController {
 //		DiskFileItem dfi = (DiskFileItem) cmf.getFileItem();
 //		File file = dfi.getStoreLocation();
 
+//		
+//		 MultipartFile file = xxx; 
+//	        CommonsMultipartFile cf= (CommonsMultipartFile)file; 
+//	        DiskFileItem fi = (DiskFileItem)cf.getFileItem(); 
+//	        File f = fi.getStoreLocation();
+		
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		MultipartFile f = multipartRequest.getFile("upfile");
-
+		File file = null;
+		try {
+			f.transferTo(file);
+		} catch (IllegalStateException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		String name = f.getOriginalFilename();
 		// 进一步判断文件是否为空（即判断其大小是否为0或其名称是否为null）
-		File file = (File) f;
 		List<ActivitySum> listExcel = this.updateServiceImpl.getAllByExcel(file);
 		for (ActivitySum a : listExcel) {
 			this.updateServiceImpl.setAS(a.getStudent(), a.getActivityName(), a.getScore());
