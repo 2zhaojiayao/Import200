@@ -1,12 +1,20 @@
 package com.bigdata.ant.update.controller;
 
+import java.io.File;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.swing.filechooser.FileSystemView;
+
+import org.apache.commons.fileupload.disk.DiskFileItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.bigdata.ant.entity.ActivitySum;
 import com.bigdata.ant.update.service.UpdateServiceImpl;
@@ -47,19 +55,22 @@ public class UpdateController {
 //					id + "" };
 //			db.AddU(sql, str);
 //		}
+//		MultipartResolver resolver = new CommonsMultipartResolver(request.getSession().getServletContext());
+//		MultipartHttpServletRequest multipartRequest = resolver.resolveMultipart(request);
+//		MultipartFile f = multipartRequest.getFile("upfile");
+//
+//		// 把MultipartFile转化为File
+//		CommonsMultipartFile cmf = (CommonsMultipartFile) f;
+//		DiskFileItem dfi = (DiskFileItem) cmf.getFileItem();
+//		File file = dfi.getStoreLocation();
 
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
-		MultipartFile file = multipartRequest.getFile("upfile");
+		MultipartFile f = multipartRequest.getFile("upfile");
 
-		String name = null;
-		// 判断文件是否为空
-		if (file != null) {
-			// 获取文件名
-			name = file.getOriginalFilename();
-			System.out.println(name);
-		}
-
-		List<ActivitySum> listExcel = this.updateServiceImpl.getAllByExcel(name);
+		String name = f.getOriginalFilename();
+		// 进一步判断文件是否为空（即判断其大小是否为0或其名称是否为null）
+		File file = (File) f;
+		List<ActivitySum> listExcel = this.updateServiceImpl.getAllByExcel(file);
 		for (ActivitySum a : listExcel) {
 			this.updateServiceImpl.setAS(a.getStudent(), a.getActivityName(), a.getScore());
 		}

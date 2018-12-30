@@ -59,10 +59,10 @@ public class UpdateServiceImpl {
 	 * @param:@return (参数)
 	 * @return:List<ActivitySum>(返回类型)
 	 *
-	 * @param file
+	 * @param 
 	 * @return
 	 */
-	public List<ActivitySum> getAllByExcel(String file) {
+	public List<ActivitySum> getAllByExcel(File file) {
 		List<ActivitySum> list = new ArrayList<ActivitySum>();
 
 //		File file = new File("F:\\活动汇总表.xls");
@@ -74,7 +74,7 @@ public class UpdateServiceImpl {
 		}
 		String year = String.valueOf(y);
 		try {
-			Workbook rwb = Workbook.getWorkbook(new File(file));
+			Workbook rwb = Workbook.getWorkbook(file);
 			Sheet rs = rwb.getSheet(0);// 或者rwb.getSheet(0)
 			int clos = rs.getColumns();// 得到所有的列
 			int rows = rs.getRows();// 得到所有的行
