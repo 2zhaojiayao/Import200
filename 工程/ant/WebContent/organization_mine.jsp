@@ -136,7 +136,7 @@
 					</div>
 					<div class="clear"></div>
 					<div class="bottom_publish">
-						<a class="btn_publish">+发布活动</a>
+						<a class="btn_publish" href="organization_publishactivity.jsp">+发布活动</a>
 					</div>
 					<div class="bottom_list">
 						<c:if test="${key eq '0' }">
@@ -177,7 +177,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="#">编辑活动</a> <a href="toparticipationall?name=${all[0] }">参与详情</a> <a href="#">删除活动</a>
+											<a href="display?act=${all[0] }">编辑活动</a> <a href="#">参与详情</a> <a href="delete?act=${all[4] }">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -213,7 +213,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="#">编辑活动</a> <a href="toparticipationba?name=${ba[0] }">参与详情</a> <a href="#">删除活动</a>
+											<a href="display?act=${ba[0] }">编辑活动</a> <a href="#">参与详情</a> <a href="delete?act=${ba[4] }">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -251,7 +251,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="#">编辑活动</a> <a href="toparticipationia?name=${ia[0] }">参与详情</a> <a href="#">删除活动</a>
+											<a href="display?act=${ia[0] }">编辑活动</a> <a href="#">参与详情</a> <a href="delete?act=${ia[4] }">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -287,7 +287,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="#">编辑活动</a> <a href="toparticipationaa?name=${aa[0] }">参与详情</a> <a href="#">删除活动</a>
+											<a href="display?act=${aa[0] }">编辑活动</a> <a href="#">参与详情</a> <a href="delete?act=${aa[4] }">删除活动</a>
 										</div>
 									</div>
 								</div>

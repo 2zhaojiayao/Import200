@@ -28,7 +28,7 @@
 			<span class="main_center_left">${activitydetail.name }</span>
 		</div>
 		<div class="main_bottom">
-			<span class="main_bottom_left">这里是活动内容的简介---------------------------------大概会有一行文字---------------------------------</span>
+			<span class="main_bottom_left">------------------------------ 此页面是关于活动相关信息的简介 ------------------------------</span>
 		</div>
 	</div>
 	<!--content-->
