@@ -72,13 +72,12 @@ public class UpdateServiceImpl {
 			int rows = rs.getRows();
 			System.out.println("clos:" + clos + " rows:" + rows);
 			for (int i = 2; i < rows; i++) {
-//				for (int j = 0; j < 7; j++) {
 				int j = 0;
 				ActivitySum a = new ActivitySum();
 				a.setYear(year);
 				String id = rs.getCell(j, i).getContents();
 				System.out.println(id);
-				j = j++;
+				j = j + 2;
 				Student s = this.getStuById(id);
 				String activity = rs.getCell(j++, i).getContents();
 				System.out.println(activity);
@@ -91,7 +90,24 @@ public class UpdateServiceImpl {
 				a.setScore(Float.parseFloat(score));
 				a.setType(type);
 				list.add(a);
-//				}
+				int m = j++;
+				while (rs.getCell(m, i).getContents() != null && rs.getCell(m, i).getContents() != "") {
+					System.out.println(m);
+					ActivitySum a1 = new ActivitySum();
+					a1.setYear(year);
+					a1.setStudent(s);
+					String acticvitys = rs.getCell(m++, i).getContents();
+					System.out.println(acticvitys);
+					String scores = rs.getCell(m++, i).getContents();
+					System.out.println(scores);
+					String types = rs.getCell(m++, i).getContents();
+					System.out.println(types);
+					a1.setActivityName(acticvitys);
+					a1.setScore(Float.parseFloat(scores));
+					a1.setType(types);
+					list.add(a1);
+					m = m + 3;
+				}
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

@@ -56,4 +56,9 @@ public class UpdateDaoImpl extends BaseDao<ActivitySum, Integer> {
 		}
 	}
 
+//	public void delete() {
+//		String hql = "delete from ActivitySum a";
+//		this.delete(hql);
+//	}
+
 }
