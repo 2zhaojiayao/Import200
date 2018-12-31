@@ -4,16 +4,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-
 import com.bigdata.ant.entity.ActivitySum;
 import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.login.dao.StudentDaoImpl;
@@ -54,18 +48,16 @@ public class UpdateServiceImpl {
 	/**
 	 * 
 	 * @Title: getAllByExcel
-	 * @Description: 获取excel
+	 * @Description: 读出excel中的数据并将其插入到list中
 	 * @param:@param file
 	 * @param:@return (参数)
 	 * @return:List<ActivitySum>(返回类型)
 	 *
-	 * @param 
+	 * @param file
 	 * @return
 	 */
 	public List<ActivitySum> getAllByExcel(File file) {
 		List<ActivitySum> list = new ArrayList<ActivitySum>();
-
-//		File file = new File("F:\\活动汇总表.xls");
 		Calendar cal = Calendar.getInstance();
 		int y = cal.get(Calendar.YEAR);
 		int month = cal.get(Calendar.MONTH);
@@ -75,31 +67,31 @@ public class UpdateServiceImpl {
 		String year = String.valueOf(y);
 		try {
 			Workbook rwb = Workbook.getWorkbook(file);
-			Sheet rs = rwb.getSheet(0);// 或者rwb.getSheet(0)
-			int clos = rs.getColumns();// 得到所有的列
-			int rows = rs.getRows();// 得到所有的行
+			Sheet rs = rwb.getSheet(0);
+			int clos = rs.getColumns();
+			int rows = rs.getRows();
 			System.out.println("clos:" + clos + " rows:" + rows);
-			for (int i = 2; i < rows + 1; i++) {
-				for (int j = 1; j < clos + 1; j++) {
-					ActivitySum a = new ActivitySum();
-					a.setYear(year);
-					if (j-- < 0) {
-						break;
-					} else {
-						int r = j--;
-						String id = rs.getCell(r, i).getContents();
-						Student s = this.getStuById(id);
-						String activity = rs.getCell(j++, i).getContents();
-						String score = rs.getCell(j++, i).getContents();
-						String type = rs.getCell(j++, i).getContents();
-						System.out.println("student:" + s + "activity:" + activity + "score:" + score + "type:" + type);
-						a.setStudent(s);
-						a.setActivityName(activity);
-						a.setScore(Float.parseFloat(score));
-						a.setType(type);
-						list.add(a);
-					}
-				}
+			for (int i = 2; i < rows; i++) {
+//				for (int j = 0; j < 7; j++) {
+				int j = 0;
+				ActivitySum a = new ActivitySum();
+				a.setYear(year);
+				String id = rs.getCell(j, i).getContents();
+				System.out.println(id);
+				j = j++;
+				Student s = this.getStuById(id);
+				String activity = rs.getCell(j++, i).getContents();
+				System.out.println(activity);
+				String score = rs.getCell(j++, i).getContents();
+				System.out.println(score);
+				String type = rs.getCell(j++, i).getContents();
+				System.out.println(type);
+				a.setStudent(s);
+				a.setActivityName(activity);
+				a.setScore(Float.parseFloat(score));
+				a.setType(type);
+				list.add(a);
+//				}
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -108,7 +100,7 @@ public class UpdateServiceImpl {
 		return list;
 	}
 
-	public void setAS(Student s, String name, Float score) {
-		this.updateDaoImpl.setAS(s, name, score);
+	public void setAS(Student s, String name, Float score, String type) {
+		this.updateDaoImpl.setAS(s, name, score, type);
 	}
 }
