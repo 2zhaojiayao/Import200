@@ -381,6 +381,15 @@ public abstract class BaseDao<T, PK extends Serializable> {
 		return query.executeUpdate();
 	}
 
+	public int excute(String sql, Object... params) throws Exception {
+		SQLQuery query = sessionFactory.getCurrentSession().createSQLQuery(sql);
+		if (params != null && params.length > 0) {
+			for (int i = 0; i < params.length; i++)
+				query.setParameter(i, params[i]);
+		}
+		return query.executeUpdate();
+	}
+
 	/**
 	 * @desc 通过原生SQL进行查询，返回单个结果集，以Map<String, Object>形式存放
 	 * 

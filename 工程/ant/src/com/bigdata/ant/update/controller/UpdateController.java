@@ -27,6 +27,17 @@ public class UpdateController {
 	@Resource
 	private UpdateServiceImpl updateServiceImpl;
 
+	/**
+	 * 
+	 * @Title: update
+	 * @Description: 将excel插入到数据库
+	 * @param:@param request
+	 * @param:@return (参数)
+	 * @return:String(返回类型)
+	 *
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping("/upload1")
 	public String update(HttpServletRequest request) {
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
@@ -35,6 +46,12 @@ public class UpdateController {
 		DiskFileItem fi = (DiskFileItem) cf.getFileItem();
 		File file = fi.getStoreLocation();
 		List<ActivitySum> listExcel = this.updateServiceImpl.getAllByExcel(file);
+		try {
+			this.updateServiceImpl.delete();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		for (ActivitySum a : listExcel) {
 			this.updateServiceImpl.setAS(a.getStudent(), a.getActivityName(), a.getScore(), a.getType());
 		}

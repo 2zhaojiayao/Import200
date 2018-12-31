@@ -116,7 +116,35 @@ public class UpdateServiceImpl {
 		return list;
 	}
 
+	/**
+	 * 
+	 * @Title: setAS
+	 * @Description: 插入
+	 * @param:@param s
+	 * @param:@param name
+	 * @param:@param score
+	 * @param:@param type (参数)
+	 * @return:void(返回类型)
+	 *
+	 * @param s
+	 * @param name
+	 * @param score
+	 * @param type
+	 */
 	public void setAS(Student s, String name, Float score, String type) {
 		this.updateDaoImpl.setAS(s, name, score, type);
+	}
+
+	/**
+	 * 
+	 * @Title: delete
+	 * @Description: 删除
+	 * @param:@throws Exception (参数)
+	 * @return:void(返回类型)
+	 *
+	 * @throws Exception
+	 */
+	public void delete() throws Exception {
+		this.updateDaoImpl.delete();
 	}
 }

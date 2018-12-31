@@ -56,9 +56,18 @@ public class UpdateDaoImpl extends BaseDao<ActivitySum, Integer> {
 		}
 	}
 
-//	public void delete() {
-//		String hql = "delete from ActivitySum a";
-//		this.delete(hql);
-//	}
+	/**
+	 * 
+	 * @Title: delete
+	 * @Description: 删除
+	 * @param:@throws Exception (参数)
+	 * @return:void(返回类型)
+	 *
+	 * @throws Exception
+	 */
+	public void delete() throws Exception {
+		String sql = "delete from activity_sum";
+		this.excute(sql);
+	}
 
 }
