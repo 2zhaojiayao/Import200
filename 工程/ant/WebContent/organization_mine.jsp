@@ -177,7 +177,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="display?act=${all[0] }">编辑活动</a> <a href="#">参与详情</a> <a href="delete?act=${all[4] }">删除活动</a>
+											<a href="display?act=${all[0] }">编辑活动</a> <a href="toparticipationall?activityid=${all[4]}">参与详情</a> <a href="delete?act=${all[4] }">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -213,7 +213,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="display?act=${ba[0] }">编辑活动</a> <a href="#">参与详情</a> <a href="delete?act=${ba[4] }">删除活动</a>
+											<a href="display?act=${ba[0] }">编辑活动</a> <a href="toparticipationall?activityid=${ba[4]}">参与详情</a> <a href="delete?act=${ba[4] }">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -251,7 +251,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="display?act=${ia[0] }">编辑活动</a> <a href="#">参与详情</a> <a href="delete?act=${ia[4] }">删除活动</a>
+											<a href="display?act=${ia[0] }">编辑活动</a> <a href="toparticipationall?activityid=${ia[4]}">参与详情</a> <a href="delete?act=${ia[4] }">删除活动</a>
 										</div>
 									</div>
 								</div>
@@ -287,7 +287,7 @@
 											</div>
 										</div>
 										<div class="operation">
-											<a href="display?act=${aa[0] }">编辑活动</a> <a href="#">参与详情</a> <a href="delete?act=${aa[4] }">删除活动</a>
+											<a href="display?act=${aa[0] }">编辑活动</a> <a href="toparticipationall?activityid=${aa[4]}">参与详情</a> <a href="delete?act=${aa[4] }">删除活动</a>
 										</div>
 									</div>
 								</div>
