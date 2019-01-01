@@ -34,16 +34,18 @@
 		</tr>
 		</form>
 		</c:forEach>
+		
+		
 	<tr height="75" class="changecolor">
 			<td colspan="4"><a href="toparticipationall?activityid=${activityid }&&pageNum=${participation.prePageNum}" class="previous"> 上一页 </a> 
 			${participation.currentPageNum}/${participation.totalPageNum } 
-			<a href="toparticipationall?activityid=${activityid }&&pageNum=${participation.nextPageNum}" class="next"> 下一页 </a>
+			<a href="toparticipationall?activityid=${activityid }&&pageNum=${participation.nextPageNum}" class="next"> 下一页 </a></td>
+	</tr>
 	</table>
 	<button class="button-submit" onclick="location.href='toDisplayOrganizationMine'">提交</button>
-	</td>
-	</tr>
+	
 	
 </body>
-<script type="text/javascript"
-	src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </html>
