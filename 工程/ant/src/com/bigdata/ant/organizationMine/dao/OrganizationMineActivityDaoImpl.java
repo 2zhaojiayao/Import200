@@ -103,7 +103,7 @@ public class OrganizationMineActivityDaoImpl extends BaseDao<Activity, Integer> 
 	public Page<Object[]> findPageByProjection(int pageNum, int pageSize,Organization organization){
 		try {
 			String hqlCount="select count(*) from Activity where organization=?0";
-			String hqlList="select name,description,holdBegin,holdEnd from Activity where organization=?0";
+			String hqlList="select name,description,holdBegin,holdEnd,id from Activity where organization=?0";
 			Object[] params= {organization};
 			
 			Page<Object[]> page=findPageByProjection(pageNum,pageSize,hqlCount, hqlList,params);
@@ -131,7 +131,7 @@ public class OrganizationMineActivityDaoImpl extends BaseDao<Activity, Integer> 
 	public Page<Object[]> findPageBeforeTime(int pageNum, int pageSize,Organization organization){
 		try {
 			String hqlCount="select count(*) from Activity where organization=?0 and holdBegin>?1 ";
-			String hqlList="select name,description,holdBegin,holdEnd from Activity where organization=?0 and holdBegin>?1";
+			String hqlList="select name,description,holdBegin,holdEnd,id from Activity where organization=?0 and holdBegin>?1";
 			Date date=new Date();
 			Object[] params= {organization,date};
 			
@@ -159,7 +159,7 @@ public class OrganizationMineActivityDaoImpl extends BaseDao<Activity, Integer> 
 	public Page<Object[]> findPageInTime(int pageNum, int pageSize,Organization organization){
 		try {
 			String hqlCount="select count(*) from Activity where holdBegin<=?0 and holdEnd>=?0 and organization=?1";
-			String hqlList="select name,description,holdBegin,holdEnd from Activity where holdBegin<=?0 and holdEnd>=?0 and organization=?1";
+			String hqlList="select name,description,holdBegin,holdEnd,id from Activity where holdBegin<=?0 and holdEnd>=?0 and organization=?1";
 			Date date=new Date();
 			Object[] params= {date,organization};
 			
@@ -188,7 +188,7 @@ public class OrganizationMineActivityDaoImpl extends BaseDao<Activity, Integer> 
 	public Page<Object[]> findPageAfterTime(int pageNum, int pageSize,Organization organization){
 		try {
 			String hqlCount="select count(*) from Activity where holdEnd<?0 and organization=?1";
-			String hqlList="select name,description,holdBegin,holdEnd from Activity where holdEnd<?0 and organization=?1";
+			String hqlList="select name,description,holdBegin,holdEnd,id from Activity where holdEnd<?0 and organization=?1";
 			Date date=new Date();
 			Object[] params= {date,organization};
 			

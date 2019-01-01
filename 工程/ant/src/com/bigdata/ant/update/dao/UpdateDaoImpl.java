@@ -1,16 +1,11 @@
 package com.bigdata.ant.update.dao;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.Calendar;
 
 import org.springframework.stereotype.Repository;
 
-import com.bigdata.ant.entity.ActivityJoin;
+import com.bigdata.ant.entity.ActivitySum;
+import com.bigdata.ant.entity.Student;
 import com.bigdata.ant.utils.BaseDao;
 
 /**
@@ -22,73 +17,57 @@ import com.bigdata.ant.utils.BaseDao;
  *
  */
 @Repository
-public class UpdateDaoImpl extends BaseDao<ActivityJoin, Integer> {
+public class UpdateDaoImpl extends BaseDao<ActivitySum, Integer> {
 
 	/**
 	 * 
-	 * @Title: listId
-	 * @Description: 查出所有的学号
-	 * @param:@return (参数)
-	 * @return:Set(返回类型)
+	 * @Title: setAS
+	 * @Description: 将list中取出的数据插入到数据库的表中
+	 * @param:@param s
+	 * @param:@param name
+	 * @param:@param score
+	 * @param:@param type (参数)
+	 * @return:void(返回类型)
 	 *
-	 * @return
+	 * @param s
+	 * @param name
+	 * @param score
+	 * @param type
 	 */
-	public Set listId() {
-		String hql = "select a from ActivityJoin a";
-		List<ActivityJoin> l = null;
-		List<Object[]> list = null;
-//		Map<String, List<Object[]>> map = new HashMap<String, List<Object[]>>();
+	public void setAS(Student s, String name, Float score, String type) {
+		Calendar cal = Calendar.getInstance();
+		int y = cal.get(Calendar.YEAR);
+		int month = cal.get(Calendar.MONTH);
+		if (month < 9) {
+			y = y - 1;
+		}
+		String year = String.valueOf(y);
+		ActivitySum a = new ActivitySum();
+		a.setStudent(s);
+		a.setActivityName(name);
+		a.setScore(score);
+		a.setType(type);
+		a.setYear(year);
 		try {
-			l = this.find0(hql);
+			this.save(a);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Set<String> set = new HashSet();
-		for (int i = 0; i < l.size(); i++) {
-			set.add(l.get(i).getStudent().getId());
-		}
-//		System.out.println(set.size());
-//		Iterator<String> it = set.iterator();
-//		while (it.hasNext()) {
-//			System.out.println(it.next());
-//			list = this.listScoreById(it.next());
-//			map.put(it.next(), list);
-//		}
-		return set;
 	}
 
 	/**
 	 * 
-	 * @Title: listScoreById
-	 * @Description: 按学号查出活动名称及分数
-	 * @param:@param id
-	 * @param:@return (参数)
-	 * @return:List(返回类型)
+	 * @Title: delete
+	 * @Description: 删除
+	 * @param:@throws Exception (参数)
+	 * @return:void(返回类型)
 	 *
-	 * @param id
-	 * @return
+	 * @throws Exception
 	 */
-	public Map listScoreById(String id) {
-		String hql = "from ActivityJoin a where a.student.id = ?0";
-		List<ActivityJoin> l = null;
-		try {
-			l = this.find0(hql, id);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(id);
-//		List<Object[]> list = new ArrayList<Object[]>();
-		Map<String, Float> map = new HashMap<String, Float>();
-		for (int i = 0; i < l.size(); i++) {
-			map.put(l.get(i).getActivityStage().getActivity().getName(), l.get(i).getActivityStage().getScore());
-//			list.add(Object[]{ l.get(i).getActivityStage().getActivity().getName(),
-//					l.get(i).getActivityStage().getScore() });
-//			System.out.println(l.get(i).getActivityStage().getActivity().getName());
-//			System.out.println(l.get(i).getActivityStage().getScore());
-		}
-		return map;
+	public void delete() throws Exception {
+		String sql = "delete from activity_sum";
+		this.excute(sql);
 	}
 
 }
