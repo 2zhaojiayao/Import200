@@ -26,43 +26,44 @@ public class ComprehensiveController {
 
 	/**
 	 * 
-	* @Title: addressComprehensive  
-	* @Description: TODO(这里用一句话描述这个方法的作用) 将综测分数插入到数据库
-	* @param:@param request
-	* @param:@return (参数)
-	* @return:String(返回类型)
-	*
+	 * @Title: addressComprehensive
+	 * @Description: TODO(这里用一句话描述这个方法的作用) 将综测分数插入到数据库
+	 * @param:@param request
+	 * @param:@return (参数)
+	 * @return:String(返回类型)
+	 *
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping(value = "/addressComprehensive")
-	public String addressComprehensive(HttpServletRequest request) {
-		HttpSession session = request.getSession();
-		Monitor monitor = (Monitor) session.getAttribute("m");// 登陆后获得该对象
-		comprehensiveServiceImpl.insertScore(monitor);
-		return "monitor_comprehensive";
-	}
+//	@RequestMapping(value = "/addressComprehensive")
+//	public String addressComprehensive(HttpServletRequest request) {
+//		HttpSession session = request.getSession();
+//		Monitor monitor = (Monitor) session.getAttribute("m");// 登陆后获得该对象
+//		comprehensiveServiceImpl.insertScore(monitor);
+//		return "monitor_comprehensive";
+//	}
 
 	/**
 	 * 
-	* @Title: downloadComprehensive  
-	* @Description: TODO(这里用一句话描述这个方法的作用) 将数据库中的数据下载为Excel文件
-	* @param:@param request
-	* @param:@param response
-	* @param:@return
-	* @param:@throws Exception (参数)
-	* @return:String(返回类型)
-	*
+	 * @Title: downloadComprehensive
+	 * @Description: TODO(这里用一句话描述这个方法的作用) 将数据库中的数据下载为Excel文件
+	 * @param:@param request
+	 * @param:@param response
+	 * @param:@return
+	 * @param:@throws Exception (参数)
+	 * @return:String(返回类型)
+	 *
 	 * @param request
 	 * @param response
 	 * @return
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/downloadComprehensive")
-	public String downloadComprehensive(HttpServletRequest request,HttpServletResponse response) throws Exception {
+	public String downloadComprehensive(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HttpSession session = request.getSession();
 		Monitor monitor = (Monitor) session.getAttribute("m");// 登陆后获得该对象
+		comprehensiveServiceImpl.insertScore(monitor);
 		comprehensiveServiceImpl.downloadExcel(response, monitor);
-		return"monitor_comprehensive";
+		return "monitor_comprehensive";
 	}
 }

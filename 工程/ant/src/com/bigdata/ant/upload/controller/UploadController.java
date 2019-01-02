@@ -76,8 +76,8 @@ public class UploadController {
 			System.out.println("批量导入EXCEL失败！");
 			return "monitor_awardcharacter";
 		}
-		request.getRequestDispatcher("addressComprehensive").forward(request, response);
-		return null;
+//		request.getRequestDispatcher("addressComprehensive").forward(request, response);
+		return "monitor_comprehensive";
 		
 	}
 }

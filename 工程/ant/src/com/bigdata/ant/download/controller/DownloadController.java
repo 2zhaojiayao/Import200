@@ -57,6 +57,12 @@ public class DownloadController {
 		Monitor m = (Monitor) session.getAttribute("m");
 		// 获取当前时间
 		Calendar cal = Calendar.getInstance();
+		int y = cal.get(Calendar.YEAR);
+		int month = cal.get(Calendar.MONTH);
+		if (month < 9) {
+			y = y - 1;
+		}
+		String year = String.valueOf(y);
 		// 设置默认excel名
 		String FILEPATH = "活动汇总表.xls";
 		deleteFile(FILEPATH);
@@ -95,7 +101,7 @@ public class DownloadController {
 		list.clear();
 		list.addAll(h);
 		try {
-			String title = cal.get(Calendar.YEAR) + "年活动汇总";
+			String title = year + "年活动汇总";
 			MakeExcel.CreateExcelFile(list, new File(FILEPATH), ll, title);
 		} catch (WriteException e) {
 			e.printStackTrace();
