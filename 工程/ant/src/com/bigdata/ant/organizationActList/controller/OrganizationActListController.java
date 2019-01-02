@@ -51,7 +51,7 @@ public class OrganizationActListController {
 			num=Integer.parseInt(pageNum);
 		}
 		Page<Activity> pageByHot=organizationActListServiceImpl.listAllByHot(num, 3);
-		System.out.println(pageByHot.getList().size());
+//		System.out.println(pageByHot.getList().size());
 		request.setAttribute("pageByHot", pageByHot);
 		request.setAttribute("key", "2");
 		return "organization_activitylist";

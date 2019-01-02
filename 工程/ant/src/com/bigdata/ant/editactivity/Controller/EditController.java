@@ -7,13 +7,16 @@
  */
 package com.bigdata.ant.editactivity.Controller;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -38,7 +41,7 @@ public class EditController {
 	@Resource
 	private DisplayServiceImpl displayserviceimpl;
 	@RequestMapping(value="/Edit")
-	public String editAcitivity(HttpServletRequest request,HttpSession session) {
+	public String editAcitivity(HttpServletRequest request,HttpServletResponse response,HttpSession session) throws ServletException, IOException {
 //		Activity activity=(Activity) session.getAttribute("activity");
 		String id=request.getParameter("id");
 		System.out.println(id);
@@ -122,6 +125,7 @@ public class EditController {
 		//把属性更新至数据库
 		this.editServiceImpl.updateA(activity);
 		session.setAttribute("activity", activity);
-		return "organization_mine";
+		request.getRequestDispatcher("toDisplayOrganizationMine").forward(request, response);
+		return null;
 	}	
 }

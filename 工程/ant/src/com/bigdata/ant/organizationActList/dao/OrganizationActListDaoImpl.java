@@ -51,8 +51,8 @@ public class OrganizationActListDaoImpl extends BaseDao<Activity, Integer>{
 	}
 	public Page<Activity> listAllByHot(int pageNum,int pageSize){
 		try {
-			String hqlCount="select count(*) from Activity order by studentNumber desc";
-			String hqlList="from Activity order by studentNumber desc";
+			String hqlCount="select count(*) from Activity order by applyEnd desc";
+			String hqlList="from Activity order by applyEnd desc";
 			Object[] params=null;
 			return findPage(pageNum, pageSize, hqlCount, hqlList, params);
 		} catch (Exception e) {

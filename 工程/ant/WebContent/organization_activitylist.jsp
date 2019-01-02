@@ -63,9 +63,6 @@
 						<c:forEach items="${pageByTime.list }" var="byTime">
 							<tr>
 								<td class="table2-4-tr0td0">
-									<div class="table2-4-tr0td0-div">
-										<table cellspacing="0" cellpadding="0" class="table2-5"
-											width="1020px">
 											<table width="1020px" cellspacing="0" cellpadding="0">
 												<tr>
 													<td class="table2-5-tr0td0" style="width: 22%"><a
@@ -124,8 +121,6 @@
 											<tr>
 												<td></td>
 											</tr>
-										</table>
-									</div>
 								</td>
 							</tr>
 						</c:forEach>
@@ -147,10 +142,8 @@
 					<c:if test="${key eq '2' }">
 						<c:forEach items="${pageByHot.list }" var="byHot">
 							<tr>
-								<td class="table2-4-tr0td0">
-									<div class="table2-4-tr0td0-div">
-										<table cellspacing="0" cellpadding="0" class="table2-5"
-											width="1020px">
+								<td class="table2-4-tr0td0" id="table_list">
+									
 											<table width="1020px" cellspacing="0" cellpadding="0">
 												<tr>
 													<td class="table2-5-tr0td0" style="width: 22%"><a
@@ -209,8 +202,6 @@
 											<tr>
 												<td></td>
 											</tr>
-										</table>
-									</div>
 								</td>
 							</tr>
 						</c:forEach>
@@ -228,6 +219,7 @@
 								</ul>
 							</div>
 						</div>
+						<div class="clear"></div>
 					</c:if>
 				</table>
 			</td>
