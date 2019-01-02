@@ -12,7 +12,6 @@ body {
 
 a {
 	text-decoration: none;
-	color:#222;
 }
 
 li {
@@ -82,18 +81,19 @@ input, button {
 	border-radius: 42px;
 	transition: .3s linear;
 	float: right;
-	padding-left: 15px;
+	padding-left:15px;
 }
 
-.search input:focus {
+ .search input:focus {
 	width: 300px;
-}
+} 
 
 .search button {
 	width: 35px;
 	height: 35px;
 	display: inline;
-	margin-right: 10px;
+	/* margin-right: 10px; */
+	cursor: pointer;
 	background: none;
 	color: #ff8d1a;
 	cursor: pointer;
@@ -105,32 +105,32 @@ input, button {
 	width: 35px;
 	height: 35px;
 	display: inline;
-	margin-right: 10px;
+	/* margin-right: 10px; */
 	content: "\f002";
 	font-family: FontAwesome;
 	color: #ff8d1a;
 }
-
-#word {
-	background-color: #fff;
-	width: 290px;
-	margin-left: -20px;
-	/* 	margin-top:5px; */
+#word{
+	background-color:#fff;
+	width:290px;
+	margin-left:-20px;
+	margin-top:5px; 
+	position:relative;
+	z-index:999;
 	/* margin-top:20px; */
 }
-
-.wordBorder {
+.wordBorder{
 	border: 1px solid #CCC;
 }
-
-.click_word {
-	height: 30px;
+.click_work a {
+	display:block;
+	height:30px;
+	color:#222;
 }
 
-.click_word a:hover {
-	background-color: #eee;
+ .click_work a:hover{
+	background-color:#eee;
 }
-
 .top_1 .message {
 	width: 25px;
 	height: 25px;
