@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletException;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -140,6 +142,7 @@ public class PublishController {
 
 	/**
 	 * 
+	 * @param response 
 	 * @Title: saveActivity
 	 * @Description: TODO(向数据库插入活动)
 	 * @param:@param activity 活动
@@ -147,6 +150,8 @@ public class PublishController {
 	 * @param:@param stage 阶段
 	 * @param:@return (参数)
 	 * @return:String(发布成功到成功页面，失败回到本页重新发布)
+	 * @throws IOException 
+	 * @throws ServletException 
 	 */
 	@RequestMapping(value = "/saveActivity", method = RequestMethod.POST)
 	public String saveActivity(Activity activity, @RequestParam("score") String score,
@@ -162,5 +167,6 @@ public class PublishController {
 			return "organization_publishactivity";
 		}
 	}
+
 
 }

@@ -106,7 +106,7 @@
 							<input type="radio" name="interview" value="否" <c:if test="${activity.isInterview eq '否'}"> checked="checked" </c:if> /> 不需要面试
 						</span>
 					</div>
-					<input class="publishbutton" type="submit" value="发布活动" /><br>
+					<input class="publishbutton" type="submit" value="保存修改" /><br>
 					<i class="icon icon-calendar"></i>
 				</form>
 			</div>

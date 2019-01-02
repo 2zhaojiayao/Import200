@@ -33,7 +33,7 @@
 							<p class="table1-youshang">
 								参加活动数<br>
 							</p>
-							<p class="table1-youxia">${activityNum}</p>
+							<p class="table1-youxia">${studentActivityNum}</p>
 						</td>
 						<td>
 							<p class="table1-youshang">
@@ -45,7 +45,7 @@
 							<p class="table1-youshang">
 								可报名活动数<br>
 							</p>
-							<p class="table1-youxia">${studentActivityNum}</p>
+							<p class="table1-youxia">${activityNum}</p>
 						</td>
 					</tr>
 				</table>

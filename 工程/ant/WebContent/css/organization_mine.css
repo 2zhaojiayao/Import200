@@ -9,7 +9,7 @@ a {
 	width: 1080px;
 	margin: 20px auto;
 }
-/*上部分*/
+/*涓婇儴鍒�*/
 .top_org {
 	width: 1080px;
 	height: 150px;
@@ -73,7 +73,7 @@ a {
 .clear {
 	clear: both;
 }
-/*下部分*/
+/*涓嬮儴鍒�*/
 .bottom {
 	width: 1080px;
 	height: 550px;
@@ -185,12 +185,12 @@ a {
 	height: 30px;
 	display: inline;
 	margin-right: 10px;
-	content: '搜';
+	content: '鎼�';
 	font-family: FontAwesome;
 	color: #ff8d1a;
 }
 
-/*发布活动按钮*/
+/*鍙戝竷娲诲姩鎸夐挳*/
 .bottom_publish {
 	width: 1000px;
 	height: 30px;
@@ -207,7 +207,7 @@ a {
 	color: #fc7a00;
 	font-size: 13px;
 }
-/*活动列表*/
+/*娲诲姩鍒楄〃*/
 .bottom_list_detail {
 	width: 1000px;
 	height: 45px;
@@ -267,7 +267,16 @@ a {
 	color: #a6a6a6;
 	font-size: 11px;
 }
-
+.detail .text2 {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 255px;
+	height: 23px;
+	line-height: 23px;
+	color: #a6a6a6;
+	font-size: 11px;
+}
 .author {
 	width: 160px;
 	height: 45px;
@@ -281,14 +290,23 @@ a {
 	color: #a6a6a6;
 	font-size: 11px;
 }
-
+.text2 {
+	width: 255px;
+	height: 23px;
+	line-height: 23px;
+	color: #a6a6a6;
+	font-size: 11px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
 .time {
 	width: 150px;
 	height: 45px;
 	float: left;
 	/*background-color: yellow;*/
 }
-/*进度条*/
+/*杩涘害鏉�*/
 .progress {
 	float: left;
 	width: 165px;
@@ -320,7 +338,7 @@ a {
 	height: 9px;
 	position: relative;
 }
-/*操作*/
+/*鎿嶄綔*/
 .operation {
 	width: 180px;
 	height: 45px;
@@ -348,7 +366,7 @@ a {
 	height: 45px;
 	line-height: 45px;
 }
-/*页码*/
+/*椤电爜*/
 .bottom_page {
 	width: 450px;
 	height: 30px;

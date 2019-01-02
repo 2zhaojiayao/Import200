@@ -20,7 +20,7 @@
 	<div class="content">
 		<img src="images/success.png">
 		<p>活动已成功发布，在活动详情页可以查看活动的报名情况，去将活动链接发送给同学们来提高活动的参与量吧~</p>
-		<a href="#"><div id="get1">查看活动详情</div></a> <a href="#"><div
+		<a href="toDisplayOrganizationMine"><div id="get1">查看活动详情</div></a> <a href="#"><div
 				id="get2">复制活动链接</div></a>
 	</div>
 	<!--footer-->

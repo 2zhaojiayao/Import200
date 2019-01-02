@@ -24,7 +24,7 @@ public class ShowActivityDaoImpl extends BaseDao<Activity, Integer> {
 	public Long CountActivity() {
 		Long sum = null;
 		try {
-			sum = this.findCount();
+			sum = this.findCount1();
 			return sum;
 		} catch (Exception e) {
 			e.printStackTrace();

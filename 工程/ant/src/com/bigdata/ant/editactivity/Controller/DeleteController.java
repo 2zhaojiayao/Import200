@@ -7,8 +7,12 @@
  */
 package com.bigdata.ant.editactivity.Controller;
 
+import java.io.IOException;
+
 import javax.annotation.Resource;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -30,7 +34,7 @@ public class DeleteController {
 	@Resource
 	private DeleteServiceImpl deleteServiceImpl;
 	@RequestMapping(value="/delete")
-	public String deleteAcitivity(HttpServletRequest request,HttpSession session) {
+	public String deleteAcitivity(HttpServletRequest request,HttpServletResponse response,HttpSession session) throws ServletException, IOException {
 		String id=request.getParameter("act");
 		//String类型转换成Integer
 		Integer id2 = null;
@@ -43,6 +47,7 @@ public class DeleteController {
 		//删除这个活动
 		this.deleteServiceImpl.deleteActivity(activity);
 		System.out.println("delete成功");
-		return "organization_mine";
+		request.getRequestDispatcher("toDisplayOrganizationMine").forward(request, response);
+		return null;
 	} 
 }

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,7 +89,7 @@
 											<table width="1020" cellspacing="0" cellpadding="0">
 												<tr>
 													<td class="table2-5-tr3td0">
-														${byTime.description }
+														${fn:substring(byTime.description, 0, 10)}
 													</td>
 												</tr>
 											</table>
@@ -169,7 +170,7 @@
 											<table width="1020" cellspacing="0" cellpadding="0">
 												<tr>
 													<td class="table2-5-tr3td0">
-														${byHot.description }
+														${fn:substring(byHot.description, 0, 10)}
 													</td>
 												</tr>
 											</table>

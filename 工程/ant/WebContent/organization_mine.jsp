@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.Date"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -148,7 +149,7 @@
 										</div>
 										<div class="detail">
 											<a class="title">${all[0] }</a>
-											<p class="text">${all[1] }</p>
+											<p class="text">${fn:substring(all[1], 0, 10)}</p>
 										</div>
 										<div class="author">
 											<p class="text">发布者</p>
@@ -193,7 +194,7 @@
 										</div>
 										<div class="detail">
 											<a class="title">${ba[0] }</a>
-											<p class="text">${ba[1] }</p>
+											<p class="text">${fn:substring(ba[1], 0, 10)}</p>
 										</div>
 										<div class="author">
 											<p class="text">发布者</p>
@@ -229,7 +230,7 @@
 										</div>
 										<div class="detail">
 											<a class="title">${ia[0] }</a>
-											<p class="text">${ia[1] }</p>
+											<p class="text">${fn:substring(ia[1], 0, 10)}</p>
 										</div>
 										<div class="author">
 											<p class="text">发布者</p>
@@ -267,7 +268,7 @@
 										</div>
 										<div class="detail">
 											<a class="title">${aa[0] }</a>
-											<p class="text">${aa[1] }</p>
+											<p class="text">${fn:substring(aa[1], 0, 10)}</p>
 										</div>
 										<div class="author">
 											<p class="text">发布者</p>
