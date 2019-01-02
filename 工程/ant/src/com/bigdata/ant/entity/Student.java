@@ -116,7 +116,8 @@ public class Student {
 		this.registerTime = registerTime;
 	}
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = CascadeType.ALL)
+//	, fetch = FetchType.LAZY
 	@JoinColumn(name = "class_id")
 	public ClassInfo getClassInfo() {
 		return classInfo;

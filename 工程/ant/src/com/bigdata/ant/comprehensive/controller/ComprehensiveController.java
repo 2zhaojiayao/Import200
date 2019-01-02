@@ -35,13 +35,13 @@ public class ComprehensiveController {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping(value = "/addressComprehensive")
-	public String addressComprehensive(HttpServletRequest request) {
-		HttpSession session = request.getSession();
-		Monitor monitor = (Monitor) session.getAttribute("m");// 登陆后获得该对象
-		comprehensiveServiceImpl.insertScore(monitor);
-		return "monitor_comprehensive";
-	}
+//	@RequestMapping(value = "/addressComprehensive")
+//	public String addressComprehensive(HttpServletRequest request) {
+//		HttpSession session = request.getSession();
+//		Monitor monitor = (Monitor) session.getAttribute("m");// 登陆后获得该对象
+//		comprehensiveServiceImpl.insertScore(monitor);
+//		return "monitor_comprehensive";
+//	}
 
 	/**
 	 * 
@@ -62,6 +62,7 @@ public class ComprehensiveController {
 	public String downloadComprehensive(HttpServletRequest request,HttpServletResponse response) throws Exception {
 		HttpSession session = request.getSession();
 		Monitor monitor = (Monitor) session.getAttribute("m");// 登陆后获得该对象
+//		comprehensiveServiceImpl.insertScore(monitor);
 		comprehensiveServiceImpl.downloadExcel(response, monitor);
 		return"monitor_comprehensive";
 	}
