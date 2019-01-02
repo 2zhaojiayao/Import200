@@ -80,7 +80,7 @@ $(function() {
 											$('.activities')
 													.append(
 															'<div class="activity_object">\
-						                       <a href="activitydetail?id='
+						                       <a href="activitydetail?actid='
 																	+ data[i][0]
 																	+ '"><img src="'
 																	+ data[i][2]
@@ -149,7 +149,7 @@ $(function() {
 							$('.activities')
 									.append(
 											'<div class="activity_object">\
-					                       <a href="student_activitydetail.jsp?id='
+					                       <a href="student_activitydetail.jsp?actid='
 													+ data1[i][0]
 													+ '"><img src="'
 													+ data1[i][2]
@@ -185,6 +185,9 @@ $(function() {
 							$('.nextPage').append('<a href="#">下一页</a>')
 						}
 					});
+				/*	$('.nextPage').click(function(){
+						//alert("下一页");
+					})*/
 	$('.lastPage')
 			.click(
 					function() {
@@ -196,7 +199,7 @@ $(function() {
 							$('.activities')
 									.append(
 											'<div class="activity_object">\
-					                       <a href="student_activitydetail.jsp?id='
+					                       <a href="student_activitydetail.jsp?actid='
 													+ data1[i][0]
 													+ '"><img src="'
 													+ data1[i][2]

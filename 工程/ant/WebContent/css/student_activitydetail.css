@@ -175,6 +175,8 @@ body {
 	background-color: #fff;
 	float: left;
 	margin-left: 20px;
+	overflow: scroll;
+	
 }
 
 .content_right_word {
