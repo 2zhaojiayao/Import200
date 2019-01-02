@@ -26,9 +26,11 @@ $(function() {
 							// if($(this).parent().parent().children().last().children().first().children().first().attr("id")=="ipt"){
 							// $('#ipt').removeClass().addClass('normal');
 							// }
+							if($(this).parent().parent().children().last().children().first().children().first().attr('id')=='ipt'){
 							$('#ipt').removeClass().addClass('normal');
 							$('#ul').children().children().removeClass()
 									.addClass('normal');
+							}
 							$(this).parent().parent().children().children()
 									.removeClass().addClass('normal');
 
@@ -50,7 +52,7 @@ $(function() {
 										'types' : types
 									},
 									dataType : 'json',
-									traditional : true,//阻止深度序列化，可以传递数组
+									traditional : true,// 阻止深度序列化，可以传递数组
 									success : function(data) {
 										data1 = data;
 										pageNum = Math.ceil(data.length / 8);
@@ -185,9 +187,9 @@ $(function() {
 							$('.nextPage').append('<a href="#">下一页</a>')
 						}
 					});
-				/*	$('.nextPage').click(function(){
-						//alert("下一页");
-					})*/
+				/*
+				 * $('.nextPage').click(function(){ //alert("下一页"); })
+				 */
 	$('.lastPage')
 			.click(
 					function() {
