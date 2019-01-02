@@ -6,6 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/header_footer.css">
 </head>
 <div class="header">
 	<div class="top">
@@ -38,7 +40,8 @@
 	<div id="nav">
 		<ul>
 			<li><a href="#">首页</a></li>
-			<li><a href="monitor_participationsituation.jsp">评奖评优</a></li>		</ul>
+			<li><a href="monitor_participationsituation.jsp">评奖评优</a></li>
+		</ul>
 	</div>
 </div>
 </html>
