@@ -130,7 +130,7 @@
 							<div class="search_org">
 								<form>
 									<input type="text" placeholder="请输入活动名称">
-									<button type="submit"></button>
+									<button type="submit">搜索</button>
 								</form>
 							</div>
 						</div>
